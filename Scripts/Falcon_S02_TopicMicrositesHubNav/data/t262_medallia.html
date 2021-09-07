@@ -1,0 +1,32 @@
+const script = document.createElement('script');
+script.setAttribute('src', 'https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js');
+script.onload = function () {
+	if (typeof KAMPYLE_ONSITE_SDK === 'undefined') {
+		return;
+	}
+	if (KAMPYLE_ONSITE_SDK && typeof KAMPYLE_ONSITE_SDK.updatePageView === 'function') {
+		KAMPYLE_ONSITE_SDK.updatePageView();
+		console.debug(KAMPYLE_ONSITE_SDK, 'debug : KAKAMPYLE SDK Update page View');
+	}
+}
+document.body.appendChild(script);
+$(document).on("click", ".main-topic-option", function () {
+	if(KAMPYLE_ONSITE_SDK){
+		KAMPYLE_ONSITE_SDK.updatePageView();
+		console.debug(KAMPYLE_ONSITE_SDK, 'debug : KAKAMPYLE SDK Update page View on the Primary intent click');
+	}	
+});
+
+$(document).on("click", ".solution-sub-topic-option", function () {
+	if(KAMPYLE_ONSITE_SDK){
+		KAMPYLE_ONSITE_SDK.updatePageView();
+		console.debug(KAMPYLE_ONSITE_SDK, 'debug : KAKAMPYLE Update page View on the Secondary intent click');
+	}
+});
+
+$(document).on("click", ".accordion-sub-topic", function () {
+	if(KAMPYLE_ONSITE_SDK){
+		KAMPYLE_ONSITE_SDK.updatePageView();
+		console.debug(KAMPYLE_ONSITE_SDK, 'debug : KAKAMPYLE Update page View on the Secondary intent  Mobile click');
+	}
+});

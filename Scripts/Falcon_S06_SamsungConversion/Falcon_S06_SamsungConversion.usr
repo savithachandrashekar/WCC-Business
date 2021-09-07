@@ -1,0 +1,80 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=Falcon_S06_SamsungConversion.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+LastActiveAction=Action
+MajorVersion=12
+MinorVersion=61
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.61.0.971
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+LastCodeGenerationVer=12.61.0.971
+DisableRegenerate=0
+Encoding=ANSI
+Description=
+ScriptLocale=en-US
+[Actions]
+vuser_init=vuser_init.c
+SamsungConversion=SamsungConversion.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=0
+SamsungConversion=1
+vuser_end=0
+[Recorded Actions]
+vuser_init=0
+SamsungConversion=1
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+SamsungConversion=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+SamsungConversion=cci
+vuser_end=cci
+[TransactionsOrder]
+Order="FP20_SamsungConversion_01_doc__*delimiter*__FP20_SamsungConversion_02_api_Region__*delimiter*__FP20_SamsungConversion_03_api_termbase__*delimiter*__FP20_SamsungConversion_04_api_href__*delimiter*__FP20_SamsungConversion_05_api_wcc_second_Nav__*delimiter*__FP20_SamsungConversion_06_api_wcc_sitehome_alerts__*delimiter*__FP20_SamsungConversion_07_api_wcc-services-ssc__*delimiter*__FP20_SamsungConversion_08_api_wcc_pfinder_common__*delimiter*__FP20_SamsungConversion_10_EnterSamsungSerialNumer&ClickSubmit__*delimiter*__FP20_SamsungConversion_11_EnterSamsungProductNumer&ClickSubmit__*delimiter*__FP20_SamsungConversion_12_EnterHPSerialNumer&ClickSubmit__*delimiter*__FP20_SamsungConversion_13_EnterHPProductNumber&ClickSubmit__*delimiter*__FP21_BulkConversion_01_ClickOnBulkUploadLink__*delimiter*__FP21_BulkConversion_02_SelectFile&Submit"
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+[ManuallyExtraFiles]
+Bulk_SN_PN_Conversion - 100.xlsx=
+Bulk_SN_PN_Conversion - 30.xlsx=
+Bulk_SN_PN_Conversion - 50.xlsx=
+Bulk_SN_PN_Conversion - 75.xlsx=
+Bulk_SN_PN_Conversion.xlsx=
+[Transactions]
+FP20_SamsungConversion_01_doc=
+FP20_SamsungConversion_02_api_Region=
+FP20_SamsungConversion_03_api_termbase=
+FP20_SamsungConversion_04_api_href=
+FP20_SamsungConversion_05_api_wcc_second_Nav=
+FP20_SamsungConversion_06_api_wcc_sitehome_alerts=
+FP20_SamsungConversion_07_api_wcc-services-ssc=
+FP20_SamsungConversion_08_api_wcc_pfinder_common=
+FP20_SamsungConversion_10_EnterSamsungSerialNumer&ClickSubmit=
+FP20_SamsungConversion_11_EnterSamsungProductNumer&ClickSubmit=
+FP20_SamsungConversion_12_EnterHPSerialNumer&ClickSubmit=
+FP20_SamsungConversion_13_EnterHPProductNumber&ClickSubmit=
+FP21_BulkConversion_01_ClickOnBulkUploadLink=
+FP21_BulkConversion_02_SelectFile&Submit=

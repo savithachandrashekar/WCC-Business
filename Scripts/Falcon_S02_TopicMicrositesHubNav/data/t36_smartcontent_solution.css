@@ -1,0 +1,419 @@
+/* Import Ubuntu Condensed font, used by inline elements */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+#udpSolutionPageFragment {
+    color: #000000;
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-size: 17px;
+}
+
+#udpSolutionPageFragment .title {
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 300;         
+    font-size: 1.882em; 
+    line-height: 1.094em; 
+    letter-spacing: 0.64px; 
+    margin: 0.67em 0;
+}
+
+#udpSolutionPageFragment h1.topictitle1,
+#udpSolutionPageFragment h2.topictitle2,
+#udpSolutionPageFragment h3.topictitle3,
+#udpSolutionPageFragment h4.topictitle4,
+#udpSolutionPageFragment .sectiontitle,
+#udpSolutionPageFragment h5.topictitle5,
+#udpSolutionPageFragment h6.topictitle6 {
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 400;
+    letter-spacing: 0.24px; 
+    color: #000000; 
+    opacity: 1;
+    box-sizing: content-box;
+    padding: 0px;
+}
+
+#udpSolutionPageFragment h1.topictitle1 {
+    font-size: 1.882em; 
+    line-height: 1.25em; 
+    margin: 0.67em 0 1.5em; 
+}
+  
+#udpSolutionPageFragment h2.topictitle2 { 
+    font-size: 1.588em; 
+    line-height: 1.764em; 
+    margin: 0.83em 0; 
+}
+  
+#udpSolutionPageFragment h3.topictitle3 { 
+    font-size: 1.176em; 
+    line-height: 1.352em; 
+    margin: 1em 0;
+    /*This overrides an important rule from mashup:ra*/
+    margin-bottom: 1em !important;
+}
+
+#udpSolutionPageFragment h4.topictitle4,
+#udpSolutionPageFragment .sectiontitle
+{ 
+    font-size: 1.058em; 
+    line-height: 1.235em; 
+    margin: 1.33em 0; 
+    /*This overrides an important rule from mashup:ra*/
+    margin-bottom: 1.33em !important;
+}
+  
+#udpSolutionPageFragment h5.topictitle5 { 
+    font-size: 0.941em; 
+    line-height: 1.117em; 
+    margin: 1.67em 0; 
+}
+  
+#udpSolutionPageFragment h6.topictitle6 { 
+    font-size: 0.823em; 
+    line-height: 1.117em;
+    margin: 2.33em 0;
+    text-transform: uppercase; 
+}
+
+#udpSolutionPageFragment p.p, 
+#udpSolutionPageFragment p.cmd, 
+#udpSolutionPageFragment p.shortdesc {
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.294em;
+    color:   rgb(0, 0, 0);
+    margin: 1em 0;
+    padding: 0;
+    letter-spacing: 0.25px;
+}
+
+#udpSolutionPageFragment div.note {
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    padding: 0.588em 1.059em;
+    margin-top: 0.824em;
+    opacity: 1;
+}
+
+#udpSolutionPageFragment li div.note {
+    margin: 0.882em 0;
+}
+
+#udpSolutionPageFragment div.caution span.cautiontitle, 
+#udpSolutionPageFragment div.important span.importanttitle {
+    background: transparent url('/wps/hp-support-product-portlets/resources/images/icon-alert_udp.svg') 0% 0% no-repeat padding-box;
+    padding-left: 1.765em;    
+}
+
+#udpSolutionPageFragment div.warning span.warningtitle, 
+#udpSolutionPageFragment div.danger span.dangertitle {
+    background: transparent url('/wps/hp-support-product-portlets/resources/images/icon-bullhorn_udp.svg') 0% 0% no-repeat padding-box;
+    padding-left: 1.765em;    
+}
+
+/*For RTL, admonishment icons are changed to the right*/
+html[dir="rtl"] #udpSolutionPageFragment div.caution span.cautiontitle,
+html[dir="rtl"] #udpSolutionPageFragment div.important span.importanttitle,
+html[dir="rtl"] #udpSolutionPageFragment div.warning span.warningtitle,
+html[dir="rtl"] #udpSolutionPageFragment div.danger span.dangertitle {
+    padding-left: 0;
+    padding-right: 1.765em;
+    background-position-x: right;
+}
+
+#udpSolutionPageFragment span.notetitle, 
+#udpSolutionPageFragment span.tiptitle, 
+#udpSolutionPageFragment span.noticetitle,
+#udpSolutionPageFragment span.cautiontitle, 
+#udpSolutionPageFragment span.warningtitle, 
+#udpSolutionPageFragment span.dangertitle, 
+#udpSolutionPageFragment span.importanttitle {
+    font-family: "HPSimplified", "HP Simplified";
+}
+
+#udpSolutionPageFragment span.notetitle, 
+#udpSolutionPageFragment span.tiptitle, 
+#udpSolutionPageFragment span.noticetitle {
+    color: black;
+    text-transform: uppercase;
+    line-height: 1.294em;
+    /*Override general styles*/
+    padding: 0px;
+    display: inline-block;
+    vertical-align: baseline;
+    min-height: 1.294em;
+}
+
+#udpSolutionPageFragment span.cautiontitle, 
+#udpSolutionPageFragment span.warningtitle, 
+#udpSolutionPageFragment span.dangertitle, 
+#udpSolutionPageFragment span.importanttitle {
+    line-height: 1.294em;
+    color: #B62237;
+    text-transform: uppercase;
+    display: inline-block;
+    min-height: 1.294em;
+}
+
+#udpSolutionPageFragment div.note p:first-of-type {
+    display:inline;
+}
+
+#udpSolutionPageFragment div.note p.p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*  Figures  */
+#udpSolutionPageFragment p.figcap,
+#udpSolutionPageFragment p.listtitle
+{
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#udpSolutionPageFragment caption {
+    text-align: left;
+}
+
+html[dir="rtl"] #udpSolutionPageFragment caption {
+    text-align: right;
+}
+
+#udpSolutionPageFragment p.figcap,
+#udpSolutionPageFragment span.tablecap, 
+#udpSolutionPageFragment p.listtitle
+{
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 400;
+    font-size: 0.941em; 
+    line-height: 1.188em; 
+    color: #000000; 
+    letter-spacing: 0.28px; 
+    text-transform: uppercase; 
+    opacity: 1;
+}
+
+/*   Lists  */
+#udpSolutionPageFragment ol.ol, 
+#udpSolutionPageFragment ul.ul { 
+    color: #000000; 
+    margin-left: 0em; 
+    margin-top: 0em; 
+    margin-bottom: 1.059em; 
+    padding-left: 1.176em;
+    /*overrides the font-family from .body*/
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+}
+
+#udpSolutionPageFragment ol.ol li.li, 
+#udpSolutionPageFragment ul.ul li.li { 
+    margin-bottom: 0.118em;
+}
+
+html[dir="rtl"] #udpSolutionPageFragment ol.ol, 
+html[dir="rtl"] #udpSolutionPageFragment ul.ul { 
+    padding-right: 1.176em;
+    padding-left: 0;
+}
+
+#udpSolutionPageFragment li ol.ol,
+#udpSolutionPageFragment li ul.ul {
+    margin: 0.882em 0;
+}
+
+#udpSolutionPageFragment li div{ 
+    margin-top: 0em; 
+    margin-bottom: 0em;
+}
+
+#udpSolutionPageFragment li p.p, 
+#udpSolutionPageFragment li p.cmd { 
+    font-size: 1em; 
+    line-height: 1.294em;
+    margin-top: 0em; 
+    margin-bottom: 0em;
+}
+
+/*  Figures  */
+#udpSolutionPageFragment div.fig { 
+    margin-top: 1.176em; 
+    margin-bottom: 1.176em;
+}
+
+#udpSolutionPageFragment div.image img.image { 
+    max-width: 100%; 
+    margin: 0.588em 0;
+}
+
+#udpSolutionPageFragment p img.image {
+    display: inline;
+}
+
+#udpSolutionPageFragment div.fig table.simpletable { 
+    font-size: 0.824em; 
+    border: none; 
+    margin-left: 1.429em;
+}
+
+#udpSolutionPageFragment div.fig table.simpletable thead tr th, 
+#udpSolutionPageFragment div.fig table.simpletable tbody tr td{ 
+    border: none; 
+    padding: 0.357em;
+}
+
+#udpSolutionPageFragment div.fig table.simpletable thead tr th p.p { 
+    font-weight: 400 !important;
+}
+
+/* video */
+#udpSolutionPageFragment div.video {
+    background-color: #F3F3F3;
+    padding: 0.882em;
+}
+
+#udpSolutionPageFragment div.videoHeading {
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 400;
+    font-size: 0.934em; /*Based on 15px from mashup*/
+    line-height: 1.214em;
+    letter-spacing: 0.25px;
+}
+
+#udpSolutionPageFragment div.videoName {
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 400;
+    font-size: 1.2em; /*Based on 15px from mashup*/
+    line-height: 1.111em;
+    letter-spacing: 0.25px;
+}
+
+#udpSolutionPageFragment div.videoDesc {
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-weight: 400;
+    font-size: 1.133em; /*Based on 15px from mashup*/
+    line-height: 1.117em;
+    letter-spacing: 0.25px;
+}
+
+
+/*  tables  */
+
+#udpSolutionPageFragment div.tablenoborder {
+    margin-top: 1.765em;
+    overflow-x: auto;
+}
+
+#udpSolutionPageFragment table caption {
+    margin-bottom: 0.294em;
+}
+
+#udpSolutionPageFragment table, 
+#udpSolutionPageFragment table thead tr th,
+#udpSolutionPageFragment table tbody tr td { 
+    border-color: #CCCCCC;
+}
+
+#udpSolutionPageFragment table thead tr th {    
+    padding: 0.883em;
+    background: #F3F3F3 0% 0% no-repeat padding-box; 
+}
+
+#udpSolutionPageFragment table thead tr th * { 
+    font-family: "HPSimplified", "HP Simplified";
+    margin-top: 0em; 
+    margin-bottom: 0em; 
+    font-weight: 400 !important;
+}
+
+#udpSolutionPageFragment table thead tr th p.p { 
+    font-family: "HPSimplified", "HP Simplified";
+}
+
+#udpSolutionPageFragment table.simpletable thead tr th * { 
+    margin-top: 0em; 
+    margin-bottom: 0em; 
+    font-weight: 300 !important;
+}
+
+#udpSolutionPageFragment table thead tr th * {
+    margin: 0em !important;
+}
+
+#udpSolutionPageFragment table tbody tr td * {
+    margin: 0em !important;
+}
+
+#udpSolutionPageFragment table tbody tr td {
+    padding: 0.883em; 
+}
+
+#udpSolutionPageFragment div.fn { 
+    margin-top: 0.294em;
+} 
+
+#udpSolutionPageFragment div.fn p{ 
+    display: inline; 
+    font-size: 0.824em;
+}
+
+/*  inline elements  */
+#udpSolutionPageFragment kbd.userinput, 
+#udpSolutionPageFragment span.controlpanel, 
+#udpSolutionPageFragment span.uicontrol, 
+#udpSolutionPageFragment samp.controlpanelmessage, 
+#udpSolutionPageFragment span.keyboard, 
+#udpSolutionPageFragment samp.uimessage, 
+#udpSolutionPageFragment code.codeph, 
+#udpSolutionPageFragment span.wintitle, 
+#udpSolutionPageFragment span.msgnum, 
+#udpSolutionPageFragment samp.msgph { 
+    font-family: "Ubuntu Condensed"; 
+    font-weight: 400; 
+    letter-spacing: 0.59px; 
+    opacity: 1;
+}
+
+#udpSolutionPageFragment strong {
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-weight: 600;
+    letter-spacing: 0.24px;
+    opacity: 1;
+}
+
+#udpSolutionPageFragment em.i, 
+#udpSolutionPageFragment cite.cite { 
+    font-style: italic;
+}
+
+#udpSolutionPageFragment sup, 
+#udpSolutionPageFragment sub{ 
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-size: 0.647em;
+}
+
+#udpSolutionPageFragment a { 
+    text-decoration: none;
+}
+
+#udpSolutionPageFragment a:hover {
+    text-decoration: underline;
+}
+
+#udpSolutionPageFragment a.xref { 
+    color: #0171AD; 
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-weight: 400; 
+    font-size: 1em; 
+    line-height: 1.294em;
+}
+
+
+/* overrides */
+#udpSolutionPageFragment .step {
+    position: static;
+    display: list-item;
+    height: auto; 
+    line-height: 1.294em;
+    padding: 0; 
+    background-color: tra…

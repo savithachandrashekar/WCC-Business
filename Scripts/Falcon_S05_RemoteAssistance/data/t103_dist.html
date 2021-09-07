@@ -1,0 +1,157 @@
+﻿// nolint
+/*{{{
+
+    This is the upstream js file by Geza Dombi (see also: codepen lmi repo)
+    with an added prefix/postfix section (acquire wrapping).
+
+
+    This is a singleton, call init right after the header
+    has been rendered. Do not lint. Peace.
+
+}}}*/
+acquire.define("RSC.ui/commonUiHeader/dist", [ // -{{{
+    "jQuery"
+], function ($) {
+    "use strict";
+    
+    function showdialog() {
+        if ($('.overlay').css('display') === 'none') {
+            $(".overlay").show();
+
+            $(".overlay").click(function () {
+                $(".overlay").hide();
+            });
+        } else {
+            $(".overlay").unbind("click");
+            $(".overlay").hide();
+        }
+
+    }
+
+
+   
+
+    return {
+        init: function () {
+            //----------------------------------------------------------------------------------------------------------------------
+
+
+            function cloneHeaderMenu() {
+                var $headerMenu = $('.header-menu');
+                var $smallScreenHeaderMenuItem = $('<li>').addClass('header-menu-item header-menu-item-skip header-menu-item-more');
+                $smallScreenHeaderMenuItem.append('<a href="#">&hellip;</a>');
+                var $smallScreenHeaderMenuUl = $('<ul>').addClass('header-sub-menu');
+                var $headerMenuItem = $('.header-menu-item');
+
+                $('.header-menu-item:not(.header-menu-item-skip)').each(function () {
+                    var $this = $(this).clone();
+                    $this.removeClass('header-menu-item');
+                    $this.find('.header-sub-menu').removeClass('header-sub-menu').addClass('header-sub-sub-menu');
+
+                    $this.find('.header-sub-mainmenu').removeClass('header-sub-mainmenu').addClass('header-sub-sub-menu');
+
+                    $this.find('>a:eq(0) svg').after('<span class="label">' + $this.attr('data-label') + '</span>');
+
+                    $this.appendTo($smallScreenHeaderMenuUl);
+                });
+
+                if ($headerMenuItem.length > 0) {
+                    $smallScreenHeaderMenuUl.appendTo($smallScreenHeaderMenuItem);
+                    $smallScreenHeaderMenuItem.appendTo($headerMenu);
+                }
+                
+            }
+
+            cloneHeaderMenu();
+            function closeOtherHeaderSubMenus($parent) {
+                $('.header-menu-item').each(function () {
+                    if (this !== $parent.get(0)) {
+                        $('.header-sub-menu.show', this).removeClass('show');
+                        $(this).removeClass('sub-menu-opened');
+
+                        $('.header-sub-mainmenu.show', this).removeClass('show');
+                        $(this).removeClass('sub-menu-opened');
+                    }
+                });
+            }
+
+
+            function closeMainMenus($parent) {
+                $('.header-menu-item').each(function () {
+                    if (this !== $parent.get(0)) {
+                        $('.header-sub-mainmenu.show', this).removeClass('show');
+                        $(this).removeClass('sub-menu-opened');
+                    }
+                });
+                showdialog();
+            }
+
+            function closeMainMenusWithoutShowDialog($parent) {
+                $('.header-menu-item').each(function () {
+                    if (this !== $parent.get(0)) {
+                        $('.header-sub-mainmenu.show', this).removeClass('show');
+                        $(this).removeClass('sub-menu-opened');
+                    }
+                });
+
+                if ($('#overlay').is(':visible')) {
+                    $("#overlay").hide();
+                }
+            }
+
+            $('.header-sub-menu, .header-sub-sub-menu').each(function () {
+                var $parent = $(this).closest('li');
+                $('a:eq(0)', $parent).unbind('click').click(function (e) {
+                    var $parent = $(this).closest('li');
+                    var isExpanded = $(this).attr("aria-expanded") === "true";
+                    e.preventDefault();
+
+                    var $menu = $parent.find('ul');
+
+                    $menu.toggleClass('show');
+                    $parent.toggleClass('sub-menu-opened');
+                    $(this).attr("aria-expanded", isExpanded ? "false" : "true");
+
+                    if ($menu.hasClass('header-sub-menu')) {
+                        closeOtherHeaderSubMenus($parent);
+                        closeMainMenusWithoutShowDialog($parent);
+                    }
+                    });
+            });
+
+            $('.header-sub-mainmenu').each(function () {
+                var $parent = $(this).closest('li');
+                $('a:eq(0)', $parent).unbind('click').click(function (e) {
+                    var $parent = $(this).closest('li');
+                    e.preventDefault();
+
+                    var $menu = $parent.find('> ul');
+
+                    $menu.toggleClass('show');
+                    $parent.toggleClass('sub-menu-opened');
+
+                    if ($menu.hasClass('header-sub-mainmenu')) {
+                        closeOtherHeaderSubMenus($parent);
+                        closeMainMenus($parent);
+                    }
+
+
+
+                });
+
+
+            });
+
+
+            $("#languages-menu-toggler").keydown(function (e) {
+                
+                if (e.which === 13 || e.which === 32) {
+                    e.preventDefault();
+                    $(this).click();
+                }
+            });
+            //----------------------------------------------------------------------------------------------------------------------
+        } // end init
+    }; // end return
+
+}); // end acquire

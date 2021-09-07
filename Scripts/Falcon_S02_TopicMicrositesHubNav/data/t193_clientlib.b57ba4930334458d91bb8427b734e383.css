@@ -1,0 +1,131 @@
+.btnVaChatNow {
+    background-color: #822980 !important;
+    border-radius: 5px !important;
+    width: 132px;
+    font-size: 16px;
+    line-height: 18px;
+    display: inline-block;
+    margin: 20px 0 0 0!important;
+}
+
+.va-callout h4, .va-callout-two-col h4 {
+    font-family: HPSimplifiedLight !important;
+    color: #822980 !important;
+    font-kerning: auto;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    line-height: 1.1em !important;
+
+}
+
+.va-callout, .va-callout-two-col {
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family: HPSimplifiedLight !important;
+}
+
+
+.va-callout p, .va-callout-two-col p {
+    margin-bottom: 5px !important;
+}
+
+.va-callout, .va-callout-two-col {
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family: HPSimplifiedLight !important;
+}
+
+
+.va-callout-two-col:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent !important;
+    border-right: 10px solid transparent !important;
+    border-top: 10px solid transparent !important;
+    border-bottom: 10px solid #fff !important;
+    left: 46% !important;
+    top: -20px !important;
+}
+
+.va-callout-two-col:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent !important;
+    border-right: 10px solid transparent !important;
+    border-top: 10px solid transparent !important;
+    border-bottom: 10px solid #ddd !important;
+    left: 46% !important;
+    top: -21px !important;
+}
+
+.diag-va-two-col > div:first-of-type {
+    margin-bottom: 15px;
+}
+
+
+.chat-now-connectivity-issues .printer-connectivity-chat1{
+    width: 8.33%;
+    float:left;
+}
+
+.chat-now-connectivity-issues .printer-connectivity-chat2{
+    width: 75%;
+    float:left;
+}
+
+
+.chat-now-connectivity-issues .printer-connectivity-chat3{
+   width: 16.66%;
+   float:left;
+}
+
+.chat-now-connectivity-issues .va-callout:before {
+    border-left: 10px solid transparent;
+    border-right: 10px solid #ddd;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    left: -20px;
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+}
+
+.chat-now-connectivity-issues .va-callout:after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    left: -18px;
+    top: 15px;
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+}
+
+
+
+
+@media only screen and (min-width: 951px) {
+    .diag-va img {
+        margin: 0 auto !important;
+    }
+}
+
+
+
+
+
+
+
+
+

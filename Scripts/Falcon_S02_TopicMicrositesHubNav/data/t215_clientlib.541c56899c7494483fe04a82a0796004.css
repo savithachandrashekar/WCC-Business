@@ -1,0 +1,35 @@
+.smsivrBtnArrow{position:absolute;right: 15px;top: 20px;}
+.smsivrBtnTxt {
+    float: left;
+    position: relative;
+    padding-right: 15px;
+}
+
+.smsivrBtnTxtIcon {margin-left: 65px;}
+.smsivrBtnIcon {
+    position: absolute;
+    left: 15px;
+    top: 7.5px;
+    padding: 5px;
+    }
+.smsivrBtnTitle {display:block;font-size: 25px; font-weight: 200;margin-bottom:5px;}
+.smsivrBtnDesc{font-size: 16px; color: #333; line-height: 22px;}
+
+.smsivrBtn{
+    padding: 15px 30px 15px 15px;
+	position: relative;
+    border: 1px solid;
+    border-color: #c2c2c2;
+    background: #fff !important;
+    color: #5A5A5A!important;
+    margin-top: 15px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0px 1px 5px rgba(194, 194, 194, 1);
+ 	min-height: 75px;
+    display: flex;
+    align-items: center;
+    }
+
+.smsivrBtn:hover{border-color: #0096d6;}

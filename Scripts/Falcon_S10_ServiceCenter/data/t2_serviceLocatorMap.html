@@ -1,0 +1,431 @@
+var serviceLocatorMap = {}, markers = [], serviceCentersLength = 0, mapDesktop;
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', labelIndex = 0, zoomMin=10, zoomMax=18, mobileCardIndex=0, storeNum;
+var mobileResultsPageHt = "710px", mobileSingleMapPageHt = "830px";
+function mapCCLSResponse(mapsJson) {
+    // adding alphabet to display on list
+    var source, alphabet, showMobile = false, locationName,i;
+    // nameEllipsisMaxlength contains max no of chars location name will contain without ellipsis
+    // var nameMaxLength contains the max no if characters location name 
+    // will contain without overflowing to next line
+    var nameEllipsisMaxlength = 40, nameMaxLength = 20;
+
+    if(mapsJson == undefined || mapsJson == null) {
+        mapsJson = serviceLocatorMap;
+    }
+    storeNum = mapsJson.serviceCenters.length;
+    for(i=0; i<storeNum; i++) {
+        if(i>=26) {
+            alphabet = i+1;
+        } else {
+            alphabet = (i+10).toString(36).toUpperCase() +". ";
+        }
+        mapsJson.serviceCenters[i].alphabet = alphabet;
+        mapsJson.serviceCenters[i].address = "";
+        // mapsJson.serviceCenters[i].address = mapsJson.serviceCenters[i].street1 + "," + mapsJson.serviceCenters[i].street2  + "," + mapsJson.serviceCenters[i].city + "," + mapsJson.serviceCenters[i].state + "," + mapsJson.serviceCenters[i].zipCd;
+        if((mapsJson.serviceCenters[i].street1 != null) && (mapsJson.serviceCenters[i].street1.length > 0)){
+            mapsJson.serviceCenters[i].address += mapsJson.serviceCenters[i].street1;
+            mapsJson.serviceCenters[i].address += ", ";
+        }
+        
+        if((mapsJson.serviceCenters[i].street2 != null) && (mapsJson.serviceCenters[i].street2.length > 0)){
+            mapsJson.serviceCenters[i].address += mapsJson.serviceCenters[i].street2;
+            mapsJson.serviceCenters[i].address += ", ";
+        }
+        
+        if((mapsJson.serviceCenters[i].city != null) && (mapsJson.serviceCenters[i].city.length > 0)){
+            mapsJson.serviceCenters[i].address += mapsJson.serviceCenters[i].city;
+            mapsJson.serviceCenters[i].address += ", ";
+        }
+        
+        if((mapsJson.serviceCenters[i].state != null) && (mapsJson.serviceCenters[i].state.length > 0)){
+            mapsJson.serviceCenters[i].address += mapsJson.serviceCenters[i].state;
+            mapsJson.serviceCenters[i].address += ", ";
+        }
+        
+        if((mapsJson.serviceCenters[i].zipCd != null) && (mapsJson.serviceCenters[i].zipCd.length > 0)){
+            mapsJson.serviceCenters[i].address += mapsJson.serviceCenters[i].zipCd;
+        }
+        
+        mapsJson.serviceCenters[i].distance = mapsJson.serviceCenters[i].distance + " " + mapsJson.unitDesc;
+
+        // Add ellipsis after 2 lines for location name 
+        locationName = mapsJson.serviceCenters[i].name;
+        mapsJson.serviceCenters[i].ellipsisName = locationName;
+        if(locationName.length >= nameEllipsisMaxlength) {
+            mapsJson.serviceCenters[i].ellipsisName = locationName.substring(0,nameEllipsisMaxlength) + "...";
+        }
+        mapsJson.serviceCenters[i].nameNextLine = "";
+        if(locationName.length <= nameMaxLength) {
+            mapsJson.serviceCenters[i].nameNextLine = "\u00A0";//nbsp
+        }
+        mapsJson.serviceCenters[i].phone = mapsJson.serviceCenters[i].phone.split("/");
+        mapsJson.serviceCenters[i].phone.splice(2);
+
+    } 
+    $("#slcResultsHolderMobile").empty();  
+    if(screen.width > 600) {
+        // compile for desktop
+        source = $("#serviceLocatorMapsTemplate").html();
+        $("#slcResultsHolderDesktop").empty();
+    } else {
+        // compile for mobile
+        showMobile = true;
+        source = $("#serviceLocatorMapsTemplateMobile").html();
+        $("#slcResultsHolderMobile").empty();
+    }
+    var template = Handlebars.compile(source);
+    if(showMobile) {
+        $('#slcResultsHolderMobile').html(template(mapsJson));
+    } else {
+        $('#slcResultsHolderDesktop').html(template(mapsJson));
+    }
+    
+    $("#serviceLocationMapView").removeClass("hide");
+    var serviceLocatorSites = $("#serviceLocatorSites").html();
+    $("#serviceLocatorSites").html(serviceLocatorSites+" ("+storeNum+")");
+    serviceLocatorMap = mapsJson;
+
+    // update address for mobile
+    if(showMobile) {
+        $(".serviceLocFormWrapper").addClass("hide");
+        // update country and city/postal code
+        var country = $("#countrySelectorServLoc_dd_headerValue").html().split("<")[0];
+        var pinOrCity = $("#postalCodeField").val();
+        $("#mobileAddress").html(country + " , " + pinOrCity);
+        // plot maps
+        initMapMobile(mapsJson.serviceCenters, mapsJson.latitude, mapsJson.longitude);
+    } else {
+        //plot map
+        initMap(mapsJson.serviceCenters, mapsJson.latitude, mapsJson.longitude);
+    }
+    
+    // hover on list card
+    $(".list-container-div").on("mouseenter",function() {
+        var id = $(this).attr("id"), selectedIndex;
+        if(id!=undefined) {
+            selectedIndex = id.match(/\d/g);
+            selectedIndex = selectedIndex.join("");
+        }
+        if(markers[selectedIndex]!= undefined) {
+            markers[selectedIndex].setAnimation(google.maps.Animation.BOUNCE);
+            setTimeout(function(){ 
+                if(selectedIndex!=undefined && markers[selectedIndex]!= undefined) {
+                    markers[selectedIndex].setAnimation(null); 
+                }
+            }, 
+            750);
+        }    
+    });
+}
+
+function getDirections(latitude,longitude) {
+    window.open('http://maps.google.com/?hl=en-us&daddr='+latitude+","+longitude,'_blank');
+}
+
+function viewAllMapResults(latitude,longitude) {
+    $("#viewAllMapResults").addClass("hide");
+    deselectList();
+    initMap(null,latitude,longitude);
+}
+
+function selectList(id) {
+    // highlight the current selected list card 
+    $(".list-container-div").removeClass("map-blue-block");        
+    $("#"+id).addClass("map-blue-block");
+    // show the hidden details of the selected card
+    $(".additionInfo").addClass("hide");
+    $("#"+id).children(".list-card-container").siblings(".additionInfo").removeClass("hide");
+    
+    $(".getDirectionsContainer").addClass("hidden");
+    $("#"+id).children(".list-card-container").siblings(".getDirectionsContainer").removeClass("hidden");
+}
+
+function deselectList() {
+    $(".list-container-div").removeClass("map-blue-block") 
+    $(".additionInfo").addClass("hide");
+    $(".getDirectionsContainer").addClass("hidden");
+}
+
+function initMapMobile(serviceCenters, latitude, longitude) {
+    
+    mapMobile = new google.maps.Map(document.getElementById('mapMobile'), {
+        center: new google.maps.LatLng(latitude, longitude),
+        zoom: zoomMin
+    });
+
+    var infoWindow = new google.maps.InfoWindow;
+    markers = [];
+    var marker;
+    serviceCentersLength = serviceCenters.length;
+    for (var i = 0; i < serviceCentersLength; i++) {
+        var latLng = new google.maps.LatLng(serviceCenters[i].latitude, serviceCenters[i].longitude);
+        if(labelIndex<26) {
+            marker = new google.maps.Marker({
+                position: latLng,
+                icon: "http://maps.google.com/mapfiles/marker" + labels[labelIndex++ % labels.length] + ".png",
+                map: mapMobile
+            });
+        } else {
+            marker = new google.maps.Marker({
+                position: latLng,
+                icon: "http://maps.google.com/mapfiles/marker.png",
+                map: mapMobile
+            });
+        }
+        markers.push(marker);
+        marker.addListener('click', function() {
+            selectLocationMobile(this);
+        });
+        $("#serviceLocationMapView").css("height",mobileResultsPageHt);
+
+        setTimeout(function(){ 
+            $('html').animate({
+                scrollTop: 0
+            });
+        }, 100);
+
+    }
+    
+    // click of one card on mobile
+    $(document).on("click",".map-list-card-single",function() { 
+        selectLocationMobile(this);
+    });
+
+    //resetting labels after plotting
+    labelIndex = 0;
+}
+
+// on click of card or marker to show the final view
+function selectLocationMobile(thisReference) {
+    var id, index;
+    if(typeof(thisReference.icon)!="undefined") {
+        id = thisReference.icon.charAt(thisReference.icon.indexOf(".png")-1);
+        index = id.charCodeAt(0) - 65;
+    } else {
+        id = $(thisReference).attr("id");
+        if(id.indexOf("serviceCenter")==-1) {
+            id = $(thisReference).parents(".list-container-div");
+        }
+        index = id.match(/\d/g);
+        index = index.join("");
+}
+
+    mobileCardIndex = index;
+    var marker = markers[index];
+    mapMobile.panTo(marker.getPosition());
+    mapMobile.setZoom(zoomMax);
+
+    // hide all cards
+    $(".map-list-card-single").addClass("hide");
+    // show one selected card
+    $("#"+index+"serviceCenter").removeClass("hide");
+    // show view all result link 
+    $("#viewAllMapResultsMobile").removeClass("hide");
+    // hiding the term sites and the no in front of it
+    $("#serviceLocatorSites").addClass("hide");
+    // show additionInfo like email id and get directions
+    $("#"+index+"serviceCenter .additionInfo").removeClass("hide");
+    $("#"+index+"serviceCenter .getDirectionsContainer").removeClass("hidden");
+    // make the last card expanded
+    $(".map-list-card-container").addClass("singleMapCard");
+    // alignment of location card
+    $(".map-list-card-container").scrollLeft(0);
+    setTimeout(function(){ 
+        $("#serviceLocationMapView").css("height",mobileSingleMapPageHt);
+        $('html').animate({
+            scrollTop: 0
+        });
+    }, 100);
+    $(document).off("click",".map-list-card-single");
+    $("#mapMobile").css("height","190px");
+    $(".map-list-card-single p").css("color","#000000");
+}
+
+function viewAllMapResultsMobile() {
+    // hide view all result link 
+    $("#viewAllMapResultsMobile").addClass("hide");
+    // show all cards back
+    $(".map-list-card-single").removeClass("hide");
+    // showing the term sites and the no in front of it
+    $("#serviceLocatorSites").removeClass("hide");
+    // hide additionInfo like email id and get directions
+    $(".additionInfo").addClass("hide");
+    $(".getDirectionsContainer").addClass("hidden");
+    // remove the styling applied for making the selected card expanded
+    $(".map-list-card-container").removeClass("singleMapCard");
+    // set the default ht back
+    $("#serviceLocationMapView").css("height",mobileResultsPageHt);
+    mapMobile.setZoom(zoomMin);
+    // scroll to the selected card back
+    $(".map-list-card-container").scrollTo($("#"+mobileCardIndex+"serviceCenter"));
+    // adjust to bring card to center
+    setTimeout(function(){ 
+        var currentScroll = $(".map-list-card-container").scrollLeft();
+        // if not last card
+        if(storeNum-1 != mobileCardIndex) {
+            currentScroll = currentScroll-55;
+        }
+        $(".map-list-card-container").scrollLeft(currentScroll);
+    }, 100);
+    // click of one card on mobile
+    $(document).on("click",".map-list-card-single",function() { 
+        selectLocationMobile(this);
+    });
+    $("#mapMobile").css("height","500px");
+    $(".map-list-card-single p").removeAttr("style");
+}
+
+function changeLocationMobile() {
+    $(".serviceLocFormWrapper").removeClass("hide");
+    $("#serviceLocationMapView").addClass("hide");
+}
+
+function showListCardMobile() {
+    for(i=0; i<serviceCentersLength; i++) {
+        $("#mapMobile").append($("#"+i+"serviceCenter").html());
+    }
+}
+
+function initMap(serviceCenters, latitude, longitude) {
+    if(serviceCenters == null) {
+        serviceCenters = serviceLocatorMap.serviceCenters;
+    }
+    if(latitude == null) {
+        latitude = serviceLocatorMap.latitude;
+    }
+    if(longitude == null) {
+        longitude = serviceLocatorMap.longitude;
+    }     
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: new google.maps.LatLng(latitude, longitude),
+        zoom: zoomMin
+    });
+
+    markers = [];
+
+    var infowindow = new google.maps.InfoWindow({
+        maxWidth: 400
+    });
+
+    for (var i = 0; i < serviceCenters.length; i++) {
+        var latLng = new google.maps.LatLng(serviceCenters[i].latitude, serviceCenters[i].longitude);
+        var name = serviceCenters[i].name;
+        var address = serviceCenters[i].address;
+        var alphabet = serviceCenters[i].alphabet;
+        var email = serviceCenters[i].email;
+        var phone = serviceCenters[i].phone;
+        var distance = serviceCenters[i].distance;
+
+         // creating on click 
+         var infowincontent = document.createElement('div');
+         infowincontent.setAttribute("id", i+"infowincontent");
+
+         var nameContainer = document.createElement('div');
+         var alphabetSpan = document.createElement('span');
+         alphabetSpan.setAttribute("class","alphabet");
+         alphabetSpan.textContent = alphabet;
+         var strong = document.createElement('strong');
+         strong.textContent = name;
+         var distanceSpan = document.createElement('span');
+         distanceSpan.textContent = "("+distance+")";
+         nameContainer.appendChild(alphabetSpan);
+         nameContainer.appendChild(strong);
+         nameContainer.appendChild(distanceSpan);
+         infowincontent.appendChild(nameContainer);
+
+         var addressSpan = document.createElement('div');
+         addressSpan.textContent = address;
+         infowincontent.appendChild(addressSpan);
+
+        //  var phoneSpan = document.createElement('div');
+        //  phoneSpan.textContent = phone;
+        //  infowincontent.appendChild(phoneSpan);
+
+        //  var emailSpan = document.createElement('a');
+        //  emailSpan.textContent = email;
+        //  emailSpan.setAttribute("href","mailto:"+email);
+        //  infowincontent.appendChild(emailSpan);
+
+        //  var noteSpan = document.createElement('div');
+        //  noteSpan.textContent = serviceCenters[i].note;
+        //  infowincontent.appendChild(noteSpan);
+
+        addMarker(latLng, infowincontent, infowindow); 
+    }
+    
+    function addMarker(latLng, infowincontent, infowindow) {
+        var marker;
+        if(labelIndex<26) {
+            marker = new google.maps.Marker({
+                position: latLng,
+                icon: "http://maps.google.com/mapfiles/marker" + labels[labelIndex++ % labels.length] + ".png",
+                map: map
+            });
+        } else {
+            marker = new google.maps.Marker({
+                position: latLng,
+                icon: "http://maps.google.com/mapfiles/marker.png",
+                map: map
+            });
+        }
+        
+        markers.push(marker);
+
+        marker.addListener('click', function() {
+            // open marker and show info
+            infowindow.setContent(infowincontent);
+            infowindow.open(map, marker);
+            // highlight selected pin on list
+            var selectedIndex = $(infowincontent).attr("id");
+            selectedIndex = selectedIndex.match(/\d/g);
+            selectedIndex = selectedIndex.join("");
+            selectList(selectedIndex+"serviceCenter");
+             // scroll the list to show the selected tile 
+             if(storeNum-1 != selectedIndex) {
+                //$("#"+selectedIndex+"serviceCenter .list-card-container").focus();
+                //document.getElementById(selectedIndex+"serviceCenter").scrollIntoView();
+                var target = document.getElementById(selectedIndex+"serviceCenter");
+                target.parentNode.scrollTop = target.offsetTop - target.parentNode.offsetTop;
+            } else {
+                $('.list-container').scrollTop($('.list-container')[0].scrollHeight);
+            }
+        });
+    }
+
+    //on clicking/selecting card of location from list
+    $(document).on("click",".list-container-div",function(e) {
+        var id = $(this).attr("id");
+        var latitude = $(this).data("latitude");
+        var longitude = $(this).data("longitude");
+        
+        if(id.indexOf("serviceCenter")==-1) {
+            id = $(this).parents(".list-container-div");
+        }
+        var index = id.match(/\d/g);
+        index = index.join("");
+        
+        selectList(id);
+        $("#viewAllMapResults").removeClass("hide");
+        var marker = markers[index];
+        map.panTo(marker.getPosition());
+        new google.maps.event.trigger(marker,"click");
+        map.setZoom(zoomMax);
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+    });
+
+    // stop propogation for click on email event.
+    $(document).on("click",".list-container-div a.map-email",function(e) {
+        e.stopPropagation();
+    });
+
+    //resetting labels after plotting
+    labelIndex = 0;
+}
+
+$(window).on("load", function(){
+    $('html').animate({
+        scrollTop: 0
+    }, 'slow');
+});

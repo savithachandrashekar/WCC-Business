@@ -1,0 +1,1258 @@
+/* Import Ubuntu Condensed font, used by inline elements */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+/* Do not Modifiy This CSS */
+/* Solution Page specific CSS */
+/* Starts here */
+/* Hyprlink Style */
+#udpDocumentFragment #udpSolutionPageFragment .fallback-content p.fallback-url{
+    font-family: HPSimplified;
+}
+#udpDocumentFragment #udpSolutionPageFragment a{
+    font-family: HPSimplified;
+    font-size:16px;
+    color:#165dba!important;
+    text-decoration: none;
+    padding:0px!important;
+}
+#udpDocumentFragment #udpSolutionPageFragment a:hover {
+    color:#114284!important;
+    text-decoration: underline;
+    padding:0px;
+}
+#udpDocumentFragment #udpSolutionPageFragment a:visited, #udpDocumentFragment #udpSolutionPageFragment a:active  {
+    color:rgba(12,46,96,1)!important;
+    text-decoration: underline;
+    padding:0px;
+}
+#udpDocumentFragment #udpSolutionPageFragment a:focus {
+    color:#114284!important;
+    text-decoration: underline;
+    padding:0px;
+    box-shadow: 0 0 8px 0 #0096d6;
+    outline: none;
+}
+#udpDocumentFragment #udpSolutionPageFragment a:disabled{
+    color: #ccc!important;
+    text-decoration: none;
+    padding:0px;
+}
+
+#udpDocumentFragment #udpSolutionPageFragment a.xref{
+    font-family: HPSimplifiedLight;
+} 
+#udpDocumentFragment #udpSolutionPageFragment a.xref:hover, #udpDocumentFragment #udpSolutionPageFragment a.xref:active, #udpDocumentFragment #udpSolutionPageFragment a.xref:focus, #udpDocumentFragment #udpSolutionPageFragment a.xref:visited {
+    text-decoration: none;
+    color:#114284!important;
+}
+#udpDocumentFragment #udpSolutionPageFragment a.xref:focus{
+    outline: none;
+	box-shadow: 0px 0px 6px #0096D6;
+	text-decoration: none;
+	color: #114284;
+}
+/* Common Button Style */
+#udpDocumentFragment #udpSolutionPageFragment button.applicationLauncher,#udpDocumentFragment #udpSolutionPageFragment a.smart-content-download-link {
+    font-family: HPSimplified;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    border-radius:4px;
+    padding:6.5px 16px;
+}
+#udpDocumentFragment #udpSolutionPageFragment a.smart-content-download-link {
+    padding:9.5px 16px!important;
+}
+/* primary button style */
+#udpDocumentFragment #udpSolutionPageFragment button.applicationLauncher,#udpDocumentFragment #udpSolutionPageFragment a.smart-content-download-link  {
+    color: #fff!important;
+    background-color: #165DBA;
+    border: 1px solid #165DBA;
+}
+#udpDocumentFragment #udpSolutionPageFragment button.applicationLauncher:hover, #udpDocumentFragment #udpSolutionPageFragment a.smart-content-download-link:hover {
+    background-color: #114284;
+    border: 1px solid #114284;
+    text-decoration: none;
+}
+#udpDocumentFragment #udpSolutionPageFragment button.applicationLauncher:visited, #udpDocumentFragment #udpSolutionPageFragment button.applicationLauncher:active,#udpDocumentFragment #udpSolutionPageFragment a.smart-content-download-link:visited, #udpDocumentFragment #udpSolutionPageFragment a.smart-content-download-link:active {
+    background-color: rgba(12,46,96,1);
+    border: 1px solid rgba(12,46,96,1);
+    text-decoration: none;
+}
+
+#udpDocumentFragment #udpSolutionPageFragment button.applicationLauncher:focus, #udpDocumentFragment #udpSolutionPageFragment a.smart-content-download-link:focus {
+    background-color: #165DBA;
+    outline: none;
+    border: 1px solid #165DBA;
+    box-shadow: 0 0 8px 0 #0096d6;
+    text-decoration: none;
+}
+
+
+#udpDocumentFragment #udpSolutionPageFragment p{
+    color:#000;
+}
+
+#udpDocumentFragment #udpSolutionPageFragment button.applicationLauncher {
+    margin-top: 10px;
+}
+#udpDocumentFragment #udpSolutionPageFragment a.smart-content-download-link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-container {
+    display: flex;
+    justify-content: center;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-container .video-card-slider {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f2f2f2;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-slider {
+    width: 100%;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .thumbnail-container {
+    width: 30%;
+}
+#udpDocumentFragment #udpSolutionPageFragment #udpDocumentFragment #udpSolutionPageFragment.solution-video-container .card-container {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-container .video-card-slider .card-container .thumbnail-container a {
+    padding: 0;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .linkThumbnail {
+    display: block;
+    position: relative;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .details-container {
+    width: 70%;
+    padding: 12px 30px;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .details-container .content .videoHeading {
+    padding-bottom: 5px;
+    
+}
+#udpDocumentFragment #udpSolutionPageFragment h2.expandableHeading {
+    padding-left: 0;
+}
+#udpDocumentFragment #udpSolutionPageFragment .playSvgContainer {
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    padding-left: 9px;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-container .video-card-slider .card-container .thumbnail-container a.linkThumbnail:hover .playIconContainer {
+    background: #0096d6;
+}
+#udpDocumentFragment #udpSolutionPageFragment .playIconContainer {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgba(0,0,0,.45);
+    top: 50%;
+    margin-top: -35px!important;
+    margin-left: -35px!important;
+    left: 50%;
+    right: 0;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+    display: table;
+    margin: 0;
+}
+@media only screen and (max-width: 768px) {
+    
+   #udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-container .video-card-slider .card-container .thumbnail-container a.linkThumbnail {
+        padding: 0px;
+   }
+   #udpDocumentFragment #udpSolutionPageFragment button.applicationLauncher {
+        display: none;
+   }
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-slider {
+    width: 100%;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-heading {
+    position: relative;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-heading h3 {
+    font-family: HPSimplifiedLight;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.13;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-container {
+    display: flex;
+    justify-content: center;
+}
+#udpDocumentFragment #udpSolutionPageFragment  .solution-video-container .video-card-container .video-card-slider {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f2f2f2;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-container .video-card-slider .card-container .thumbnail-container a {
+    padding: 0px;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .video-card-container .video-card-slider .card-container .thumbnail-container a.linkThumbnail:hover .playIconContainer {
+    background: #0096d6;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .linkThumbnail {
+    display: block;
+    position: relative;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .card-container {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .details-container {
+    width: 70%;
+    padding: 12px 30px;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .thumbnail-container {
+    width: 30%;
+}
+#udpDocumentFragment #udpSolutionPageFragment .solution-video-container .details-container .content .videoHeading {
+    padding-bottom: 5px;
+    font-family: HPSimplified;
+    font-size: 14px;
+}
+#udpDocumentFragment #udpSolutionPageFragment .playIconContainer {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.45);
+    top: 50%;
+    margin-top: -35px !important;
+    margin-left: -35px !important;
+    left: 50%;
+    right: 0px;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+    display: table;
+    margin: 0;
+}
+#udpDocumentFragment #udpSolutionPageFragment .playSvgContainer {
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    padding-left: 9px;
+}
+#udpDocumentFragment #udpSolutionPageFragment .playSvg {
+    fill: #fff;
+    height: 30px;
+    width: 25px;
+}
+@media only screen and (max-width: 768px) {
+    #udpDocumentFragment #udpSolutionPageFragment .solution-video-container .card-container {
+        flex-direction: row;
+   }
+   #udpDocumentFragment #udpSolutionPageFragment .solution-video-container .card-container .thumbnail-container {
+        order: 2;
+        width: 100%;
+   }
+   #udpDocumentFragment #udpSolutionPageFragment .solution-video-container .card-container .details-container {
+        order: 1;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+   }
+}
+#udpDocumentFragment #udpSolutionPageFragment .feedback_solution {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
+#udpDocumentFragment #udpSolutionPageFragment .rtl-smart-content .playIconContainer {
+    right: 38%;
+    left: 0px;
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    #udpSolutionPageFragment .solution-page-video-main-container .video-card-container {
+        justify-content: center;
+        display: contents;
+   }
+    #udpSolutionPageFragment .solution-page-video-main-container .video-card-container .video-card-slider {
+        max-width: 345px;
+        height: 130px !important;
+        padding: 11px 5px 10px 15px;
+        background-color: #fff;
+   }
+    #udpSolutionPageFragment .solution-page-video-main-container .video-heading h3 {
+        font-family: HPSimplifiedLight;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.1;
+        color: #000;
+        padding-left: 20px;
+        padding-right: 20px;
+   }
+    #udpSolutionPageFragment .solution-page-video-main-container .thumbnail-container {
+        flex-basis: 160px;
+   }
+    #udpSolutionPageFragment .solution-page-video-main-container .img {
+        width: 130px;
+        height: 70px;
+   }
+}
+@media only screen and (max-width: 480px) {
+    #udpSolutionPageFragment .solution-page-video-main-container .video-card-container {
+        justify-content: center;
+        display: contents;
+   }
+    #udpSolutionPageFragment .solution-page-video-main-container .video-card-container .video-card-slider {
+        max-width: 345px;
+        height: 130px !important;
+        margin: 21px 0 50px;
+        padding: 11px 5px 10px 15px;
+        box-shadow: 0 5px 22px 0 rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+   }
+    #udpSolutionPageFragment .solution-page-video-main-container .video-heading h3 {
+        font-family: HPSimplifiedLight;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.1;
+        color: #000;
+        padding-left: 20px;
+        padding-right: 20px;
+   }
+    #udpSolutionPageFragment .solution-page-video-main-container .thumbnail-container {
+        flex-basis: 160px;
+   }
+    #udpSolutionPageFragment .solution-page-video-main-container .img {
+        width: 130px;
+        height: 70px;
+   }
+    #udpSolutionPageFragment .swiper-custom-pagination .swiper-button-prev, #udpSolutionPageFragment .swiper-custom-pagination .swiper-button-next {
+        position: relative;
+        left: auto !important;
+        right: auto !important;
+        margin: -4px 8px 0px 8px;
+        background-size: 15px 15px;
+        outline: none;
+   }
+}
+#udpDocumentFragment #udpSolutionPageFragment .fallback-content a span{
+    font-family: HPSimplifiedLight;
+    color:#165dba
+}
+/* Ends here */
+
+
+/* CSS Related WEBSPHERE Document */
+#udpDocumentFragment {
+    color: #000000;
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-size: 17px;
+}
+
+#udpDocumentFragment .title {
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 300;         
+    font-size: 1.882em; 
+    line-height: 1.094em; 
+    letter-spacing: 0.64px; 
+    margin: 0.67em 0;
+}
+
+#udpDocumentFragment h1.topictitle1,
+#udpDocumentFragment h2.topictitle2,
+#udpDocumentFragment h3.topictitle3,
+#udpDocumentFragment h4.topictitle4,
+#udpDocumentFragment .sectiontitle,
+#udpDocumentFragment h5.topictitle5,
+#udpDocumentFragment h6.topictitle6 {
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 400;
+    letter-spacing: 0.24px; 
+    color: #000000; 
+    opacity: 1;
+    box-sizing: content-box;
+    padding: 0px;
+}
+
+#udpDocumentFragment h1.topictitle1 {
+    font-size: 1.882em; 
+    line-height: 1.25em; 
+    margin: 0.67em 0 1.5em; 
+}
+  
+#udpDocumentFragment h2.topictitle2 { 
+    font-size: 1.588em; 
+    line-height: 1.764em; 
+    margin: 0.83em 0; 
+}
+  
+#udpDocumentFragment h3.topictitle3 { 
+    font-size: 1.176em; 
+    line-height: 1.352em; 
+    margin: 1em 0;
+    /*This overrides an important rule from mashup:ra*/
+    margin-bottom: 1em !important;
+}
+
+#udpDocumentFragment h4.topictitle4,
+#udpDocumentFragment .sectiontitle
+{ 
+    font-size: 1.058em; 
+    line-height: 1.235em; 
+    margin: 1.33em 0; 
+    /*This overrides an important rule from mashup:ra*/
+    margin-bottom: 1.33em !important;
+}
+  
+#udpDocumentFragment h5.topictitle5 { 
+    font-size: 0.941em; 
+    line-height: 1.117em; 
+    margin: 1.67em 0; 
+}
+  
+#udpDocumentFragment h6.topictitle6 { 
+    font-size: 0.823em; 
+    line-height: 1.117em;
+    margin: 2.33em 0;
+    text-transform: uppercase; 
+}
+
+#udpDocumentFragment p.p, 
+#udpDocumentFragment p.cmd, 
+#udpDocumentFragment p.shortdesc {
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.294em;
+    color:   rgb(0, 0, 0);
+    margin: 1em 0;
+    padding: 0;
+    letter-spacing: 0.25px;
+}
+
+#udpDocumentFragment div.note {
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    padding: 0.588em 1.059em;
+    margin-top: 0.824em;
+    opacity: 1;
+}
+
+#udpDocumentFragment li div.note {
+    margin: 0.882em 0;
+}
+
+#udpDocumentFragment div.caution span.cautiontitle, 
+#udpDocumentFragment div.important span.importanttitle {
+    background: transparent url('/wps/hp-support-product-portlets/resources/images/icon-alert_udp.svg') 0% 0% no-repeat padding-box;
+    padding-left: 1.765em;    
+}
+
+#udpDocumentFragment div.warning span.warningtitle, 
+#udpDocumentFragment div.danger span.dangertitle {
+    background: transparent url('/wps/hp-support-product-portlets/resources/images/icon-bullhorn_udp.svg') 0% 0% no-repeat padding-box;
+    padding-left: 1.765em;    
+}
+
+/*For RTL, admonishment icons are changed to the right*/
+html[dir="rtl"] #udpDocumentFragment div.caution span.cautiontitle,
+html[dir="rtl"] #udpDocumentFragment div.important span.importanttitle,
+html[dir="rtl"] #udpDocumentFragment div.warning span.warningtitle,
+html[dir="rtl"] #udpDocumentFragment div.danger span.dangertitle {
+    padding-left: 0;
+    padding-right: 1.765em;
+    background-position-x: right;
+}
+
+#udpDocumentFragment span.notetitle, 
+#udpDocumentFragment span.tiptitle, 
+#udpDocumentFragment span.noticetitle,
+#udpDocumentFragment span.cautiontitle, 
+#udpDocumentFragment span.warningtitle, 
+#udpDocumentFragment span.dangertitle, 
+#udpDocumentFragment span.importanttitle {
+    font-family: "HPSimplified", "HP Simplified";
+}
+
+#udpDocumentFragment span.notetitle, 
+#udpDocumentFragment span.tiptitle, 
+#udpDocumentFragment span.noticetitle {
+    color: black;
+    text-transform: uppercase;
+    line-height: 1.294em;
+    /*Override general styles*/
+    padding: 0px;
+    display: inline-block;
+    vertical-align: baseline;
+    min-height: 1.294em;
+}
+
+#udpDocumentFragment span.cautiontitle, 
+#udpDocumentFragment span.warningtitle, 
+#udpDocumentFragment span.dangertitle, 
+#udpDocumentFragment span.importanttitle {
+    line-height: 1.294em;
+    color: #B62237;
+    text-transform: uppercase;
+    display: inline-block;
+    min-height: 1.294em;
+}
+
+#udpDocumentFragment div.note p:first-of-type {
+    display:inline;
+}
+
+#udpDocumentFragment div.note p.p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*  Figures  */
+#udpDocumentFragment p.figcap,
+#udpDocumentFragment p.listtitle
+{
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#udpDocumentFragment caption {
+    text-align: left;
+}
+
+html[dir="rtl"] #udpDocumentFragment caption {
+    text-align: right;
+}
+
+#udpDocumentFragment p.figcap,
+#udpDocumentFragment span.tablecap, 
+#udpDocumentFragment p.listtitle
+{
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 400;
+    font-size: 0.941em; 
+    line-height: 1.188em; 
+    color: #000000; 
+    letter-spacing: 0.28px; 
+    text-transform: uppercase; 
+    opacity: 1;
+}
+
+/*   Lists  */
+#udpDocumentFragment ol.ol, 
+#udpDocumentFragment ul.ul { 
+    color: #000000; 
+    margin-left: 0em; 
+    margin-top: 0em; 
+    margin-bottom: 1.059em; 
+    padding-left: 1.176em;
+    /*overrides the font-family from .body*/
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+}
+
+#udpDocumentFragment ol.ol li.li, 
+#udpDocumentFragment ul.ul li.li { 
+    margin-bottom: 0.118em;
+}
+
+#udpDocumentFragment #udpSolutionPageFragment ul.ul {
+    list-style-type: disc;
+}
+
+html[dir="rtl"] #udpDocumentFragment ol.ol, 
+html[dir="rtl"] #udpDocumentFragment ul.ul { 
+    padding-right: 1.176em;
+    padding-left: 0;
+}
+
+#udpDocumentFragment li ol.ol,
+#udpDocumentFragment li ul.ul {
+    margin: 0.882em 0;
+}
+
+#udpDocumentFragment li div{ 
+    margin-top: 0em; 
+    margin-bottom: 0em;
+}
+
+#udpDocumentFragment li p.p, 
+#udpDocumentFragment li p.cmd { 
+    font-size: 1em; 
+    line-height: 1.294em;
+    margin-top: 0em; 
+    margin-bottom: 0em;
+}
+
+/*  Figures  */
+#udpDocumentFragment div.fig { 
+    margin-top: 1.176em; 
+    margin-bottom: 1.176em;
+}
+
+#udpDocumentFragment div.image img.image { 
+    max-width: 100%; 
+    margin: 0.588em 0;
+}
+
+#udpDocumentFragment p img.image {
+    display: inline;
+}
+
+#udpDocumentFragment div.fig table.simpletable { 
+    font-size: 0.824em; 
+    border: none; 
+    margin-left: 1.429em;
+}
+
+#udpDocumentFragment div.fig table.simpletable thead tr th, 
+#udpDocumentFragment div.fig table.simpletable tbody tr td{ 
+    border: none; 
+    padding: 0.357em;
+}
+
+#udpDocumentFragment div.fig table.simpletable thead tr th p.p { 
+    font-weight: 400 !important;
+}
+
+/* video */
+#udpDocumentFragment div.video {
+    background-color: #F3F3F3;
+    padding: 0.882em;
+}
+
+#udpDocumentFragment div.videoHeading {
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 400;
+    font-size: 0.934em; /*Based on 15px from mashup*/
+    line-height: 1.214em;
+    letter-spacing: 0.25px;
+}
+
+#udpDocumentFragment div.videoName {
+    font-family: "HPSimplified", "HP Simplified";
+    font-weight: 400;
+    font-size: 1.2em; /*Based on 15px from mashup*/
+    line-height: 1.111em;
+    letter-spacing: 0.25px;
+}
+
+#udpDocumentFragment div.videoDesc {
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-weight: 400;
+    font-size: 1.133em; /*Based on 15px from mashup*/
+    line-height: 1.117em;
+    letter-spacing: 0.25px;
+}
+
+
+/*  tables  */
+
+#udpDocumentFragment div.tablenoborder {
+    margin-top: 1.765em;
+    overflow-x: auto;
+}
+
+#udpDocumentFragment table caption {
+    margin-bottom: 0.294em;
+}
+
+#udpDocumentFragment table, 
+#udpDocumentFragment table thead tr th,
+#udpDocumentFragment table tbody tr td { 
+    border-color: #CCCCCC;
+}
+
+#udpDocumentFragment table thead tr th {    
+    padding: 0.883em;
+    background: #F3F3F3 0% 0% no-repeat padding-box; 
+}
+
+#udpDocumentFragment table thead tr th * { 
+    font-family: "HPSimplified", "HP Simplified";
+    margin-top: 0em; 
+    margin-bottom: 0em; 
+    font-weight: 400 !important;
+}
+
+#udpDocumentFragment table thead tr th p.p { 
+    font-family: "HPSimplified", "HP Simplified";
+}
+
+#udpDocumentFragment table.simpletable thead tr th * { 
+    margin-top: 0em; 
+    margin-bottom: 0em; 
+    font-weight: 300 !important;
+}
+
+#udpDocumentFragment table thead tr th * {
+    margin: 0em !important;
+}
+
+#udpDocumentFragment table tbody tr td * {
+    margin: 0em !important;
+}
+
+#udpDocumentFragment table tbody tr td {
+    padding: 0.883em; 
+}
+
+#udpDocumentFragment div.fn { 
+    margin-top: 0.294em;
+} 
+
+#udpDocumentFragment div.fn p{ 
+    display: inline; 
+    font-size: 0.824em;
+}
+
+/*  inline elements  */
+#udpDocumentFragment kbd.userinput, 
+#udpDocumentFragment span.controlpanel, 
+#udpDocumentFragment span.uicontrol, 
+#udpDocumentFragment samp.controlpanelmessage, 
+#udpDocumentFragment span.keyboard, 
+#udpDocumentFragment samp.uimessage, 
+#udpDocumentFragment code.codeph, 
+#udpDocumentFragment span.wintitle, 
+#udpDocumentFragment span.msgnum, 
+#udpDocumentFragment samp.msgph { 
+    font-family: "Ubuntu Condensed"; 
+    font-weight: 400; 
+    letter-spacing: 0.59px; 
+    opacity: 1;
+}
+
+#udpDocumentFragment strong {
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-weight: 600;
+    letter-spacing: 0.24px;
+    opacity: 1;
+}
+
+#udpDocumentFragment em.i, 
+#udpDocumentFragment cite.cite { 
+    font-style: italic;
+}
+
+#udpDocumentFragment sup, 
+#udpDocumentFragment sub{ 
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-size: 0.647em;
+}
+
+#udpDocumentFragment a { 
+    text-decoration: none;
+}
+
+#udpDocumentFragment a:hover {
+    text-decoration: underline;
+}
+
+#udpDocumentFragment a.xref { 
+    color: #0171AD; 
+    font-family: "HPSimplifiedLight", "HP Simplified Light";
+    font-weight: 400; 
+    font-size: 1em; 
+    line-height: 1.294em;
+}
+
+
+/* overrides */
+#udpDocumentFragment .step {
+    position: static;
+    display: list-item;
+    height: auto; 
+    line-height: 1.294em;
+    padding: 0; 
+    background-color: transparent; 
+    color: #000000;
+}
+
+#udpDocumentFragment .step:hover {
+    color: #000000;
+}
+
+#udpDocumentFragment .step::after {
+    content: none;
+}
+
+#udpDocumentFragment li {
+    list-style-type: inherit;
+}
+
+#udpDocumentFragment table {
+    margin-bottom: 0;
+}
+
+#udpDocumentFragment em {
+    font-family: inherit;
+}
+
+#udpDocumentFragment sup {
+    font-weight: 300;
+    line-height: 2em;
+    position: static;
+    vertical-align: super;
+}
+
+#udpDocumentFragment sub {
+    line-height: 2em;
+    position: static;
+    vertical-align: sub;
+}
+
+#udpDocumentFragment .row::before,
+#udpDocumentFragment .row::after {
+    content: inherit;
+}
+
+#udpDocumentFragment .table {
+    width: inherit;
+}
+
+/* expandable divs */
+div.accordionIconContainer {
+    display: none;
+}
+
+#udpDocumentFragment div.expandable {
+    padding: 0;
+    border-bottom: 1px solid #e8e8e8;
+    margin-left: 0;
+}
+
+#udpDocumentFragment div.expandable div.expandable {
+    margin-bottom: 15px;
+}
+
+#udpDocumentFragment h2.expandableHeading,
+#udpDocumentFragment h3.expandableHeading,
+#udpDocumentFragment h4.expandableHeading,
+#udpDocumentFragment h5.expandableHeading,
+#udpDocumentFragment h6.expandableHeading {
+    font-family: "HPSimplified", "HP Simplified";
+    color: #000000; 
+    opacity: 1;
+    box-sizing: content-box;
+    font-weight: 400;
+}
+
+#udpDocumentFragment h2.expandableHeading { 
+    font-size: 1.588em;
+    line-height: 1.111em; 
+    letter-spacing: 0.54px; 
+    background-size: 1.037em 1.037em;
+    padding-top: 0.370em;
+    padding-bottom: 0.370em;
+    padding-left: 1.778em;
+}
+  
+#udpDocumentFragment h3.expandableHeading { 
+    font-size: 1.176em; 
+    line-height: 1.150em; 
+    letter-spacing: 0.4px; 
+    background-size: 1.400em 1.400em;
+    padding-top: 0.500em;
+    padding-bottom: 0.500em;
+    padding-left: 2.400em;
+}
+  
+#udpDocumentFragment h4.expandableHeading { 
+    font-size: 1.059em; 
+    line-height: 1.167em; 
+    letter-spacing: 0.36px; 
+    background-size: 1.333em 1.333em;
+    padding-top: 0.556em;
+    padding-bottom: 0.556em;
+    padding-left: 2.667em;
+}
+  
+#udpDocumentFragment h5.expandableHeading { 
+    font-size: 0.941em; 
+    line-height: 1.188em; 
+    letter-spacing: 0.29px; 
+    background-size: 1.500em 1.500em;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em;
+    padding-left: 3em;
+}
+
+html[dir="rtl"] #udpDocumentFragment h2.expandableHeading { 
+    padding-right: 1.778em;
+    padding-left: 0;
+}
+
+html[dir="rtl"] #udpDocumentFragment h3.expandableHeading { 
+    padding-right: 2.4em;
+    padding-left: 0;
+}
+
+html[dir="rtl"] #udpDocumentFragment h4.expandableHeading { 
+    padding-right: 2.667em;
+    padding-left: 0;
+}
+
+html[dir="rtl"] #udpDocumentFragment h5.expandableHeading { 
+    padding-right: 3em;
+    padding-left: 0;
+}
+
+#udpDocumentFragment div.expandable .expandableHeading {
+    cursor: pointer;
+    margin: 0;
+    margin-bottom: 0 !important;
+    display: table;
+    width: 100%;
+    background-image: url('/wps/hp-support-product-portlets/resources/images/expand-plus_udp.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position-y: center;
+    box-sizing: border-box;
+}
+
+html[dir="rtl"] #udpDocumentFragment div.expandable .expandableHeading {
+    background-position: right;
+}
+
+#udpDocumentFragment div.expandable .expandableHeading:hover {
+    background-image: url('/wps/hp-support-product-portlets/resources/images/expand-plus-hover_udp.svg');
+}
+
+#udpDocumentFragment :not(.expandable) + .expandable .expandableHeading {
+    border-top: 1px solid #e8e8e8;
+}
+
+#udpDocumentFragment div.expandable .expandableHeading.toggled {
+    background-image: url('/wps/hp-support-product-portlets/resources/images/expand-plus-rotated_udp.svg');
+}
+
+#udpDocumentFragment div.collapse {
+    display: none;
+}
+
+#udpDocumentFragment div.in {
+    display: block;
+}
+
+#udpDocumentFragment div.expandable div.body {
+    padding-left: 2.824em;
+}
+
+html[dir="rtl"] #udpDocumentFragment div.expandable div.body {
+    padding-left: 0;
+    padding-right: 2.824em;
+}
+
+/*
+ * SEQUENCE model
+ * Note: px used instead of em, this is fixed */
+#udpDocumentFragment div.sequence {
+    counter-reset: seq-counter;
+}
+
+#udpDocumentFragment div.sequence div.topic {
+    counter-increment: seq-counter;
+}
+
+#udpDocumentFragment div.sequence > div.topic {
+    margin-top: 35px;
+}
+
+#udpDocumentFragment div.sequence > div.topic::before {
+    text-align: center;
+    content: counter(seq-counter);
+    background-color: #F3F3F3;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;;
+    font-size: 35px;
+    line-height: 60px;
+    font-weight: 300;
+    position: absolute;
+}
+
+#udpDocumentFragment div.sequence > div.topic > h2,
+#udpDocumentFragment div.sequence > div.topic > h3,
+#udpDocumentFragment div.sequence > div.topic > h4,
+#udpDocumentFragment div.sequence > div.topic > h5,
+#udpDocumentFragment div.sequence > div.topic > h6 {
+    line-height: 60px;
+    margin-bottom: 0;
+}
+
+/*Overriding margin-bottom for h3 and h4 */
+#udpDocumentFragment div.sequence > div.topic > h3,
+#udpDocumentFragment div.sequence > div.topic > h4 {
+    margin-bottom: 0 !important;
+}
+
+/* Fix for p elements right after the title,
+ * default margin-top was included and created
+ * incorrect spacing between title and body
+*/
+#udpDocumentFragment div.sequence > div.topic > h2+p.p,
+#udpDocumentFragment div.sequence > div.topic > h3+p.p,
+#udpDocumentFragment div.sequence > div.topic > h4+p.p,
+#udpDocumentFragment div.sequence > div.topic > h5+p.p,
+#udpDocumentFragment div.sequence > div.topic > h6+p.p{
+    margin-top: 0;
+}
+
+#udpDocumentFragment div.sequence > div.topic > *
+{
+    margin-left: 78px;
+}
+
+html[dir="rtl"] #udpDocumentFragment div.sequence > div.topic > *
+{
+    margin-left: 0px;
+    margin-right: 78px;
+}
+
+@media only screen and (max-width: 496px) {
+
+    #udpDocumentFragment{
+        font-size: 15px;
+    }
+
+    #udpDocumentFragment h1.topictitle1 {
+        font-size: 2em;
+        line-height: 1.1em;
+        letter-spacing: .6px;
+        font-weight: 400;
+        margin: 0.67em 0;
+    }
+
+    #udpDocumentFragment h2.topictitle2,
+    #udpDocumentFragment div.sequence > div.topic > h2.topictitle2 {
+        font-size: 1.667em;
+        line-height: 1.120em;
+        letter-spacing: .5px;
+        margin: 0.83em 0;
+    }
+
+    #udpDocumentFragment h3.topictitle3,
+    #udpDocumentFragment div.sequence > div.topic > h3.topictitle3 {
+        font-size: 1.2em;
+        line-height: 1.167em;
+        letter-spacing: .36px;
+        margin: 1em 0;
+        /*This overrides an important rule from mashup:ra*/
+        margin-bottom: 1em !important;
+    }
+
+    #udpDocumentFragment h4.topictitle4,
+    #udpDocumentFragment div.sequence > div.topic > h4.topictitle4,
+    #udpDocumentFragment .sectiontitle {
+        font-size: 1.067em;
+        line-height: 1.188em;
+        letter-spacing: .32px;
+        margin: 1.33em 0;
+        /*This overrides an important rule from mashup:ra*/
+        margin-bottom: 1.33em !important;
+    }
+
+    #udpDocumentFragment h5.topictitle5,
+    #udpDocumentFragment div.sequence > div.topic > h5.topictitle5 {
+        font-size: 0.933em;
+        line-height: 1.214em;
+        letter-spacing: .25px;
+        margin: 1.67em 0;
+    }
+
+    #udpDocumentFragment h6.topictitle6,
+    #udpDocumentFragment div.sequence > div.topic > h6.topictitle6 {
+        font-size: 0.8em;
+        line-height: 1.333em;
+        letter-spacing: .24px;
+        text-transform: uppercase;
+        margin: 2.33em 0;
+    }
+
+    #udpDocumentFragment p.p, 
+    #udpDocumentFragment p.cmd, 
+    #udpDocumentFragment p.shortdesc {
+        font-size: 1em;
+        line-height: 1.333em;
+        letter-spacing: .25px;
+    }
+
+    #udpDocumentFragment p.figcap,
+    #udpDocumentFragment span.tablecap, 
+    #udpDocumentFragment p.listtitle {
+        font-size: 1.067em;
+        line-height: 1.063em;
+        letter-spacing: .32px;
+    }
+
+    #udpDocumentFragment div.fig table.simpletable thead tr th, 
+    #udpDocumentFragment div.fig table.simpletable tbody tr td,
+    #udpDocumentFragment table thead tr th,
+    #udpDocumentFragment table tbody tr td {  
+        padding: 0.667em;
+    }
+
+    #udpDocumentFragment kbd.userinput, 
+    #udpDocumentFragment span.controlpanel, 
+    #udpDocumentFragment span.uicontrol, 
+    #udpDocumentFragment samp.controlpanelmessage, 
+    #udpDocumentFragment span.keyboard, 
+    #udpDocumentFragment samp.uimessage, 
+    #udpDocumentFragment code.codeph, 
+    #udpDocumentFragment span.wintitle, 
+    #udpDocumentFragment span.msgnum, 
+    #udpDocumentFragment samp.msgph {
+        letter-spacing: .53px;
+    }
+
+    #udpDocumentFragment strong {
+        letter-spacing: .24px;
+    }
+
+    /*Admonishments, gentext*/
+    #udpDocumentFragment span.notetitle, 
+    #udpDocumentFragment span.tiptitle, 
+    #udpDocumentFragment span.noticetitle,
+    #udpDocumentFragment span.cautiontitle, 
+    #udpDocumentFragment span.warningtitle, 
+    #udpDocumentFragment span.dangertitle, 
+    #udpDocumentFragment span.importanttitle {
+        line-height: 1.333em;
+    }
+
+    #udpDocumentFragment table {
+        margin-right: 0;
+    }
+
+    #udpDocumentFragment table th p.p,
+    #udpDocumentFragment table th p {
+        font-size: 0.933em;
+        line-height: 1.143em;
+        letter-spacing: 0;
+    }
+    
+    #udpDocumentFragment table td p.p,
+    #udpDocumentFragment table td p {
+        font-size: 0.933em;
+        line-height: 1.357em;
+        letter-spacing: 0.42px;
+    }
+
+    /* Expandable divs */
+    #udpDocumentFragment h2.expandableHeading { 
+        font-size: 1.667em;
+        line-height: 1.120em; 
+        letter-spacing: 0.5px; 
+        background-size: 0.960em 0.960em;
+    }
+    
+    #udpDocumentFragment h3.expandableHeading { 
+        font-size: 1.200em;
+        line-height: 1.167em; 
+        letter-spacing: 0.36px; 
+        background-size: 1.333em 1.333em;
+    }
+    
+    #udpDocumentFragment h4.expandableHeading { 
+        font-size: 1.067em;
+        line-height: 1.188em; 
+        letter-spacing: 0.32px; 
+        background-size: 1.250em 1.250em;
+    }
+    
+    #udpDocumentFragment h5.expandableHeading { 
+        font-size: 0.933em;
+        line-height: 1.214em; 
+        letter-spacing: 0.25px; 
+        background-size: 1.429em 1.429em;
+    }
+
+    /* SEQUENCE in mobile, px used instead of em 
+     * because sizes are static in this case
+    */
+    #udpDocumentFragment div.sequence > div.topic::before{
+        width: 48px;
+        height: 48px;
+        font-size: 25px;
+        line-height: 48px;
+        font-weight: 300;
+        position: relative;
+        display: block;
+    }
+    
+    /*Reset margins to 0 for mobile version*/
+    #udpDocumentFragment div.sequence > div.topic > h2,
+    #udpDocumentFragment div.sequence > div.topic > h3,
+    #udpDocumentFragment div.sequence > div.topic > h4,
+    #udpDocumentFragment div.sequence > div.topic > h5,
+    #udpDocumentFragment div.sequence > div.topic > h6 {
+        display: block;
+    }
+
+    /*Reset margins to 0 for mobile version*/
+    #udpDocumentFragment div.sequence > div.topic > *,
+    html[dir="rtl"] #udpDocumentFragment div.sequence > div.topic > *
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /*Overriding WCC styles, setting default values*/
+    #udpDocumentFragment .step {
+        font-size: 1em;
+        overflow: visible;
+        white-space: normal;
+        transition: 0s;
+    }
+
+    #udpDocumentFragment div.body {
+        padding: 0px;
+        border-top: 0px;
+    }
+
+    #udpDocumentFragment div.video {
+        padding: 0.667em;
+    }
+
+    /*Video*/
+    #udpDocumentFragment div.videoHeading {
+        font-size: 0.8em;
+    }
+    
+    #udpDocumentFragment div.videoName {
+        font-size: 1.067em;
+    }
+    
+    #udpDocumentFragment div.videoDesc {
+        font-size: 1em;
+    }
+
+}
+
+@media only screen and (min-width: 496px) and (max-width: 800px) {
+    /*Overriding WCC styles, setting default values*/
+    #udpDocumentFragment .step {
+        font-size: 1em;
+        overflow: visible;
+        white-space: normal;
+    }
+
+    #udpDocumentFragment div.body {
+        padding: 0px;
+        border-top: 0px;
+    }
+}

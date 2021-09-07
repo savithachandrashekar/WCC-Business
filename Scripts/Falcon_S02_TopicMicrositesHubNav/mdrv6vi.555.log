@@ -1,0 +1,12 @@
+Start auto log messages stack - Iteration 4.	[MsgId: MMSG-10545]
+TopicPages.c(161): Found resource "https://ppssupport-itgllbh7.inc.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/js/contentsquare.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products"  	[MsgId: MMSG-26659]
+TopicPages.c(161): web_url("products") was successful, 1185034 body bytes, 20492 header bytes  	[MsgId: MMSG-26386]
+TopicPages.c(170): Notify: Transaction "TopicLanding_New_products" ended with a "Pass" status (Duration: 0.4420 Wasted Time: 0.0000).	[MsgId: MMSG-16871]
+TopicPages.c(173): web_add_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+TopicPages.c(173): web_add_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+TopicPages.c(174): Notify: Transaction "TopicLanding_New_doc_seo" started.	[MsgId: MMSG-16999]
+TopicPages.c(175): web_url("us-en") started  	[MsgId: MMSG-26355]
+TopicPages.c(175): Error -26610: HTTP Status-Code=502 (Bad Gateway) for "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MERR-26610]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

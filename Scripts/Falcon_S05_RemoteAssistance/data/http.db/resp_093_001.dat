@@ -1,0 +1,117 @@
+﻿.downloadAppletContainer {
+    width: 700px;
+    min-height: 100%;
+    margin: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+.downloadAppletContainer p,
+.downloadAppletContainer h1 {
+    color: #555;
+}
+
+.downloadAppletContainer a {
+    color: #4cb7ef;
+    text-decoration: underline;
+}
+
+.downloadAppletContainer h1 {
+    font-size: 24px;
+}
+
+.downloadAppletContainer p, 
+.downloadAppletContainer h3, 
+.downloadAppletContainer h2 {
+    font-size: 14px;
+}
+
+.downloadAppletContainer .titleContent {
+    width: 700px;
+    height: 24px;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.downloadAppletContainer .titleContent h1 {
+    text-align: center;
+}
+
+.downloadAppletContainer .middleContainer {
+    width: 700px;
+    height: 200px;
+    margin: auto;
+    padding-bottom: 250px;
+}
+
+.downloadAppletContainer .middleContainer .middleContent {
+    width: 350px;
+    float: left;
+    margin: auto;
+}
+
+.downloadAppletContainer .middleContainer .middleContent .middleContentIcon {
+    margin-bottom: 20px;
+}
+
+.downloadAppletContainer .middleContainer .middleContent .middleContentIcon .downloadIcon {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    background: url('/Images/site/DownloadApplet/download_v2.png') no-repeat;
+}
+
+.downloadAppletContainer .middleContainer .middleContent .middleContentTitleText {
+    margin-bottom: 20px;
+}
+
+.downloadAppletContainer .middleContainer .middleContent .middleContentTitleText h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.downloadAppletContainer .middleContainer .middleContent .runIcon {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    background: url('/Images/site/DownloadApplet/run_v2.png') no-repeat;
+}
+
+.downloadAppletContainer .middleContainer .middleContent .middleContentDescriptionText {
+    text-align: center;
+}
+
+.downloadAppletContainer .middleContainer .middleContent .middleContentDescriptionText p {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.downloadAppletContainer .bottomContent {
+    height: 100px;
+    width: 400px;
+    clear: both;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    padding-top: 100px;
+}
+
+.downloadAppletContainer .bottomContent .bottomContentText {
+    clear: both;
+}
+
+.downloadAppletContainer .bottomContent .bottomContentText h2 {
+    font-weight: bold;
+    /*margin-bottom: 20px;*/
+    text-align: center;
+}
+
+.downloadAppletContainer .bottomContent .bottomContentText p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: left;
+}

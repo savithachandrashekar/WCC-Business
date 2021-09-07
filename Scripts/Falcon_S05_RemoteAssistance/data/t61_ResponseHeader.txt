@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Access-Control-Allow-Origin: https://www.google.com
+Access-Control-Allow-Credentials: true
+X-Content-Type-Options: nosniff
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Mon, 10 May 2021 08:09:40 GMT
+Strict-Transport-Security: max-age=31536000
+Content-Security-Policy: script-src 'report-sample' 'nonce-LxtE/u2Fknm9KSUtnHZmKQ' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/IdentityListAccountsHttp/cspreport;worker-src 'self'
+Content-Security-Policy: script-src 'nonce-LxtE/u2Fknm9KSUtnHZmKQ' 'self' https://apis.google.com https://ssl.gstatic.com https://www.google.com https://www.gstatic.com https://www.google-analytics.com;report-uri /_/IdentityListAccountsHttp/cspreport
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: cross-origin
+Content-Encoding: gzip
+Server: ESF
+X-XSS-Protection: 0
+Set-Cookie: SIDCC=AJi4QfFQWTpu5Oa3Dgm_RB2VWGIAcHk6JxcTjovtRBF18JDOXsXKYRJdskKoD9EBRDmh3cC4eQ; expires=Tue, 10-May-2022 08:09:40 GMT; path=/; domain=.google.com; priority=high
+Set-Cookie: __Secure-3PSIDCC=AJi4QfHD3rrXdWp40dZAt8QeGfGMAKIseZY4Bz9NutONUcCgFBUUzdR8UJaZgX8qOh5DPTG-oA; expires=Tue, 10-May-2022 08:09:40 GMT; path=/; domain=.google.com; Secure; HttpOnly; priority=high; SameSite=none
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Transfer-Encoding: chunked
+

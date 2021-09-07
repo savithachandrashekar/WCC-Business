@@ -1,0 +1,210 @@
+var isMenuOpen = false;
+var isPopupOpen = false;
+
+function SetFocus(id) {
+    if ($(id) != null) {
+        var element = $(id);
+        //element.parentNode.parentNode.parentNode.parentNode.className += " active";
+        element.focus();
+        element.select();
+    }
+}
+
+function OpenCertDetails()
+{
+	var thewindow = window.open('https://www.thawte.com/cgi/server/certdetails.exe?code=USLOGM1','anew',config='height=495,width=495,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,directories=no,status=yes');
+}
+
+function setCookie(name, value, expire_day) {
+	var expiredate = new Date();
+	if (!expire_day)
+		expiredate.setTime(expiredate.getTime() + (365 * 24 * 3600 * 1000));
+	else
+		expiredate.setTime(expiredate.getTime() + (expire_day * 24 * 3600 * 1000));
+
+	document.cookie = name + "=" + escape(value) + 
+		"; expires=" + expiredate.toGMTString() + "; secure";
+}
+
+function submitenter(myfield, e)
+{
+	var keycode;
+	if (window.event) 
+		keycode = window.event.keyCode; 
+	else if (e) 
+		keycode = e.which; 
+	else return true;
+ 
+	// enter check if true then auto submit form
+	if (keycode == 13)
+	{
+		myfield.form.submit();
+		return false;
+	}
+	else
+		return true;
+}
+
+function checkLoginDetails(formobj)
+{
+    if (formobj)
+    {
+        if ((formobj.email.value != "") && (formobj.password.value != ""))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+function foo(evt)
+{
+	var e = (window.event) ? window.event : evt;
+	e.cancelBubble = true;
+	if (e.stopPropagation) {e.stopPropagation()};
+}
+
+function resizePopup(elementId) 
+{
+    var popup_ = document.getElementById(elementId);
+    var popup_background = document.getElementById('popupBackground');
+    if (popup_ && popup_.style.display == "block") {
+        showPopup(elementId);        
+    }             
+}
+
+function showPopup(elementId, strengthType)
+{
+    // strengthType = 0 (not given, e.g. Registration), 2 (Good), 3 (Strong), 4 (Excellent)
+    var popup_ = document.getElementById(elementId);
+    var popup_background = document.getElementById('popupBackground');    
+
+    if (popup_ && popup_background){
+            popup_.style.left = parseInt(document.body.offsetWidth) / 2 - parseInt(popup_.style.width) / 2 + "px";
+            popup_background.style.width = parseInt(document.body.offsetWidth) + "px";
+
+        if (self.innerHeight != undefined && self.innerHeight != 0) { //FF and others
+            popup_.style.top = parseInt(self.innerHeight) / 2 - parseInt(popup_.style.height) / 2 + "px";
+            popup_background.style.height = parseInt(self.innerHeight) + "px";
+        }
+        else if (document.documentElement.clientHeight != undefined && document.documentElement.clientHeight != 0 && navigator.userAgent.toLowerCase().indexOf('msie 6') == -1) { //IE 7+
+            popup_.style.top = parseInt(document.documentElement.clientHeight) / 2 - parseInt(popup_.style.height) / 2 + "px";
+            popup_background.style.height = parseInt(document.documentElement.clientHeight) + "px";            
+        }       
+        else { //IE 6
+            popup_.style.top = parseInt(document.body.offsetHeight) / 2 - parseInt(popup_.style.height) / 2 + "px";
+            popup_background.style.height = parseInt(document.body.offsetHeight) + "px";
+            // PNG fix
+            if (!isPopupOpen)
+            {
+                isPopupOpen = true;
+                clearTimeout(IEPNGFix.update.timer);
+                IEPNGFix.update.timer = setTimeout(IEPNGFix.update, 100);
+            }
+        }
+
+        var divSpecific = document.getElementById("divSpecific");
+        var divGeneral = document.getElementById("divGeneral");
+        var divGood = document.getElementById("divGood");
+        var divStrong = document.getElementById("divStrong");
+        var divExcellent = document.getElementById("divExcellent");
+        
+        // If password strength is not given then set it to default value 0.
+        if (strengthType == null) strengthType = 0;
+        
+        // Hide/display regions based on the given password strength
+        if (divSpecific != null && divGeneral != null && divGood != null && divStrong != null && divExcellent != null)
+        {
+            divSpecific.style.display = (strengthType > 0 ? "" : "none");
+            divGeneral.style.display = (strengthType > 0 ? "none" : "");
+            divGood.style.display = ((strengthType == 0 || strengthType == 2) ? "" : "none");
+            divStrong.style.display = ((strengthType == 0 || strengthType == 3) ? "" : "none");
+            divExcellent.style.display = ((strengthType == 0 || strengthType == 4) ? "" : "none");
+        }
+                
+        popup_.style.display = "block";
+        popup_background.style.display = "block";
+    }   
+}
+
+function hidePopup(elementId) {
+    var popup_ = document.getElementById(elementId);
+    if (popup_)
+        popup_.style.display = "none";
+
+    var popupBackground_ = document.getElementById('popupBackground');
+    if (popupBackground_) {
+        popupBackground_.style.display = "none";
+    }
+}
+
+function showNotification (strengthType) {
+    // strengthType = 0 (not given, e.g. Registration), 1 (Good), 2 (Strong), 3 (Excellent)
+    $("#notificationbox").removeClass("str0 str1 str2 str3").addClass("str" + strengthType || 0).show();
+}
+
+function hideNotification () {
+    $("#notificationbox").hide();
+}
+
+// Get actual property of style attribute
+function getLiveProperty(oObject, sProperty)
+{ 
+    // 0px is the default value
+    var sPropertyValue = "0px";
+    if (oObject.currentStyle)
+        sPropertyValue = oObject.currentStyle[sProperty];
+    else if(window.getComputedStyle)
+    {
+        var oStyle = window.getComputedStyle(oObject, null);
+        if (oStyle != null)
+            sPropertyValue = oStyle.getPropertyValue(sProperty);
+    }
+    // E.g.: the return value is auto, then returns 0px, only for IE sessions
+    if ((parseInt(sPropertyValue) + "").indexOf("NaN") != -1)
+        sPropertyValue = "0px";
+    return sPropertyValue;
+}
+
+function showElement(elemName) {
+    document.getElementById(elemName).style.display = "";
+    document.getElementById(elemName + '_show').style.display = "none";
+    document.getElementById(elemName + '_hide').style.display = "";
+}
+function hideElement(elemName) {
+    document.getElementById(elemName).style.display = "none";
+    document.getElementById(elemName + '_show').style.display = "";
+    document.getElementById(elemName + '_hide').style.display = "none";
+}
+
+function switchRegion(obj, regionId)
+{
+    var region = document.getElementById(regionId);
+    var isCollapsed = (obj.childNodes[1].innerHTML == "+");
+    if (region != null)
+    {
+        region.style.display = (isCollapsed ? '' : 'none');
+        obj.childNodes[1].innerHTML = (isCollapsed ? '-' : '+');
+    }
+}
+
+function selectLang(selectObj) {
+    var selectedLang = selectObj.options[selectObj.selectedIndex].value;
+    if (selectedLang != null) {
+        // Remove lang parameter from the URL
+        //var destinationUrl = window.location.pathname + window.location.search.replace(/(lang=.*)&/g, "");
+        var destinationUrl = encodeURIComponent(window.location.pathname + window.location.search.replace(/(&lang=[a-zA-Z]*)/g, ""));
+        window.location.href = "/Language.aspx?lang=" + selectedLang + "&destination=" + destinationUrl;
+    }
+}
+
+function separateChars(stringval) {
+    var ret = "";
+    for (var i = 0; i < stringval.length; i++) {
+        ret += stringval.charAt(i) + " ";
+    }
+    return ret;
+}
