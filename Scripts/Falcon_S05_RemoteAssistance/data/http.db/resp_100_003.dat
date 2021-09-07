@@ -1,0 +1,185 @@
+﻿/*global acquire*/
+/*jslint browser:true*/
+/*{{{
+
+Stringified html chunk. Copy codepen rendered code here and
+enclose each line with quotes (then clean it up, add template stuff).
+
+Dropdowns may have selected items and separators; example (see also on codepen):
+  <ul class="header-sub-menu">
+    <li><a href="#">Dropdown sample</a></li>
+    <li><a href="#" class="selected">Selected item <span class="icon">â</span></a></li>
+    <li class="separator"></li>
+    <li><a href="#">Separator above</a></li>
+    <li><a href="#" class="bold">Bold item</a></li>
+  </ul>
+
+  For rendering see _main.js_, json input shall come from the server.
+
+}}}*/
+acquire.define("RSC.ui/commonUiHeader/template", [ // -{{{
+    // none
+], function () {
+    "use strict";
+    //-----------------------------------------------------------------------------------------------}}}
+
+    return '<div id="overlay" class="overlay menu_dialog_overlay"></div>' +
+        "<div id='CuiHeader' class='cuiHeader'>" +
+        '<div id="header" class="header" role="banner" >' +
+        '<div id="header-main" class="header-main" >' +
+        '<a href="<%= LogoLink %>" title="Rescue by LogMeIn" class="header-logo-container" tabindex="0"><img src="/Images/rescuelogo.png" title="Rescue by LogMeIn" /></a>' +
+        '<% if(userInfo!=null) { %>' +
+        '<a id= "u_i_temp" class="u_i_temp" style="display:none;"><%= userInfo.userid %></a>' +
+        '<% } %>' +
+        '<ul id="header-menu" class="header-menu">' +
+
+        // header Menu section
+        '<% if(HeaderMenu!=null) { %>' +
+        '<li class="header-menu-item header-menu-item-skip" id="header-menu-item">' +
+        '  <a class="collapsed user" href="#" tabindex="0">' +
+        '    <div id="header-menu-img" class="header-menu-img"></div>' +
+        '    <span class="user-name">' +
+        '      <strong><%= HeaderMenu.MenuText %></strong>' +
+        '    </span>' +
+        '  </a>' +
+
+        '<ul class="header-sub-mainmenu" id="header-sub-mainmenu">' + // dropdown
+
+        '<li class="menu_dialog navcontainer" id="menu_dialog">' +
+
+        '<ul class="dynamic" id="top-menu">' +
+        ' <% if(HeaderMenu.TopMenu.Items!=null) { %>' +
+        '  <% jQuery.each(HeaderMenu.TopMenu.Items, function(index, item){ %>' +
+        '    <li class="<%= item.Id %>" id="<%= item.Id %>" >' +
+        '       <a href="<%= item.Url %>" tabindex="0">' +
+		'		<div class="<%= item.Image %>" />' +
+        '       <br />' +
+        '       <div class="title"><%= item.Text %></div>' +
+        '       </a>' +
+        '   </li>' +
+        '  <% }); %>' +
+        
+        '<% } %>' +
+        '</ul>' +
+
+        '<ul>' +
+         ' <% if(HeaderMenu.TopMenu.SeparatorLine) { %>' +
+        '   <li class="separator-line"></li>' +
+        ' <% } %>' +
+        '</ul>' +
+
+        '<ul class="dynamic" id="middle-menu">' +
+        ' <% if(HeaderMenu.MiddleMenu.Items!=null) { %>' +
+        '  <% jQuery.each(HeaderMenu.MiddleMenu.Items, function(index, item){ %>' +
+        '    <li class="full <%= item.Id %>" id="<%= item.Id %>">' +
+        '       <a href="<%= item.Url %>" tabindex="0">' +
+		'		<div class="<%= item.Image %>" />' +
+        '       <br />' +
+        '       <div class="title"><%= item.Text %></div>' +
+        '      </a>' +
+        '    </li>' +
+        '  <% }); %>' +
+         
+        '<% } %>' +
+        '</ul>' +
+
+        '<ul>' +
+        ' <% if(HeaderMenu.MiddleMenu.SeparatorLine) { %>' +
+        '   <li class="separator-line"></li>' +
+        ' <% } %>' +
+        '</ul>' +
+        '<ul class="dynamic" id="bottom-menu">' +
+        '<% if(HeaderMenu.BottomMenu.Items!=null) { %>' +
+        '<% jQuery.each(HeaderMenu.BottomMenu.Items, function(index, item){ %>' +
+        '    <li class="<%= item.Id %>" id="<%= item.Id %>">' +
+        '      <a target="_blank" href="<%= item.Url %>" tabindex="0">' +
+		'	    	<div class="<%= item.Image %>" />' +
+        '           <br />' +
+        '           <br />' +
+        '           <div class="title"><%= item.Text %></div>' +
+        '      </a>' +
+        '    </li>' +
+        '  <% }); %>' +
+        '  <% }; %>' +
+        '</ul>' +
+
+        '</li>' +
+        '</ul>' +
+
+        '</li>' +
+        '  <% }; %>' +
+       
+        // end header Menu section
+        // user info section
+        '<% if(userMenuList != null && userMenuList.length > 0) { %>' +
+        '<li class="header-menu-item header-menu-item-skip" id="header-user-menu-item">' +
+        '  <a class="collapsed user" href="#" tabindex="0">' +
+        '    <div class="header-user-img" id="header-user-img"></div>' +
+        '    <span class="user-name multiple">' +
+        '      <strong><%= jQuery("<div>").text(userInfo.name).html();%></strong>' +
+        '      <br />' +
+        '      <span><%= userInfo.subTitle %></span>' +
+        '    </span>' +
+		'    <% if(eQuote != null) { %>' +
+        '      <% if(eQuote.showPopup == true && eQuote.count > 0) { %>' +
+        '      <span class="new_badge"><%= eQuote.count %></span>' +
+        '      <% } %>' +
+		'    <% } %>' +
+        '  </a>' +
+        '  <ul class="header-sub-menu" id="header-user-sub-menu">' + // dropdown
+        '  <% jQuery.each(userMenuList, function(index, item) { %>' +
+        '    <li class="<%= item.id %>" id="<%= item.id %>">' +
+        '      <a href="<%= item.url %>" class="<%= window.location.pathname.toLowerCase().indexOf(item.url.toLowerCase()) > -1 ? "selected" : "" %>" tabindex="0">' +
+        '        <%= item.text %>' +
+        '        <% if (window.location.pathname.toLowerCase().indexOf(item.url.toLowerCase()) > -1) { %>' +
+        '          <span class="header-menu-pipe" id="header-menu-pipe"></span>' +
+        '        <% } %>' +
+		'        <% if(eQuote != null) { %>' +
+        '          <% if(item.id == "equote" && eQuote.showPopup == true && eQuote.count > 0 ) { %>' +
+        '              <span class="new"><%= eQuote.count %> <%= eQuote.text %></span>' +
+        '          <% } %>' +
+		'        <% } %>' +
+        '      </a>' +
+        '    </li>' +
+        '    <% if (item.separatorLine) { %>' +
+        '      <li class="separator-line"></li>' +
+        '    <% } %>' +
+        '    <% if (item.separatorSpace) { %>' +
+        '      <li class="separator-space"></li>' +
+        '    <% } %>' +
+        '  <% }); %>' +
+        '  </ul>' +
+        '</li>' +
+        '<% } %>' +// end user info section
+        // languages section
+        '<% if (languageSelectorList != null && languageSelectorList.length > 0) { %>' +
+        '<li id="header-languages-menu-item" class="header-menu-item header-menu-item-skip header-languages-menu-item" data-label="<%= label.languagesLabel %>">' +
+        '<nav id="languages-menu-item-navigation">' + 
+        '  <a class="collapsed user" id="languages-menu-toggler" href="#" role="button" aria-expanded="false" tabindex="0" aria-controls="header-languages-sub-menu">' +
+        '    <div class="header-languages-icon" id="header-languages-icon">' +
+        '    </div>' +
+        '    <span class="user-name">' +
+        '      <span><%= label.languagesLabel %></span>' +
+        '    </span>' +
+        '  </a>' +
+        '  <ul class="header-sub-menu" class="header-languages-sub-menu" id="header-languages-sub-menu">' + // dropdown
+        '  <% jQuery.each(languageSelectorList, function(index, item){ %>' +
+        '    <li class="<%= item.id %>" id="<%= item.id %>">' +
+        '      <a lang="<%= item.id %>" href="<%= item.url %>" aria-current="<%= item.selected ? "true" : "false" %>" class="<%= item.selected ? "selected" : "" %>" tabindex="0">' +
+        '        <%= item.text %>' +
+        '        <% if (item.selected) { %>' +
+        '            <span class="header-menu-pipe" id="header-menu-pipe"></span>' +
+        '        <% } %>' +
+        '      </a>' +
+        '    </li>' +
+        '  <% }); %>' +
+        '  </ul>' +
+        '</nav>' +
+        '</li>' + 
+        '<% } %>' + // end languages section
+
+        '</ul>' + // end .header-menu
+        '</div>' + // end .header-main
+        '</div>' + // end .header
+        "</div>"; // end .cuiHeader
+});

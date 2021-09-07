@@ -1,0 +1,17 @@
+/* CSS for how to SMS IVR site */
+
+.sms-ivr-left .image:lang(zh-CN){bottom:auto; position:relative;margin: 30px auto;}
+.sms-ivr-left img:lang(zh-CN) {margin-left: auto; margin-right: auto;}
+.sms-ivr-left:lang(zh-CN) {padding:30px; text-align:center;}
+.sms-ivr-left .cmp-container:lang(zh-CN) {padding:auto; float: auto; clear:both; width: auto;}
+.sms-ivr-left h1:lang(zh-CN){margin:15px 0;}
+
+@media only screen and (max-width: 575px) {
+.visible-sm, .sms-ivr-left:lang(zh-CN) {display: block !important;}
+.sms-ivr-left .image:lang(zh-CN) {width:50%;}
+.fixedWidgets {display:none;}
+.sms-ivr-container {padding: 0 0 30px 0;margin: 0 auto;}
+}
+
+/* ie11 specific */
+_:-ms-lang(x), .sms-ivr-left img { width: 350px;}

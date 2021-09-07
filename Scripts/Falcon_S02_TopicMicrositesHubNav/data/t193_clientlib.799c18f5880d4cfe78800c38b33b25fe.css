@@ -1,0 +1,45 @@
+// Print scan - Tab CSS
+
+
+
+.osnav-tabs {
+     float: left;
+} 
+
+.osnav-tabs li {
+     float: left;
+}
+
+
+.psfTabs .nav li a {
+    color: #555 !important;
+    position: relative;
+    display: block;
+    padding: 10px 5px 5px 5px;
+    margin: 0 10px;
+}
+
+.psfTabs .osnav-tabs>li.active>a, .psfTabs .osnav-tabs>li.active>a:focus, .psfTabs .osnav-tabs>li.active>a:hover, .psfTabs .osnav-tabs>li>a:focus, .psfTabs .osnav-tabs>li>a:hover {
+    background-color: #fff;
+    border-bottom: 7px solid #0096d6;
+    outline-style: none !important;
+    text-decoration: none;
+}
+
+
+#osSelector {
+    float: right;
+    font-size: 14px;
+}    
+
+#osSelector div {
+    padding-top: 5px;
+}
+
+.navbar-text {
+    color: #767676;
+}
+
+.myOsNavRow {
+        margin-top: 0;
+}

@@ -1,0 +1,106 @@
+$(document).ready(function () { 
+
+        var domainName = window.location.origin;
+        var pageInfoMeta = $('head meta[name=pageinfo]');
+        var cc = pageInfoMeta.data('cc');
+    	var lc = pageInfoMeta.data('lc');
+		var alertAPI = domainName + "/wcc-services/cms/" + cc + "-" + lc + "/wcc_sitehome_alerts";
+
+		$.ajax({
+			type: "GET",
+			url: alertAPI,
+			success: function (data) {
+
+				var alertHtml;
+
+				for (var i = 0; i < data.data.length; i++) {
+
+					var alertTitle = data.data[i].alerttitle;
+					var alertDesc = data.data[i].alertdesc;
+					alertTitle = decodeHTML(alertTitle);
+                    alertDesc = decodeHTML(alertDesc);
+
+					if (typeof data.data[i].categories !== 'undefined' && data.data[i].categories.indexOf("Informational") > -1) {
+
+						alertHtml = $('<div class="notification"><div class="notification-title"><strong>Information</strong></div><div class="notification-body"><div class="notification-text"><div><strong>' + alertTitle + '</strong></div><div>' + alertDesc + '</div></div></div>');
+					} else if (typeof data.data[i].categories !== 'undefined' && data.data[i].categories.indexOf("Critical") > -1) {
+
+						alertHtml = $('<div class="notification"><div class="notification-title alertRed"><strong>Alert</strong></div><div class="notification-body"><div class="notification-text"><div><strong>' + alertTitle + '</strong></div><div>' + alertDesc + '</div></div></div>');
+
+					}
+
+					$('.notifications-scroll').append(alertHtml);
+					$('.notifications-bg').addClass('open');
+                    $('.notifications-bg').removeClass('viewed');
+                    countNotifications();
+                    hideAlert();
+				}
+
+			},
+			error: function () {
+				console.log("Error in Alert Service API Call")
+			}
+		});
+
+
+
+    // Open notifications on click
+    $('#notifications-trigger').on('tap click', function(e) {    
+      e.preventDefault();
+
+      //Local Storage for Alert Click
+      var notificationBtnCicked = localStorage.notificationBtnCickedTrue;
+
+      notificationBtnCicked = true;
+       
+      $('.notifications-bg').addClass('open');
+	  $('.notifications-bg').addClass('viewed');
+      $(this).toggleClass('open');
+      $("#dismiss-notifications").attr("aria-hidden","false");
+    });
+
+
+    // Close notifications on click of dismissal
+    $('.closeAlert').on('click', function(e) {
+      e.preventDefault();
+      $(this).attr("aria-hidden","true");
+      $('.notifications-bg').removeClass('open').addClass('viewed');
+      $('#notifications-trigger').addClass('viewed');
+      $('.notification-title').removeClass('alertRed');
+        countNotifications();
+        // If there no more notifications, show the empty notifications message
+        if ($('.notification').length === 0) {
+          $('#empty-notifications').show();
+          // Automatically close notifications after 2 sec.
+          setTimeout(function() {
+            $('.notifications-bg').removeClass('open');
+          }, 2000);
+        } 
+   		//add local storage on click of Close button
+        localStorage.setItem("onLoadreadAlert", "read");
+    });
+
+
+     // Hide Alert if user already read the notifcation
+    function hideAlert() {
+    	if(localStorage.getItem('onLoadreadAlert') == "read"){ 
+         	$('.notifications-bg').removeClass('open');
+			$('.notification-title').removeClass('alertRed');
+    	}
+    }
+
+     // Function for ALERT Component Click
+    var countNotifications = function() { 
+      var totalNotifications = $('.notifications-bg').find('.notification').size();
+      $('#totalNotifications').text(totalNotifications);
+    };
+    countNotifications();
+
+});;
+
+function decodeHTML(html){
+    if(typeof html !== 'undefined' ){
+         html = html.replace(/&#34;/g,'"');
+    }
+    return html;
+}

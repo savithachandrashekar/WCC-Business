@@ -1,0 +1,13 @@
+[t20]
+FileName1=t20.txt
+URL1=https://logx.optimizely.com/v1/events
+Total=2
+RequestHeaderFile=t20_RequestHeader.txt
+RequestBodyFile=t20_RequestBody.txt
+ResponseHeaderFile=t20_ResponseHeader.txt
+ContentType=text/plain
+SnapshotXmlFile=snapshot_20.xml
+FileName2=t20_location.html
+URL2=https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location
+[ProtocolInfo]
+ProtocolId=QTWeb

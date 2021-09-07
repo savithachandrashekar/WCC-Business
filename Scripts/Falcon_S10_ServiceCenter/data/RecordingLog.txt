@@ -1,0 +1,98 @@
+[Network Analyzer (4d74:41d4)]   (Sid:150) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Network Analyzer (4d74:5298)]   (Sid: 43) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 68) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 87) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 78) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 13) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 74) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:100) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 93) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 72) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:107) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 85) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 41) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 31) Connection Terminated (by Client)
+[Net An. Error    (4d74:41d4)] SSLAccept(ssl_id = 1796364953616 = 000001A23FB1E810) Failed, ctx = 000001A2403E2E40, err = "SSLv3/TLS write server done", err code = 1, err msg= "error:00000001:lib(0):func(0):reason(1)
+error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+" 
+[Net An. Error    (4d74:41d4)]   (Sid:150) Negotiate Client -> Proxy SSL Handshake Failed!!!
+[Network Analyzer (4d74:5298)]   (Sid: 20) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 48) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 49) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:112) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 19) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 15) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 61) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:127) Connection Terminated (by Client)
+[Network Analyzer (4d74:22c0)] Address lookup for G8W00938S = 15.60.11.235
+[Network Analyzer (4d74:5298)]   (Sid:118) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:129) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 17) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:108) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 88) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 75) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 45) Connection Terminated (by Client)
+[Network Analyzer (4d74:22c0)] Request Connection: Remote Server @ 216.58.193.131:443   (Service=)  (Sid=151)  PROXIED!
+[Network Analyzer (4d74:5298)]   (Sid:116) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid: 94) Connection Terminated (by Client)
+[Network Analyzer (4d74:40a8)]   (Sid:151) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Net An. Error    (4d74:40a8)] SSLAccept(ssl_id = 1796363717232 = 000001A23F9F0A70) Failed, ctx = 000001A2403E3500, err = "SSLv3/TLS write server done", err code = 1, err msg= "error:00000001:lib(0):func(0):reason(1)
+error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+" 
+[Net An. Error    (4d74:40a8)]   (Sid:151) Negotiate Client -> Proxy SSL Handshake Failed!!!
+[Network Analyzer (4d74:22c0)] Address lookup for G8W00938S = 15.60.11.235
+[Network Analyzer (4d74:22c0)] Request Connection: Remote Server @ 216.239.32.116:443   (Service=)  (Sid=152)  PROXIED!
+[Network Analyzer (4d74: 9a4)]   (Sid:152) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Net An. Error    (4d74: 9a4)] SSLAccept(ssl_id = 1796371845600 = 000001A2401B11E0) Failed, ctx = 000001A23F9CD320, err = "SSLv3/TLS write server done", err code = 1, err msg= "error:00000001:lib(0):func(0):reason(1)
+error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+" 
+[Net An. Error    (4d74: 9a4)]   (Sid:152) Negotiate Client -> Proxy SSL Handshake Failed!!!
+[Network Analyzer (4d74:22c0)] Address lookup for G8W00938S = 15.60.11.235
+[Network Analyzer (4d74:22c0)] Request Connection: Remote Server @ 216.239.32.116:443   (Service=)  (Sid=153)  PROXIED!
+[Network Analyzer (4d74:5100)]   (Sid:153) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Net An. Error    (4d74:5100)] SSLAccept(ssl_id = 1796350944304 = 000001A23EDC2430) Failed, ctx = 000001A23F9CD320, err = "SSLv3/TLS write server done", err code = 1, err msg= "error:00000001:lib(0):func(0):reason(1)
+error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+" 
+[Net An. Error    (4d74:5100)]   (Sid:153) Negotiate Client -> Proxy SSL Handshake Failed!!!
+[Network Analyzer (4d74:22c0)] Address lookup for G8W00938S = 15.60.11.235
+[Network Analyzer (4d74:22c0)] Request Connection: Remote Server @ 142.251.32.131:443   (Service=)  (Sid=154)  PROXIED!
+[Network Analyzer (4d74: 13c)]   (Sid:154) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Net An. Error    (4d74: 13c)] SSLAccept(ssl_id = 1796367402032 = 000001A23FD74430) Failed, ctx = 000001A2403E3500, err = "SSLv3/TLS write server done", err code = 1, err msg= "error:00000001:lib(0):func(0):reason(1)
+error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+" 
+[Net An. Error    (4d74: 13c)]   (Sid:154) Negotiate Client -> Proxy SSL Handshake Failed!!!
+[Network Analyzer (4d74:22c0)] Address lookup for G8W00938S = 15.60.11.235
+[Network Analyzer (4d74:22c0)] Request Connection: Remote Server @ 142.251.35.206:443   (Service=)  (Sid=155)  PROXIED!
+[Network Analyzer (4d74:3a48)]   (Sid:155) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Net An. Error    (4d74:3a48)] SSLAccept(ssl_id = 1796362311520 = 000001A23F899760) Failed, ctx = 000001A23F70A180, err = "SSLv3/TLS write server done", err code = 1, err msg= "error:00000001:lib(0):func(0):reason(1)
+error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+" 
+[Net An. Error    (4d74:3a48)]   (Sid:155) Negotiate Client -> Proxy SSL Handshake Failed!!!
+[Network Analyzer (4d74:5298)]   (Sid:150) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:151) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:152) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:153) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:154) Connection Terminated (by Client)
+[Network Analyzer (4d74:5298)]   (Sid:155) Connection Terminated (by Client)
+[Network Analyzer (4d74:22c0)] Address lookup for G8W00938S = 15.60.11.235
+[Network Analyzer (4d74:22c0)] Request Connection: Remote Server @ 54.83.18.23:443   (Service=)  (Sid=156)  PROXIED!
+[Network Analyzer (4d74:4f4c)]   (Sid:156) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (4d74:4f4c)]   (Sid:156) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Web Request      (4d74:5298)] "POST /ctn_v2/wr/?3380697139446167&325&11&10&0&9&8&subsid=232897&msgsize=120"   
+[Network Analyzer (4d74:5298)]   (Sid:156) Client -> Server @ : 766 bytes (SSL)(Service=HTTP)
+[Network Analyzer (4d74:5298)]   (Sid:156) Server -> Client : 173 bytes (SSL) (Service=HTTP)
+[Network Analyzer (4d74:22c0)] Address lookup for G8W00938S = 15.60.11.235
+[Network Analyzer (4d74:22c0)] Request Connection: Remote Server @ 142.250.114.84:443   (Service=)  (Sid=157)  PROXIED!
+[Network Analyzer (4d74:5570)]   (Sid:157) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Net An. Error    (4d74:5570)] SSLAccept(ssl_id = 1796371854336 = 000001A2401B3400) Failed, ctx = 000001A23B5A91D0, err = "SSLv3/TLS write server done", err code = 1, err msg= "error:00000001:lib(0):func(0):reason(1)
+error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+" 
+[Net An. Error    (4d74:5570)]   (Sid:157) Negotiate Client -> Proxy SSL Handshake Failed!!!
+[Network Analyzer (4d74:5298)]   (Sid:157) Connection Terminated (by Client)
+[Network Analyzer (4d74:22c0)] Address lookup for G8W00938S = 15.60.11.235
+[Network Analyzer (4d74:22c0)] Request Connection: Remote Server @ 142.251.32.131:443   (Service=)  (Sid=158)  PROXIED!
+[Network Analyzer (4d74:43a4)]   (Sid:158) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-ECDSA-AES128-GCM-SHA256)
+[Net An. Error    (4d74:43a4)] SSLAccept(ssl_id = 1796364426416 = 000001A23FA9DCB0) Failed, ctx = 000001A2403E3500, err = "SSLv3/TLS write server done", err code = 1, err msg= "error:00000001:lib(0):func(0):reason(1)
+error:14094416:SSL routines:ssl3_read_bytes:sslv3 alert certificate unknown
+" 
+[Net An. Error    (4d74:43a4)]   (Sid:158) Negotiate Client -> Proxy SSL Handshake Failed!!!

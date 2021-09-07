@@ -1,0 +1,321 @@
+$("document").ready(function(){
+	fetchAndPaintCheckboxes();
+
+	/* To prefill country dropdown
+	normal val and trigger not working for this dropdown */
+function prefillCountryDropdown(cc){
+	var countryVal = $("#countrySelectorServLoc option[value=" + cc + "]").html();
+	var newHeaderValue = countryVal + "<span class=\"hide value\">" + cc+ "</span>";
+	$("#countrySelectorServLoc_dd_headerValue").html(newHeaderValue);
+	$("#countrySelectorServLoc").val(cc);
+}
+
+
+
+function fetchAndPaintCountry(data){
+
+    	//Post success country fetch
+    	var arr = data.serviceCentersCountryResponse.Countries;
+
+    	var source = $("#countryDropdownTemplate").html();
+	    var template = Handlebars.compile(source);
+	    $('#countryDropdownContainer').html(template(arr));
+    	getHpStyleDropdown();
+
+    	//Adding Label in aria-described by for custom dropdown
+    	var oldAriaCountry = $("#countrySelectorServLoc_dd_headerLink").attr("aria-describedby");
+    	$("#countrySelectorServLoc_dd_headerLink").attr("aria-describedby","lblCountrySelector "+oldAriaCountry);
+
+    	if(availableCC.indexOf(getCCLC("cc").toUpperCase()) > -1) {
+    		prefillCountryDropdown(getCCLC("cc").toUpperCase());
+    	}
+    	else if(availableCC.indexOf("US") > -1) {
+    			prefillCountryDropdown("US");
+    	}
+    	else{
+    		prefillCountryDropdown(availableCC[0]);
+    	}
+
+
+    }
+
+    function fetchAndPaintCheckboxes(){
+    	var countryCode = getCCLC("cc");
+    	var plc = getQueryParameter("plc");
+    	var userType = getQueryParameter("userType");
+    	if(!userType){
+    		userType = "WSP";
+    	}
+    	var requestData = JSON.stringify({
+			"UseCase": userType,
+			"CountryCd": countryCode,
+			"Language": getCCLC("lc")+"-"+countryCode.toUpperCase(),
+			"FilterCdGroup":"",
+			"ProductLine": plc
+		});
+    	var countryData = {};
+    	var filterData = {};
+    	var finalResponse = {};
+    	$.when(
+		       $.ajax({
+					type: "POST",
+					url: "/external/service/scl/filters",
+					data:requestData,
+					dataType: "json",
+					beforeSend: function(xhr) {
+			            xhr.setRequestHeader('Content-Type', 'application/json');
+			        }
+		       }).done(function (data) {
+		    	   filterData = data;
+    			}),
+		        $.ajax({
+					type: "POST",
+					url: "/external/service/scl/countries",
+					data:requestData,
+					dataType: "json",
+					beforeSend: function(xhr) {
+			            xhr.setRequestHeader('Content-Type', 'application/json');
+			        }
+    			}).done(function (data) {
+    				countryData = data;
+    			})
+    		).then( function(){    		     
+    		     finalResponse = filterData;
+    		     finalResponse.serviceCentersCountryResponse = countryData;
+    		     $(".radiusMetric").text(filterData.unitDesc);
+    				// TODO ssc
+    				$("#radiusField").val(serviceCenterDefaultRadius);
+    				
+    				if(filterData.filters){
+    					var checkboxData = filterData.filters[0].values;
+    					//Post success checkbox fetch
+    			    	var source = $("#radioContainerTemplate").html();
+    				    var template = Handlebars.compile(source);
+    				    $('#radioContainer').html(template(checkboxData));
+
+    				    $('input').icheck({
+    					    checkboxClass: 'icheckbox_flat-blue',
+    					    radioClass: 'iradio_flat-blue',
+    					    checkedClass: 'checked',
+    					    disabledClass: 'disabled'
+    				  	});
+    				  	$(".productRadio").trigger("change");
+    				}
+    			    fetchAndPaintCountry(finalResponse);
+    		});    	
+    }
+
+    function fetchAndPaintMapPointers(){
+    	//Collate required data
+    	var userRadius = $("#radiusField").val();
+    	var userAddress = $("#postalCodeField").val();
+    	var countryCode = $("#countrySelectorServLoc").val();
+    	var userType = getQueryParameter("userType");
+    	if(!userType){
+    		userType = "WSP";
+    	}
+    	if($(".serviceLocFormWrapper .errorContainer").is(":visible")){
+			$(".serviceLocFormWrapper .errorContainer").addClass("hidden");
+		}
+
+    	//Ajax Call
+    	$.ajax({
+			type: "POST",
+			url: "/external/service/scl/centers",
+			data:JSON.stringify({
+				"UseCase": userType,
+				"DateTime":"",
+				"Offset":"",
+				"UseRequestTime":0,
+				"PrevSeq": 0,
+				"CountryCd": countryCode,
+				"Language":getCCLC("lc"),
+				"ProductNameOID":0,
+				"Name":null,
+				"Address": userAddress,
+				"Latitude":0,
+				"Longitude":0,
+				"FilterValueCdgroup":$(".productRadio:checked").data("val"),
+				"NbMax":sscNbmax,
+				"Radius": userRadius
+			}),
+			dataType: "json",
+			beforeSend: function(xhr) {
+	            xhr.setRequestHeader('Content-Type', 'application/json');
+	        }
+		}).done(function (data) {
+			if(data.requestStatus.toLowerCase() == "ok"){
+				console.log("getServiceCenters SUCCESS");
+				mapCCLSResponse(data);
+			}
+			else{
+				$(".serviceLocFormWrapper .errorContainer").removeClass("hidden");
+				$("#serviceLocationMapView").addClass("hide");
+			}
+			$("#Svc_Loc_Search").attr("disabled","disabled");
+		}).fail(function (jqXHR, textStatus) {
+			console.log("getServiceCenters service fail");
+		});
+    }
+
+    $(document).on("change", ".productRadio", function(){
+    	if($(".productRadio").is(":checked")){
+    		$("#checkboxValidator").val("checked");
+    	}
+    	else{
+    		$("#checkboxValidator").val("");
+    	}
+    	$("#checkboxValidator").trigger("keyup");	//Triggering this because in validation.js the reference is picked up only when some event happens on the element mentioned in the active dependency
+	});
+
+	$(document).on("click", "#Svc_Loc_Search", function(){
+		fetchAndPaintMapPointers();
+	});
+	
+	$(document).on("change", "#countrySelectorServLoc", function(){
+		refetchSupportedProducts();
+	});
+});
+
+var availableCC = [];
+
+function refetchSupportedProducts() {
+    var countryCode = $('#countrySelectorServLoc').val();
+	var plc = getQueryParameter("plc");
+	var userType = getQueryParameter("userType");
+	if(!userType){
+		userType = "WSP";
+	}
+	var requestData = JSON.stringify({
+		"UseCase": userType,
+		"CountryCd": countryCode,
+		"Language": getCCLC("lc")+"-"+getCCLC("cc").toUpperCase(),
+		"FilterCdGroup":"",
+		"ProductLine": plc
+	});
+	
+	
+	$.ajax({
+		type: "POST",
+		url: "/external/service/scl/filters",
+		data:requestData,
+		dataType: "json",
+		beforeSend: function(xhr) {
+            xhr.setRequestHeader('Content-Type', 'application/json');
+        }
+	}).done(function (data) {
+		$(".radiusMetric").text(data.unitDesc);
+		if(data.filters){
+			var checkboxData = data.filters[0].values;
+			//Post success checkbox fetch
+	    	var source = $("#radioContainerTemplate").html();
+		    var template = Handlebars.compile(source);
+		    $('#radioContainer').html(template(checkboxData));
+
+		    $('input').icheck({
+			    checkboxClass: 'icheckbox_flat-blue',
+			    radioClass: 'iradio_flat-blue',
+			    checkedClass: 'checked',
+			    disabledClass: 'disabled'
+		  	});
+		  	$(".productRadio").trigger("change");
+		}
+	}).fail(function (jqXHR, textStatus) {
+		console.log("checkbox service fail");
+	});
+}
+
+/*-- Registered handlebars functions*/
+Handlebars.registerHelper({
+    eq: function(v1, v2) {
+        return v1 === v2;
+    },
+    ne: function(v1, v2) {
+        return v1 !== v2;
+    },
+    lt: function(v1, v2) {
+        return v1 < v2;
+    },
+    gt: function(v1, v2) {
+        return v1 > v2;
+    },
+    lte: function(v1, v2) {
+        return v1 <= v2;
+    },
+    gte: function(v1, v2) {
+        return v1 >= v2;
+    },
+    and: function(v1, v2) {
+        return v1 && v2;
+    },
+    or: function(v1, v2) {
+        return v1 || v2;
+    },
+    emptyOrUndefined: function(v1) {
+        if (v1 == undefined || v1 == null || v1 == "") {
+            return true;
+        } else {
+            return false;
+        }
+    },
+    isNull: function(v1) {
+        return v1 === null;
+    },
+    isEmpty: function(v1) {
+        return v1 === "";
+    },
+    notEmpty: function(v1) {
+        if (v1 !== undefined && v1 !== null && v1.length >= 1)
+            return true;
+        else
+            return false;
+	},
+	ifChecked: function(preselected){
+		console.log("preselected");
+		console.log(preselected);
+		if(parseInt(preselected) == 1){
+			//$("#checkboxValidator").val("checked");
+			//$("#checkboxValidator").trigger("keyup");
+			return 'checked';
+		}
+		else{
+			return "";
+		}
+	},
+	isSelected: function(countryCode){
+		availableCC.push(countryCode);
+	},
+	phoneSeparator: function(phoneNumber){
+		var phoneSeparated = phoneNumber.split(",");
+		return phoneSeparated[0];
+	},
+	hasProtocol: function(url){
+		var urlRegEx = new RegExp('^(?:[a-z]+:)?//', 'i');
+             if(urlRegEx.test(url)){
+					return url;
+				}
+			 else{
+				 var protocol = "https://";
+				 url = protocol+url;
+				 return url; 
+			 }
+	},
+	// emailSeparator: function(email){
+	// 	email = email.split(";");
+	// 	return email;
+	// },
+	extReplace: function(phone){
+		if(phone.indexOf(",")> -1){
+		var ext = phone.substring(phone.indexOf(",")+1);
+		ext = ext.trim();
+		var extRegEx = new RegExp('[e][x][t][^D]','i');
+		if(extRegEx.test(ext)){
+			ext = ext.replace(extRegEx," x");
+		}
+		return ext;
+		}
+		else {
+			return null;
+		}
+	}
+});

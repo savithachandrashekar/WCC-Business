@@ -1,0 +1,521 @@
+// this file passes jslint, do not break it please.
+// the weird "{{{" "}}}" signs are explicit fold marks, the comment in the last line
+// is a buffer property string; these are supported by certain text editors
+/*jslint browser:true*/
+(function ($, ns) {
+    "use strict";
+    // this is a bit more flexible than using vars
+    // (less conflicts, easier to break up into separate files)
+    var app = ns.modules = ns.modules || {}, callIf;
+
+    // calls the given methodName on (ns.modules) if the selector exists
+    // @param selector
+    // @param methodName
+    // @params ... these params are passed on to the called function
+    callIf = function () { // {{{
+        var args, selector, methodName;
+
+        args = $.makeArray(arguments);
+        selector = args.shift();
+        methodName = args.shift();
+
+        if ($(selector).length) {
+            ns.modules[methodName].apply(this, args);
+        }
+    }; // }}}
+
+
+    // Autostart the download on the download applet page + manage downloader button
+    // (I have moved the javascript from "Download.aspx" to here
+    // + removed lots of document.getElementByIds)
+    app.manageDownloadForm = function () { // {{{
+        var autoDownloadTimer, autoDownloadTimeout = 5000;
+
+        autoDownloadTimer = setTimeout(function () {
+            $("#btnDownload").click();
+        }, autoDownloadTimeout);
+
+        $("#btnDownload").on("click", function (e) {
+            e.preventDefault();
+            clearTimeout(autoDownloadTimer);
+            $("#DownloadForm").submit();
+        });
+
+    }; // }}}
+
+
+    // click once downloading (only in IE)
+    // I have copied here the old code from the aspx!!!
+    app.manageClickOnceDownload = function () { // {{{
+        var download, downloadClickOnce, isDownloaded, queryStr;
+        queryStr = window.location.search;
+
+        $("#btnDownload").on("click", function (e) {
+            download();
+            e.preventDefault();
+            return false;
+        });
+
+        downloadClickOnce = function () {
+            isDownloaded = window.location.href = ns.clickOnce.coUrl;
+        };
+
+        download = function () {
+            isDownloaded = window.location.href = ns.clickOnce.plainUrl;
+        };
+
+        setTimeout(function () {
+            if (!isDownloaded) {
+                downloadClickOnce();
+            }
+        }, 5000);
+    }; // }}}
+
+
+    // prepare jquery validator (set default messages, override
+    // error element, clean up leftover errors etc.)
+    app.clientValidation = function () { // {{{
+        var i, newMessages, oldMessages, forms, hiddenValidate, lightweightValidate, onInputChange;
+
+        newMessages = ns.errorMessages;
+        oldMessages = $.validator.messages;
+        forms = $("form.clientValidation");
+
+        // add our translated messages
+        for (i in newMessages) {
+            if (newMessages.hasOwnProperty(i)) {
+                if (oldMessages[i]) {
+                    // we can not simply extend, because the error messages may contain
+                    // number placeholders (which must be resolved runtime)
+                    oldMessages[i] = $.validator.format(newMessages[i]);
+                }
+            }
+        }
+
+        // secretly validate the form (without showing the error messages)
+        // but this only works with onkeyup and onfocusout false!!!!
+        hiddenValidate = function (form) {
+            var validator = form.data("validator");
+            var isValid = validator.checkForm();
+            form.toggleClass("broken", isValid !== true);
+            $(".submitButtonWrapper .button.submit").attr("aria-disabled", isValid !== true);
+        };
+
+        forms.each(function (i, el) {
+            var form = $(el);
+            form.data("validator", window.x = form.validate({
+                onkeyup: false,
+                onfocusout: false,
+                errorElement: "span",
+                errorPlacement: function (error, element) {
+                    var errorBox = element.closest(".field").find("#Content_error_msg");
+                    errorBox.text(error.text());
+                },
+                showErrors: function (errorMap, errorList) {
+                    var form = $(this.currentForm), errorItem, i, l;
+                    this.defaultShowErrors();
+                    form.find(".text").not(".error").closest(".field").find("#Content_error_msg").html("");
+                    //$("#Code").attr("aria-invalid", !validator.checkForm());
+                    $("#Code").attr("aria-invalid", "true");
+                }
+            }));
+        });
+
+        // validate by rquireds only: this i our own implementation, should the
+        // above hiddenValidate fail, we really shall fall back to this one!
+        lightweightValidate = function (form) {
+            var requireds, count = 0;
+            requireds = form.find(".required");
+            requireds.each(function (i, el) {
+                if ($.trim($(el).val()).length) {
+                    count += 1;
+                }
+            });
+            form.toggleClass("broken", requireds.length !== count);
+            $(".submitButtonWrapper .button.submit").attr("aria-disabled", requireds.length !== count);
+        };
+
+        // since validating the whole form without adding the error messages
+        // is a pain in the back with the plugin, at least check the required fields manually
+        onInputChange = function (e) {
+            var el = $(e.currentTarget), form = el.closest("form");
+            hiddenValidate(form);
+            //lightweightValidate(form);
+        };
+        forms.find(".text")
+            .on("keyup", onInputChange) // nothing special... mybe blur would be needed too
+            .on("input", onInputChange); // firefox triggers this event on autocomplete
+
+
+        // first mark the form as broken (gray button) and then check it on
+        // each and every user interaction (key ups; above)
+        forms.addClass("broken").each(function () {
+            hiddenValidate($(this));
+            //lightweightValidate($(this));
+        });
+
+    }; // }}}
+
+
+    // the error message uses codebehind, while the input has no "error"
+    // class set; let's fix this from the client side for now (if we have an error
+    // message add the error class to the input itself)
+    app.addExtraErrorClasses = function () { // {{{
+        var el = $("form p#Content_error_msg");
+        
+        el.closest(".field").find(".text").toggleClass("error", !!$.trim(el.text()));
+    }; // }}}
+
+    // same as above but with success messages
+    app.addExtraSuccessClasses = function () { // {{{
+        var el = $("form p#Content_success_msg");
+        
+        el.closest(".field").find(".text").toggleClass("success", !!$.trim(el.text()));
+    }; // }}}
+
+    // to our greatest amusement the footer shall be fixed to the browser's bottom
+    // border, which is a bit problematic even if we have position:fixed support
+    // (which ie6 does not have of course)
+    app.footerPositionFixed = function () { // {{{
+        var footer, footerHeight, win, onResizing;
+        win = $(window);
+        footer = $("#Footer");
+        footerHeight = footer.outerHeight();
+
+        onResizing = function () {
+            var docHeight, winHeight;
+            footer.hide();
+            docHeight = $(document).height();
+            winHeight = win.height();
+            footer.css("top", Math.max(docHeight, winHeight) - footerHeight);
+            footer.show();
+        };
+
+        win.on("resized", onResizing);
+    }; // }}}
+
+
+    // pipe the browser's "resize" event to "resized", which is filtered,
+    // so we will not fry the trigger happy browsers
+    // example for using the lazy callback: win.on("resized", function () {});
+    // (we are going to use it for moving the footer around)
+    app.resizerProxy = function () { // {{{
+        var updateFrequency, win, onNativeResize, lazyUpdate, triggerFunc;
+
+        win = $(window);
+        updateFrequency = 200;
+
+        lazyUpdate = function (e) {
+            win.trigger("resized", e);
+        };
+
+        // global window resize event
+        onNativeResize = function (e) {
+            clearTimeout(triggerFunc);
+            triggerFunc = setTimeout(lazyUpdate, updateFrequency);
+        };
+
+        win.on("resize", onNativeResize);
+        win.resize(); // trigger
+    }; // }}}
+
+
+    // forms have neatly designed submit buttons, but in general
+    // html inputs and buttons are hard to style, so we fall back to links
+    app.formSubmission = function () { // {{{
+        var onClick;
+
+        onClick = function (e) {
+            e.preventDefault();
+            $(e.target).closest("form").submit();
+        };
+
+        $("form a.submit").click(onClick);
+
+        $('#Code').keyup(function (e) {
+            var code = e.which; 
+            if (code == 13) {
+                onClick(e);
+            }
+        });
+                        
+    }; // }}}
+
+
+    // the .more div is visible, but is outside the viewport;
+    // after getting the height we remove the magix, on click we toggle
+    // slide and a class (the latter is used for the little icon's background position setting)
+    // (css animation with height auto won't work and the max-height + callback
+    // solution is way too complex for us)
+    app.moreLessSwitch = function () { // {{{
+        var ready;
+
+        // this is useful if the opened (more) content overflows the
+        // default page boundary (the footer will be coverd)
+        ready = function () {
+            $(window).trigger("resized");
+        };
+
+        // with slideup we store the height internally
+        // when the body gets the "done" class we throw away the
+        // position absoliute -1500px hack, because we won't need it anymore
+        $(".hasMore .more").each(function (i, el) {
+            $(el).slideUp(0, ready);
+        });
+
+        // on click toggle sliding, now that jq has the height stored it should be okay
+        $(".hasMore .showMoreLess").click(function (e) {
+            var el = $(this);
+            var isExpanded = el.attr("aria-expanded") === "true";
+            el.attr("aria-expanded", isExpanded ? "false" : "true").closest(".hasMore").toggleClass("hasMoreActive").find(".more").slideToggle(ready);
+        });
+    }; // }}}
+
+
+    // since ie6 really hates hovers (among other things) and this dropdown has an
+    // "interesting" shape we're better off with opening and closing it with javascript
+    // (at least using a class toggle only, so we can offload part of the animating to css)
+    app.languageSelector = function () { // {{{
+        var activate, deactivate, clickElsewhere, timer, timeOut,
+            dropdownWidth, slimPageWidth, docuWidth, headerMargins;
+
+        headerMargins = 70 * 2 + 80;
+
+        // mouse leave timeout
+        timeOut = 500;
+
+        // do NOT remove this class toggling mechanism, we rely on it heavily in ie6!
+        activate = function () {
+            $("body").addClass("selectLang");
+            // ie6/7 fix for hiding the input label on the download (enter pin) form
+            // if the dropdown overlaps the input (cache values if possible)
+            dropdownWidth = dropdownWidth || $(".languageSelector .dropdown").outerWidth();
+            slimPageWidth = slimPageWidth || $(".slimPage").outerWidth();
+            docuWidth = $(document).width();
+            if (dropdownWidth + slimPageWidth + headerMargins > docuWidth) {
+                $("body").addClass("selectLangNarrow");
+            }
+        };
+
+        deactivate = function () {
+            $("body").removeClass("selectLang");
+            $("body").removeClass("selectLangNarrow");
+        };
+
+        // close the menu if the user clicked outside the language selector
+        clickElsewhere = function (e) {
+            if (!$(e.target).closest(".languageSelector").length) {
+                deactivate();
+            }
+        };
+
+        // attach events
+        $(".languageSelector .closed").on("hover", activate).on("click", activate);
+
+        $("html.touch .languageSelector .opened").on("click", function () { // on touch devices it may be closed with a touchclick
+            clearTimeout(timer);
+            deactivate();
+        });
+
+        $("body").on("click", clickElsewhere);
+
+        // non touch devices: manage hovering (enter/leave)
+        $("html.no-touch").find(".languageSelector .opened, .languageSelector .dropdown").hover(function () {
+            clearTimeout(timer);
+        }, function () {
+            timer = setTimeout(deactivate, timeOut);
+        });
+    }; // }}}
+
+
+    // since the placeholder attribute support is pretty hectic,
+    // we have to implement fake placeholders, because of the design (use the "placeholder" class)
+    // UPDATE: now if a label has an "onKeyUp" class then it will be shown until
+    // a value is added to the field (so a user can see the message even with a focused control)
+    app.fakePlaceholders = function () { // {{{
+        var labelHide, labelShow, onLabelClick, updateLabel, onFilteredKey, onKeyUp;
+
+        // locate laebl from input and hide
+        labelHide = function (e) {
+            var el = $(e.target), label;
+            label = el.closest(".field").find("label");
+            label.hide();
+        };
+
+        // locate laebl from input and show (if value is empty)
+        labelShow = function (e) {
+            var el = $(e.target), label;
+            label = el.closest(".field").find("label");
+            if (!el.val()) {
+                label.show();
+            }
+        };
+
+        // on label click transfer the focus to the input
+        onLabelClick = function (e) {
+            var el = $(e.target), input;
+            input = el.closest(".field").find(".text");
+            input.focus();
+        };
+
+        // used with the keyup version (we won't hide the label on key down with
+        // these keys, so that we can prevent *some* blinking)
+        onFilteredKey = function (e) {
+            // a nice list can be found in the jquery.hotkeys.js (plugin)
+            var blacklist = ",8,9,16,17,18,19,20,27,33,34,35,36,37,38" +
+                ",39,40,45,46,144,145,224,112,113,114,115,116,117,118" +
+                ",119,120,121,122";
+            // poor man's array indexOf (or we could use es5 shim, but with ie6 still around...)
+            if (blacklist.indexOf("," + e.keyCode + ",") === -1) {
+                labelHide(e);
+            }
+        };
+
+        // used with the keyup version: on key up try to show the label, if the value is empty
+        onKeyUp = function (e) {
+            var el = $(this);
+            if (el.val()) {
+                labelHide({target: el});
+            } else {
+                labelShow({target: el});
+            }
+        };
+
+        // am I using this with the validator? do I still need this?
+        updateLabel = function (e) {
+            labelShow(e);
+        };
+
+        $("form label.placeholder").each(function (i, el) {
+            var label, input;
+            label = $(el);
+            input = label.closest(".field").find(".text");
+
+            if (!label.is(".onKeyUp")) {
+                // works with focus/blur, the original behaviour
+                input.on("focus", labelHide)
+                    .on("blur", labelShow)
+                    .data("update", updateLabel); // assign to data (publish)
+            } else {
+                // yikes, now we have a special request:
+                // show the label even if user focuses the field (but it's empty)
+                // Now, what did we learn today? Never use a label as a placeholder.
+                input.on("keydown", onFilteredKey)
+                    .on("blur", labelShow)
+                    .on("input", onFilteredKey) // firefox autocomplete (we might turn it back on)
+                    .on("keyup", onKeyUp);
+                label.toggle(!input.val());
+            }
+
+            // quick and dirty help for the css
+            input.on("focus", function () { $(this).closest(".field").addClass("focus"); })
+                .on("blur", function () { $(this).closest(".field").removeClass("focus"); });
+
+            if (input.is(":focus")) {
+                input.focus();
+            } else {
+                input.blur();
+            }
+
+            label.on("click", onLabelClick);
+        });
+    }; // }}}
+
+
+    // ie image caching (the js slide effect would otherwise cause
+    // heavy flickering, at least on ie6)
+    app.fixIeBgimageCache = function () { // {{{
+        if (!$.browser.msie) {
+            return;
+        }
+        try {
+            document.execCommand("BackgroundImageCache", false, true);
+        } catch (e) {}
+    }; // }}}
+
+
+    // in ie6 sometimes (yes, sometimes) when the user fills out the download form
+    // (the one with the code only), then goes to the abuse form, where he or she
+    // presses "back", then the input may still retain its value (do not ask me
+    // why the spooky hell is this a bug and not the desired behaviour... [@see: RSC-16517])
+    app.fixIE6FormResetDownloadPage = function () { // {{{
+        var form = $("html.lt-ie7 .downloadPage form").get(0);
+        if (form) {
+            form.reset();
+        }
+    }; // }}}
+
+
+    // when the dom is ready let's check what we have and call the above functions
+    // accordingly; right now the whole project shall have this one js file only
+    app.onPageLoaded = function () { // {{{
+        var downloadNotification = $('.downloadNotification');
+
+        if (downloadNotification) {
+            var downloadNotificationPositionClass = 'bottomCenter';
+
+            if (navigator.userAgent.indexOf('Chrome') != -1 && navigator.vendor.indexOf('Google Inc') != -1) {
+                downloadNotificationPositionClass = 'bottomLeft';
+            }
+
+            if (navigator.userAgent.indexOf('Firefox') != -1 || navigator.userAgent.indexOf('Opera') != -1 || navigator.userAgent.indexOf('OPR') != -1 || (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)) {
+                downloadNotificationPositionClass = 'topRight';
+            }
+
+            downloadNotification.addClass(downloadNotificationPositionClass);
+            
+            $('.downloadNotification p').focus();
+
+            $(".downloadNotification .icon-close").click(function () {
+                $(".downloadNotification").addClass("closed");
+            });
+
+            $(".downloadNotification .icon-close").keydown(function (e) {
+                if (e.which === 13 || e.which === 32) {
+                    $(".downloadNotification").addClass("closed");
+                }
+            });
+        }
+
+        // stuff we need on all the pages
+        app.fixIeBgimageCache();
+        app.resizerProxy();
+
+        // fix something for the QA people on the download page
+        app.fixIE6FormResetDownloadPage();
+
+        // if we have the applet downloader, call it
+        if (typeof window.startDownloadRunProcess === "function") {
+            window.startDownloadRunProcess();
+        }
+
+        // modules (activated by certain selectors)
+        $.each([
+            // first is the selector, and if that exists, then let's call the method (2nd param)
+            [".clientValidation", "clientValidation"],
+            ["#Footer", "footerPositionFixed"],
+            [".field label", "fakePlaceholders"],
+            [".languageSelector", "languageSelector"],
+            [".hasMore", "moreLessSwitch"],
+            ["form p#Content_error_msg", "addExtraErrorClasses"],
+            ["form p#Content_success_msg", "addExtraSuccessClasses"],
+            ["form a.submit", "formSubmission"],
+            ["#DownloadForm", "manageDownloadForm"],
+            ["#ClickOnceDownload", "manageClickOnceDownload"]
+        ], function (i, params) { callIf.apply(null, params); });
+        $("body").addClass("done");
+
+        // force flush client side cache (without this the back button in firefox would
+        // not trigger js reparse / dom ready!); this can be prevented by adding proper
+        // nocache headers (which I will add to the codebehind just for completeness sake)
+        // EDIT: the server side aggressive no-cache header causes problems with the form
+        // submission (press submit, fail, go elsewhere, press back, whoops browser nag screen)
+        $(window).unload(function () {});
+    }; // }}}
+
+
+    // FINALLY
+    $(app.onPageLoaded);
+
+}(this.jQuery, this.lmi123));
+// :collapseFolds=0:mode=javascript:tabSize=4:indentSize=4:deepIndent=false:folding=explicit:

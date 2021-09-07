@@ -1,0 +1,62 @@
+//////////////////////////////////////////////////////////////////////
+// DO NOT MODIFY THIS PAC - CHANGES MUST BE MADE THRU THE ADMIN SITE
+//////////////////////////////////////////////////////////////////////
+// AUTOCACHE HP (c) 2014 ver.2.01 Web Publish
+// Debug URL: http://autocache.hpicorp.net/?debug=1
+// This PAC was web generated: 2020-06-19 08:54:11 AM
+//////////////////////////////////////////////////////////////////////
+
+var pacname = "sitedirect-hpi.pac";
+var pacdate = "2020-06-19 08:54:11 AM";
+
+function FindProxyForURL(url, host)
+
+{
+
+HPQNETPROXY = "PROXY web-proxy.austin.hpicorp.net:8080; PROXY proxy-txn.austin.hpicorp.net:8080";
+
+    hostIP = dnsResolve(host);
+    if (hostIP == false)
+        var hostIP = "1.1.1.1";
+
+    // make everything lowercase
+    // WARNING: all shExpMatch rules following MUST be lowercase!
+    url = url.toLowerCase();
+    host = host.toLowerCase();
+
+  // work-around for destinations expecting Net 15
+   if (dnsDomainIs(host, "npd.com")
+        || dnsDomainIs(host, "id.hp.com")
+        || dnsDomainIs(host, "instantink.com")
+        || dnsDomainIs(host, "hp-instantink.com")
+        || dnsDomainIs(host, "hp10.us")
+        || dnsDomainIs(host, "hp-dataservices.com")
+        || dnsDomainIs(host, "cso-hp.com")
+        || dnsDomainIs(host, "credit-suisse.com")
+        || dnsDomainIs(host, "npddecisionkey.com"))
+        return HPQNETPROXY ;
+
+    // HPI CRM, Satish Babu, 01/31/2018
+    // HPI Net15 exception, Randall Courtney, 07/28/2018
+    if (dnsDomainIs(host, "crm.dynamics.com")
+     || dnsDomainIs(host, "us.storedvalue.com"))
+        return "PROXY web-proxy.austin.hpicorp.net:8080; proxy-txn.austin.hpicorp.net:8080";
+
+    // Extranets that need to go via a pmHP proxy
+    if (isInNet(hostIP,"192.170.0.0", "255.255.0.0")
+         || isInNet(hostIP,"192.6.0.0", "255.255.0.0")
+         || isInNet(hostIP,"192.25.0.0", "255.255.0.0")
+         || isInNet(hostIP,"192.30.92.0", "255.255.255.0")
+         || isInNet(hostIP,"192.151.32.0", "255.255.255.0")
+         || isInNet(hostIP,"192.151.52.0", "255.255.255.0")
+         || isInNet(hostIP,"192.151.53.0", "255.255.255.0")
+         || isInNet(hostIP,"128.88.0.0", "255.255.0.0")
+         || isInNet(hostIP,"155.208.0.0", "255.255.0.0")
+         || isInNet(hostIP,"156.153.0.0", "255.255.0.0")
+         || isInNet(hostIP,"156.152.0.0", "255.255.0.0")
+         || isInNet(hostIP,"209.228.0.0", "255.255.0.0")
+         || isInNet(hostIP,"209.228.0.0", "255.255.0.0"))
+        return HPQNETPROXY;
+
+    return "DIRECT";
+}

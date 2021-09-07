@@ -1,0 +1,520 @@
+Virtual User Script started at: 8/19/2021 12:17:54 PM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\CSS\FY21\WCCBusiness\Scripts\ITG\V1\Falcon_S03_ProductCategories\\default.cfg"  	[MsgId: MMSG-27141]
+Starting to download the proxy automatic configuration script, URL="http://autocache.hpicorp.net/"  	[MsgId: MMSG-27097]
+Proxy automatic configuration script (URL="http://autocache.hpicorp.net/") downloaded and evaluated successfully  	[MsgId: MMSG-27096]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action ProductCategory_Landing.
+ProductCategory_Landing.c(4): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(4): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(5): web_add_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(5): web_add_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(7): web_add_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(7): web_add_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(9): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(9): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(11): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(11): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(13): web_add_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(13): web_add_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(15): web_add_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(15): web_add_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(19): Notify: Transaction "FP12_ProductCategoryLanding_01_doc" started.
+ProductCategory_Landing.c(21): web_custom_request("products") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(21): web_custom_request("products") was successful, 2124 body bytes, 604 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(31): Notify: Transaction "FP12_ProductCategoryLanding_01_doc" ended with a "Pass" status (Duration: 0.3905 Wasted Time: 0.0532).
+ProductCategory_Landing.c(34): Notify: Transaction "FP12_ProductCategoryLanding_02_api_wcc-service-ssc" started.
+ProductCategory_Landing.c(36): web_custom_request("productLanding") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(36): web_custom_request("productLanding") was successful, 1960 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(45): Notify: Transaction "FP12_ProductCategoryLanding_02_api_wcc-service-ssc" ended with a "Pass" status (Duration: 0.2499 Wasted Time: 0.0128).
+ProductCategory_Landing.c(48): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(48): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(50): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(50): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(53): Notify: Transaction "FP12_ProductCategoryLanding_03_api_region" started.
+ProductCategory_Landing.c(55): web_custom_request("region") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(55): web_custom_request("region") was successful, 738 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(64): Notify: Transaction "FP12_ProductCategoryLanding_03_api_region" ended with a "Pass" status (Duration: 0.2966 Wasted Time: 0.0070).
+ProductCategory_Landing.c(67): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(67): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(69): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(69): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(72): Notify: Transaction "FP12_ProductCategoryLanding_04_api_Termbase" started.
+ProductCategory_Landing.c(75): web_custom_request("productLanding_2") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(75): web_custom_request("productLanding_2") was successful, 2713 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(85): Notify: Transaction "FP12_ProductCategoryLanding_04_api_Termbase" ended with a "Pass" status (Duration: 0.2341 Wasted Time: 0.0106).
+ProductCategory_Landing.c(88): Notify: Transaction "FP12_ProductCategoryLanding_05_api_wcc_second_Nav" started.
+ProductCategory_Landing.c(90): web_custom_request("wcc_second_Nav") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(90): web_custom_request("wcc_second_Nav") was successful, 983 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(100): Notify: Transaction "FP12_ProductCategoryLanding_05_api_wcc_second_Nav" ended with a "Pass" status (Duration: 0.2808 Wasted Time: 0.0095).
+ProductCategory_Landing.c(103): Notify: Transaction "FP12_ProductCategoryLanding_06_api_wcc_pfinder_common" started.
+ProductCategory_Landing.c(105): web_custom_request("wcc_pfinder_common") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(105): web_custom_request("wcc_pfinder_common") was successful, 1958 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(115): Notify: Transaction "FP12_ProductCategoryLanding_06_api_wcc_pfinder_common" ended with a "Pass" status (Duration: 0.2340 Wasted Time: 0.0135).
+ProductCategory_Landing.c(118): Notify: Transaction "FP12_ProductCategoryLanding_07_api_wcc_sitehome_alerts" started.
+ProductCategory_Landing.c(120): web_custom_request("wcc_sitehome_alerts") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(120): web_custom_request("wcc_sitehome_alerts") was successful, 3665 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(130): Notify: Transaction "FP12_ProductCategoryLanding_07_api_wcc_sitehome_alerts" ended with a "Pass" status (Duration: 0.2344 Wasted Time: 0.0094).
+ProductCategory_Landing.c(134): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(134): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(136): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(136): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(139): Notify: Transaction "FP12_ProductCategoryLanding_08_api_wcc_products_banner" started.
+ProductCategory_Landing.c(141): web_custom_request("wcc_products_banner") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(141): web_custom_request("wcc_products_banner") was successful, 253 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(151): Notify: Transaction "FP12_ProductCategoryLanding_08_api_wcc_products_banner" ended with a "Pass" status (Duration: 0.2341 Wasted Time: 0.0099).
+ProductCategory_Landing.c(154): Notify: Transaction "FP12_ProductCategoryLanding_09_api_wcc_products_category" started.
+ProductCategory_Landing.c(157): web_custom_request("wcc_products_category") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(157): web_custom_request("wcc_products_category") was successful, 575 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(167): Notify: Transaction "FP12_ProductCategoryLanding_09_api_wcc_products_category" ended with a "Pass" status (Duration: 0.2811 Wasted Time: 0.0048).
+ProductCategory_Landing.c(170): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(170): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(172): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(172): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategory_Landing.c(175): Notify: Transaction "FP12_ProductCategoryLanding_10_api_active-products" started.
+ProductCategory_Landing.c(177): web_custom_request("active-products") started  	[MsgId: MMSG-26355]
+ProductCategory_Landing.c(177): web_custom_request("active-products") was successful, 1232 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategory_Landing.c(187): Notify: Transaction "FP12_ProductCategoryLanding_10_api_active-products" ended with a "Pass" status (Duration: 0.2498 Wasted Time: 0.0077).
+Ending action ProductCategory_Landing.
+Starting action ProductCategoryPrinter_L0.
+ProductCategoryPrinter_L0.c(4): web_add_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(4): web_add_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(6): web_add_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(6): web_add_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(8): web_add_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(8): web_add_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(10): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(10): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(12): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(12): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(17): Notify: Transaction "FP13_ProductCategoryL0_01_doc" started.
+ProductCategoryPrinter_L0.c(19): web_custom_request("{p_ProductCategory_L0}") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(19): web_custom_request("{p_ProductCategory_L0}") was successful, 2124 body bytes, 604 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(28): Notify: Transaction "FP13_ProductCategoryL0_01_doc" ended with a "Pass" status (Duration: 0.2183 Wasted Time: 0.0081).
+ProductCategoryPrinter_L0.c(31): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(31): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(33): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(33): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(35): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(35): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(38): Notify: Transaction "FP13_ProductCategoryL0_02_api_region" started.
+ProductCategoryPrinter_L0.c(40): web_custom_request("region_2") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(40): web_custom_request("region_2") was successful, 738 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(50): Notify: Transaction "FP13_ProductCategoryL0_02_api_region" ended with a "Pass" status (Duration: 0.2342 Wasted Time: 0.0076).
+ProductCategoryPrinter_L0.c(53): Notify: Transaction "FP13_ProductCategoryL0_03_api_termbase" started.
+ProductCategoryPrinter_L0.c(55): web_custom_request("productLanding_3") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(55): web_custom_request("productLanding_3") was successful, 2713 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(64): Notify: Transaction "FP13_ProductCategoryL0_03_api_termbase" ended with a "Pass" status (Duration: 0.2497 Wasted Time: 0.0097).
+ProductCategoryPrinter_L0.c(67): Notify: Transaction "FP13_ProductCategoryL0_04_api_wcc-service-ssc" started.
+ProductCategoryPrinter_L0.c(69): web_custom_request("productLanding_4") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(69): web_custom_request("productLanding_4") was successful, 1960 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(79): Notify: Transaction "FP13_ProductCategoryL0_04_api_wcc-service-ssc" ended with a "Pass" status (Duration: 0.2484 Wasted Time: 0.0134).
+ProductCategoryPrinter_L0.c(83): Notify: Transaction "FP13_ProductCategoryL0_05_api_wcc_second_Nav" started.
+ProductCategoryPrinter_L0.c(85): web_custom_request("wcc_second_Nav_2") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(85): web_custom_request("wcc_second_Nav_2") was successful, 983 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(94): Notify: Transaction "FP13_ProductCategoryL0_05_api_wcc_second_Nav" ended with a "Pass" status (Duration: 0.2342 Wasted Time: 0.0085).
+ProductCategoryPrinter_L0.c(97): Notify: Transaction "FP13_ProductCategoryL0_06_api_wcc_sitehome_alerts" started.
+ProductCategoryPrinter_L0.c(99): web_custom_request("wcc_sitehome_alerts_2") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(99): web_custom_request("wcc_sitehome_alerts_2") was successful, 3665 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(108): Notify: Transaction "FP13_ProductCategoryL0_06_api_wcc_sitehome_alerts" ended with a "Pass" status (Duration: 0.2496 Wasted Time: 0.0094).
+ProductCategoryPrinter_L0.c(112): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(112): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(114): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(114): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(116): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(116): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(119): Notify: Transaction "FP13_ProductCategoryL0_07_api_wcc_pfinder_common" started.
+ProductCategoryPrinter_L0.c(121): web_custom_request("wcc_pfinder_common_2") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(121): web_custom_request("wcc_pfinder_common_2") was successful, 1958 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(131): Notify: Transaction "FP13_ProductCategoryL0_07_api_wcc_pfinder_common" ended with a "Pass" status (Duration: 0.2497 Wasted Time: 0.0109).
+ProductCategoryPrinter_L0.c(134): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(134): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(137): Notify: Transaction "FP13_ProductCategoryL0_08_api_getProductCategoriesBySeoName" started.
+ProductCategoryPrinter_L0.c(139): web_custom_request("getProductCategoriesBySeoName") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(139): web_custom_request("getProductCategoriesBySeoName") was successful, 1258 body bytes, 540 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(150): Notify: Transaction "FP13_ProductCategoryL0_08_api_getProductCategoriesBySeoName" ended with a "Pass" status (Duration: 0.2497 Wasted Time: 0.0080).
+ProductCategoryPrinter_L0.c(153): Notify: Transaction "FP13_ProductCategoryL0_09_api_wcc_products_banner" started.
+ProductCategoryPrinter_L0.c(155): web_custom_request("wcc_products_banner_2") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(155): web_custom_request("wcc_products_banner_2") was successful, 251 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(165): Notify: Transaction "FP13_ProductCategoryL0_09_api_wcc_products_banner" ended with a "Pass" status (Duration: 0.2654 Wasted Time: 0.0054).
+ProductCategoryPrinter_L0.c(168): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(168): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(170): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(170): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(172): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(172): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(175): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(175): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(178): Notify: Transaction "FP13_ProductCategoryL0_10_api_href" started.
+ProductCategoryPrinter_L0.c(180): web_custom_request("href") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(180): web_custom_request("href") was successful, 90 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L0.c(192): Notify: Transaction "FP13_ProductCategoryL0_10_api_href" ended with a "Pass" status (Duration: 0.2498 Wasted Time: 0.0080).
+ProductCategoryPrinter_L0.c(195): web_add_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(195): web_add_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L0.c(197): Notify: Transaction "FP13_ProductCategoryL0_11_seo" started.
+ProductCategoryPrinter_L0.c(199): web_url("SEO_ProductCategoryL0") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(199): Found resource "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/styles.86f6121febe9ac96de73.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.8f34ce54cb7f2ef7d07091465f746cf5.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.8f34ce54cb7f2ef7d07091465f746cf5.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/product-page-assets/productLandingBanner.webp" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/30-p-finder-printer.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-printer-blue.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/icons-30-p-finder-laptop.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-laptop-blue.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/icons-30-p-finder-desktop.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-desktop-blue.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/icons-30-p-finder-other.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-other-blue.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03748764.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03960438.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03766779.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06276230.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03306760.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c04002384.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05152897.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05266446.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05822855.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05657034.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06113761.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c04269389.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c00763550.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05669588.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c00770125.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/virtual_assistant.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/flags/flag_us.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L0.c(199): Detected non-resource "https://a2129670914.cdn.optimizely.com/client_storage/a2129670914.html" in "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26574]
+ProductCategoryPrinter_L0.c(199): Detected non-resource "https://hp.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fppssupport-dev.inc.hpicorp.net" in "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers"  	[MsgId: MMSG-26574]
+ProductCategoryPrinter_L0.c(199): web_url("SEO_ProductCategoryL0") was successful, 1322554 body bytes, 20097 header bytes, 17 chunking overhead bytes  	[MsgId: MMSG-26385]
+ProductCategoryPrinter_L0.c(208): Notify: Transaction "FP13_ProductCategoryL0_11_seo" ended with a "Pass" status (Duration: 2.1494 Wasted Time: 0.1094).
+ProductCategoryPrinter_L0.c(210): web_remove_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L0.c(210): Previous automatically added web header for "User-Agent" removed  	[MsgId: MMSG-26587]
+ProductCategoryPrinter_L0.c(210): web_remove/revert_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+Ending action ProductCategoryPrinter_L0.
+Starting action ProductCategoryPrinter_L1.
+ProductCategoryPrinter_L1.c(4): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(4): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(6): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(6): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(8): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(8): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(10): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(10): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(12): web_add_auto_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(12): web_add_auto_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(14): web_add_auto_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(14): web_add_auto_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(17): Notify: Transaction "FP14_ProductCategoryL1_01_doc" started.
+ProductCategoryPrinter_L1.c(18): web_custom_request("{p_ProductCategory_L1}") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(18): web_custom_request("{p_ProductCategory_L1}") was successful, 2124 body bytes, 604 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(27): Notify: Transaction "FP14_ProductCategoryL1_01_doc" ended with a "Pass" status (Duration: 0.2341 Wasted Time: 0.0113).
+ProductCategoryPrinter_L1.c(30): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(30): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(32): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(32): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(34): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(34): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(37): Notify: Transaction "FP14_ProductCategoryL1_02_api_wcc-service-ssc" started.
+ProductCategoryPrinter_L1.c(39): web_custom_request("productLanding_5") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(39): web_custom_request("productLanding_5") was successful, 1960 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(49): Notify: Transaction "FP14_ProductCategoryL1_02_api_wcc-service-ssc" ended with a "Pass" status (Duration: 0.2497 Wasted Time: 0.0112).
+ProductCategoryPrinter_L1.c(52): Notify: Transaction "FP14_ProductCategoryL1_03_api_wcc_second_Nav" started.
+ProductCategoryPrinter_L1.c(55): web_custom_request("wcc_second_Nav_3") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(55): web_custom_request("wcc_second_Nav_3") was successful, 983 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(65): Notify: Transaction "FP14_ProductCategoryL1_03_api_wcc_second_Nav" ended with a "Pass" status (Duration: 0.2368 Wasted Time: 0.0096).
+ProductCategoryPrinter_L1.c(68): Notify: Transaction "FP14_ProductCategoryL1_04_api_region" started.
+ProductCategoryPrinter_L1.c(70): web_custom_request("region_3") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(70): web_custom_request("region_3") was successful, 738 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(79): Notify: Transaction "FP14_ProductCategoryL1_04_api_region" ended with a "Pass" status (Duration: 0.2340 Wasted Time: 0.0124).
+ProductCategoryPrinter_L1.c(82): Notify: Transaction "FP14_ProductCategoryL1_05_api_wcc_sitehome_alerts" started.
+ProductCategoryPrinter_L1.c(84): web_custom_request("wcc_sitehome_alerts_3") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(84): web_custom_request("wcc_sitehome_alerts_3") was successful, 3665 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(93): Notify: Transaction "FP14_ProductCategoryL1_05_api_wcc_sitehome_alerts" ended with a "Pass" status (Duration: 0.2344 Wasted Time: 0.0092).
+ProductCategoryPrinter_L1.c(96): Notify: Transaction "FP14_ProductCategoryL1_06_api_termbase" started.
+ProductCategoryPrinter_L1.c(98): web_custom_request("productLanding_6") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(98): web_custom_request("productLanding_6") was successful, 2713 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(107): Notify: Transaction "FP14_ProductCategoryL1_06_api_termbase" ended with a "Pass" status (Duration: 0.2497 Wasted Time: 0.0099).
+ProductCategoryPrinter_L1.c(110): Notify: Transaction "FP14_ProductCategoryL1_07_api_wcc_pfinder_common" started.
+ProductCategoryPrinter_L1.c(112): web_custom_request("wcc_pfinder_common_3") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(112): web_custom_request("wcc_pfinder_common_3") was successful, 1958 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(121): Notify: Transaction "FP14_ProductCategoryL1_07_api_wcc_pfinder_common" ended with a "Pass" status (Duration: 0.2497 Wasted Time: 0.0083).
+ProductCategoryPrinter_L1.c(124): Notify: Transaction "FP14_ProductCategoryL1_08_api_wcc_products_banner" started.
+ProductCategoryPrinter_L1.c(126): web_custom_request("wcc_products_banner_3") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(126): web_custom_request("wcc_products_banner_3") was successful, 254 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(136): Notify: Transaction "FP14_ProductCategoryL1_08_api_wcc_products_banner" ended with a "Pass" status (Duration: 0.2497 Wasted Time: 0.0085).
+ProductCategoryPrinter_L1.c(139): web_add_auto_header("Origin") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(139): web_add_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(141): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(141): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(143): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(143): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(145): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(145): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(148): Notify: Transaction "FP14_ProductCategoryL1_09_api_getProductCategoriesBySeoName" started.
+ProductCategoryPrinter_L1.c(151): web_custom_request("getProductCategoriesBySeoName_2") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(151): web_custom_request("getProductCategoriesBySeoName_2") was successful, 101 body bytes, 540 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(163): Notify: Transaction "FP14_ProductCategoryL1_09_api_getProductCategoriesBySeoName" ended with a "Pass" status (Duration: 0.3279 Wasted Time: 0.0091).
+ProductCategoryPrinter_L1.c(166): Notify: Transaction "FP14_ProductCategoryL1_10_api_href" started.
+ProductCategoryPrinter_L1.c(168): web_custom_request("href_2") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(168): web_custom_request("href_2") was successful, 90 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L1.c(180): Notify: Transaction "FP14_ProductCategoryL1_10_api_href" ended with a "Pass" status (Duration: 0.2496 Wasted Time: 0.0109).
+ProductCategoryPrinter_L1.c(183): web_add_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(183): web_add_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L1.c(185): Notify: Transaction "FP14_ProductCategoryL1_11_seo" started.
+ProductCategoryPrinter_L1.c(187): web_url("SEO_ProductCategoryL1") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(187): Resource "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/styles.86f6121febe9ac96de73.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.8f34ce54cb7f2ef7d07091465f746cf5.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.8f34ce54cb7f2ef7d07091465f746cf5.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/product-page-assets/productLandingBanner.webp" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/30-p-finder-printer.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-printer-blue.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/icons-30-p-finder-laptop.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-laptop-blue.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/icons-30-p-finder-desktop.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-desktop-blue.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/icons-30-p-finder-other.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-other-blue.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/virtual_assistant.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/flags/flag_us.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L1.c(187): Detected non-resource "https://a2129670914.cdn.optimizely.com/client_storage/a2129670914.html" in "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers"  	[MsgId: MMSG-26574]
+ProductCategoryPrinter_L1.c(187): Retrieving data from cache for "https://a2129670914.cdn.optimizely.com/client_storage/a2129670914.html"  	[MsgId: MMSG-26558]
+ProductCategoryPrinter_L1.c(187): Detected non-resource "https://hp.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fppssupport-dev.inc.hpicorp.net" in "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers"  	[MsgId: MMSG-26574]
+ProductCategoryPrinter_L1.c(187): web_url("SEO_ProductCategoryL1") was successful, 36415 body bytes, 1308 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+ProductCategoryPrinter_L1.c(196): Notify: Transaction "FP14_ProductCategoryL1_11_seo" ended with a "Pass" status (Duration: 0.4530 Wasted Time: 0.0224).
+ProductCategoryPrinter_L1.c(198): web_remove_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L1.c(198): Previous automatically added web header for "User-Agent" removed  	[MsgId: MMSG-26587]
+ProductCategoryPrinter_L1.c(198): web_remove/revert_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+Ending action ProductCategoryPrinter_L1.
+Starting action ProductCategoryPrinter_L2.
+ProductCategoryPrinter_L2.c(4): web_add_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(4): web_add_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(6): web_add_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(6): web_add_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(8): web_add_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(8): web_add_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(10): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(10): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(12): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(12): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(15): Notify: Transaction "FP15_ProductCategoryL2_01_doc" started.
+ProductCategoryPrinter_L2.c(17): web_custom_request("{p_ProductCategory_L2}") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(17): web_custom_request("{p_ProductCategory_L2}") was successful, 2124 body bytes, 604 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(26): Notify: Transaction "FP15_ProductCategoryL2_01_doc" ended with a "Pass" status (Duration: 0.2334 Wasted Time: 0.0074).
+ProductCategoryPrinter_L2.c(29): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(29): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(31): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(31): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(33): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(33): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(36): Notify: Transaction "FP15_ProductCategoryL2_02_api_region" started.
+ProductCategoryPrinter_L2.c(38): web_custom_request("region_4") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(38): web_custom_request("region_4") was successful, 738 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(48): Notify: Transaction "FP15_ProductCategoryL2_02_api_region" ended with a "Pass" status (Duration: 0.2355 Wasted Time: 0.0077).
+ProductCategoryPrinter_L2.c(51): Notify: Transaction "FP15_ProductCategoryL2_03_api_wcc-service-ssc" started.
+ProductCategoryPrinter_L2.c(53): web_custom_request("productLanding_7") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(53): web_custom_request("productLanding_7") was successful, 1960 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(62): Notify: Transaction "FP15_ProductCategoryL2_03_api_wcc-service-ssc" ended with a "Pass" status (Duration: 0.2497 Wasted Time: 0.0084).
+ProductCategoryPrinter_L2.c(65): Notify: Transaction "FP15_ProductCategoryL2_04_api_termbase" started.
+ProductCategoryPrinter_L2.c(67): web_custom_request("productLanding_8") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(67): web_custom_request("productLanding_8") was successful, 2713 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(76): Notify: Transaction "FP15_ProductCategoryL2_04_api_termbase" ended with a "Pass" status (Duration: 0.2498 Wasted Time: 0.0083).
+ProductCategoryPrinter_L2.c(79): Notify: Transaction "FP15_ProductCategoryL2_05_api_wcc_sitehome_alerts" started.
+ProductCategoryPrinter_L2.c(81): web_custom_request("wcc_sitehome_alerts_4") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(81): web_custom_request("wcc_sitehome_alerts_4") was successful, 3665 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(90): Notify: Transaction "FP15_ProductCategoryL2_05_api_wcc_sitehome_alerts" ended with a "Pass" status (Duration: 0.2342 Wasted Time: 0.0090).
+ProductCategoryPrinter_L2.c(93): Notify: Transaction "FP15_ProductCategoryL2_06_api_wcc_second_Nav" started.
+ProductCategoryPrinter_L2.c(95): web_custom_request("wcc_second_Nav_4") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(95): web_custom_request("wcc_second_Nav_4") was successful, 983 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(104): Notify: Transaction "FP15_ProductCategoryL2_06_api_wcc_second_Nav" ended with a "Pass" status (Duration: 0.2498 Wasted Time: 0.0074).
+ProductCategoryPrinter_L2.c(107): Notify: Transaction "FP15_ProductCategoryL2_07_api_wcc_pfinder_common" started.
+ProductCategoryPrinter_L2.c(109): web_custom_request("wcc_pfinder_common_4") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(109): web_custom_request("wcc_pfinder_common_4") was successful, 1958 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(118): Notify: Transaction "FP15_ProductCategoryL2_07_api_wcc_pfinder_common" ended with a "Pass" status (Duration: 0.2341 Wasted Time: 0.0113).
+ProductCategoryPrinter_L2.c(121): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(121): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(123): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(123): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(125): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(125): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(128): Notify: Transaction "FP15_ProductCategoryL2_08_api_wcc_products_banner" started.
+ProductCategoryPrinter_L2.c(130): web_custom_request("wcc_products_banner_4") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(130): web_custom_request("wcc_products_banner_4") was successful, 253 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(140): Notify: Transaction "FP15_ProductCategoryL2_08_api_wcc_products_banner" ended with a "Pass" status (Duration: 0.2625 Wasted Time: 0.0080).
+ProductCategoryPrinter_L2.c(143): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(143): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(145): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(145): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(147): web_add_auto_header("Origin") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(147): web_add_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(149): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(149): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(152): Notify: Transaction "FP15_ProductCategoryL2_09_api_getProductCategoriesBySeoName" started.
+ProductCategoryPrinter_L2.c(154): web_custom_request("getProductCategoriesBySeoName_3") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(154): web_custom_request("getProductCategoriesBySeoName_3") was successful, 0 body bytes, 401 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(165): Notify: Transaction "FP15_ProductCategoryL2_09_api_getProductCategoriesBySeoName" ended with a "Pass" status (Duration: 0.2342 Wasted Time: 0.0051).
+ProductCategoryPrinter_L2.c(168): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(168): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(170): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(170): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(172): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(172): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(175): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(175): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(178): Notify: Transaction "FP15_ProductCategoryL2_10_api_href" started.
+ProductCategoryPrinter_L2.c(181): web_custom_request("href_3") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(181): web_custom_request("href_3") was successful, 90 body bytes, 526 header bytes  	[MsgId: MMSG-26386]
+ProductCategoryPrinter_L2.c(193): Notify: Transaction "FP15_ProductCategoryL2_10_api_href" ended with a "Pass" status (Duration: 0.2498 Wasted Time: 0.0081).
+ProductCategoryPrinter_L2.c(196): web_add_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(196): web_add_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+ProductCategoryPrinter_L2.c(198): Notify: Transaction "FP15_ProductCategoryL2_11_seo" started.
+ProductCategoryPrinter_L2.c(200): web_url("SEO_ProductCategoryL2") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(200): Resource "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/styles.86f6121febe9ac96de73.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.8f34ce54cb7f2ef7d07091465f746cf5.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.8f34ce54cb7f2ef7d07091465f746cf5.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/product-page-assets/productLandingBanner.webp" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/30-p-finder-printer.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-printer-blue.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/icons-30-p-finder-laptop.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-laptop-blue.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/icons-30-p-finder-desktop.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-desktop-blue.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/icons-30-p-finder-other.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/p-finder/p-finder-icon-30-p-finder-other-blue.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c00596522.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c00596551.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c00696573.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c01930144.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c02070727.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c02208905.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c02149233.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03119856.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03109341.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c03788282.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06257985.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Found resource "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/pic18896.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26659]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/virtual_assistant.svg" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/flags/flag_us.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ProductCategoryPrinter_L2.c(200): Detected non-resource "https://a2129670914.cdn.optimizely.com/client_storage/a2129670914.html" in "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26574]
+ProductCategoryPrinter_L2.c(200): Retrieving data from cache for "https://a2129670914.cdn.optimizely.com/client_storage/a2129670914.html"  	[MsgId: MMSG-26558]
+ProductCategoryPrinter_L2.c(200): Detected non-resource "https://hp.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fppssupport-dev.inc.hpicorp.net" in "https://ppssupport-itgllbh7.inc.hp.com/us-en/products/printers/officejet-printers/officejet-4000"  	[MsgId: MMSG-26574]
+ProductCategoryPrinter_L2.c(200): web_url("SEO_ProductCategoryL2") was successful, 86724 body bytes, 5175 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+ProductCategoryPrinter_L2.c(209): Notify: Transaction "FP15_ProductCategoryL2_11_seo" ended with a "Pass" status (Duration: 0.7184 Wasted Time: 0.0356).
+ProductCategoryPrinter_L2.c(211): web_remove_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+ProductCategoryPrinter_L2.c(211): Previous automatically added web header for "User-Agent" removed  	[MsgId: MMSG-26587]
+ProductCategoryPrinter_L2.c(211): web_remove/revert_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+Ending action ProductCategoryPrinter_L2.
+Starting action ServiceCenter.
+ServiceCenter.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+ServiceCenter.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(5): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(5): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(7): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(7): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(9): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(9): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(11): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(11): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(13): web_add_auto_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(13): web_add_auto_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(15): web_add_auto_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(15): web_add_auto_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(18): Notify: Transaction "FP26_ServiceCenter_01_doc" started.
+ServiceCenter.c(20): web_url("service-center") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(20): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/images/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/images/loadingHp.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/js/jqueryv1_10_2.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ssl.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://cdn.optimizely.com/js/19578177762.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://nebula-cdn.kampyle.com/wu/474882/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/portal/pps/Home/service-locator/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifQ08DYy83A28LbyMTQ0CDQwcnQPDXI0NDAz1w8EKnN0dPUzMfQwM3ANNnAw8zX39vV2DLIwNPM30o4jRb4ADOBoQpx-Pgij8xofrR4GV4PMBITMKckNDIwwyHQEJdD2h/hp/js/qualtricsLoader.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Resource "https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/contenthandler/pps/!ut/p/digest!Gu1JQ18jiCIB-gUpmFgFTw/sp/mashup:ra:collection?soffset=0&eoffset=21&themeID=ZJ_3054ICK0K8VR40ACSBJACA0001&locale=en&mime-type=text%2Fcss&lm=1628862774000&entry=wp_one_ui_30__0.0%3Ahead_css&entry=wp_one_ui_dijit_30__0.0%3Ahead_css&entry=wp_portlet_css__0.0%3Ahead_css&entry=wp_status_bar__0.0%3Ahead_css&entry=hpStyleR2__1.0%3Ahead_css&entry=wp_legacy_layouts__0.0%3Ahead_css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/contenthandler/pps/!ut/p/digest!3JKaotSk_gMd0aUfF0xN-w/mashup/ra:collection?themeID=ZJ_3054ICK0K8VR40ACSBJACA0001&locale=en&mime-type=text%2Fjavascript&lm=1628862770000&entry=wp_client_main__0.0%3Ahead_js&entry=wp_client_ext__0.0%3Ahead_js&entry=hpStyleR2__1.0%3Ahead_js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/themeModules/themes/html/dynamicSpots/icons/blank.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/hp-support-common-portlets/resources/v1/js/get_to_know_win.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/hp-support-common-portlets/resources/v1/js/ContactSecondaryNavigation.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/hp-support-common-portlets/resources/v1/js/csrf.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/portal/pps/Home/service-locator/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifQ08DYy83A28LbyMTQ0CDQwcnQPDXI0NDAz1w8EKnN0dPUzMfQwM3ANNnAw8zX39vV2DLIwNPM30o4jRb4ADOBoQpx-Pgij8xofrR4GV4PMBITMKckNDIwwyHQEJdD2h/gme-hp" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/hp-support-contact-portlets/resources/v1/js/serviceLocator.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/hp-support-contact-portlets/resources/v1/js/serviceLocatorMap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/images/toronto_Avatar.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/images/close_white.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/images/session_timeout.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/contenthandler/pps/!ut/p/digest!nAHmxwT-K1ischyBWmt1ig/mashup/ra:collection?themeID=ZJ_3054ICK0K8VR40ACSBJACA0001&locale=en&mime-type=text%2Fjavascript&lm=1629296792952&entry=wp_portal__0.0%3Aconfig_config_static&entry=mm_enabler__0.0%3Aconfig_config_static" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wps/contenthandler/pps/!ut/p/digest!3JKaotSk_gMd0aUfF0xN-w/mashup/ra:collection?themeID=ZJ_3054ICK0K8VR40ACSBJACA0001&locale=en&mime-type=text%2Fjavascript&lm=1628834286000&entry=wp_theme_edit__0.0%3Aconfig_js&entry=wp_one_ui_30__0.0%3Aconfig_js&entry=wp_theme_skin_region__0.0%3Aconfig_js&entry=wp_status_bar__0.0%3Aconfig_js&entry=wp_theme_menus__0.0%3Aconfig_js&entry=hpStyleR2__1.0%3Aconfig_js&entry=wp_theme_high_contrast__0.0%3Aconfig_js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Found resource "https://ppssupport-itgllbh7.inc.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/js/contentsquare.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/service-center"  	[MsgId: MMSG-26659]
+ServiceCenter.c(20): Redirecting "https://ppssupport-itgllbh7.inc.hp.com/wps/portal/pps/Home/service-locator/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifQ08DYy83A28LbyMTQ0CDQwcnQPDXI0NDAz1w8EKnN0dPUzMfQwM3ANNnAw8zX39vV2DLIwNPM30o4jRb4ADOBoQpx-Pgij8xofrR4GV4PMBITMKckNDIwwyHQEJdD2h/hp/js/qualtricsLoader.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+ServiceCenter.c(20): To location "https://ppssupport-itgllbh7.inc.hp.com/wps/contenthandler/pps/!ut/p/digest!3JKaotSk_gMd0aUfF0xN-w/war/hp-portal-theme-static/themes/Portal8.0/hp/js/qualtricsLoader.js"  	[MsgId: MMSG-26693]
+ServiceCenter.c(20): Redirecting "https://ppssupport-itgllbh7.inc.hp.com/wps/portal/pps/Home/service-locator/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zifQ08DYy83A28LbyMTQ0CDQwcnQPDXI0NDAz1w8EKnN0dPUzMfQwM3ANNnAw8zX39vV2DLIwNPM30o4jRb4ADOBoQpx-Pgij8xofrR4GV4PMBITMKckNDIwwyHQEJdD2h/gme-hp" (redirection depth is 0)  	[MsgId: MMSG-26694]
+ServiceCenter.c(20): To location "https://ppssupport-itgllbh7.inc.hp.com/wps/contenthandler/pps/!ut/p/spa/Z6_M0I02JG0K8J350Q00ACQVE3001/html/gme-hp"  	[MsgId: MMSG-26693]
+ServiceCenter.c(20): web_url("service-center") was successful, 756799 body bytes, 15914 header bytes  	[MsgId: MMSG-26386]
+ServiceCenter.c(29): Notify: Transaction "FP26_ServiceCenter_01_doc" ended with a "Pass" status (Duration: 2.1043 Wasted Time: 0.1791).
+ServiceCenter.c(32): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(32): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(34): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(34): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(36): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(36): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(38): web_remove_auto_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(38): Previous automatically added web header for "sec-ch-ua" removed  	[MsgId: MMSG-26587]
+ServiceCenter.c(38): web_remove/revert_auto_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(39): web_remove_auto_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(39): Previous automatically added web header for "sec-ch-ua-mobile" removed  	[MsgId: MMSG-26587]
+ServiceCenter.c(39): web_remove/revert_auto_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(40): web_add_auto_header("Origin") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(40): web_add_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(43): web_add_auto_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(43): web_add_auto_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(46): Notify: Transaction "FP26_ServiceCenter_02_api_Filters" started.
+ServiceCenter.c(49): web_custom_request("filters") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(49): web_custom_request("filters") was successful, 447 body bytes, 333 header bytes  	[MsgId: MMSG-26386]
+ServiceCenter.c(62): Notify: Transaction "FP26_ServiceCenter_02_api_Filters" ended with a "Pass" status (Duration: 0.7186 Wasted Time: 0.0124).
+ServiceCenter.c(64): web_remove_auto_header("Origin") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(64): Previous automatically added web header for "Origin" removed  	[MsgId: MMSG-26587]
+ServiceCenter.c(64): web_remove/revert_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(65): web_remove_auto_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(65): Previous automatically added web header for "X-Requested-With" removed  	[MsgId: MMSG-26587]
+ServiceCenter.c(65): web_remove/revert_auto_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(66): web_add_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(66): web_add_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(68): web_add_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(68): web_add_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(71): Notify: Transaction "FP26_ServiceCenter_03_api_countries" started.
+ServiceCenter.c(73): web_custom_request("countries") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(73): web_custom_request("countries") was successful, 1224 body bytes, 333 header bytes  	[MsgId: MMSG-26386]
+ServiceCenter.c(86): Notify: Transaction "FP26_ServiceCenter_03_api_countries" ended with a "Pass" status (Duration: 0.5982 Wasted Time: 0.0101).
+ServiceCenter.c(90): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(90): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(93): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(93): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(96): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(96): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(99): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(99): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(102): web_add_auto_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(102): web_add_auto_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(105): web_add_auto_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(105): web_add_auto_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+ServiceCenter.c(108): Notify: Transaction "FP26_ServiceCenter_04_api_centers" started.
+ServiceCenter.c(109): web_custom_request("centers") started  	[MsgId: MMSG-26355]
+ServiceCenter.c(109): web_custom_request("centers") was successful, 1937 body bytes, 333 header bytes  	[MsgId: MMSG-26386]
+ServiceCenter.c(120): Notify: Transaction "FP26_ServiceCenter_04_api_centers" ended with a "Pass" status (Duration: 1.2030 Wasted Time: 0.0078).
+Ending action ServiceCenter.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

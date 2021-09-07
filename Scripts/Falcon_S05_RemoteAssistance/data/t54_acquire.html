@@ -1,0 +1,384 @@
+/*global AC, jQuery, console*/
+/*jslint browser:true, nomen:true, regexp:true*/
+// copied back from site code
+window.acquire = window.acquire || (function ($) { // if loaded multiple times, do not redefine!
+    "use strict";
+
+    var unpackNS, needsRender, markAsRendered, postpone, define, renderAll,
+        recordedDefinitions, launch, internalScope, dumpInternalScope, renderOne,
+        renderList, dumpRenderList, flushInternals, isMinified,
+        inspectDefinedCode;
+
+
+    // detect minification
+    (function () {
+        var func = function (Yoda) { return Yoda; };
+        isMinified = func.toString().indexOf("(Yoda)") === -1;
+    }());
+
+
+    // Function: _flush
+    //   empty internal arrays
+    flushInternals = function () { // {{{
+        recordedDefinitions = [];
+        renderList = [];
+        internalScope = {};
+    }; // }}}
+
+    // store list of names internally for renderAll auto
+    flushInternals();
+
+    // Function: _needsRender
+    //   is this a finalized object or it needs to be evaluated?
+    //   (if it is a function, OR a function that is marked uncooked, then do so)
+    //
+    // Returns:
+    //   needsRender - boolean (true if item exists and it is lazy)
+    needsRender = function (item) { // {{{
+        return (item && item.__isLazy);
+    }; // }}}
+
+    // Function: _markAsRendered
+    //   we don't want colliding functions
+    markAsRendered = function (item) { // {{{
+        if (typeof item === "function") {
+            item.__acquired = true;
+        }
+    }; // }}}
+
+    // Function: _inspectDefinedCode
+    //   check for 1. the number of parameters (deps vs fn tostring params)
+    //   and 2. unused parameters (fn params and fn source; rough check of
+    //   course, no language analyzer used)
+    inspectDefinedCode = function (name, deps, fn, _console) {
+        var src, i, l, params, param;
+        _console = _console || window.console;
+
+        // do a little introspection and count the number of parameters
+        // this shall work with munging compressors too
+        src = fn.toString().replace(/\s+/g, " ");
+        if (/^\s*function\s+\(/.test(src)) {
+            src = src.match(/^\s*function\s+\(([^\)]*)\)/);
+            // does it mismatch?
+            if (src.length === 2) {
+                params = src[1] ? src[1].split(/,\s*/) : null;
+            }
+            if (params && (params.length !== deps.length) && _console) {
+                _console.warn("Parameter count mismatch: '" + name + "'");
+            }
+        }
+
+        // do a somewhat more dangerous introspection here: see if we have
+        // unused parameters *inside* the code (of course this has "pretty high"
+        // accuracy with descriptive variable names and terrible with short ones
+        // but without static analysis that's all I would dare to do
+        src = fn.toString();
+        if (!isMinified && params && params.length) { // if not minified and we have valid func params
+            src = src.replace(/[^{]*\{/, ""); // cut off first "function (stuff) {"
+            for (i = 0, l = params.length; i < l; i += 1) { // check occurances one by one
+                param = params[i].replace(/\s/g, ""); // "trim"
+                if ((src.indexOf(param) === -1) && _console) { // if not found, then warn
+                    _console.warn("Unused parameter: '" + param + "' in '" + name + "'");
+                }
+            }
+        }
+    };
+
+    // Function: _unpackNS
+    //   unpacks a namespace string (by default it returns the found object)
+    //   "lorem.ipsum.dolor" -> {lorem: {ipsum: dolor: {}}}
+    //
+    //   use "create" to create the given object set
+    //   and "popLast" to remove the last item (so you can create/merge it manually)
+    //
+    // Returns:
+    //   obj - the created/retrieved object
+    unpackNS = function (str, create, popLast) { // {{{
+        //str = str.replace(/^~/, "AC.");
+        var parts, obj = window, i, l;
+        if (str.indexOf("~") === 0) {
+            obj = internalScope;
+        }
+        parts = str.split(".");
+        if (popLast) {
+            parts.pop();
+        }
+        for (i = 0, l = parts.length; i < l; i += 1) {
+            // create props + it doesn't exist + not the last one
+            if (create && (obj[parts[i]] === undefined)) {
+                obj[parts[i]] = {};
+            }
+            if (obj) {
+                obj = obj[parts[i]];
+            }
+        }
+        return obj;
+    }; // }}}
+
+    // Function: postpone
+    //   postpone loading of a resource (a function, that shall be run at agiven time)
+    //
+    //   (start code)
+    //     var postpone = AC.framework.aquire.postpone;
+    //
+    //     AC.viewmodels.OrgPageCreateTechnician = postpone(null, function () { ...
+    //
+    //     AC.viewmodels.OrgPageCreateTechnician
+    //       = postpone([
+    //           "AC.vm/OrgPageCreateTechnician_model" <-- egyelore lib es plugin meg nem?!
+    //       ], function (model) {
+    //           model: model
+    //       ...
+    //
+    //     /*global AC*/
+    //     AC.viewmodels.OrgPageCreateTechnician.model = postpone([
+    //         "ko", "AC.framework.obj", "AC.framework.request"
+    //     ], function (ko, obj, req) {
+    //         "use strict";
+    //         return {
+    //           ...
+    //  (end)
+    //
+    // Parameters:
+    //   deps - array of strings, or an empty array (or null, but the latter is the same).
+    //          I could make it (somewhat) work with no strings, but in that case
+    //          overwriting would be problematic (same as with renderOne), so please use strings.
+    //   fn - function to be wrapped (lazified)
+    //   _console - pass your spied console here if you're unit testing
+    //
+    // Returns:
+    //   lazy - callable function
+    postpone = function (deps, fn, _console) { // {{{
+        var lazy;
+        _console = _console || window.console;
+
+        lazy = function postponedFunc() { // called by renderAll
+            var unpacked, i, l, unpItem, depName, last, ret;
+            if (!deps || !deps.length) { // no dependencies
+                ret = fn();
+            } else { // we have a list of deps
+                l = deps.length;
+                unpacked = [];
+                for (i = 0; i < l; i += 1) {
+                    depName = deps[i];
+                    unpItem = unpackNS(depName);
+                    if (!unpItem && _console) {
+                        _console.warn("Could not find requested dependency/file '" + depName + "'!");
+                    }
+                    if (needsRender(unpItem)) {
+                        // we must ryle on object references, so we have to use a "parent" object
+                        last = depName.split(".").pop();
+                        //                string, no create, pop last
+                        unpItem = unpackNS(depName, false, true)[last] = unpItem();
+                        // now that we have a referenced object, we can mark it
+                        markAsRendered(unpItem);
+                    }
+                    unpacked.push(unpItem);
+                }
+                ret = fn.apply(fn, unpacked);
+            }
+            // we store the original "acquired" name (this is not really interesting
+            // with namespaces, but if we remove them, this may be used for some interesting stuff)
+            if (ret !== null && (typeof ret === "object" || typeof ret === "function")) {
+                ret.__acquiredAs = lazy.__name;
+            }
+            renderList.push(lazy.__name);
+            return ret;
+        };
+
+        lazy.__isLazy = true;
+        lazy.__immediateDeps = deps;
+        return lazy;
+    }; // }}}
+
+    // Function: define
+    //   create and postpone in the same time
+    //
+    // Returns:
+    //   newObj - the newly created lazified code
+    define = function (name, deps, fn, overwrite, _console) { // {{{
+        if (/!$/.test(name)) {
+            name = name.substr(0, name.length - 1);
+            overwrite = true;
+        }
+        recordedDefinitions.push(name);
+        // otherwise go on with all three params
+        if (typeof fn !== "function") {
+            throw new Error("define: callback must be a function.");
+        }
+        var ret = unpackNS(name, true, true), last = name.split(".").pop(), newObj;
+        if (ret[last] && !overwrite) {
+            throw new Error("define: merging not implemented / or name is not unique '" + name + "'.");
+        }
+        inspectDefinedCode(name, deps || [], fn, _console);
+        newObj = ret[last] = postpone(deps, fn);
+        newObj.__name = name;
+        return newObj; //(ret[last] = postpone(deps, fn));
+    }; // }}}
+
+    // Function: _renderAll
+    //   before usage all the lazied functions must be called;
+    //   probably right before creating the app-App in preinit.
+    //   Can render an array of strings/objects, if the parameter is missing
+    //   it will render everything (all the _recorded definitions_); now
+    //   it calls renderOne if only one item is given and if that item needs rendering.
+    //
+    //   WARNING: If you get a TOO MUCH RECURSION ERROR then you tried to call render
+    //   from an unrendered code block!!! Don't do that, please!
+    //
+    // Parameters:
+    //   objs - may be array (of strings or objects) or a string with one item's name or one object
+    renderAll = function (objs) { // {{{
+        var i, obj, wasType, wasObjs;
+        wasType = typeof objs;
+        wasObjs = objs;
+        if (objs === null) { // throw away null objects
+            return;
+        }
+        if ($.type(objs) === "array") {
+            return objs.map(function (obj) { renderAll(obj); });
+        }
+        if (wasType === "string") {
+            //objs = unpackNS(objs, false, true); // no create, but pop last
+            objs = unpackNS(objs, false, false); // try not to pop the last, that's more consistent
+        }
+        if (wasType === "string" && typeof objs === "function" && needsRender(objs)) {
+            return renderOne(wasObjs);
+        }
+        if (wasType === "string" && !needsRender(objs)) { // it was nothing more than an unpack
+            return objs;
+        }
+        if (objs === undefined) {
+            jQuery.map(recordedDefinitions, function (itemName) { renderAll(itemName); });
+        }
+        // REMOVED "&& needsRender(objs)" FROM CONDITIONAL BELOW
+        if (typeof objs === "function") { // whoops, it's not a namespace
+            return renderOne(objs); // it's not very good, because it was not added as a string
+        }
+        for (i in objs) {
+            if (objs.hasOwnProperty(i)) {
+                obj = objs[i];
+                if (needsRender(obj)) {
+                    objs[i] = obj();
+                    markAsRendered(objs[i]); // aquire's lazy
+                }
+            }
+        }
+    }; // }}}
+
+    // Function: _renderOne
+    //   render only one dependency and return that
+    //
+    // Parameters:
+    //   obj - string name of object or object itself, which is a lazy function and shall be run;
+    //         but *be warned*, if you're not passing a namespace-string, but the real variable,
+    //         you *must* overwrite the target item with the returning value yourself!
+    //
+    // Returns:
+    //   obj - the resolved object (with added mock functions if mixinMockers was true)
+    renderOne = function (obj) { // {{{
+        var was, lastPart;
+        // with a non-string automatic value writing will not work!!!!
+        // (possibly I would have to "look for" a target object)
+        if (typeof obj === "string") {
+            was = obj;
+            lastPart = obj.split(".").pop();
+            obj = unpackNS(obj); // no create, but pop last
+        }
+        //temp = obj.__immediateDeps; - we have this list, don't forget it :)
+        if (needsRender(obj)) {
+            obj = obj();
+            markAsRendered(obj);
+            if (was) { // if obj was a string, then overwrite
+                unpackNS(was, false, true)[lastPart] = obj;
+            }
+        }
+        return obj;
+    }; // }}}
+
+    // Function: _dumpInternalScope
+    //   debug tool for showing the internal top level namespace
+    //   if we do not use the "window" (internal scope can be triggered
+    //   with the tilde ("~") as the first char of the namespace string)
+    //
+    // Returns:
+    //   internalScope - the collector object (empty if no tilde has been used in name definitions)
+    dumpInternalScope = function () { // {{{
+        return internalScope;
+    }; // }}}
+
+    // Function: _dumpRenderList
+    //   debug tool for showing the list of rendered items;
+    //   this may come handy if we want to collect a list of files to load
+    //   for a page, instead of loading everything (should they be way too much).
+    //
+    // Returns:
+    //   renderList - array of strings (or objects?, let me think...)
+    dumpRenderList = function (flush) { // {{{
+        var ret = renderList.slice();
+        if (flush) {
+            renderList = [];
+        }
+        return ret;
+    }; // }}}
+
+    // Function: launch
+    //   render all automatically on dom load + instanciate given item (from string)
+    //   in the future unpackNS will be deprecated in favour of no namespaces
+    //
+    // Parameters:
+    //   name - string, name of the item to render (for example: "AC.app/account/RegFormA")
+    //   preInit - optional function that will be executed before rendering
+    //   _node - pass your mock dom node here (a unique class will be atteched to it)
+    launch = function (name, preInit, _node) { // {{{
+        $(function () {
+            // add the app name to the body class, so that we can tweak
+            // it from css (ex: AC["app/account/TrialCenter"] -> app-account-trialcenter
+            $(_node || "body").addClass(name.replace(/^.*?\./, "")
+                .replace(/[^a-z0-9-_]/gi, "-").toLowerCase());
+            if (preInit) {
+                preInit();
+            }
+            //renderAll(name);
+            //var obj = (typeof name === "string") ? unpackNS(name, false) : name;
+            var obj = renderOne(name);
+            if (obj && obj.init) {
+                ($.extend({}, obj)).init(); // I removed Object.create from here, because that's not available ie6
+            }
+        });
+    }; // }}}
+
+    // Function: ?OnDOMContentLoaded
+    //   listen for dom content load and launch if body has special data-app attribute.
+    //   We can have ONE APP PER PAGE! If no app is defined, but "AC.app/Fallback"
+    //   exists then we shall use that.
+    $(function () { // {{{
+        var autoApp; // = $("body").attr("data-app");
+        autoApp = $("[data-app]").attr("data-app") || "";
+        // this is not healthy (for tests + not really logical here)
+        //if (!autoApp && window.AC && AC["app/Fallback"]) {
+        //    autoApp = "AC.app/Fallback";
+        //}
+        launch(autoApp);
+    }); // }}}
+
+// EXPORTS -----------------------------------------------------------------------------------------
+
+    return {
+        postpone: postpone, // lazify a function
+        define: define, // define AND postpone
+        render: renderAll, // renderOne or renderAll
+        renderAll: renderAll, // BACKWARD COMPATIBILITY
+        launch: launch, // renderall + preinit + obj create init
+
+        // debug/test tools {{{
+        _dumpRenderList: dumpRenderList, // debug, akiket lerendereltunk (array of strings)
+        _dumpInternalScope: dumpInternalScope, // debug, "~"-mal kezdodo itemekhez, amik nem window-ra kerulnek
+        _renderAll: renderAll, // left here for compatibility, may be removed later
+        _renderOne: renderOne, // left here for compatibility, may be removed later
+        _flush: flushInternals, // empty internals, required for testing
+        _isMinified: isMinified
+        // }}}
+    };
+
+}(jQuery));

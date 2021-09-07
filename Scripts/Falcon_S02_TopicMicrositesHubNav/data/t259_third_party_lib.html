@@ -1,0 +1,96 @@
+(function(){
+  const getHpDotComCountrylangCode =function(cc, lc){
+    let countryLangCode = cc+'/'+lc;
+    switch (countryLangCode) {
+      case 'gb/en':
+        countryLangCode = 'uk/en';
+        break;
+      case 'bg/en':
+        countryLangCode = 'bg/bg';
+        break;
+      case 'hr/en':
+        countryLangCode = 'hr/hr';
+        break;
+      case 'ee/en':
+        countryLangCode = 'ee/et';
+        break;
+      case 'lv/en':
+        countryLangCode = 'lv/lv';
+        break;
+      case 'lt/en':
+        countryLangCode = 'lt/lt';
+        break;
+      case 'ro/en':
+        countryLangCode = 'ro/ro';
+        break;
+      case 'rs/en':
+        countryLangCode = 'rs/sr';
+        break;
+      case 'sk/en':
+        countryLangCode = 'sk/sk';
+        break;
+      case 'si/en':
+        countryLangCode = 'si/sl';
+        break;
+      default:
+        countryLangCode = cc+'/'+lc;
+    }
+    return countryLangCode;
+  }
+  const getCcLc = function (cclc){
+    if (typeof window !== 'undefined') {
+      return cclc.trim().toLowerCase() === 'cc'   
+              ? window.location.pathname.split('/')[1].split('-')[0]
+              : window.location.pathname.split('/')[1].split('-')[1];
+    } else {
+      return cclc.trim().toLowerCase() === 'cc' ? 'us' : 'en';
+    }
+  }
+  let cc = getCcLc('cc');
+  let lc = getCcLc('lc');
+  let countryLanguageCode = getHpDotComCountrylangCode( getCcLc('cc'), getCcLc('lc'));
+  if(cc && lc){
+    //Prod URl
+    //{'canJquery':'https://ssl.www8.hp.com/'+countryLanguageCode+'/scripts/framework/jquery/v-1-8/can.jquery.js'},
+    const jsFileList = [
+      //{'canJquery':'https://ssl.www8.hp.com/'+countryLanguageCode+'/scripts/framework/jquery/v-1-8/can.jquery.js'},
+      {'bootStrap':'https://nexus.ensighten.com/hp/support_stage/Bootstrap.js'},
+      {'optimizely':'https://cdn.optimizely.com/js/18956663993.js'},
+      {'headerFooter':'https://itg-live.www8.hp.com/caas/header-footer/'+ countryLanguageCode+'/default/latest.r?contentType=js&hide_search=true&show_shopping_cart=true&hide_country_selector=true'}
+    ]
+    //const headerFooterJs =  {'headerFooter':'https://www8.hp.com/caas/header-footer/'+countryLanguageCode+'/default/latest.r?contentType=js&hide_search=true&show_shopping_cart=true&hide_country_selector=true'};
+    // Pointing to ITG to check if header footer loading issue Resolved
+    // const headerFooterJs = {'headerFooter':'https://itg-live.www8.hp.com/caas/header-footer/'+ countryLanguageCode+'/default/latest.r?contentType=js&hide_search=true&show_shopping_cart=true&hide_country_selector=true'}
+    const setAttributes = function(el, attrs) {
+      for(var key in attrs) {
+        el.setAttribute(key, attrs[key]);
+      }
+    }
+    const loadScriptMultipleScript = function(urlArray){
+      for (let i =0; i < urlArray.length; i++) {
+        addScript(urlArray[i]);
+      }
+      //if(jsFileLoaded['canJquery']){addScript(headerFooterJs)} ;
+    };
+    const addScript = function(obj){
+      Object.keys(obj).forEach(function(key) {
+        loadScript(obj[key], key);
+      });
+    }
+  
+    const loadScript = function(url, key) {
+      const js = document.createElement("script");
+      setAttributes(js, {'src': url, 'defer' : ''});
+      js.onload = scriptOnload(key)
+      document.head.appendChild(js);
+      return js;
+    };
+    let jsFileLoaded = {}
+    const scriptOnload = function(key){
+      jsFileLoaded[key]=true;
+      return jsFileLoaded;
+    }
+    loadScriptMultipleScript(jsFileList);
+  }
+})();
+

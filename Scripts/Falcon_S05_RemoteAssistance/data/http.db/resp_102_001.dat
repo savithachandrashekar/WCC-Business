@@ -1,0 +1,66 @@
+﻿acquire.define("RSC.ui/commonUiHeader/main", [ // -{{{
+    "jQuery",
+    "RSC.ui/commonUiHeader/template", // stringified html chunk
+    "RSC.ui/commonUiHeader/dist"
+], function ($, template, distSugar) {
+    "use strict";
+    
+    var Json = (function () {
+        var json = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': '/header/api/get',
+            'dataType': "json",
+            'success': function (data) {
+                json = data;
+            }
+        });
+        return json;
+    })();
+
+  
+
+    return {
+
+
+        init: function () {
+            var tpl, chunk;
+            tpl = $.tpl(template); // prerender
+            chunk = tpl(Json); // render
+            $(chunk).prependTo("body"); // inject
+
+            // 3rd party decorators for the header
+            // eg. mostly menu handling
+            distSugar.init();
+
+            // close the opened menus if clicked elsewhere
+            $("body").click(this.onNonHeaderClick); // no need for binding
+        },
+
+        onNonHeaderClick: function (e) {
+            var el = $(e.target);
+
+            // inside the header don't do a thing
+            if (el.is(".header-menu-item") || el.closest(".header-menu-item").length > 0) {
+                return;
+            }
+            // taken from dist.js
+            $('.header-menu-item').each(function () {
+                $('.header-sub-menu.show', this).removeClass('show');
+                $(this).removeClass('sub-menu-opened');
+
+                $('.header-sub-mainmenu.show', this).removeClass('show');
+            });
+
+            $('.header-main').each(function () {
+                $('.header-sub-menu.show', this).removeClass('show');
+                $(this).removeClass('sub-menu-opened');
+
+                $('.header-sub-mainmenu.show', this).removeClass('show');
+                $("#overlay").hide();
+            });
+
+        }
+    };
+});
