@@ -1,0 +1,70 @@
+
+window.virtualAgent = (function() {
+
+    var protocol = "https://";
+    var agentHost = "virtualagent.hpcloud.hp.com";
+    var agentClient = "Web";
+    var agentSubClient = "webdirect2"; 
+    var prodContext;
+    var cc= "";
+    var lc="";
+
+
+
+    return {
+        setProdContext: function() {
+ 			prodContext="";
+            var productGDL = globalDataLayer['Product'];
+
+		if (productGDL.hasOwnProperty("serialNumber")) {
+                        prodContext += "&SerialNumber=";
+                        prodContext += productGDL.serialNumber !== null ? productGDL.serialNumber : "";
+                    }
+                    if (productGDL.hasOwnProperty("productLineCode")) {
+                        prodContext += "&PL=";
+                        prodContext += productGDL.productLineCode !== null ? productGDL.productLineCode : "";
+                    }
+                    if (productGDL.hasOwnProperty("productModelNumber")) {
+                        prodContext += "&ProductNumber=";
+                        prodContext += productGDL.productModelNumber !== null ? productGDL.productModelNumber : "";
+                    }
+                    if (productGDL.hasOwnProperty("supportNameName")) {
+                        prodContext += "&ProductName=";
+                        prodContext += productGDL.supportNameName !== null ? productGDL.supportNameName : "";
+                    }
+                    if (productGDL.hasOwnProperty("supportNameOid")) {
+                        prodContext += "&ProductNameOID=";
+                        prodContext += productGDL.supportNameOid !== null ? productGDL.supportNameOid : "";
+                    }
+                    if (productGDL.hasOwnProperty("seriesName")) {
+                        prodContext += "&ProductSeriesName=";
+                        prodContext += productGDL.seriesName !== null ? productGDL.seriesName : "";
+                    }
+                    if (productGDL.hasOwnProperty("seriesOid")) {
+                        prodContext += "&ProductSeriesNameOID=";
+                        prodContext += productGDL.seriesOid !== null ? productGDL.seriesOid : "";
+                    }
+			 cc= globalDataLayer.CountryCode;
+             lc=globalDataLayer.LanguageCode;
+        },
+        getProdContext: function() {
+            return prodContext;
+        },
+        createAgentUri: function(intent,template) {
+            var agentUri = protocol + agentHost + "?BotClient=" + agentClient + "&BotSubClient=" + agentSubClient + "&query=" + intent + prodContext + "&CC=" +cc + "&LC=" + lc + "&Template="+template;
+            return encodeURI(agentUri);
+        },
+        createAgentProductTypeUri: function(template) {
+            var agentUri = protocol + agentHost + "?BotClient=" + agentClient +"Widget"+ "&BotSubClient=" + agentSubClient + "&productType=printer"  + prodContext + "&CC=" +cc + "&LC=" + lc + "&Template="+template;
+            return encodeURI(agentUri);
+        },
+        createAgentPCSlowUri: function(intent,template) {
+            var agentUri = protocol + agentHost + "?BotClient=" + agentClient + "&BotSubClient=" + agentSubClient + "&query=" + intent  +  "&LC=" + lc + "&CC=" +cc +"&Template="+template;
+            return encodeURI(agentUri);
+        },
+        launchAgent: function(agentHref) {
+			 window.open(agentHref, '_blank');
+             return false;
+        }
+    };
+}());

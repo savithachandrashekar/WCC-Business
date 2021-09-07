@@ -1,0 +1,119 @@
+    window.detectedOs = '';
+    window.detectedOsIcon = '';
+    window.altOs = '';
+    window.altOsIcon = '';
+
+function osnavtabclick(e, el) {
+        var tabName = "#" + $(el).attr('aria-controls');
+        e.preventDefault();    
+        $('.navCont').removeClass('active');
+        $(el).closest('li').addClass('active');
+        $('.myOsNavRow .tab-pane').hide();
+        $(tabName).show(); 
+        $(tabName).addClass('active');
+        if (tabName == "#howToFax") {
+            $("#osSelector").hide();
+        } else {
+            $("#osSelector").show();
+        }            
+        pushQueryString("tab="+$(el).attr('aria-controls'));
+}
+
+function pushQueryString(queryString){
+    var isPreview = getUrlParameter("wcmmode");
+    var nqs = (isPreview !== "") ? "?wcmmode=disabled&" + queryString : "?" + queryString;
+    history.pushState(null, null, window.location.origin + window.location.pathname + nqs);
+};
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return (results === null) ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+window.showOsSpecificContent = function(os) {      
+    switch (os){
+        case 'Windows':
+            $('.maccontainer').addClass('hidden').hide();            
+            $('.windowscontainer').removeClass('hidden').show();            
+            detectedOsIcon = 'fa-windows';
+            altOsIcon = 'fa-apple';
+            altOs = 'Macintosh';                
+            break;
+        case 'Macintosh':
+            $('.windowscontainer').addClass('hidden').hide();
+            $('.maccontainer').removeClass('hidden').show();
+            detectedOsIcon = 'fa-apple';
+            altOsIcon = 'fa-windows';
+            altOs = 'Windows';
+            break;
+        default:
+            $('.maccontainer').addClass('hidden').hide();
+            $('.windowscontainer').removeClass('hidden').show();
+            detectedOsIcon = 'fa-windows';
+            altOsIcon = 'fa-apple';
+            altOs = 'Macintosh';
+            break;
+    }
+};
+
+window.detectOs = (function(){
+    detectedOs =  /Mac/i.test(navigator.userAgent) ? 'Macintosh':'Windows';
+    showOsSpecificContent(detectedOs);
+
+}());
+
+window.getQueryString = function(){
+    var queryStringTab = getUrlParameter("tab");
+    var tabId = "#" + queryStringTab + "Tab";
+    if (queryStringTab !== "") {
+        $('.navCont').removeClass('active');
+        $(tabId).parent().addClass('active');
+        $('.myOsNavRow .tab-pane').hide();
+        $("#"+queryStringTab).show(); 
+        $("#"+queryStringTab).addClass('active');       
+        if (queryStringTab == "howToFax") {
+            $("#osSelector").hide();
+        } else {
+            $("#osSelector").show();
+        }               
+    } 
+        var tabHref = $('.osnav-tabs li a');
+        tabHref.each(function () {
+            var href = $(this).attr('aria-controls');
+            var isPreview = getUrlParameter("wcmmode");
+            var nqt = (isPreview !== "") ? "?wcmmode=disabled&tab=" + href : "?tab=" + href;            
+            $(this).attr('href', window.location.origin + window.location.pathname + nqt);
+
+        });      
+};
+
+$(window).on('load', function () {
+    getQueryString();       
+    $('#activeOs').text(detectedOs);
+    $('#activeOs').prev().addClass(detectedOsIcon).removeClass(altOsIcon);
+    $('#inactiveOs span:last').text(altOs);
+    $('#inactiveOs i').addClass(altOsIcon).removeClass(detectedOsIcon);
+    $('#inactiveOs').attr('aria-label', 'switch to viewing content for ' + altOs); 
+    if (detectedOs !== 'Macintosh') {
+        $('.maccontainer').addClass('hidden');
+    } else {
+        $('.maccontainer').removeClass('hidden');
+        $('.windowscontainer').addClass('hidden');
+    }    
+
+    $('#inactiveOs').click(function(e) {
+        var selectedOsElem = $(this).find('span:last').text();
+        $(this).find('span:last').text(detectedOs);
+        $(this).attr('aria-label', 'switch to viewing content for ' + detectedOs);
+        $(this).find('i').addClass(detectedOsIcon).removeClass(altOsIcon);
+        $('#activeOs').text(selectedOsElem);
+        $('#activeOs').prev().addClass(altOsIcon).removeClass(detectedOsIcon);
+        detectedOs = selectedOsElem;        
+        showOsSpecificContent(selectedOsElem);
+        $('.liveregion').text('Now showing content for  ' + selectedOsElem);
+        e.preventDefault();
+    });
+
+});

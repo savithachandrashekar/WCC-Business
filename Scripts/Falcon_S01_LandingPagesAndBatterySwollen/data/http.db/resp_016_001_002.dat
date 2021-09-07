@@ -1,0 +1,1554 @@
+//var mastiffUrl = "https://g7w02972a.inc.hpicorp.net:8443/MastiffService-1/getOffer";
+//var mastiffUrl = "https://api-uns-sgw.external.hp.com/gw/hpit/cs/mastiff/1.0/MastiffService-1/getOffer";
+var mastiffUrl = "https://mastiff-itg.ext.hp.com/gw/hpit/cs/mastiff.itg/1.0/MastiffService-1/getOffer";
+
+document.addEventListener('DOMContentLoaded', harvestData, false);
+
+var falconPages = false;
+var offerResults = null;
+var LeadOfferIndex = 1;
+var primaryLocationEmpty = true;
+var secondaryLocationEmpty = true;
+var largeBannerLocationEmpty = true;
+var enableShopTab = false;
+var enableDashTile = false;
+var reqObj = {};
+var pgName = pageName();
+if (falconPages)
+    $(document).ready(function () {
+        harvestDataFalcon();
+    });
+
+var contatctOffertemplate = "<div class=PrimaryTile><style>.PrimaryTile {font-family: 'HPSimplified' !important;padding: 16px 0px 10px 0px;border: 0.063em #cccccc;text-align: left;color: #2c3038;box-shadow: 0px 5px 22px #0000001A !important;display: flex;min-height: 55px;background-color: #fff;border: 1px solid transparent;}.PrimaryTile:hover {border: solid 1px #009B9F;cursor: pointer;}.PrimaryTileImgDiv {padding-left: 10px;padding-right: 10px;max-width: 90px;max-height: 85px;}.PrimaryTileImg {max-width: 100%;}.PrimaryTileOfferDiv {padding-right: 10px;line-height: 22px;}.PrimaryTileOfferTitle {font-size: 20px;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;}.PrimaryTileOfferDescription {font-size: 16px;font-family: 'HPSimplifiedLight' !important;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;}.PrimaryTileOfferCTA {font-size: 16px;color: #009B9F;text-decoration: none !important;}.PrimaryTileOfferCTA::after{content: '>';}.PrimaryTilePriceStrike {position: relative;color: #ccc;font-weight: initial;}.PrimaryTilePriceStrike:before {position: absolute;left: 0;top: 50%;right: 0;border-top: 1px solid;border-color: inherit;-webkit-transform: rotate(-10deg);-moz-transform: rotate(-10deg);-ms-transform: rotate(-10deg);-o-transform: rotate(-10deg);transform: rotate(-10deg);} @media screen  and (max-width : 800px){.PrimaryTile {max-width: 334px;}} @media screen  and (min-width : 800px){.PrimaryTile {width: 295px;}}</style><div class=PrimaryTileImgDiv><img class=PrimaryTileImg src=https://h10003.www1.hp.com/digmedialib/prodimg/lowres/c07030496.png></div><div class=PrimaryTileOfferDiv><div class=PrimaryTileOfferTitle>Any problem, any device, anytime.</div><div class=PrimaryTileOfferDescription>We can setup, sync and maintain all of your devices. Not just HP products.Not just HP products.</div><div class=PrimaryTileOfferCTA><span class=PrimaryTileCTA>Learn More</span><spanclass=PrimaryTilePriceStrike></span><spanclass=PrimaryTilePriceSales></span></div></div></div>";
+var contatctOffertemplateSec = "<div class=SmallTileshop2Col><style>.SmallTileshop2Col {padding:15px;box-sizing: border-box; box-shadow: 0px 5px 22px #0000001A !important;flex-wrap: wrap;display: flex;box-sizing: border-box;background: -moz-linear-gradient(top, rgba(181, 181, 181, 0.15) 0%, rgba(0, 0, 0, 0) 100%);background: -webkit-linear-gradient(top, rgba(181, 181, 181, 0.15) 0%, rgba(0, 0, 0, 0) 100%);background: linear-gradient(to bottom, rgba(181, 181, 181, 0.15) 0%, rgba(0, 0, 0, 0) 100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#26b5b5b5', endColorstr='#00000000', GradientType=0);border: 1px solid transparent;}.SmallTileshop2Col:hover {border: solid 1px #009B9F;cursor: pointer;}.SmallTileshop2ColOfferDiv {align-self: center !important;flex-basis: 0;flex-grow: 1;position: relative;box-sizing: border-box;width: 170;}.SmallTileshop2ColImgDiv {box-sizing: border-box;width: 90px;}.SmallTileshop2ColImg {max-width: 100% !important;}.SmallTileshop2ColOfferTitle {font-family: 'HPSimplified' !important;font-size: 20px;margin-bottom: 5px !important;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;}.SmallTileshop2ColOfferDesc {font-family: 'HPSimplifiedLight' !important;font-size: 16px;line-height: 1.1;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;overflow: hidden;max-height: 70px;}.SmallShop2ColOfferCTA {font-family: HP Simplified !important;font-size: 16px;height: 33px;width: 109px;background-color: #009B9F;color: #FFFFFF;text-align: center;line-height: 2;margin-top: 10px;}@media screen  and (max-width : 800px){.SmallTileshop2Col {max-width: 334px;}} @media screen  and (min-width : 800px){.SmallTileshop2Col {width: 295px;}}</style><div class=SmallTileshop2ColImgDiv><img class=SmallTileshop2ColImg src=https://h10003.www1.hp.com/digmedialib/prodimg/lowres/c07030496.png></div><div class=SmallTileshop2ColOfferDiv><div class=SmallTileshop2ColOfferTitle>Save up to 25%Save up to 25%Save up to 25%Save up to 25%Save up to 25%Save up to 25%Save up to 25%Save up to 25%Save up to 25%</div><div class=SmallTileshop2ColOfferDesc>When you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridgesWhen you choose HP high-capacity cartridges vs. standard cartridges</div><div class=SmallShop2ColOfferCTA>Details</div></div></div>";
+//Old Large Banner Template with old button
+//var swdClosuretemplate = "<div id=LargeBannerTemplate><style>#LargeBannerTemplate {width: 970px;min-width: 100%;height: 190px;background: transparent url('http://h17009.www1.hp.com/pub/msc/882843E1-BEA6-3F5C-FE97-D5B323DC04F1.png') 0% 0% no-repeat padding-box;background-size: cover;border: 1px solid #707070;opacity: 1;}#LargeBannerContent {max-width: 485px;height: 190px;padding-left: 50px;padding-top: 20px;background: transparent linear-gradient(62deg, var(--unnamed-color-009b9f) 0%, #009B9F00 87%, #009B9F00 100%) 0% 0% no-repeat padding-box;background: transparent linear-gradient(62deg, #009B9F 0%, #009B9F00 87%, #009B9F00 100%) 0% 0% no-repeat padding-box;opacity: 1;}#LargeBannerTextDiv {font-family: 'HPSimplifiedLight';color: #FFFFFF;letter-spacing: 0px;}#LargeBannerTitle { line-height: 32px;font-size: 30px;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;}#LargeBannerSubtitleTitle {line-height: 26px;font-size: 24px;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;}.LargeBannerCTADiv {font-family: 'HPSimplifiedLight';font-size: 18px;margin-top: 15px;padding-top: 10px;padding-bottom: 10px;padding-left: 30px;padding-right: 30px;display: inline-block;cursor: pointer;text-decoration: none;color: #FFFFFF;border: 1px solid #FFFFFF;border-radius: 2px;line-height:24px;} .LargeBannerCTADiv:hover {background-color: #0096d6;} .LargeBannerCTADiv:focus {background-color: #0096d6;}@media screen  and (max-width : 975px){#LargeBannerTemplate {width: 100%;}} @media screen  and (max-width : 570px){#LargeBannerTemplate {height: 150px;}#LargeBannerContent {height: 150px;padding-left: 25px;padding-top: 10px;}#LargeBannerTitle {line-height: 24px;font-size: 22px;}#LargeBannerSubtitleTitle {line-height: 20px;font-size: 18px;}.LargeBannerCTADiv {font-size: 15px;margin-top: 6px;padding-top: 8px;padding-bottom: 8px;padding-left: 25px;padding-right: 25px;line-height: 20px;}}</style><div id=LargeBannerContent><div id=LargeBannerTextDiv><div id=LargeBannerTitle>Save up to 55% on HP PCs todaySave up to 55% on HP PCs todaySave up to 55% on HP PCs todaySave up to 55% on HP PCs today</div><div id=LargeBannerSubtitleTitle>Another line of copy is available here.Another line of copy is available here.Another line of copy is available here.Another line of copy is available here.Another line of copy is available here.Another line of copy is available here.</div></div><div class=LargeBannerCTADiv>Shop Now</div></div></div>";
+var swdClosuretemplate = "<div id=LargeBannerTemplate><style>#LargeBannerTemplate {width: 970px;min-width: 100%;height: 190px;background: transparent url('http://h17009.www1.hp.com/pub/msc/882843E1-BEA6-3F5C-FE97-D5B323DC04F1.png') 0% 0% no-repeat padding-box;background-size: cover;border: 1px solid #707070;opacity: 1;}#LargeBannerContent {max-width: 485px;height: 190px;padding-left: 50px;padding-top: 20px;background: transparent linear-gradient(62deg, var(--unnamed-color-009b9f) 0%, #009B9F00 87%, #009B9F00 100%) 0% 0% no-repeat padding-box;background: transparent linear-gradient(62deg, #009B9F 0%, #009B9F00 87%, #009B9F00 100%) 0% 0% no-repeat padding-box;opacity: 1;}#LargeBannerTextDiv {font-family: 'HPSimplifiedLight';color: #FFFFFF;letter-spacing: 0px;}#LargeBannerTitle { line-height: 32px;font-size: 30px;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;}#LargeBannerSubtitleTitle {line-height: 26px;font-size: 24px;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;}.LargeBannerCTADiv {font-family: 'HPSimplified';font-size: 16px;margin-top: 15px;padding-top: 0px;padding-bottom: 0px;padding-left: 16px;padding-right: 16px;display: inline-block;cursor: pointer;text-decoration: none;color: #FFFFFF;border-radius: 4px;line-height:33px;background-color: #165dba;} .LargeBannerCTADiv:hover {background-color: #114284;} .LargeBannerCTADiv:focus {background-color: #114284;}@media screen  and (max-width : 975px){#LargeBannerTemplate {width: 100%;}} @media screen  and (max-width : 570px){#LargeBannerTemplate {height: 150px;}.arabicContent{padding-right:25px;}#LargeBannerContent {height: 150px;padding-left: 25px;padding-top: 10px;}#LargeBannerTitle {line-height: 24px;font-size: 22px;}#LargeBannerSubtitleTitle {line-height: 20px;font-size: 18px;}.LargeBannerCTADiv {font-size: 15px;margin-top: 6px;padding-top: 8px;padding-bottom: 8px;padding-left: 25px;padding-right: 25px;line-height: 20px;}}</style><div id=LargeBannerContent><div id=LargeBannerTextDiv><div id=LargeBannerTitle>Save up to 55% on HP PCs todaySave up to 55% on HP PCs todaySave up to 55% on HP PCs todaySave up to 55% on HP PCs today</div><div id=LargeBannerSubtitleTitle>Another line of copy is available here.Another line of copy is available here.Another line of copy is available here.Another line of copy is available here.Another line of copy is available here.Another line of copy is available here.</div></div><div title=\"Shop Now\" class=LargeBannerCTADiv>Shop Now</div></div></div>";
+var dashboardTemplate = "<div class=\"dashboardTemplate DashTempshowSlide DashTempfade\"><style> h2.dashboardTemplateTileHeader {font-size: 18px;color: #333;font-family: 'HPSimplified';min-height: 30px;overflow: visible;line-height: 1.11;margin-bottom: 0px;} .dashboardTemplateDescContainer {margin-bottom: 5px;} .dashboardTemplateCardImage {height: 75px;width: auto;background-size: auto;margin: 0 auto;background-repeat: no-repeat;background-position: center 5px;} .dashboardTemplateCardImage>img { height: 75px; } p.dashboardTemplateTileDesc { font-size: 16px; line-height: 1.25; color: #5a5a5a; min-height: 49px; max-height: 85px; padding-top: 0px; margin-bottom: 5px; margin-top: 5px; overflow: hidden; font-family: 'HPSimplifiedLight'; } a.dashboardTemplateTileLink { font-size: 18px; line-height: 1.22; min-height: 24px; font-weight: 500; display: block; font-family: 'HPSimplified'; color: #0096d6 !important; } a.dashboardTemplateTileLink::after { content: '>'; } a.dashboardTemplateTileLink::hover {color: #0171ad !important;text-decoration: underline !important;}</style> <h2 class=\"dashboardTemplateTileHeader\">%DashboardTileTitleplaceholder%</h2> <div class=\"dashboardTemplateDescContainer\"> <div class=\"dashboardTemplateImageContainer\"> <div class=\"dashboardTemplateCardImage\"> <img src=%DashboardTileImgplaceholder%> </div> <p class=\"dashboardTemplateTileDesc\">%DashboardTileDescriptionplaceholder%</p> </div> </div> <div> <a class=\"dashboardTemplateTileLink\" href=\"javascript:void(0)\" id=%DashboardTileCTAId%  >%DashboardTileCTAplaceholder%</a> </div> </div>";
+
+function harvestDataFalcon() {
+    var mastiffIntegrated = pageSupported();
+    if (mastiffIntegrated) {
+        var dashDevList = globalDataLayer.Dashboard.Products;
+        var dashDevice = null;
+        if (pgName == "dashboard") {
+            for (i = 0; i < globalDataLayer.Dashboard.NoOfDevices; i++) {
+                if (dashDevList[i].productLine == globalDataLayer.Product.productLineCode
+                    && dashDevList[i].productName == globalDataLayer.Product.productName
+                    && dashDevList[i].productNameOID == globalDataLayer.Product.productOID)
+                    dashDevice = dashDevList[i];
+            }
+
+            var user = {};
+            var product = {};
+            var warranty = {};
+
+            reqObj.requestId = createReqId();
+            reqObj.offerLocations = "primary,shop1,shop2,shop3,secondary";
+            reqObj.offerName = "";
+            reqObj.acceptanceLevel = "";
+            user.callerId = "supportweb";
+            if (typeof globalDataLayer !== 'undefined') {
+
+                user.sessionId = globalDataLayer.sessionId;
+                user.pageId = pgName;
+                user.HPID = "";
+                user.intent = "";
+                user.locale = globalDataLayer.Locale;
+                user.countryCode = globalDataLayer.CountryCode;
+                user.language = globalDataLayer.LanguageCode;
+                user.deviceType = "";
+                user.activeHealth = "";
+                user.isNewCustomer = "";
+                user.emailOffers = "";
+                user.gender = "";
+                user.smartFriend = "";
+                user.customerType = "";
+
+                product.modelNumber = dashDevice.productNumber; //product.modelNumber = null;
+                //product.serialNumber = globalDataLayer.Product.serialNumber != "" ? globalDataLayer.Product.serialNumber : globalDataLayer.EntitlementResults.serialNumber;
+                product.serialNumber = dashDevice.serialNumber;
+                product.partNumber = "";
+                product.productRegion = "";
+                product.productEndOfLifeCycle = "";
+                product.productEndOfSupportCycle = "";
+                product.productType = "";
+                product.productLine = dashDevice.productLine; //product.productLine = globalDataLayer.Product.productLineCode;
+                product.productSegment = "";
+                product.productCategory = "";
+                product.productSubCategory = "";
+                product.productSeries = dashDevice.productSeriesName; //product.productSeries = globalDataLayer.Product.seriesName;
+                product.productSeriesOid = dashDevice.productSeriesOID; //globalDataLayer.Product.seriesOid;
+                product.productSupportCategoryName = dashDevice.productName; //product.productSupportCategoryName = globalDataLayer.Product.supportCategoryName;
+                product.productReleasedate = "";
+                product.platform = ""; //product.platform = globalDataLayer.Product.platformId;
+                product.includeHTML = "";
+                product.carePackEligible = "";
+                product.currentActiveCarePack = "";
+                product.instantInkEligible = "";
+                product.instantInkCapability = "";
+                product.inkLevel = "";
+                product.instantInkSubscriptionStatus = "";
+                product.loi = "";
+
+                warranty.warrantyState = globalDataLayer.EntitlementResults.EntResults;
+                warranty.warrantyStatus = "";
+                warranty.warrantyStatusDetail = "";
+                warranty.warrantyStatusCode = "";
+                warranty.warrantyCaption = "";
+                warranty.warrantyStartdate = globalDataLayer.EntitlementResults.serviceObligationLineItemStartDate;
+                warranty.warrantyEnddate = globalDataLayer.EntitlementResults.serviceObligationLineItemEndDate;
+                warranty.warrantyRemainingDays = globalDataLayer.EntitlementResults.serviceObligationLineItemRemainingDays;
+                warranty.warrantyTypeCode = globalDataLayer.EntitlementResults.serviceObligationTypeCode;
+                warranty.warrantyProductTypeCode = globalDataLayer.EntitlementResults.serviceProductTypeCode;
+                warranty.warrantyCoveragePeriod = globalDataLayer.EntitlementResults.tierServiceObligationLineItemPeriodInMonths;
+            }
+            var url = String(window.location);
+            var segments = url.split("/");
+
+            if (user.countryCode == null || user.countryCode == "") {
+                user.countryCode = segments[3].substring(0, 2);
+            }
+            if (user.language == null || user.language == "") {
+                user.language = segments[3].substring(3);
+            }
+            if (user.locale == null || user.locale == "") {
+                user.locale = segments[3];
+            }
+            if (product.modelNumber === null) {
+                product.modelNumber = "";
+            }
+            if (product.serialNumber === null) {
+                product.serialNumber = "";
+            }
+
+            product.warranty = warranty;
+            reqObj.product = product;
+            reqObj.user = user;
+
+            if (user.sessionId == null || user.sessionId == "") {
+                reqObj.user.sessionId = reqObj.requestId.substring(reqObj.requestId.length - 10);
+            }
+
+
+            console.log("Request Object");
+            console.log(reqObj);
+
+            if (globalDataLayer.SPOSOffers === null || typeof (globalDataLayer.SPOSOffers) === "undefined") {
+                var SPOSOffers = {};
+                SPOSOffers.errorCode = "";
+                SPOSOffers.requestId = reqObj.requestId;
+                SPOSOffers.sessionId = reqObj.user.sessionId;
+                globalDataLayer.SPOSOffers = SPOSOffers;
+            } else {
+                globalDataLayer.SPOSOffers.requestId = reqObj.requestId;
+                globalDataLayer.SPOSOffers.sessionId = reqObj.user.sessionId;
+            }
+            $.ajax({
+                url: mastiffUrl,
+                method: "POST",
+                async: true,
+                data: encodeURIComponent(JSON.stringify(reqObj)),
+                //data: "%7B%22requestId%22%3A%221618575505392XJvtpFo%22%2C%22offerLocations%22%3A%22primary%2Cshop1%2Cshop2%2Cshop3%2Csecondary%22%2C%22offerName%22%3A%22%22%2C%22acceptanceLevel%22%3A%22%22%2C%22product%22%3A%7B%22modelNumber%22%3A%22%22%2C%22serialNumber%22%3A%22%22%2C%22partNumber%22%3A%22%22%2C%22productRegion%22%3A%22%22%2C%22productEndOfLifeCycle%22%3A%22%22%2C%22productEndOfSupportCycle%22%3A%22%22%2C%22productType%22%3A%22%22%2C%22productLine%22%3A%22KV%22%2C%22productSegment%22%3A%22%22%2C%22productCategory%22%3A%22%22%2C%22productSubCategory%22%3A%22%22%2C%22productSeries%22%3A%22HP%20ENVY%2017-r100%20Notebook%20PC%22%2C%22productSeriesOid%22%3A%2210282854%22%2C%22productSupportCategoryName%22%3A%22Notebook%20PCs%22%2C%22productReleasedate%22%3A%22%22%2C%22platform%22%3Anull%2C%22includeHTML%22%3A%22%22%2C%22carePackEligible%22%3A%22%22%2C%22currentActiveCarePack%22%3A%22%22%2C%22instantInkEligible%22%3A%22%22%2C%22instantInkCapability%22%3A%22%22%2C%22inkLevel%22%3A%22%22%2C%22instantInkSubscriptionStatus%22%3A%22%22%2C%22loi%22%3A%22%22%2C%22warranty%22%3A%7B%22warrantyState%22%3A%22IW%22%2C%22warrantyStatus%22%3A%22%22%2C%22warrantyStatusDetail%22%3A%22%22%2C%22warrantyStatusCode%22%3A%22%22%2C%22warrantyCaption%22%3A%22%22%2C%22warrantyStartdate%22%3A%22%22%2C%22warrantyEnddate%22%3A%22%22%2C%22warrantyRemainingDays%22%3A%22%22%2C%22warrantyTypeCode%22%3A%22%22%2C%22warrantyProductTypeCode%22%3A%22%22%2C%22warrantyCoveragePeriod%22%3A%22%22%7D%7D%2C%22user%22%3A%7B%22callerId%22%3A%22supportweb%22%2C%22sessionId%22%3A%22392XJvtpFo%22%2C%22pageId%22%3A%22%22%2C%22HPID%22%3A%22%22%2C%22intent%22%3A%22%22%2C%22locale%22%3A%22ca-en%22%2C%22countryCode%22%3A%22ca%22%2C%22language%22%3A%22en%22%2C%22deviceType%22%3A%22%22%2C%22activeHealth%22%3A%22%22%2C%22isNewCustomer%22%3A%22%22%2C%22emailOffers%22%3A%22%22%2C%22gender%22%3A%22%22%2C%22smartFriend%22%3A%22%22%2C%22customerType%22%3A%22Consumer%22%7D%7D",
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                success: function (result) {
+
+                    console.log("Response Object");
+                    console.log(result);
+                    offerResults = result;
+
+                    if (offerResults.offerCount > 0) {
+                        showDashboardTile();
+                    } else {
+                        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                            if (offerResults.errorMessage === null || (typeof (offerResults.errorMessage) === "undefined")
+                                || offerResults.errorMessage === "null" || offerResults.errorMessage === "") {
+                                globalDataLayer.SPOSOffers.errorCode = "No Offers Available for this Profile/Device";
+                            } else {
+                                globalDataLayer.SPOSOffers.errorCode = offerResults.errorMessage;
+                            }
+                        }
+                        hideDashboardTile();
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(XMLHttpRequest.status);
+                    console.log(textStatus);
+                    console.log(errorThrown);
+                    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                        if ((typeof (XMLHttpRequest.responseJSON) !== "undefined") && (XMLHttpRequest.responseJSON !== null)) {
+                            console.log(XMLHttpRequest.responseJSON.errorCode + "-" + XMLHttpRequest.responseJSON.errorMessage);
+                            globalDataLayer.SPOSOffers.errorCode = XMLHttpRequest.responseJSON.errorCode;
+                        } else if (textStatus === "timeout") {
+                            globalDataLayer.SPOSOffers.errorCode = textStatus;
+                        } else if (XMLHttpRequest.status === 0) {
+                            globalDataLayer.SPOSOffers.errorCode = "500";
+                        } else {
+                            globalDataLayer.SPOSOffers.errorCode = XMLHttpRequest.status;
+                        }
+                    }
+                    hideDashboardTile();
+                },
+                timeout: 5000
+            });
+
+
+        } else {
+            var pdType = "";
+            // if (typeof globalDataLayer !== 'undefined') {
+            //     pdType = globalDataLayer.Product.audienceType.toLowerCase();
+            // }
+
+            // if (pdType === "consumer" || pdType === "hho") {
+            var user = {};
+            var product = {};
+            var warranty = {};
+
+            reqObj.requestId = createReqId();
+            if (pgName.indexOf("home") > -1)
+                reqObj.offerLocations = "primary";
+            else
+                reqObj.offerLocations = "primary,shop1,shop2,shop3,secondary";
+
+            reqObj.offerName = "";
+            reqObj.acceptanceLevel = "";
+            user.callerId = "supportweb";
+
+
+            if (typeof globalDataLayer !== 'undefined') {
+
+                user.sessionId = globalDataLayer.sessionId;
+                user.pageId = pgName;
+                user.HPID = "";
+                user.intent = "";
+                user.locale = globalDataLayer.Locale;
+                user.countryCode = globalDataLayer.CountryCode;
+                user.language = globalDataLayer.LanguageCode;
+                user.deviceType = "";
+                user.activeHealth = "";
+                user.isNewCustomer = "";
+                user.emailOffers = "";
+                user.gender = "";
+                user.smartFriend = "";
+                user.customerType = "";
+
+                // product.modelNumber = "K8U27PA";
+                product.modelNumber = null;
+                //product.serialNumber = globalDataLayer.Product.serialNumber != "" ? globalDataLayer.Product.serialNumber : globalDataLayer.EntitlementResults.serialNumber;
+                product.serialNumber = null;
+                product.partNumber = "";
+                product.productRegion = "";
+                product.productEndOfLifeCycle = "";
+                product.productEndOfSupportCycle = "";
+                product.productType = "";
+                // product.productLine = "KV";
+                product.productLine = globalDataLayer.Product.productLineCode;
+                product.productSegment = "";
+                product.productCategory = "";
+                product.productSubCategory = "";
+                // product.productSeries = "HP ENVY 15-k200 Notebook PC series";
+                product.productSeries = globalDataLayer.Product.seriesName;
+                // product.productSeriesOid = "7527530";
+                product.productSeriesOid = globalDataLayer.Product.seriesOid;
+                // product.productSupportCategoryName = "Notebook PCs";
+                product.productSupportCategoryName = globalDataLayer.Product.supportCategoryName;
+                product.productReleasedate = "";
+                // product.platform = "Petrus 1.2 ENV";
+                product.platform = globalDataLayer.Product.platformId;
+                product.includeHTML = "";
+                product.carePackEligible = "";
+                product.currentActiveCarePack = "";
+                product.instantInkEligible = "";
+                product.instantInkCapability = "";
+                product.inkLevel = "";
+                product.instantInkSubscriptionStatus = "";
+                product.loi = "";
+
+                warranty.warrantyState = globalDataLayer.EntitlementResults.EntResults;
+                warranty.warrantyStatus = "";
+                warranty.warrantyStatusDetail = "";
+                warranty.warrantyStatusCode = "";
+                warranty.warrantyCaption = "";
+                warranty.warrantyStartdate = globalDataLayer.EntitlementResults.serviceObligationLineItemStartDate;
+                warranty.warrantyEnddate = globalDataLayer.EntitlementResults.serviceObligationLineItemEndDate;
+                warranty.warrantyRemainingDays = globalDataLayer.EntitlementResults.serviceObligationLineItemRemainingDays;
+                warranty.warrantyTypeCode = globalDataLayer.EntitlementResults.serviceObligationTypeCode;
+                warranty.warrantyProductTypeCode = globalDataLayer.EntitlementResults.serviceProductTypeCode;
+                warranty.warrantyCoveragePeriod = globalDataLayer.EntitlementResults.tierServiceObligationLineItemPeriodInMonths;
+            }
+
+            // if (warranty.warrantyState == null || warranty.warrantyState == "") {
+            //     if (document.getElementById('warrantyStatus') !== null)
+            //         warranty.warrantyState = $("#warrantyStatus").val();
+            // }
+
+
+            // if (product.modelNumber == null || product.modelNumber == "") {
+            //     if (document.getElementById('skuFromSession') !== null)
+            //         product.modelNumber = $("#skuFromSession").val();
+            // }
+            // if (product.serialNumber == null || product.serialNumber == "") {
+            //     if (document.getElementById('detectedSerialNo') !== null)
+            //         product.serialNumber = $("#detectedSerialNo").val();
+            //     else if (document.getElementById('serialNumberFromSession') !== null)
+            //         product.serialNumber = $("#serialNumberFromSession").val();
+            // }
+            // if (product.productSeries == null || product.productSeries == "") {
+            //     if (document.getElementById('seriesName') !== null)
+            //         product.productSeries = $("#seriesName").val();
+            // }
+            // if (product.productSeriesOid == null || product.productSeriesOid == "") {
+            //     if (document.getElementById('productSeriesId') !== null)
+            //         product.productSeriesOid = $("#productSeriesId").val();
+            // }
+
+            var url = String(window.location);
+            var segments = url.split("/");
+
+            if (user.countryCode == null || user.countryCode == "") {
+                user.countryCode = segments[3].substring(0, 2);
+            }
+            if (user.language == null || user.language == "") {
+                user.language = segments[3].substring(3);
+            }
+            if (user.locale == null || user.locale == "") {
+                user.locale = segments[3];
+            }
+            // if (product.productSeries == null || product.productSeries == "") {
+            //     product.productSeries = segments[5].replace(/-/g, " ");
+            // }
+            // if (product.productSeriesOid == null || product.productSeriesOid == "") {
+            //     product.productSeriesOid = segments[6].replace(/-/g, " ");
+            // }
+
+            // if (url.indexOf("?") > 0) {
+            //     var snPN = url.substring(url.indexOf("?") + 1);
+            //     if (snPN.indexOf("&") > 0) {
+            //         var snPnSegments = snPN.split("&");
+            //         for (ind = 0; ind < snPnSegments.length; ind++) {
+            //             var strToCheck = snPnSegments[ind];
+            //             if ((product.modelNumber == null || product.modelNumber == "") && strToCheck.indexOf("sku=") > -1) {
+            //                 product.modelNumber = strToCheck.substring(strToCheck.indexOf("sku=") + 4);
+            //             }
+            //             if ((product.serialNumber == null || product.serialNumber == "") && strToCheck.indexOf("serialnumber=") > -1) {
+            //                 product.serialNumber = strToCheck.substring(strToCheck.indexOf("serialnumber=") + 13);
+            //             }
+            //         }
+            //     } else {
+            //         if (product.modelNumber == null || product.modelNumber == "") {
+            //             product.modelNumber = snPN.indexOf("sku=") >= 0 ? snPN.substring(snPN.indexOf("sku=") + 4) : null;
+            //         }
+            //     }
+            // }
+            if (product.modelNumber === null) {
+                product.modelNumber = "";
+            }
+            if (product.serialNumber === null) {
+                product.serialNumber = "";
+            }
+
+            product.warranty = warranty;
+            reqObj.product = product;
+            reqObj.user = user;
+
+            if (user.sessionId == null || user.sessionId == "") {
+                reqObj.user.sessionId = reqObj.requestId.substring(reqObj.requestId.length - 10);
+            }
+
+
+            console.log("Request Object");
+            console.log(reqObj);
+
+            if (globalDataLayer.SPOSOffers === null || typeof (globalDataLayer.SPOSOffers) === "undefined") {
+                var SPOSOffers = {};
+                SPOSOffers.errorCode = "";
+                SPOSOffers.requestId = reqObj.requestId;
+                SPOSOffers.sessionId = reqObj.user.sessionId;
+                globalDataLayer.SPOSOffers = SPOSOffers;
+            } else {
+                globalDataLayer.SPOSOffers.requestId = reqObj.requestId;
+                globalDataLayer.SPOSOffers.sessionId = reqObj.user.sessionId;
+            }
+
+            $.ajax({
+                url: mastiffUrl,
+                method: "POST",
+                async: true,
+                data: encodeURIComponent(JSON.stringify(reqObj)),
+                //data: "%7B%22requestId%22%3A%221618575505392XJvtpFo%22%2C%22offerLocations%22%3A%22primary%2Cshop1%2Cshop2%2Cshop3%2Csecondary%22%2C%22offerName%22%3A%22%22%2C%22acceptanceLevel%22%3A%22%22%2C%22product%22%3A%7B%22modelNumber%22%3A%22%22%2C%22serialNumber%22%3A%22%22%2C%22partNumber%22%3A%22%22%2C%22productRegion%22%3A%22%22%2C%22productEndOfLifeCycle%22%3A%22%22%2C%22productEndOfSupportCycle%22%3A%22%22%2C%22productType%22%3A%22%22%2C%22productLine%22%3A%22KV%22%2C%22productSegment%22%3A%22%22%2C%22productCategory%22%3A%22%22%2C%22productSubCategory%22%3A%22%22%2C%22productSeries%22%3A%22HP%20ENVY%2017-r100%20Notebook%20PC%22%2C%22productSeriesOid%22%3A%2210282854%22%2C%22productSupportCategoryName%22%3A%22Notebook%20PCs%22%2C%22productReleasedate%22%3A%22%22%2C%22platform%22%3Anull%2C%22includeHTML%22%3A%22%22%2C%22carePackEligible%22%3A%22%22%2C%22currentActiveCarePack%22%3A%22%22%2C%22instantInkEligible%22%3A%22%22%2C%22instantInkCapability%22%3A%22%22%2C%22inkLevel%22%3A%22%22%2C%22instantInkSubscriptionStatus%22%3A%22%22%2C%22loi%22%3A%22%22%2C%22warranty%22%3A%7B%22warrantyState%22%3A%22IW%22%2C%22warrantyStatus%22%3A%22%22%2C%22warrantyStatusDetail%22%3A%22%22%2C%22warrantyStatusCode%22%3A%22%22%2C%22warrantyCaption%22%3A%22%22%2C%22warrantyStartdate%22%3A%22%22%2C%22warrantyEnddate%22%3A%22%22%2C%22warrantyRemainingDays%22%3A%22%22%2C%22warrantyTypeCode%22%3A%22%22%2C%22warrantyProductTypeCode%22%3A%22%22%2C%22warrantyCoveragePeriod%22%3A%22%22%7D%7D%2C%22user%22%3A%7B%22callerId%22%3A%22supportweb%22%2C%22sessionId%22%3A%22392XJvtpFo%22%2C%22pageId%22%3A%22%22%2C%22HPID%22%3A%22%22%2C%22intent%22%3A%22%22%2C%22locale%22%3A%22ca-en%22%2C%22countryCode%22%3A%22ca%22%2C%22language%22%3A%22en%22%2C%22deviceType%22%3A%22%22%2C%22activeHealth%22%3A%22%22%2C%22isNewCustomer%22%3A%22%22%2C%22emailOffers%22%3A%22%22%2C%22gender%22%3A%22%22%2C%22smartFriend%22%3A%22%22%2C%22customerType%22%3A%22Consumer%22%7D%7D",
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                success: function (result) {
+
+                    console.log("Response Object");
+                    console.log(result);
+                    offerResults = result;
+
+                    if (offerResults.offerCount > 0) {
+                        for (i = 0; i < offerResults.offerCount; i++) {
+                            var element = offerResults.offers.offer[i];
+                            if (element.templatePosition == "primary") {
+                                var divId = "";
+                                divId = divId.concat(element.templatePosition, "_", element.name);
+
+                                var LeadOffer = {};
+                                var GDLOfferName = "LeadOffer" + (LeadOfferIndex);
+                                LeadOffer.OfferID = divId;
+                                LeadOffer.OfferClicked = "no";
+                                LeadOffer.SPOStemplate = "7";
+                                if (element.html !== null && element.html !== "" && element.html !== "null"
+                                    && element.imageURL !== null && element.imageURL !== "" && element.imageURL !== "null"
+                                    && element.primaryText1 !== null && element.primaryText1 !== "" && element.primaryText1 !== "null"
+                                    && element.primaryButtonText !== null && element.primaryButtonText !== "" && element.primaryButtonText !== "null"
+                                    && element.storeURL !== null && element.storeURL !== "" && element.storeURL !== "null") {
+                                    var htmlTemplate = element.html;
+                                    var html = "";
+                                    // html = html.concat("<div id=\"", divId, "\">", swdClosuretemplate, "</div>");
+                                    html = html.concat("<div id=\"", divId, "\">", htmlTemplate, "</div>");
+                                    if (largeBannerLocationEmpty) {
+                                        html = html.replace("%LargeBannerImgPlaceholder%", element.imageURL !== null ? (element.imageURL !== "null" ? element.imageURL : "") : "");
+                                        html = html.replace("%LargeBannerTitleplaceholder%", element.primaryText1 !== null ? (element.primaryText1 !== "null" ? element.primaryText1 : "") : "");
+                                        html = html.replace("%LargeBannerDescriptionplaceholder%", element.primaryText2 !== null ? (element.primaryText2 != "null" ? element.primaryText2 : "") : "");
+                                        html = html.replace("%LargeBannerCTAplaceholder%", element.primaryButtonText !== null ? (element.primaryButtonText != "null" ? "\"" + element.primaryButtonText + "\"" : "") : "");
+                                        html = html.replace("%LargeBannerCTAplaceholder%", element.primaryButtonText !== null ? (element.primaryButtonText != "null" ? element.primaryButtonText : "") : "");
+
+                                        $(".mastiff_template_container").html(html);
+                                        LeadOffer.offerShown = "yes";
+                                        if (reqObj.user.language === "ar" || reqObj.user.language === "he") {
+                                            $("#LargeBannerContent").css("text-align", "left !important");
+                                            $("#LargeBannerContent").css("float", "left");
+                                            $("#LargeBannerContent").addClass("arabicContent");
+                                        }
+                                        $("#" + divId).attr("aria-label", element.offerType);
+                                        $("#LargeBannerTemplate").attr("tabindex", 0);
+                                        $(".LargeBannerCTADiv").attr("tabindex", 0);
+                                        $(".LargeBannerCTADiv").keypress(function (e) {
+                                            var code = e.keyCode || e.which;
+                                            if (code == 13) {
+                                                offerClickEvent(reqObj, offerResults.offers.offer, this.parentNode.parentNode.parentNode.id);
+                                            }
+
+                                        });
+                                        $(".LargeBannerCTADiv").click(function () {
+                                            offerClickEvent(reqObj, offerResults.offers.offer, this.parentNode.parentNode.parentNode.id);
+                                        });
+                                        largeBannerLocationEmpty = false;
+                                    } else {
+                                        LeadOffer.errorData = "Large banner Location is not empty";
+                                    }
+                                    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                                        globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+                                        LeadOfferIndex++;
+                                    }
+                                } else {
+                                    LeadOffer.errorData = "No Content Available";
+                                    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                                        globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+                                        LeadOfferIndex++;
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                            if (offerResults.errorMessage === null || (typeof (offerResults.errorMessage) === "undefined")
+                                || offerResults.errorMessage === "null" || offerResults.errorMessage === "") {
+                                globalDataLayer.SPOSOffers.errorCode = "No Offers Available for this Profile/Device";
+                            } else {
+                                globalDataLayer.SPOSOffers.errorCode = offerResults.errorMessage;
+                            }
+                        }
+                        removeMastiffBanner();
+                    }
+                    if (largeBannerLocationEmpty)
+                        removeMastiffBanner();
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(XMLHttpRequest.status);
+                    console.log(textStatus);
+                    console.log(errorThrown);
+                    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                        if ((typeof (XMLHttpRequest.responseJSON) !== "undefined") && (XMLHttpRequest.responseJSON !== null)) {
+                            console.log(XMLHttpRequest.responseJSON.errorCode + "-" + XMLHttpRequest.responseJSON.errorMessage);
+                            globalDataLayer.SPOSOffers.errorCode = XMLHttpRequest.responseJSON.errorCode;
+                        } else if (textStatus === "timeout") {
+                            globalDataLayer.SPOSOffers.errorCode = textStatus;
+                        } else if (XMLHttpRequest.status === 0) {
+                            globalDataLayer.SPOSOffers.errorCode = "500";
+                        } else {
+                            globalDataLayer.SPOSOffers.errorCode = XMLHttpRequest.status;
+                        }
+                    }
+                    removeMastiffBanner();
+                },
+                timeout: 5000
+            });
+            // } else {
+            //     hideShopTab();
+            //     if (globalDataLayer.SPOSOffers === null || typeof (globalDataLayer.SPOSOffers) === "undefined") {
+            //         var SPOSOffers = {};
+            //         globalDataLayer.SPOSOffers = SPOSOffers;
+            //     }
+            //     globalDataLayer.SPOSOffers.errorCode = "Commercial Products are not supported!";
+            // }
+        }
+    }
+}
+
+function removeMastiffBanner() {
+    window.isMastiffChecked = true;
+    window.isMastiffRemoved = true;
+    // var elem = document.getElementsByClassName('mastiff_template_container');
+    // var elemLength = elem.length;
+    // for (let i = elemLength - 1; i >= 0; i--) {
+    //     elem[i].parentNode.remove();
+    //     // if (elem[i].parentNode.getAttribute('class').indexOf('duplicate') === -1) {
+    //     //     elem[i].parentNode.remove();
+    //     // } else {
+    //     //     elem[i].remove();
+    //     // }
+    // };
+    // // for (let i = 0; i < elemLength; i++) {
+    // //     if (elem[i].parentNode.getAttribute('class').indexOf('duplicate') === -1) {
+    // //         elem[i].parentNode.remove();
+    // //     } else {
+    // //         elem[i].remove();
+    // //     }
+    // // };
+}
+
+function harvestData() {
+    var mastiffIntegrated = pageSupported();
+    if (mastiffIntegrated) {
+        var pdType = "";
+        if (typeof globalDataLayer !== 'undefined') {
+            pdType = globalDataLayer.Product.audienceType.toLowerCase();
+        }
+
+        if (pdType === "consumer" || pdType === "hho") {
+            var user = {};
+            var product = {};
+            var warranty = {};
+
+            reqObj.requestId = createReqId();
+            if (pgName === "pdp")
+                reqObj.offerLocations = "primary,shop1,shop2,shop3,secondary";
+            else if (pgName === "warrantyresult")
+                reqObj.offerLocations = "primary,secondary";
+            else if (pgName === "drivers_closure")
+                reqObj.offerLocations = "primary";
+            else if (pgName === "contact-hp")
+                reqObj.offerLocations = "primary";
+            else
+                reqObj.offerLocations = "primary,shop1,shop2,shop3,secondary";
+
+            reqObj.offerName = "";
+            reqObj.acceptanceLevel = "";
+            user.callerId = "supportweb";
+
+
+            if (typeof globalDataLayer !== 'undefined') {
+
+                user.sessionId = globalDataLayer.sessionId;
+                user.pageId = pgName;
+                user.HPID = "";
+                user.intent = "";
+                user.locale = globalDataLayer.Locale;
+                user.countryCode = globalDataLayer.CountryCode;
+                user.language = globalDataLayer.LanguageCode;
+                user.deviceType = "";
+                user.activeHealth = "";
+                user.isNewCustomer = "";
+                user.emailOffers = "";
+                user.gender = "";
+                user.smartFriend = "";
+                user.customerType = "Consumer";
+
+                product.modelNumber = null;
+                //product.serialNumber = globalDataLayer.Product.serialNumber != "" ? globalDataLayer.Product.serialNumber : globalDataLayer.EntitlementResults.serialNumber;
+                product.serialNumber = null;
+                product.partNumber = "";
+                product.productRegion = "";
+                product.productEndOfLifeCycle = "";
+                product.productEndOfSupportCycle = "";
+                product.productType = "";
+                product.productLine = globalDataLayer.Product.productLineCode;
+                product.productSegment = "";
+                product.productCategory = "";
+                product.productSubCategory = "";
+                product.productSeries = globalDataLayer.Product.seriesName;
+                product.productSeriesOid = globalDataLayer.Product.seriesOid;
+                product.productSupportCategoryName = globalDataLayer.Product.supportCategoryName;
+                product.productReleasedate = "";
+                product.platform = globalDataLayer.Product.platformId;
+                product.includeHTML = "";
+                product.carePackEligible = "";
+                product.currentActiveCarePack = "";
+                product.instantInkEligible = "";
+                product.instantInkCapability = "";
+                product.inkLevel = "";
+                product.instantInkSubscriptionStatus = "";
+                product.loi = "";
+
+                warranty.warrantyState = globalDataLayer.EntitlementResults.EntResults;
+                warranty.warrantyStatus = "";
+                warranty.warrantyStatusDetail = "";
+                warranty.warrantyStatusCode = "";
+                warranty.warrantyCaption = "";
+                warranty.warrantyStartdate = globalDataLayer.EntitlementResults.serviceObligationLineItemStartDate;
+                warranty.warrantyEnddate = globalDataLayer.EntitlementResults.serviceObligationLineItemEndDate;
+                warranty.warrantyRemainingDays = globalDataLayer.EntitlementResults.serviceObligationLineItemRemainingDays;
+                warranty.warrantyTypeCode = globalDataLayer.EntitlementResults.serviceObligationTypeCode;
+                warranty.warrantyProductTypeCode = globalDataLayer.EntitlementResults.serviceProductTypeCode;
+                warranty.warrantyCoveragePeriod = globalDataLayer.EntitlementResults.tierServiceObligationLineItemPeriodInMonths;
+            }
+
+            if (warranty.warrantyState == null || warranty.warrantyState == "") {
+                if (document.getElementById('warrantyStatus') !== null)
+                    warranty.warrantyState = $("#warrantyStatus").val();
+            }
+
+
+            if (product.modelNumber == null || product.modelNumber == "") {
+                if (document.getElementById('skuFromSession') !== null)
+                    product.modelNumber = $("#skuFromSession").val();
+            }
+            if (product.serialNumber == null || product.serialNumber == "") {
+                if (document.getElementById('detectedSerialNo') !== null)
+                    product.serialNumber = $("#detectedSerialNo").val();
+                else if (document.getElementById('serialNumberFromSession') !== null)
+                    product.serialNumber = $("#serialNumberFromSession").val();
+            }
+            if (product.productSeries == null || product.productSeries == "") {
+                if (document.getElementById('seriesName') !== null)
+                    product.productSeries = $("#seriesName").val();
+            }
+            if (product.productSeriesOid == null || product.productSeriesOid == "") {
+                if (document.getElementById('productSeriesId') !== null)
+                    product.productSeriesOid = $("#productSeriesId").val();
+            }
+
+            var url = String(window.location);
+            var segments = url.split("/");
+
+            if (user.countryCode == null || user.countryCode == "") {
+                user.countryCode = segments[3].substring(0, 2);
+            }
+            if (user.language == null || user.language == "") {
+                user.language = segments[3].substring(3);
+            }
+            if (user.locale == null || user.locale == "") {
+                user.locale = segments[3];
+            }
+            if (product.productSeries == null || product.productSeries == "") {
+                if (pgName === "drivers_closure") {
+                    product.productSeries = segments[7].replace(/-/g, " ");
+                } else if (pgName === "contact-hp") {
+                    product.productSeries = segments[6].replace(/-/g, " ");
+                } else {
+                    product.productSeries = segments[5].replace(/-/g, " ");
+                }
+            }
+            if (product.productSeriesOid == null || product.productSeriesOid == "") {
+                if (pgName === "drivers_closure") {
+                    product.productSeriesOid = segments[8].replace(/-/g, " ");
+                } else if (pgName === "contact-hp") {
+                    product.productSeriesOid = segments[7].replace(/-/g, " ");
+                } else {
+                    product.productSeriesOid = segments[6].replace(/-/g, " ");
+                }
+            }
+
+            if (url.indexOf("?") > 0) {
+                var snPN = url.substring(url.indexOf("?") + 1);
+                if (snPN.indexOf("&") > 0) {
+                    var snPnSegments = snPN.split("&");
+                    for (ind = 0; ind < snPnSegments.length; ind++) {
+                        var strToCheck = snPnSegments[ind];
+                        if ((product.modelNumber == null || product.modelNumber == "") && strToCheck.indexOf("sku=") > -1) {
+                            product.modelNumber = strToCheck.substring(strToCheck.indexOf("sku=") + 4);
+                        }
+                        if ((product.serialNumber == null || product.serialNumber == "") && strToCheck.indexOf("serialnumber=") > -1) {
+                            product.serialNumber = strToCheck.substring(strToCheck.indexOf("serialnumber=") + 13);
+                        }
+                    }
+                } else {
+                    if (product.modelNumber == null || product.modelNumber == "") {
+                        product.modelNumber = snPN.indexOf("sku=") >= 0 ? snPN.substring(snPN.indexOf("sku=") + 4) : null;
+                    }
+                }
+            }
+            if (product.modelNumber === null) {
+                product.modelNumber = "";
+            }
+            if (product.serialNumber === null) {
+                product.serialNumber = "";
+            }
+
+            product.warranty = warranty;
+            reqObj.product = product;
+            reqObj.user = user;
+
+            if (user.sessionId == null || user.sessionId == "") {
+                reqObj.user.sessionId = reqObj.requestId.substring(reqObj.requestId.length - 10);
+            }
+
+
+            console.log("Request Object");
+            console.log(reqObj);
+
+            if (globalDataLayer.SPOSOffers === null || typeof (globalDataLayer.SPOSOffers) === "undefined") {
+                var SPOSOffers = {};
+                SPOSOffers.errorCode = "";
+                SPOSOffers.requestId = reqObj.requestId;
+                SPOSOffers.sessionId = reqObj.user.sessionId;
+                globalDataLayer.SPOSOffers = SPOSOffers;
+            } else {
+                globalDataLayer.SPOSOffers.requestId = reqObj.requestId;
+                globalDataLayer.SPOSOffers.sessionId = reqObj.user.sessionId;
+            }
+
+            $.ajax({
+                url: mastiffUrl,
+                method: "POST",
+                async: true,
+                data: encodeURIComponent(JSON.stringify(reqObj)),
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                success: function (result) {
+
+                    console.log("Response Object");
+                    console.log(result);
+                    offerResults = result;
+
+                    if (offerResults.offerCount > 0) {
+                        for (i = 0; i < offerResults.offerCount; i++) {
+                            var element = offerResults.offers.offer[i];
+                            if (element.templatePosition == "primary") {
+                                if (pgName == "pdp" || pgName == "warrantyresult") {
+                                    showPrimaryOffer(element);
+                                } else if (pgName == "drivers_closure") {
+                                    showSwdClosureOffer(element);
+                                } else if (pgName == "contact-hp") {
+                                    showContactOffer(element);
+                                }
+                            }
+                            if (element.templatePosition == "secondary") {
+                                if (pgName == "pdp" || pgName == "warrantyresult") {
+                                    showSecondaryOffer(element);
+                                }
+                            }
+                            if (element.templatePosition === "shop1" || element.templatePosition === "shop2" || element.templatePosition === "shop3") {
+                                if (pgName == "pdp")
+                                    enableShopTab = true;
+                            }
+                        }
+                    } else {
+                        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                            if (offerResults.errorMessage === null || (typeof (offerResults.errorMessage) === "undefined")
+                                || offerResults.errorMessage === "null" || offerResults.errorMessage === "") {
+                                globalDataLayer.SPOSOffers.errorCode = "No Offers Available for this Profile/Device";
+                            } else {
+                                globalDataLayer.SPOSOffers.errorCode = offerResults.errorMessage;
+                            }
+                        }
+                    }
+                    if (enableShopTab) {
+                        showShopTabOffer();
+                    } else {
+                        if (pgName == "pdp")
+                            hideShopTab();
+                    }
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log(XMLHttpRequest.status);
+                    console.log(textStatus);
+                    console.log(errorThrown);
+                    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                        if ((typeof (XMLHttpRequest.responseJSON) !== "undefined") && (XMLHttpRequest.responseJSON !== null)) {
+                            console.log(XMLHttpRequest.responseJSON.errorCode + "-" + XMLHttpRequest.responseJSON.errorMessage);
+                            globalDataLayer.SPOSOffers.errorCode = XMLHttpRequest.responseJSON.errorCode;
+                        } else if (textStatus === "timeout") {
+                            globalDataLayer.SPOSOffers.errorCode = textStatus;
+                        } else if (XMLHttpRequest.status === 0) {
+                            globalDataLayer.SPOSOffers.errorCode = "500";
+                        } else {
+                            globalDataLayer.SPOSOffers.errorCode = XMLHttpRequest.status;
+                        }
+                    }
+                    if (pgName == "pdp")
+                        hideShopTab();
+                },
+                timeout: 5000
+            });
+        } else {
+            if (pgName == "pdp")
+                hideShopTab();
+            if (globalDataLayer.SPOSOffers === null || typeof (globalDataLayer.SPOSOffers) === "undefined") {
+                var SPOSOffers = {};
+                globalDataLayer.SPOSOffers = SPOSOffers;
+            }
+            globalDataLayer.SPOSOffers.errorCode = "Commercial Products are not supported!";
+        }
+    }
+}
+
+function showSwdClosureOffer(primaryOfferElement) {
+    var divId = "";
+    divId = divId.concat(primaryOfferElement.templatePosition, "_", primaryOfferElement.name);
+
+    var LeadOffer = {};
+    var GDLOfferName = "LeadOffer" + (LeadOfferIndex);
+    LeadOffer.OfferID = divId;
+    LeadOffer.OfferClicked = "no";
+    LeadOffer.SPOStemplate = "6";
+    if (primaryOfferElement.html !== null && primaryOfferElement.html !== "" && primaryOfferElement.html !== "null"
+        && primaryOfferElement.imageURL !== null && primaryOfferElement.imageURL !== "" && primaryOfferElement.imageURL !== "null"
+        && primaryOfferElement.primaryText1 !== null && primaryOfferElement.primaryText1 !== "" && primaryOfferElement.primaryText1 !== "null"
+        && primaryOfferElement.primaryButtonText !== null && primaryOfferElement.primaryButtonText !== "" && primaryOfferElement.primaryButtonText !== "null"
+        && primaryOfferElement.storeURL !== null && primaryOfferElement.storeURL !== "" && primaryOfferElement.storeURL !== "null") {
+        var htmlTemplate = primaryOfferElement.html;
+        var html = "";
+        //html = html.concat("<div id=\"", divId, "\">", swdClosuretemplate, "</div>");
+        html = html.concat("<div id=\"", divId, "\">", htmlTemplate, "</div>");
+        if (largeBannerLocationEmpty) {
+            html = html.replace("%LargeBannerImgPlaceholder%", primaryOfferElement.imageURL !== null ? (primaryOfferElement.imageURL !== "null" ? primaryOfferElement.imageURL : "") : "");
+            html = html.replace("%LargeBannerTitleplaceholder%", primaryOfferElement.primaryText1 !== null ? (primaryOfferElement.primaryText1 !== "null" ? primaryOfferElement.primaryText1 : "") : "");
+            html = html.replace("%LargeBannerDescriptionplaceholder%", primaryOfferElement.primaryText2 !== null ? (primaryOfferElement.primaryText2 != "null" ? primaryOfferElement.primaryText2 : "") : "");
+            html = html.replace("%LargeBannerCTAplaceholder%", primaryOfferElement.primaryButtonText !== null ? (primaryOfferElement.primaryButtonText != "null" ? "\"" + primaryOfferElement.primaryButtonText + "\"" : "") : "");
+            html = html.replace("%LargeBannerCTAplaceholder%", primaryOfferElement.primaryButtonText !== null ? (primaryOfferElement.primaryButtonText != "null" ? primaryOfferElement.primaryButtonText : "") : "");
+
+            $("#swd_spos_template6").append(html);
+            LeadOffer.offerShown = "yes";
+            if (reqObj.user.language === "ar" || reqObj.user.language === "he") {
+                $("#LargeBannerContent").css("text-align", "left !important");
+                $("#LargeBannerContent").css("float", "left");
+                $("#LargeBannerContent").addClass("arabicContent");
+            }
+            $("#" + divId).attr("aria-label", primaryOfferElement.offerType);
+            $("#LargeBannerTemplate").attr("tabindex", 0);
+            $(".LargeBannerCTADiv").attr("tabindex", 0);
+            $(".LargeBannerCTADiv").keypress(function (e) {
+                var code = e.keyCode || e.which;
+                if (code == 13) {
+                    offerClickEvent(reqObj, offerResults.offers.offer, this.parentNode.parentNode.parentNode.id);
+                }
+
+            });
+            $(".LargeBannerCTADiv").click(function () {
+                offerClickEvent(reqObj, offerResults.offers.offer, this.parentNode.parentNode.parentNode.id);
+            });
+            largeBannerLocationEmpty = false;
+        } else {
+            LeadOffer.errorData = "Large banner Location is not empty";
+        }
+        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+            globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+            LeadOfferIndex++;
+        }
+    } else {
+        LeadOffer.errorData = "No Content Available";
+        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+            globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+            LeadOfferIndex++;
+        }
+    }
+}
+
+function showContactOffer(primaryOfferElement) {
+    var divId = "";
+    divId = divId.concat(primaryOfferElement.templatePosition, "_", primaryOfferElement.name);
+
+    var LeadOffer = {};
+    var GDLOfferName = "LeadOffer" + (LeadOfferIndex);
+    LeadOffer.OfferID = divId;
+    LeadOffer.OfferClicked = "no";
+    LeadOffer.SPOStemplate = "5";
+    if (primaryOfferElement.html !== null && primaryOfferElement.html !== "" && primaryOfferElement.html !== "null"
+        && primaryOfferElement.imageURL !== null && primaryOfferElement.imageURL !== "" && primaryOfferElement.imageURL !== "null"
+        && primaryOfferElement.primaryText1 !== null && primaryOfferElement.primaryText1 !== "" && primaryOfferElement.primaryText1 !== "null"
+        && primaryOfferElement.primaryButtonText !== null && primaryOfferElement.primaryButtonText !== "" && primaryOfferElement.primaryButtonText !== "null"
+        && primaryOfferElement.storeURL !== null && primaryOfferElement.storeURL !== "" && primaryOfferElement.storeURL !== "null") {
+        var htmlTemplate = primaryOfferElement.html;
+        var html = "";
+        // if (primaryOfferElement.templatePosition == "secondary")
+        //     html = html.concat("<div id=\"", divId, "\">", contatctOffertemplateSec, "</div>");
+        // if (primaryOfferElement.templatePosition == "primary")
+        //     html = html.concat("<div id=\"", divId, "\">", contatctOffertemplate, "</div>");
+        html = html.concat("<div id=\"", divId, "\">", htmlTemplate, "</div>");
+        if (largeBannerLocationEmpty) {
+            html = html.replace("%ImgPlaceholder%", primaryOfferElement.imageURL !== null ? (primaryOfferElement.imageURL !== "null" ? primaryOfferElement.imageURL : "") : "");
+            html = html.replace("%Titleplaceholder%", primaryOfferElement.primaryText1 !== null ? (primaryOfferElement.primaryText1 !== "null" ? primaryOfferElement.primaryText1 : "") : "");
+            html = html.replace("%Descriptionplaceholder%", primaryOfferElement.primaryText2 !== null ? (primaryOfferElement.primaryText2 != "null" ? primaryOfferElement.primaryText2 : "") : "");
+            html = html.replace("%CTAplaceholder%", primaryOfferElement.primaryButtonText !== null ? (primaryOfferElement.primaryButtonText != "null" ? primaryOfferElement.primaryButtonText : "") : "");
+
+            $("#co_spos_template5").append(html);
+            LeadOffer.offerShown = "yes";
+            if (reqObj.user.language === "ar" || reqObj.user.language === "he") {
+                $(".contactHPTemplate5").css("text-align", "right");
+            }
+            $("#" + divId).attr("aria-label", primaryOfferElement.offerType);
+            $("#" + divId).attr("tabindex", 0);
+            $("#" + divId).keypress(function (e) {
+                var code = e.keyCode || e.which;
+                if (code == 13) {
+                    offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+                }
+
+            });
+            $("#" + divId).click(function () {
+                offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+            });
+            largeBannerLocationEmpty = false;
+        } else {
+            LeadOffer.errorData = "SPOS Offer Location is not empty";
+        }
+        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+            globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+            LeadOfferIndex++;
+        }
+    } else {
+        LeadOffer.errorData = "No Content Available";
+        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+            globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+            LeadOfferIndex++;
+        }
+    }
+}
+
+function showSecondaryOffer(secondaryOfferElement) {
+    var divId = "";
+    divId = divId.concat(secondaryOfferElement.templatePosition, "_", secondaryOfferElement.name);
+
+    var LeadOffer = {};
+    var GDLOfferName = "LeadOffer" + (LeadOfferIndex);
+    LeadOffer.OfferID = divId;
+    LeadOffer.OfferClicked = "no";
+    LeadOffer.SPOStemplate = "4";
+    if (secondaryOfferElement.html !== null && secondaryOfferElement.html !== "" && secondaryOfferElement.html !== "null"
+        && secondaryOfferElement.imageURL !== null && secondaryOfferElement.imageURL !== "" && secondaryOfferElement.imageURL !== "null"
+        && secondaryOfferElement.primaryText1 !== null && secondaryOfferElement.primaryText1 !== "" && secondaryOfferElement.primaryText1 !== "null"
+        && secondaryOfferElement.primaryButtonText !== null && secondaryOfferElement.primaryButtonText !== "" && secondaryOfferElement.primaryButtonText !== "null"
+        && secondaryOfferElement.storeURL !== null && secondaryOfferElement.storeURL !== "" && secondaryOfferElement.storeURL !== "null") {
+        var htmlTemplate = secondaryOfferElement.html;
+        var html = "";
+        html = html.concat("<div id=\"", divId, "\">", htmlTemplate, "</div>");
+        if (secondaryLocationEmpty) {
+            html = html.replace("%SingleTileImageDivplaceholder%", secondaryOfferElement.imageURL !== null ? (secondaryOfferElement.imageURL !== "null" ? secondaryOfferElement.imageURL : "") : "");
+            html = html.replace("%SingleTileOfferTitleplaceholder%", secondaryOfferElement.primaryText1 !== null ? (secondaryOfferElement.primaryText1 !== "null" ? secondaryOfferElement.primaryText1 : "") : "");
+            html = html.replace("%SingleTileOfferDescriprionplaceholder%", secondaryOfferElement.primaryText2 !== null ? (secondaryOfferElement.primaryText2 != "null" ? secondaryOfferElement.primaryText2 : "") : "");
+            if (pgName == "pdp") {
+                $("#pdp_spos_template4").append(html);
+            } else if (pgName == "warrantyresult") {
+                $("#warranty_spos_template4").append(html);
+            }
+            LeadOffer.offerShown = "yes";
+            //  
+            $("#" + divId).addClass("column-block");
+            $("#" + divId).addClass("tile-block");
+            $("#" + divId).addClass("gray-block");
+
+            var tilesHeight = $(".contact-tile").height();
+            var singleTileHeight = $(".SingleTile").height();
+            if ((singleTileHeight + 19) > tilesHeight) {
+                $(".contact-tile").height(singleTileHeight + 19);
+            } else {
+                $(".SingleTile").height(tilesHeight - 19)
+            }
+            $("#" + divId).attr("aria-label", secondaryOfferElement.offerType);
+            $("#" + divId).attr("tabindex", 0);
+            $("#" + divId).keypress(function (e) {
+                var code = e.keyCode || e.which;
+                if (code == 13) {
+                    offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+                }
+
+            });
+            $("#" + divId).click(function () {
+                offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+            });
+            secondaryLocationEmpty = false;
+
+        } else {
+            LeadOffer.errorData = "Primary Location is not empty";
+        }
+        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+            globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+            LeadOfferIndex++;
+        }
+
+    } else {
+        LeadOffer.errorData = "No Content Available";
+        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+            globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+            LeadOfferIndex++;
+        }
+    }
+}
+
+function showPrimaryOffer(primaryOfferElement) {
+    var divId = "";
+    divId = divId.concat(primaryOfferElement.templatePosition, "_", primaryOfferElement.name);
+
+    var LeadOffer = {};
+    var GDLOfferName = "LeadOffer" + (LeadOfferIndex);
+    LeadOffer.OfferID = divId;
+    LeadOffer.OfferClicked = "no";
+    if (pgName == "pdp") {
+        LeadOffer.SPOStemplate = "1";
+    } else if (pgName == "warrantyresult") {
+        LeadOffer.SPOStemplate = "3";
+    }
+    if (primaryOfferElement.html !== null && primaryOfferElement.html !== "" && primaryOfferElement.html !== "null"
+        && primaryOfferElement.imageURL !== null && primaryOfferElement.imageURL !== "" && primaryOfferElement.imageURL !== "null"
+        && primaryOfferElement.primaryText1 !== null && primaryOfferElement.primaryText1 !== "" && primaryOfferElement.primaryText1 !== "null"
+        && primaryOfferElement.primaryButtonText !== null && primaryOfferElement.primaryButtonText !== "" && primaryOfferElement.primaryButtonText !== "null"
+        && primaryOfferElement.storeURL !== null && primaryOfferElement.storeURL !== "" && primaryOfferElement.storeURL !== "null") {
+        var htmlTemplate = primaryOfferElement.html;
+        var html = "";
+        html = html.concat("<div id=\"", divId, "\">", htmlTemplate, "</div>");
+        if (primaryLocationEmpty) {
+            html = html.replace("%PrimaryTileImgplaceholder%", primaryOfferElement.imageURL !== null ? (primaryOfferElement.imageURL !== "null" ? primaryOfferElement.imageURL : "") : "");
+            html = html.replace("%PrimaryTileOfferTitleplaceholder%", primaryOfferElement.primaryText1 !== null ? (primaryOfferElement.primaryText1 !== "null" ? primaryOfferElement.primaryText1 : "") : "");
+            html = html.replace("%PrimaryTileOfferDescriptionplaceholder%", primaryOfferElement.primaryText2 !== null ? (primaryOfferElement.primaryText2 != "null" ? primaryOfferElement.primaryText2 : "") : "");
+            html = html.replace("%PrimaryTileCTAplaceholder%", primaryOfferElement.primaryButtonText !== null ? (primaryOfferElement.primaryButtonText != "null" ? primaryOfferElement.primaryButtonText : "") : "");
+            html = html.replace("%PrimaryTilePriceStrikeplaceholder%", primaryOfferElement.listPrice !== null && primaryOfferElement.listPrice !== 0 ? primaryOfferElement.listPrice : "");
+            html = html.replace("%PrimaryTilePriceSalesplaceholder%", primaryOfferElement.incartPrice !== null && primaryOfferElement.incartPrice !== 0 ? primaryOfferElement.incartPrice : "");
+
+            if (pgName == "pdp") {
+                $("#pdp_spos_template1_mobile").append(html.replace(divId, divId + "_mobile"));
+                $("#pdp_spos_template1").append(html);
+            } else if (pgName == "warrantyresult") {
+                $("#warranty_spos_template3_mobile").append(html.replace(divId, divId + "_mobile"));
+                $("#warranty_spos_template3").append(html);
+            }
+            LeadOffer.offerShown = "yes";
+            if (reqObj.user.language === "ar" || reqObj.user.language === "he")
+                $(".PrimaryTileOfferDiv").css("text-align", "right");
+            $("#" + divId + "_mobile").attr("aria-label", primaryOfferElement.offerType);
+            $("#" + divId + "_mobile").click(function () {
+                for (offerIndividual in offerResults.offers.offer) {
+                    if (this.id === offerResults.offers.offer[offerIndividual].templatePosition + "_" + offerResults.offers.offer[offerIndividual].name + "_mobile") {
+                        var clicElement = offerResults.offers.offer[offerIndividual];
+                        break;
+                    }
+                }
+
+                reqObj.offerName = clicElement.name;
+                reqObj.acceptanceLevel = "Accepted";
+                if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                    for (property in globalDataLayer.SPOSOffers) {
+                        if (this.id === globalDataLayer.SPOSOffers[property].OfferID) {
+                            globalDataLayer.SPOSOffers[property].OfferClicked = "yes";
+                        }
+                    }
+                }
+
+                AcceptOffer(reqObj);
+
+                window.open(clicElement.storeURL, '_blank');
+            });
+            $("#" + divId).attr("aria-label", primaryOfferElement.offerType);
+            $(".PrimaryTile").attr("tabindex", 0);
+            $("#" + divId).keypress(function (e) {
+                var code = e.keyCode || e.which;
+                if (code == 13) {
+                    offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+                }
+
+            });
+            $("#" + divId).click(function () {
+                offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+            });
+            primaryLocationEmpty = false;
+        } else {
+            LeadOffer.errorData = "Primary Location is not empty";
+        }
+        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+            globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+            LeadOfferIndex++;
+        }
+    } else {
+        LeadOffer.errorData = "No Content Available";
+        if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+            globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+            LeadOfferIndex++;
+        }
+    }
+}
+
+var hideDashboardTileAttempt = 0;
+function hideDashboardTile() {
+    if (hideDashboardTileAttempt < 20) {
+        var dashTileDiv = document.getElementById('dashboard_tile_mastiff_template');
+        if (dashTileDiv === null) {
+            setTimeout(hideDashboardTile, 100);
+            hideDashboardTileAttempt++;
+        } else {
+            $("#dashboard_tile_mastiff_template").parent().remove();
+        }
+    }
+}
+
+var slide_index = 1;
+function nextSlide(n) {
+    displaySlides(slide_index += n);
+}
+
+function currentSlide(n) {
+    displaySlides(slide_index = n);
+}
+
+var myVarTimeout;
+
+function displaySlides(n) {
+    clearTimeout(myVarTimeout);
+    var i;
+    var slides = document.getElementsByClassName("DashTempshowSlide");
+    var bullets = document.querySelectorAll(".nav-bullet");
+
+    if (n > slides.length) { slide_index = 1 }
+    if (n < 1) { slide_index = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        bullets[i].classList.remove("nav-bullet-active");
+    }
+
+    slides[slide_index - 1].style.display = "block";
+    bullets[slide_index - 1].className += " nav-bullet-active";
+    myVarTimeout = setTimeout(showSlidesAuto, 5000);
+}
+
+function showSlidesAuto() {
+    clearTimeout(myVarTimeout);
+    var i;
+    var slides = document.getElementsByClassName("DashTempshowSlide");
+    var bullets = document.querySelectorAll(".nav-bullet");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < bullets.length; i++) {
+        bullets[i].classList.remove("nav-bullet-active");
+    }
+    slide_index++;
+    if (slide_index > slides.length) { slide_index = 1 }
+    slides[slide_index - 1].style.display = "block";
+    bullets[slide_index - 1].className += " nav-bullet-active";
+    myVarTimeout = setTimeout(showSlidesAuto, 5000); // Change image every 2 seconds
+}
+
+function DashboardTileContent(offerElement) {
+    var divId = "";
+    divId = divId.concat(offerElement.templatePosition, "_", offerElement.name);
+    var LeadOffer = {};
+    var GDLOfferName = "LeadOffer" + (LeadOfferIndex);
+    LeadOffer.OfferID = divId;
+    LeadOffer.OfferClicked = "no";
+    LeadOffer.SPOStemplate = "8";
+
+    if (offerElement.html !== null && offerElement.html !== "" && offerElement.html !== "null"
+        && offerElement.imageURL !== null && offerElement.imageURL !== "" && offerElement.imageURL !== "null"
+        && offerElement.primaryText1 !== null && offerElement.primaryText1 !== "" && offerElement.primaryText1 !== "null"
+        && offerElement.primaryButtonText !== null && offerElement.primaryButtonText !== "" && offerElement.primaryButtonText !== "null"
+        && offerElement.storeURL !== null && offerElement.storeURL !== "" && offerElement.storeURL !== "null") {
+        var htmlTemplate = offerElement.html;
+        // testing
+        //htmlTemplate = dashboardTemplate;
+        if (!dashboardTileElements) {
+            $("#dashboard_tile_mastiff_template").append(sliderDiv);
+            dashboardTileElements = true;
+        }
+        enableDashTile = true;
+        htmlTemplate = htmlTemplate.replace("%DashboardTileImgplaceholder%", offerElement.imageURL !== null ? (offerElement.imageURL !== "null" ? offerElement.imageURL : "") : "");
+        htmlTemplate = htmlTemplate.replace("%DashboardTileTitleplaceholder%", offerElement.primaryText1 !== null ? (offerElement.primaryText1 !== "null" ? offerElement.primaryText1 : "") : "");
+        htmlTemplate = htmlTemplate.replace("%DashboardTileDescriptionplaceholder%", offerElement.primaryText2 !== null ? (offerElement.primaryText2 != "null" ? offerElement.primaryText2 : "") : "");
+        htmlTemplate = htmlTemplate.replace("%DashboardTileCTAplaceholder%", offerElement.primaryButtonText !== null ? (offerElement.primaryButtonText != "null" ? offerElement.primaryButtonText : "") : "");
+        htmlTemplate = htmlTemplate.replace("%dashboardTemplateTileLinkURL%", offerElement.storeURL !== null ? (offerElement.storeURL != "null" ? offerElement.storeURL : "") : "");
+        htmlTemplate = htmlTemplate.replace("%DashboardTileCTAId%", divId);
+        // append htmlTemplate with Slider dot into the appropriate div
+        $(".dashboardSlidercontainer").append(htmlTemplate);
+        $("#nav-bullets").append("<div class=\"nav-bullet\" onclick=\"currentSlide(1)\"></div>");
+        LeadOffer.offerShown = "yes";
+        $("#" + divId).keypress(function (e) {
+            var code = e.keyCode || e.which;
+            if (code == 13) {
+                offerClickEvent(reqObj, offerResults.offers.offer, this.parentNode.parentNode.parentNode.id);
+            }
+
+        });
+        $("#" + divId).click(function () {
+            offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+        });
+    } else {
+        LeadOffer.errorData = "No Content Available";
+    }
+
+    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+        globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+        LeadOfferIndex++;
+    }
+}
+
+var showDashboardTileAttempt = 0;
+var dashboardTileElements = false;
+// html div for slider
+var sliderDiv = "<div class=\"dashboardSlidercontainer\"> <style type=\"text/css\"> .DashTempshowSlide { display: none } .dashboardSlidercontainer { height: 242px; display: flex; justify-content: center; text-align: center;} .left, .right { display: inline-block; margin-right: 10px; cursor: pointer; width: 8px; height: 8px; transition: .5s; box-shadow: -1px 1px 0 #0171AD; opacity: 1; } .left { transform: rotate(45deg); } .right { display: inline-block; transform: rotate(-135deg); margin-left: 10px; } .active { background-color: #717171; } .DashTempfade { -webkit-animation-name: fade; -webkit-animation-duration: 1.5s; animation-name: fade; animation-duration: 1.5s; } @-webkit-keyframes fade { from { opacity: .4 } to { opacity: 1 } } @keyframes fade { from { opacity: .4 } to { opacity: 1 } } #navigation { position: absolute; display: inline-flex; bottom: 10px; text-align: center; line-height: 0; } #nav-bullets { pointer-events: none; } .nav-bullet {margin-left:10px; display: inline-block; border-radius: 100%; width: 7px; height: 7px; background: #D0CCCC 0% 0% no-repeat padding-box; opacity: 1; } .nav-bullet-active { display: inline-block; border-radius: 100%; width: 7px; height: 7px; background: #0171AD 0% 0% no-repeat padding-box; opacity: 1; } </style> <div id=\"navigation\"> <div class=\"left\" onclick=\"nextSlide(-1)\"></div> <div id=\"nav-bullets\"> </div> <div class=\"right\" onclick=\"nextSlide(1);\"></div> </div> </div>";
+function showDashboardTile() {
+    enableDashTile = false;
+    if (showDashboardTileAttempt < 20) {
+        var dashTileDiv = document.getElementById('dashboard_tile_mastiff_template');
+        if (dashTileDiv === null) {
+            setTimeout(showDashboardTile, 500);
+            showDashboardTileAttempt++;
+        } else {
+            var primaryPositionElement = offerResults.offers.offer.find(x => x.templatePosition === "primary");
+            var secondaryPositionElement = offerResults.offers.offer.find(x => x.templatePosition === "secondary");
+            var shop1PositionElement = offerResults.offers.offer.find(x => x.templatePosition === "shop1");
+            var shop2PositionElement = offerResults.offers.offer.find(x => x.templatePosition === "shop2");
+            var shop3PositionElement = offerResults.offers.offer.find(x => x.templatePosition === "shop3");
+
+            if (primaryPositionElement != null) {
+                DashboardTileContent(primaryPositionElement);
+            }
+            if (secondaryPositionElement != null) {
+                DashboardTileContent(secondaryPositionElement);
+            }
+            if (shop1PositionElement != null) {
+                DashboardTileContent(shop1PositionElement);
+            }
+            if (shop2PositionElement != null) {
+                DashboardTileContent(shop2PositionElement);
+            }
+            if (shop3PositionElement != null) {
+                DashboardTileContent(shop3PositionElement);
+            }
+
+            //testing
+            // $("#dashboard_tile_mastiff_template").html(dashboardTemplate);
+            // enableDashTile = true;
+
+            if (!enableDashTile) {
+                hideDashboardTile();
+            }
+            else {
+                displaySlides(slide_index);
+            }
+        }
+    } else {
+        if (!enableDashTile) {
+            hideDashboardTile();
+        }
+    }
+}
+
+var hideShopTabAttempt = 0;
+function hideShopTab() {
+
+    if (pgName == "pdp") {
+        if (hideShopTabAttempt < 20) {
+            var shoptabDiv = document.getElementById('tab-shop');
+            if (shoptabDiv === null) {
+                setTimeout(hideShopTab, 500);
+                hideShopTabAttempt++;
+            } else {
+                $("#tab-shop").hide();
+                document.getElementById('tab-shop').style.display = "none";
+            }
+        }
+    }
+}
+
+var showShopTabAttempt = 0;
+function showShopTabOffer() {
+    if (pgName == "pdp") {
+        enableShopTab = false;
+        if (showShopTabAttempt < 20) {
+            var shoptabDiv = document.getElementById('tab-shop');
+            if (shoptabDiv === null) {
+                setTimeout(showShopTabOffer, 500);
+                showShopTabAttempt++;
+            } else {
+                if (offerResults.offerCount > 0) {
+                    var shopTabElements = false;
+
+                    for (i = 0; i < offerResults.offerCount; i++) {
+                        var element = offerResults.offers.offer[i];
+                        if (element.templatePosition === "shop1" || element.templatePosition === "shop2" || element.templatePosition === "shop3") {
+                            var divId = "";
+                            divId = divId.concat(element.templatePosition, "_", element.name);
+
+                            var LeadOffer = {};
+                            var GDLOfferName = "LeadOffer" + (LeadOfferIndex);
+                            LeadOffer.OfferID = divId;
+                            LeadOffer.OfferClicked = "no";
+                            LeadOffer.SPOStemplate = "2";
+
+                            if (element.html !== null && element.html !== "" && element.html !== "null"
+                                && element.imageURL !== null && element.imageURL !== "" && element.imageURL !== "null"
+                                && element.primaryText1 !== null && element.primaryText1 !== "" && element.primaryText1 !== "null"
+                                && element.primaryButtonText !== null && element.primaryButtonText !== "" && element.primaryButtonText !== "null"
+                                && element.storeURL !== null && element.storeURL !== "" && element.storeURL !== "null") {
+                                var htmlTemplate = element.html;
+                                var html = "";
+                                html = html.concat("<div id=\"", divId, "\">", htmlTemplate, "</div>");
+
+                                if (element.templatePosition === "shop1" && pgName !== "warrantyresult") {
+                                    enableShopTab = true;
+
+                                    html = html.replace("%LargeShopImgplaceholder%", element.imageURL !== null ? (element.imageURL !== "null" ? element.imageURL : "") : "");
+                                    html = html.replace("%OfferTitleplaceholder%", element.primaryText1 !== null ? (element.primaryText1 !== "null" ? element.primaryText1 : "") : "");
+                                    html = html.replace("%OfferDescriptionplaceholder%", element.primaryText2 !== null ? (element.primaryText2 != "null" ? element.primaryText2 : "") : "");
+                                    html = html.replace("%OfferCTAplaceholder%", element.primaryButtonText !== null ? (element.primaryButtonText != "null" ? element.primaryButtonText : "") : "");
+                                    $("#pdp_spos_shoptab_template2").prepend(html);
+                                    $("#" + divId).css("display", "inline-block");
+                                    $("#" + divId).css("vertical-align", "top");
+                                    if (pgName == "warrantyresult") {
+                                        LeadOffer.offerShown = "no";
+                                    } else {
+                                        LeadOffer.offerShown = "yes";
+                                    }
+                                    $("#" + divId).attr("aria-label", element.offerType);
+                                    $("#" + divId).attr("tabindex", 0);
+                                    $("#" + divId).keypress(function (e) {
+                                        var code = e.keyCode || e.which;
+                                        if (code == 13) {
+                                            offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+                                        }
+
+                                    });
+                                    $("#" + divId).click(function () {
+                                        offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+                                    });
+                                    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                                        globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+                                        LeadOfferIndex++;
+                                    }
+
+                                }
+
+                                if (element.templatePosition === "shop2" && pgName !== "warrantyresult") {
+
+                                    if (!shopTabElements) {
+                                        $("#pdp_spos_shoptab_template2").append("<div class=shop><style>.shop{display: flex;flex-wrap: wrap}.shopchild:nth-child(2n+1){margin-left: 20px;margin-top: 20px;}.shopchild:nth-child(2n){margin-top: 20px;}@media screen  and (max-width : 1015px) {.shop{ flex-direction: column;align-items: center;}.shopchild:nth-child(2n+1){margin-left: 0px;margin-top: 20px;}}@media screen  and (max-width : 400px) {.shop{ flex-direction: column;align-items: flex-start;}}</style></div>");
+                                        shopTabElements = true;
+                                    }
+                                    enableShopTab = true;
+                                    html = html.replace("%SmallShop1ColImgplaceholder%", element.imageURL !== null ? (element.imageURL !== "null" ? element.imageURL : "") : "");
+                                    html = html.replace("%SmallShop1colOfferTitleplaceholder%", element.primaryText1 !== null ? (element.primaryText1 !== "null" ? element.primaryText1 : "") : "");
+                                    html = html.replace("%SmallShop1ColOfferDescplaceholder%", element.primaryText2 !== null ? (element.primaryText2 != "null" ? element.primaryText2 : "") : "");
+                                    html = html.replace("%SmallShop1ColOfferCTAplaceholder%", element.primaryButtonText !== null ? (element.primaryButtonText != "null" ? element.primaryButtonText : "") : "");
+                                    $(".shop").append(html);
+                                    $("#" + divId).addClass("shopchild");
+                                    if (pgName == "warrantyresult") {
+                                        LeadOffer.offerShown = "no";
+                                    } else {
+                                        LeadOffer.offerShown = "yes";
+                                    }
+                                    $("#" + divId).attr("aria-label", element.offerType);
+                                    $("#" + divId).attr("tabindex", 0);
+                                    $("#" + divId).keypress(function (e) {
+                                        var code = e.keyCode || e.which;
+                                        if (code == 13) {
+                                            offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+                                        }
+
+                                    });
+                                    $("#" + divId).click(function () {
+                                        offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+                                    });
+                                    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                                        globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+                                        LeadOfferIndex++;
+                                    }
+                                }
+
+                                if (element.templatePosition === "shop3" && pgName !== "warrantyresult") {
+                                    if (!shopTabElements) {
+                                        $("#pdp_spos_shoptab_template2").append("<div class=shop><style>.shop{display: flex;flex-wrap: wrap}.shopchild:nth-child(2n+1){margin-left: 20px;margin-top: 20px;}.shopchild:nth-child(2n){margin-top: 20px;}@media screen  and (max-width : 1015px) {.shop{ flex-direction: column;align-items: center;}.shopchild:nth-child(2n+1){margin-left: 0px;margin-top: 20px;}}@media screen  and (max-width : 400px) {.shop{ flex-direction: column;align-items: flex-start;}}</style></div>");
+                                        shopTabElements = true;
+                                    }
+                                    enableShopTab = true;
+                                    html = html.replace("%SmallTileshop2ColImgplaceholder%", element.imageURL !== null ? (element.imageURL !== "null" ? element.imageURL : "") : "");
+                                    html = html.replace("%SmallTileshop2ColOfferTitleplaceholder%", element.primaryText1 !== null ? (element.primaryText1 !== "null" ? element.primaryText1 : "") : "");
+                                    html = html.replace("%SmallTileshop2ColOfferDescplaceholder%", element.primaryText2 !== null ? (element.primaryText2 != "null" ? element.primaryText2 : "") : "");
+                                    html = html.replace("%SmallShop2ColOfferCTAplaceholder%", element.primaryButtonText !== null ? (element.primaryButtonText != "null" ? element.primaryButtonText : "") : "");
+                                    $(".shop").append(html);
+                                    $("#" + divId).addClass("shopchild");
+                                    if (pgName == "warrantyresult") {
+                                        LeadOffer.offerShown = "no";
+                                    } else {
+                                        LeadOffer.offerShown = "yes";
+                                    }
+                                    $("#" + divId).attr("aria-label", element.offerType);
+                                    $("#" + divId).attr("tabindex", 0);
+                                    $("#" + divId).keypress(function (e) {
+                                        var code = e.keyCode || e.which;
+                                        if (code == 13) {
+                                            offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+                                        }
+
+                                    });
+                                    $("#" + divId).click(function () {
+                                        offerClickEvent(reqObj, offerResults.offers.offer, this.id);
+                                    });
+                                    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                                        globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+                                        LeadOfferIndex++;
+                                    }
+                                }
+                            }
+                            else {
+                                LeadOffer.errorData = "No Content Available";
+                                if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+                                    globalDataLayer.SPOSOffers[GDLOfferName] = LeadOffer;
+                                    LeadOfferIndex++;
+                                }
+                            }
+                        }
+                    }
+                    if (!enableShopTab) {
+                        hideShopTab();
+                    }
+                }
+            }
+        } else {
+            if (!enableShopTab) {
+                hideShopTab();
+            }
+        }
+    }
+}
+
+function sleep(milliseconds) {
+    var date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
+
+function offerClickEvent(acceptOfferReqObj, offerList, elementIdClicked) {
+    for (offerIndividual in offerList) {
+        if (elementIdClicked === offerList[offerIndividual].templatePosition + "_" + offerList[offerIndividual].name) {
+            var offerElement = offerList[offerIndividual];
+            break;
+        }
+    }
+    acceptOfferReqObj.offerName = offerElement.name;
+    acceptOfferReqObj.acceptanceLevel = "Accepted";
+    if ((typeof (globalDataLayer.SPOSOffers) !== "undefined") && (globalDataLayer.SPOSOffers !== null)) {
+        for (property in globalDataLayer.SPOSOffers) {
+            if (elementIdClicked === globalDataLayer.SPOSOffers[property].OfferID) {
+                globalDataLayer.SPOSOffers[property].OfferClicked = "yes";
+            }
+        }
+    }
+
+    $.ajax({
+        url: mastiffUrl,
+        method: "POST",
+        async: true,
+        data: encodeURIComponent(JSON.stringify(acceptOfferReqObj)),
+        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        success: function (result) {
+
+            console.log("Response object - Offer accepted.");
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+            console.log("ERROR");
+
+            console.log(XMLHttpRequest);
+            console.log(textStatus);
+            console.log(errorThrown);
+        }
+    });
+
+    if (pgName != "dashboard")
+    window.open(offerElement.storeURL, '_blank');
+}
+
+function createReqId() {
+
+    var timestamp = Date.now();
+    var tsLength = String(timestamp).length;
+    var randStrLen = 20 - parseInt(tsLength);
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    var result = "";
+
+    for (var i = 0; i < randStrLen; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return String(timestamp).concat(result);
+}
+
+function getDeviceType() {
+    var ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return "tablet";
+    }
+    if (
+        /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+            ua
+        )
+    ) {
+        return "mobile";
+    }
+    return "desktop";
+}
+
+function pageName() {
+    var url = String(window.location);
+    var urlSegments = url.split("/");
+    if (urlSegments[4] === "drivers" && urlSegments[6] === "closure") {
+        return urlSegments[4] + "_" + urlSegments[6];
+    }
+    if ((typeof (urlSegments[4]) === "undefined")) {
+        falconPages = true;
+        return "home";
+    }
+    if (urlSegments[4] === "printer" || urlSegments[4] === "computer") {
+        falconPages = true;
+        return "home_" + urlSegments[4];
+    }
+    if (urlSegments[4] === "product") {
+        return "pdp";
+    }
+    if (urlSegments[4] === "dashboard") {
+        falconPages = true;
+        return urlSegments[4];
+    }
+    return urlSegments[4];
+}
+
+function pageSupported() {
+    var supportedPageList = ["warrantyresult", "pdp", "drivers_closure", "contact-hp", "home", "home_printer", "home_computer", "dashboard"];
+    return supportedPageList.includes(pgName);
+}
+
+function AcceptOffer(acceptOfferReqObj) {
+
+    $.ajax({
+        url: mastiffUrl,
+        method: "POST",
+        async: true,
+        data: encodeURIComponent(JSON.stringify(acceptOfferReqObj)),
+        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        success: function (result) {
+
+            console.log("Response object - Offer accepted.");
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+            console.log("ERROR");
+
+            console.log(XMLHttpRequest);
+            console.log(textStatus);
+            console.log(errorThrown);
+        }
+    });
+
+}

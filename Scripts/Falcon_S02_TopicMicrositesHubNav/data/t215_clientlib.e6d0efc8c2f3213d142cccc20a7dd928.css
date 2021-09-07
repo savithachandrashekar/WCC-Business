@@ -1,0 +1,27 @@
+.sms-ivr-container {padding:50px; max-width:1000px;margin:30px auto;}
+
+.sms-ivr-leftt {padding: 30px 30px 0 30px !important;}
+.sms-ivr-right {padding: 30px !important;}
+
+.sms-ivr-left h1, .sms-ivr-left p, .sms-ivr-right h1, .sms-ivr-right {font-family: "HPSimplified-Light", "HP Simplified Light", "HPSimplified" !important; }
+.sms-ivr-left h1, .sms-ivr-left p {color: #fff;}
+.sms-ivr-left h1,.sms-ivr-right h1 {
+    font-size: 38px;
+    margin: 30px 10px 10px 0;
+    font-weight: 200;
+};
+
+.sms-ivr-left p {font-size:16px; margin-bottom: 30px;}
+
+@media only screen and (max-width: 575px) {
+    .sms-ivr-left {display:flex;}
+	.sms-ivr-left .image {width: 30%; position: absolute;bottom: 0;right: 0;}
+	.sms-ivr-left img {vertical-align:bottom;}
+	.sms-ivr-left h1 {font-size: 32px; margin: initial;}
+    .sms-ivr-container {padding:30px 0;}
+	.sms-ivr-left .cmp-container {padding: 15px 0 15px 15px;float:left;width: 70%}
+    }
+
+@media only screen and (min-width: 576px) {
+	.sms-ivr-left .image {position: absolute;bottom: 0;}
+    }

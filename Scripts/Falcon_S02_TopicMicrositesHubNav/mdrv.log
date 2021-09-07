@@ -1,0 +1,1007 @@
+Virtual User Script started at: 7/19/2021 12:22:12 PM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 2016; build 971 (Aug 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36  	[MsgId: MMSG-26988]
+Runtime Settings file: "E:\PERFORMANCE\CSS\FY21\WCCBusiness\Scripts\ITG\V1\Falcon_S02_TopicMicrositesHubNav\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action TopicPages_SEO_Calls.
+TopicPages_SEO_Calls.c(5): web_add_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+TopicPages_SEO_Calls.c(5): web_add_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+TopicPages_SEO_Calls.c(6): Notify: Transaction "FP09_TopicLanding_10_seo" started.
+TopicPages_SEO_Calls.c(7): web_url("{p_locale}") started  	[MsgId: MMSG-26355]
+TopicPages_SEO_Calls.c(7): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicPages_SEO_Calls.c(7): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicPages_SEO_Calls.c(7): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicPages_SEO_Calls.c(7): web_url("{p_locale}") highest severity level was "warning", 20927 body bytes, 567 header bytes, 36 chunking overhead bytes  	[MsgId: MMSG-26387]
+TopicPages_SEO_Calls.c(15): Notify: Transaction "FP09_TopicLanding_10_seo" ended with a "Pass" status (Duration: 0.8874 Wasted Time: 0.0899).
+TopicPages_SEO_Calls.c(16): web_remove_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+TopicPages_SEO_Calls.c(16): Previous automatically added web header for "User-Agent" removed  	[MsgId: MMSG-26587]
+TopicPages_SEO_Calls.c(16): web_remove/revert_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+TopicPages_SEO_Calls.c(19): web_add_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+TopicPages_SEO_Calls.c(19): web_add_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+TopicPages_SEO_Calls.c(20): Notify: Transaction "FP10_TopicAudioPages_13_seo" started.
+TopicPages_SEO_Calls.c(21): web_url("{p_locale}") started  	[MsgId: MMSG-26355]
+TopicPages_SEO_Calls.c(21): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicPages_SEO_Calls.c(21): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicPages_SEO_Calls.c(21): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicPages_SEO_Calls.c(21): web_url("{p_locale}") highest severity level was "warning", 37525 body bytes, 567 header bytes, 52 chunking overhead bytes  	[MsgId: MMSG-26387]
+TopicPages_SEO_Calls.c(29): Notify: Transaction "FP10_TopicAudioPages_13_seo" ended with a "Pass" status (Duration: 0.9636 Wasted Time: 0.0058).
+TopicPages_SEO_Calls.c(30): web_remove_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+TopicPages_SEO_Calls.c(30): Previous automatically added web header for "User-Agent" removed  	[MsgId: MMSG-26587]
+TopicPages_SEO_Calls.c(30): web_remove/revert_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+TopicPages_SEO_Calls.c(34): web_add_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+TopicPages_SEO_Calls.c(34): web_add_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+TopicPages_SEO_Calls.c(35): Notify: Transaction "FP11_TopicWirelessPages_13_seo" started.
+TopicPages_SEO_Calls.c(36): web_url("{p_locale}") started  	[MsgId: MMSG-26355]
+TopicPages_SEO_Calls.c(36): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicPages_SEO_Calls.c(36): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicPages_SEO_Calls.c(36): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicPages_SEO_Calls.c(36): web_url("{p_locale}") highest severity level was "warning", 33786 body bytes, 567 header bytes, 44 chunking overhead bytes  	[MsgId: MMSG-26387]
+TopicPages_SEO_Calls.c(44): Notify: Transaction "FP11_TopicWirelessPages_13_seo" ended with a "Pass" status (Duration: 1.1212 Wasted Time: 0.0073).
+TopicPages_SEO_Calls.c(45): web_remove_auto_header("User-Agent") started  	[MsgId: MMSG-26355]
+TopicPages_SEO_Calls.c(45): Previous automatically added web header for "User-Agent" removed  	[MsgId: MMSG-26587]
+TopicPages_SEO_Calls.c(45): web_remove/revert_auto_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+Ending action TopicPages_SEO_Calls.
+Starting action AEM_MicrositePages.
+AEM_MicrositePages.c(6): web_set_sockets_option started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(6): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(7): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(7): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(9): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(9): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(11): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(11): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(13): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(13): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(15): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(15): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(18): Notify: Transaction "FP08_Microsites_01_WindowsSupportCenter_doc" started.
+AEM_MicrositePages.c(19): web_url("windows-10-support-center") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(19): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(19): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.19cfa5ba9ce5df3097a1fdfdfcf88472.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://cdn.optimizely.com/js/19424703111.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/customlib/globalHeaderSync.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.66657a0f54463d4948168672625f6fe1.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.66657a0f54463d4948168672625f6fe1.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.82f1b202f0609f34c1d045d2ae2697f4.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://itg-live.www8.hp.com/caas/header-footer/us/en/default/latest.r?contentType=js&hide_search=true&show_shopping_cart=true&hide_country_selector=true&show_sign_in=true" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/clientlibs/granite/jquery.0811b5e7037ada110b591bbd86240386.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.9c40ba8ed0e9cfdde89d9353623065db.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.eaf0885875da76db146e1f0297ae9428.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center/_jcr_content/root/responsivegrid/container/container/columncontrol/columnCtrl2/image.coreimg.png/1615276564460/u3423.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center/_jcr_content/root/responsivegrid/container_1461480804/columncontrol/columnCtrl1/image.coreimg.png/1615276564498/u3401-1.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center/_jcr_content/root/responsivegrid/container_358394941/columncontrol/columnCtrl2/image.coreimg.png/1615276564584/u3423-1.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/flag/flag_us.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/structure/sidealert/clientlibs.71130019a3be7fc03f854a1c388daea8.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(19): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(19): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(19): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(19): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/can.jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(19): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(19): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(19): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(19): web_url("windows-10-support-center") highest severity level was "warning", 623736 body bytes, 16085 header bytes  	[MsgId: MMSG-26388]
+AEM_MicrositePages.c(29): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(29): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(31): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(31): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(33): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(33): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(35): web_add_auto_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(35): web_add_auto_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(38): web_url("en") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(38): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(38): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(38): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(38): web_url("en") was successful, 28 body bytes, 413 header bytes  	[MsgId: MMSG-26386]
+AEM_MicrositePages.c(49): Notify: Transaction "FP08_Microsites_01_WindowsSupportCenter_doc" ended with a "Pass" status (Duration: 1.5819 Wasted Time: 0.1047).
+AEM_MicrositePages.c(52): web_remove_auto_header("Origin") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(52): Warning -26590: web_remove/revert_auto_header for "Origin" had no effect  	[MsgId: MWAR-26590]
+AEM_MicrositePages.c(52): web_remove/revert_auto_header("Origin") highest severity level was "warning"  	[MsgId: MMSG-26391]
+AEM_MicrositePages.c(53): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(53): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(55): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(55): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(57): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(57): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(59): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(59): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(61): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(61): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(64): Notify: Transaction "FP08_Microsites_02_WindowsSupportCenterComputing_doc" started.
+AEM_MicrositePages.c(65): web_url("windows-10-support-center-computing") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(65): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(65): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.584cb464c9ef2f729f74eaab86bd6774.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://cdn.optimizely.com/js/19424703111.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.0092239db491f865f85b66c09cf8be7f.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/clientlibs/granite/jquery.0811b5e7037ada110b591bbd86240386.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.6386e9248df102fafc1f7f14797fd407.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/micrositetabs/clientlib.64389cb666a7cf11fbc2024eac9e01db.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/micrositetabs/clientlib.56b529361a99074106f9b2d64f3816a5.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/u3715.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/u3711.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/win10-setup.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/u3881.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/learnTab/container/columncontrol_1809809004/columnCtrl2/image_copy.coreimg.png/1608671054037/windows-update.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/launchnow/clientlib.d41d8cd98f00b204e9800998ecf8427e.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/launchnow/clientlib.b24324a3bd1f55c687b5df1bba616834.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hpptu.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/loadingHp.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/yellowTriangle.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/learnTab/container/columncontrol/columnCtrl2/image.coreimg.png/1608671054128/windows-update.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/learnTab/container/columncontrol_808945053/columnCtrl2/image.coreimg.png/1608671054232/u315.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/youtube-component/clientlib.f6502c1aad9ae5cb94c12c0b397ab74e.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/youtube-component/clientlib.0f34117689b50c22bf4788c61b2dd1b6.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://img.youtube.com/vi/O-Ak18JwOW0/sddefault.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/fixTab/container/columncontrol_413875835/columnCtrl2/image.coreimg.png/1608671054503/u2014.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://img.youtube.com/vi/I4oU7bd1jec/sddefault.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/1clickfixes_icon_RGB_audio_50x50.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/diag-icons-network.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/lookup/clientlib.74650ce6be727af527e63324387444cd.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/fixTab/container/columncontrol_198848894/columnCtrl2/image.coreimg.png/1608671054891/u3816.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/fixTab/container/columncontrol_880536493/columnCtrl2/image.coreimg.png/1608671054950/u3813.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/batteryAdapterMinitab.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/fixTab/container/columncontrol_1591399875/columnCtrl2/image.coreimg.png/1608671055069/u3820.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://img.youtube.com/vi/IkkiB1rhLTA/sddefault.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/fixTab/container/columncontrol_1999595947/columnCtrl2/image.coreimg.png/1608671055165/u3877.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/recoverTab/container/columncontrol_402526450/columnCtrl2/image_copy.coreimg.png/1608671055311/u3729.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/recoverTab/container/columncontrol/columnCtrl2/image.coreimg.png/1608671055368/u3729.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/recoverTab/container/columncontrol_1113413219/columnCtrl2/image.coreimg.png/1608671055403/u319.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/recoverTab/container/columncontrol_1535153514/columnCtrl2/image.coreimg.png/1608671055463/u3739.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/recoverTab/container/columncontrol_323890040/columnCtrl2/image.coreimg.png/1608671055517/u3741.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/improveTab/container/columncontrol_9300394/columnCtrl2/image_copy.coreimg.png/1608671055626/u3849.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/chatnow/clientlib.b57ba4930334458d91bb8427b734e383.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/chatnow/clientlib.6c362a2a42f838ea539ac9b8fbe281dd.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/improveTab/container/columncontrol/columnCtrl2/image.coreimg.png/1608671055720/u3849.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-computing/_jcr_content/root/responsivegrid/micrositetabs/improveTab/container/columncontrol_1082873493/columnCtrl2/image.coreimg.png/1608671055767/u3874.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/Windows_10_notext.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/flag/flag_us.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/structure/sidealert/clientlibs.71130019a3be7fc03f854a1c388daea8.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-computing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(65): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(65): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(65): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(65): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/can.jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(65): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(65): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(65): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(65): web_url("windows-10-support-center-computing") highest severity level was "warning", 1720866 body bytes, 40393 header bytes  	[MsgId: MMSG-26388]
+AEM_MicrositePages.c(74): Notify: Transaction "FP08_Microsites_02_WindowsSupportCenterComputing_doc" ended with a "Pass" status (Duration: 2.5143 Wasted Time: 0.1475).
+AEM_MicrositePages.c(77): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(77): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(79): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(79): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(82): Notify: Transaction "FP08_Microsites_03_WindowsSupportCenterPrinting_doc" started.
+AEM_MicrositePages.c(83): web_url("windows-10-support-center-printing") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(83): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(83): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.584cb464c9ef2f729f74eaab86bd6774.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://cdn.optimizely.com/js/19424703111.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.0092239db491f865f85b66c09cf8be7f.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/clientlibs/granite/jquery.0811b5e7037ada110b591bbd86240386.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.6386e9248df102fafc1f7f14797fd407.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/micrositetabs/clientlib.64389cb666a7cf11fbc2024eac9e01db.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/micrositetabs/clientlib.56b529361a99074106f9b2d64f3816a5.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/u3461.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/u3464.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/u3469.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/issuesTab/container/columncontrol_1366818769/columnCtrl2/image_copy.coreimg.png/1610361672624/u3514.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/issuesTab/container/columncontrol/columnCtrl2/image.coreimg.png/1610361672677/u3514.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/issuesTab/container/columncontrol_348779139/columnCtrl2/image.coreimg.png/1610361672811/u3515.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/issuesTab/container/columncontrol_1038948160/columnCtrl2/image.coreimg.png/1610361672864/u3516.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/setupTab/container/columncontrol_1673399555/columnCtrl2/image_copy.coreimg.png/1610361673049/u3159.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/setupTab/container/columncontrol/columnCtrl2/image.coreimg.png/1610361673096/u3159.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/chatnow/clientlib.b57ba4930334458d91bb8427b734e383.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/chatnow/clientlib.6c362a2a42f838ea539ac9b8fbe281dd.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/vaDiagType.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/youtube-component/clientlib.f6502c1aad9ae5cb94c12c0b397ab74e.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/youtube-component/clientlib.0f34117689b50c22bf4788c61b2dd1b6.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://img.youtube.com/vi/wUgbIgUClHA/sddefault.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/setupTab/container/columncontrol_1802998822/columnCtrl2/image.coreimg.png/1610361673196/u3559.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://img.youtube.com/vi/zV2PbLfg9-w/sddefault.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/setupTab/container/columncontrol_1317913929/columnCtrl1/columncontrol/columnCtrl2/image.coreimg.png/1610361673333/u3164.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/setupTab/container/columncontrol_1317913929/columnCtrl1/columncontrol_230277654/columnCtrl2/image.coreimg.png/1610361673396/u3561.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/playlist/clientlib.346eb3cbf38fb3961a284260f0edaf49.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/playlist/clientlib.ce1063de6c0fcbe2998363798e1cfc53.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/connectTab/container/columncontrol_1780097352/columnCtrl2/image_copy.coreimg.png/1610361673651/u3580.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/windows-10-support-center-printing/_jcr_content/root/responsivegrid/container_1964077517/micrositetabs/connectTab/container/columncontrol/columnCtrl2/image.coreimg.png/1610361673723/u3580.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/u3590.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/u3596.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/flag/flag_us.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/structure/sidealert/clientlibs.71130019a3be7fc03f854a1c388daea8.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/windows-10-support-center-printing"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(83): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(83): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(83): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(83): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/can.jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(83): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(83): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(83): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(83): web_url("windows-10-support-center-printing") highest severity level was "warning", 1562727 body bytes, 31640 header bytes  	[MsgId: MMSG-26388]
+AEM_MicrositePages.c(93): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(93): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(95): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(95): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(97): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(97): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(99): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(99): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(102): web_url("en_3") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(102): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(102): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(102): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(102): web_url("en_3") was successful, 384 body bytes, 624 header bytes  	[MsgId: MMSG-26386]
+AEM_MicrositePages.c(112): Notify: Transaction "FP08_Microsites_03_WindowsSupportCenterPrinting_doc" ended with a "Pass" status (Duration: 1.4538 Wasted Time: 0.1469).
+AEM_MicrositePages.c(116): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(116): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(118): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(118): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(120): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(120): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(122): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(122): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(124): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(124): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(126): web_add_auto_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(126): web_add_auto_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(128): web_add_auto_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(128): web_add_auto_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(132): Notify: Transaction "FP08_Microsites_04_PrintingProblems_doc" started.
+AEM_MicrositePages.c(133): web_url("printscandoctor-printing-problems") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(133): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(133): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.584cb464c9ef2f729f74eaab86bd6774.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://cdn.optimizely.com/js/19424703111.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.0092239db491f865f85b66c09cf8be7f.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/clientlibs/granite/jquery.0811b5e7037ada110b591bbd86240386.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.6386e9248df102fafc1f7f14797fd407.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/customlib/ms-psdr-new-custom.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/printscandoctor-printing-problems/_jcr_content/root/responsivegrid/columncontrol_copy_c/columnCtrl2/image.coreimg.png/1623724754601/psdr-new-hero.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/navigationtab/clientlib.6d88e6d8e8bee32abe0a9bb675ed3336.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/navigationtab/clientlib.1c0909b8f047f0779b9c945ffd4a84b0.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/printscandoctor-printing-problems/_jcr_content/root/responsivegrid/container/navigationtab/fixPrintingTab/container/columncontrol/columnCtrl2/image.coreimg.png/1623724754746/u3487.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/chatnow/clientlib.b57ba4930334458d91bb8427b734e383.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/chatnow/clientlib.6c362a2a42f838ea539ac9b8fbe281dd.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/flag/flag_us.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/structure/sidealert/clientlibs.71130019a3be7fc03f854a1c388daea8.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-printing-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(133): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(133): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(133): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(133): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/can.jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(133): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(133): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(133): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(133): web_url("printscandoctor-printing-problems") highest severity level was "warning", 692353 body bytes, 16733 header bytes  	[MsgId: MMSG-26388]
+AEM_MicrositePages.c(143): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(143): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(145): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(145): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(147): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(147): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(149): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(149): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(152): web_url("en_5") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(152): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(152): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(152): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(152): web_url("en_5") was successful, 28 body bytes, 413 header bytes  	[MsgId: MMSG-26386]
+AEM_MicrositePages.c(162): Notify: Transaction "FP08_Microsites_04_PrintingProblems_doc" ended with a "Pass" status (Duration: 1.1381 Wasted Time: 0.0971).
+AEM_MicrositePages.c(165): web_remove_auto_header("Origin") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(165): Warning -26590: web_remove/revert_auto_header for "Origin" had no effect  	[MsgId: MWAR-26590]
+AEM_MicrositePages.c(165): web_remove/revert_auto_header("Origin") highest severity level was "warning"  	[MsgId: MMSG-26391]
+AEM_MicrositePages.c(166): web_remove_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(166): Previous automatically added web header for "Sec-Fetch-Dest" removed  	[MsgId: MMSG-26587]
+AEM_MicrositePages.c(166): web_remove/revert_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(167): web_add_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(167): web_add_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(169): web_remove_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(169): Previous automatically added web header for "Sec-Fetch-Mode" removed  	[MsgId: MMSG-26587]
+AEM_MicrositePages.c(169): web_remove/revert_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(170): web_add_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(170): web_add_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(172): web_remove_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(172): Previous automatically added web header for "Sec-Fetch-Site" removed  	[MsgId: MMSG-26587]
+AEM_MicrositePages.c(172): web_remove/revert_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(173): web_add_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(173): web_add_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(175): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(175): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(177): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(177): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(180): Notify: Transaction "FP08_Microsites_05_PrintScanDoctor_doc" started.
+AEM_MicrositePages.c(181): web_url("printscandoctor") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(181): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(181): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.19cfa5ba9ce5df3097a1fdfdfcf88472.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://cdn.optimizely.com/js/19424703111.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/customlib/globalHeaderSync.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.66657a0f54463d4948168672625f6fe1.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.66657a0f54463d4948168672625f6fe1.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.82f1b202f0609f34c1d045d2ae2697f4.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://itg-live.www8.hp.com/caas/header-footer/us/en/default/latest.r?contentType=js&hide_search=true&show_shopping_cart=true&hide_country_selector=true&show_sign_in=true" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/clientlibs/granite/jquery.0811b5e7037ada110b591bbd86240386.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.9c40ba8ed0e9cfdde89d9353623065db.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.eaf0885875da76db146e1f0297ae9428.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/customlib/ms-psdr-new-custom.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/printscandoctor/_jcr_content/root/responsivegrid/columncontrol/columnCtrl2/image.coreimg.png/1623923716719/psdr-new-hero.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/navigationtab/clientlib.6d88e6d8e8bee32abe0a9bb675ed3336.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/navigationtab/clientlib.1c0909b8f047f0779b9c945ffd4a84b0.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/flag/flag_us.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/structure/sidealert/clientlibs.71130019a3be7fc03f854a1c388daea8.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(181): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(181): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(181): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(181): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/can.jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(181): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(181): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(181): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(181): web_url("printscandoctor") highest severity level was "warning", 646690 body bytes, 16254 header bytes  	[MsgId: MMSG-26388]
+AEM_MicrositePages.c(191): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(191): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(193): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(193): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(195): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(195): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(197): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(197): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(200): web_url("en_4") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(200): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(200): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(200): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(200): web_url("en_4") was successful, 28 body bytes, 413 header bytes  	[MsgId: MMSG-26386]
+AEM_MicrositePages.c(210): Notify: Transaction "FP08_Microsites_05_PrintScanDoctor_doc" ended with a "Pass" status (Duration: 1.4508 Wasted Time: 0.1062).
+AEM_MicrositePages.c(213): web_add_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(213): web_add_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(215): web_add_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(215): web_add_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(217): web_add_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(217): web_add_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(219): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(219): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(221): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(221): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(223): web_add_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(223): web_add_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(225): web_add_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(225): web_add_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(228): Notify: Transaction "FP08_Microsites_06_ScaningProblems" started.
+AEM_MicrositePages.c(229): web_url("printscandoctor-scanning-problems") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(229): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(229): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.584cb464c9ef2f729f74eaab86bd6774.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://cdn.optimizely.com/js/19424703111.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.0092239db491f865f85b66c09cf8be7f.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/clientlibs/granite/jquery.0811b5e7037ada110b591bbd86240386.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.6386e9248df102fafc1f7f14797fd407.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/customlib/ms-psdr-new-custom.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/printscandoctor-scanning-problems/_jcr_content/root/responsivegrid/columncontrol_copy/columnCtrl2/image.coreimg.png/1623724796451/psdr-new-hero.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/navigationtab/clientlib.6d88e6d8e8bee32abe0a9bb675ed3336.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/navigationtab/clientlib.1c0909b8f047f0779b9c945ffd4a84b0.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/printscandoctor-scanning-problems/_jcr_content/root/responsivegrid/container/navigationtab/fixScanningTab/container/columncontrol/columnCtrl2/image.coreimg.jpeg/1623724796612/fix-scanning-img.jpeg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/chatnow/clientlib.b57ba4930334458d91bb8427b734e383.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/chatnow/clientlib.6c362a2a42f838ea539ac9b8fbe281dd.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/flag/flag_us.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/structure/sidealert/clientlibs.71130019a3be7fc03f854a1c388daea8.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/printscandoctor-scanning-problems"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(229): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(229): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(229): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(229): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/can.jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(229): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(229): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(229): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(229): web_url("printscandoctor-scanning-problems") highest severity level was "warning", 659869 body bytes, 16746 header bytes  	[MsgId: MMSG-26388]
+AEM_MicrositePages.c(240): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(240): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(242): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(242): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(244): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(244): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(246): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(246): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(249): web_url("en_6") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(249): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(249): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(249): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(249): web_url("en_6") was successful, 28 body bytes, 485 header bytes  	[MsgId: MMSG-26386]
+AEM_MicrositePages.c(258): Notify: Transaction "FP08_Microsites_06_ScaningProblems" ended with a "Pass" status (Duration: 1.2543 Wasted Time: 0.1069).
+AEM_MicrositePages.c(264): web_set_sockets_option started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(264): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(266): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(266): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(268): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(268): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(270): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(270): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(272): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(272): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(274): web_add_auto_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(274): web_add_auto_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(276): web_add_auto_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(276): web_add_auto_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(279): Notify: Transaction "FP08_Microsites_07_HPCareSupportOptions_doc" started.
+AEM_MicrositePages.c(280): web_url("hpcare-support-options") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(280): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.584cb464c9ef2f729f74eaab86bd6774.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://itg-live.www8.hp.com/au/en/scripts/framework/jquery/v-1-8/jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://itg-live.www8.hp.com/au/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://cdn.optimizely.com/js/19424703111.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/au/en/clientlib-hf-fontface.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.0092239db491f865f85b66c09cf8be7f.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/clientlibs/granite/jquery.0811b5e7037ada110b591bbd86240386.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.6efb0f1504110deaf09a62602d5629e3.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/twoColBackgroundColor/clientlib.e6d0efc8c2f3213d142cccc20a7dd928.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-au/help/hpcare-support-options/_jcr_content/root/responsivegrid/twocolbackgroundcolo/columnCtrl1/image.coreimg.png/1611297358168/hero-anz.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/smsivrbutton/clientlib.541c56899c7494483fe04a82a0796004.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/sms-ivr/icon-wa.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/sms-ivr/icon-laptop.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/sms-ivr/pdt_Printer_60.svg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/sms-ivr/icon-compass.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/sms-ivr/icon-faq.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://support.hp.com/content/dam/hp-wcc/microsite-assets/customlib/ms-smsivr-custom.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/flag/flag_au.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/structure/sidealert/clientlibs.71130019a3be7fc03f854a1c388daea8.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/au-en/help/hpcare-support-options"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(280): Redirecting "https://itg-live.www8.hp.com/au/en/scripts/framework/jquery/v-1-8/jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(280): To location "https://itg-live.www.hp.com/au-en/scripts/framework/jquery/v-1-8/jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(280): Redirecting "https://itg-live.www8.hp.com/au/en/scripts/framework/jquery/v-1-8/can.jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(280): To location "https://itg-live.www.hp.com/au-en/scripts/framework/jquery/v-1-8/can.jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(280): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(280): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(280): web_url("hpcare-support-options") highest severity level was "warning", 931432 body bytes, 18029 header bytes  	[MsgId: MMSG-26388]
+AEM_MicrositePages.c(290): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(290): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(292): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(292): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(294): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(294): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(296): web_remove_auto_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(296): Previous automatically added web header for "sec-ch-ua" removed  	[MsgId: MMSG-26587]
+AEM_MicrositePages.c(296): web_remove/revert_auto_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(297): web_remove_auto_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(297): Previous automatically added web header for "sec-ch-ua-mobile" removed  	[MsgId: MMSG-26587]
+AEM_MicrositePages.c(297): web_remove/revert_auto_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(298): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(298): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(301): web_url("wcc_sitehome_alerts") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(301): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(301): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(301): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms/au-en/wcc_sitehome_alerts"  	[MsgId: MMSG-26548]
+AEM_MicrositePages.c(301): web_url("wcc_sitehome_alerts") was successful, 412 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+AEM_MicrositePages.c(311): Notify: Transaction "FP08_Microsites_07_HPCareSupportOptions_doc" ended with a "Pass" status (Duration: 2.0289 Wasted Time: 0.1158).
+AEM_MicrositePages.c(315): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(315): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(317): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(317): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(319): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(319): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(321): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(321): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(323): web_add_auto_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(323): web_add_auto_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(325): web_add_auto_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(325): web_add_auto_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(328): Notify: Transaction "FP08_Microsites_08_PrintScanFax_doc" started.
+AEM_MicrositePages.c(329): web_url("how-to-print-scan-fax") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(329): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(329): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.19cfa5ba9ce5df3097a1fdfdfcf88472.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://cdn.optimizely.com/js/19424703111.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/customlib/globalHeaderSync.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.66657a0f54463d4948168672625f6fe1.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.66657a0f54463d4948168672625f6fe1.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.82f1b202f0609f34c1d045d2ae2697f4.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://itg-live.www8.hp.com/caas/header-footer/us/en/default/latest.r?contentType=js&hide_search=true&show_shopping_cart=true&hide_country_selector=true&show_sign_in=true" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/clientlibs/granite/jquery.0811b5e7037ada110b591bbd86240386.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.9c40ba8ed0e9cfdde89d9353623065db.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.eaf0885875da76db146e1f0297ae9428.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/ossniffnavtabs/clientlib.799c18f5880d4cfe78800c38b33b25fe.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/ossniffnavtabs/clientlib.7958d9992dbab9cc88d59fd554048390.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/flag/flag_us.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/structure/sidealert/clientlibs.71130019a3be7fc03f854a1c388daea8.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/how-to-print-scan-fax"  	[MsgId: MMSG-26659]
+AEM_MicrositePages.c(329): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(329): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(329): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+AEM_MicrositePages.c(329): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/can.jquery.js"  	[MsgId: MMSG-26693]
+AEM_MicrositePages.c(329): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(329): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(329): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+AEM_MicrositePages.c(329): web_url("how-to-print-scan-fax") highest severity level was "warning", 530508 body bytes, 14680 header bytes  	[MsgId: MMSG-26388]
+AEM_MicrositePages.c(339): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(339): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(341): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(341): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(343): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(343): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+AEM_MicrositePages.c(346): web_url("wcc_sitehome_alerts") started  	[MsgId: MMSG-26355]
+AEM_MicrositePages.c(346): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(346): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(346): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+AEM_MicrositePages.c(346): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+AEM_MicrositePages.c(346): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms/us-en/wcc_sitehome_alerts"  	[MsgId: MMSG-26548]
+AEM_MicrositePages.c(346): web_url("wcc_sitehome_alerts") was successful, 286 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+AEM_MicrositePages.c(355): Notify: Transaction "FP08_Microsites_08_PrintScanFax_doc" ended with a "Pass" status (Duration: 1.5651 Wasted Time: 0.1080).
+Ending action AEM_MicrositePages.
+Starting action TopicAudioWirelessPages.
+TopicAudioWirelessPages.c(6): web_set_sockets_option started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(6): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(9): Notify: Transaction "FP09_TopicLanding_01_doc" started.
+TopicAudioWirelessPages.c(11): web_url("topic") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(11): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(11): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(11): Found resource "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Found resource "https://ssl.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Found resource "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Found resource "https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/styles.86f6121febe9ac96de73.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/runtime.677cf795c7672c9b2fa3.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/polyfills-es5.318752d820dd2895e9af.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/polyfills.1fcd7059dd04f25ca52f.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/scripts.b306dd7ae3694cfd8910.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/main.39ad6ce6a0a82906b75a.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(11): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicAudioWirelessPages.c(11): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicAudioWirelessPages.c(11): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicAudioWirelessPages.c(11): web_url("topic") highest severity level was "warning", 523644 body bytes, 8080 header bytes  	[MsgId: MMSG-26388]
+TopicAudioWirelessPages.c(20): Notify: Transaction "FP09_TopicLanding_01_doc" ended with a "Pass" status (Duration: 0.7762 Wasted Time: 0.1260).
+TopicAudioWirelessPages.c(23): Notify: Transaction "FP09_TopicLanding_02_api_ssc_global" started.
+TopicAudioWirelessPages.c(24): web_url("global") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(24): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(24): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(24): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(24): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(24): web_url("global") was successful, 154 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(33): Notify: Transaction "FP09_TopicLanding_02_api_ssc_global" ended with a "Pass" status (Duration: 0.2230 Wasted Time: 0.0055).
+TopicAudioWirelessPages.c(36): Notify: Transaction "FP09_TopicLanding_03_api_solution-topics-us-en" started.
+TopicAudioWirelessPages.c(37): web_url("{p_locale}") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(37): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(37): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(37): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(37): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(37): web_url("{p_locale}") was successful, 484 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(46): Notify: Transaction "FP09_TopicLanding_03_api_solution-topics-us-en" ended with a "Pass" status (Duration: 0.2189 Wasted Time: 0.0105).
+TopicAudioWirelessPages.c(49): Notify: Transaction "FP09_TopicLanding_04_api_termbase_topicLandingPage" started.
+TopicAudioWirelessPages.c(50): web_url("topicLandingPage") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(50): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(50): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(50): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(50): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(50): web_url("topicLandingPage") was successful, 4335 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(59): Notify: Transaction "FP09_TopicLanding_04_api_termbase_topicLandingPage" ended with a "Pass" status (Duration: 0.2230 Wasted Time: 0.0081).
+TopicAudioWirelessPages.c(62): Notify: Transaction "FP09_TopicLanding_05_api_wcc_second_Nav" started.
+TopicAudioWirelessPages.c(63): web_url("wcc_second_Nav") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(63): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(63): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(63): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(63): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(63): web_url("wcc_second_Nav") was successful, 983 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(72): Notify: Transaction "FP09_TopicLanding_05_api_wcc_second_Nav" ended with a "Pass" status (Duration: 0.2238 Wasted Time: 0.0071).
+TopicAudioWirelessPages.c(75): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(75): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(75): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(78): Notify: Transaction "FP09_TopicLanding_06_api_href" started.
+TopicAudioWirelessPages.c(79): web_custom_request("href") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(79): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(79): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(79): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(79): Warning: The string '"template":"TopicLanding_New","path":"/topic","seriesoid":0,"modeloid":0' with parameter delimiters is not a parameter.
+TopicAudioWirelessPages.c(79): web_custom_request("href") was successful, 338 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(91): Notify: Transaction "FP09_TopicLanding_06_api_href" ended with a "Pass" status (Duration: 0.2397 Wasted Time: 0.0080).
+TopicAudioWirelessPages.c(94): Notify: Transaction "FP09_TopicLanding_07_api_ssc_topicLandingPage" started.
+TopicAudioWirelessPages.c(95): web_url("topicLandingPage_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(95): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(95): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(95): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(95): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(95): web_url("topicLandingPage_2") was successful, 1848 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(104): Notify: Transaction "FP09_TopicLanding_07_api_ssc_topicLandingPage" ended with a "Pass" status (Duration: 0.2096 Wasted Time: 0.0085).
+TopicAudioWirelessPages.c(107): Notify: Transaction "FP09_TopicLanding_08_api_wcc_sitehome_alerts" started.
+TopicAudioWirelessPages.c(108): web_url("wcc_sitehome_alerts") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(108): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(108): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(108): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(108): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(108): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v1/us-en/wcc_sitehome_alerts"  	[MsgId: MMSG-26548]
+TopicAudioWirelessPages.c(108): web_url("wcc_sitehome_alerts") was successful, 286 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(117): Notify: Transaction "FP09_TopicLanding_08_api_wcc_sitehome_alerts" ended with a "Pass" status (Duration: 0.2361 Wasted Time: 0.0092).
+TopicAudioWirelessPages.c(120): Notify: Transaction "FP09_TopicLanding_09_api_wcc_pfinder_common" started.
+TopicAudioWirelessPages.c(121): web_url("wcc_pfinder_common") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(121): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(121): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(121): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(121): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(121): web_url("wcc_pfinder_common") was successful, 1935 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(130): Notify: Transaction "FP09_TopicLanding_09_api_wcc_pfinder_common" ended with a "Pass" status (Duration: 0.2500 Wasted Time: 0.0090).
+TopicAudioWirelessPages.c(148): Notify: Transaction "FP10_TopicAudioPages_01_doc" started.
+TopicAudioWirelessPages.c(149): web_url("audio") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(149): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(149): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(149): Found resource "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Found resource "https://ssl.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Found resource "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Found resource "https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/styles.86f6121febe9ac96de73.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/runtime.677cf795c7672c9b2fa3.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/polyfills-es5.318752d820dd2895e9af.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/polyfills.1fcd7059dd04f25ca52f.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/scripts.b306dd7ae3694cfd8910.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/main.39ad6ce6a0a82906b75a.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/audio"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(149): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicAudioWirelessPages.c(149): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicAudioWirelessPages.c(149): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicAudioWirelessPages.c(149): web_url("audio") highest severity level was "warning", 523644 body bytes, 8076 header bytes  	[MsgId: MMSG-26388]
+TopicAudioWirelessPages.c(158): Notify: Transaction "FP10_TopicAudioPages_01_doc" ended with a "Pass" status (Duration: 0.7330 Wasted Time: 0.0951).
+TopicAudioWirelessPages.c(161): web_remove_auto_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(161): Warning -26590: web_remove/revert_auto_header for "Upgrade-Insecure-Requests" had no effect  	[MsgId: MWAR-26590]
+TopicAudioWirelessPages.c(161): web_remove/revert_auto_header("Upgrade-Insecure-Requests") highest severity level was "warning"  	[MsgId: MMSG-26391]
+TopicAudioWirelessPages.c(162): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(162): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(164): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(164): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(166): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(166): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(169): Notify: Transaction "FP10_TopicAudioPages_02_api_region" started.
+TopicAudioWirelessPages.c(170): web_url("region") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(170): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(170): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(170): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(170): web_url("region") was successful, 749 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(179): Notify: Transaction "FP10_TopicAudioPages_02_api_region" ended with a "Pass" status (Duration: 0.2226 Wasted Time: 0.0080).
+TopicAudioWirelessPages.c(182): web_add_auto_header("Origin") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(182): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(182): web_add_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(186): Notify: Transaction "FP10_TopicAudioPages_03_api_solution_topics_audio" started.
+TopicAudioWirelessPages.c(187): web_custom_request("audio_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(187): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(187): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(187): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(187): Warning: The string '"isSelected":false,"osDetected":"Windows NT 10.0; Win64; x64","osbit":"64","selectedOs":"","osTmsId":null,"osParentTmsId":null' with parameter delimiters is not a parameter.
+TopicAudioWirelessPages.c(187): web_custom_request("audio_2") was successful, 1655 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(199): Notify: Transaction "FP10_TopicAudioPages_03_api_solution_topics_audio" ended with a "Pass" status (Duration: 0.2626 Wasted Time: 0.0073).
+TopicAudioWirelessPages.c(202): Notify: Transaction "FP10_TopicAudioPages_04_api_href" started.
+TopicAudioWirelessPages.c(203): web_custom_request("href_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(203): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(203): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(203): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(203): Warning: The string '"template":"Solutions_New","path":"/topic/audio","seriesoid":0,"modeloid":0' with parameter delimiters is not a parameter.
+TopicAudioWirelessPages.c(203): web_custom_request("href_2") was successful, 342 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(215): Notify: Transaction "FP10_TopicAudioPages_04_api_href" ended with a "Pass" status (Duration: 0.2351 Wasted Time: 0.0079).
+TopicAudioWirelessPages.c(218): web_remove_auto_header("Origin") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(218): Previous automatically added web header for "Origin" removed  	[MsgId: MMSG-26587]
+TopicAudioWirelessPages.c(218): web_remove/revert_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(220): Notify: Transaction "FP10_TopicAudioPages_05_api_ssc_global" started.
+TopicAudioWirelessPages.c(221): web_url("global_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(221): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(221): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(221): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(221): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(221): web_url("global_2") was successful, 154 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(230): Notify: Transaction "FP10_TopicAudioPages_05_api_ssc_global" ended with a "Pass" status (Duration: 0.2231 Wasted Time: 0.0096).
+TopicAudioWirelessPages.c(233): Notify: Transaction "FP10_TopicAudioPages_06_api_ssc_topicPage" started.
+TopicAudioWirelessPages.c(234): web_url("topicPage") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(234): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(234): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(234): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(234): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(234): web_url("topicPage") was successful, 2014 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(243): Notify: Transaction "FP10_TopicAudioPages_06_api_ssc_topicPage" ended with a "Pass" status (Duration: 0.2430 Wasted Time: 0.0080).
+TopicAudioWirelessPages.c(246): Notify: Transaction "FP10_TopicAudioPages_07_api_wcc_second_Nav" started.
+TopicAudioWirelessPages.c(247): web_url("wcc_second_Nav_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(247): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(247): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(247): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(247): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(247): web_url("wcc_second_Nav_2") was successful, 983 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(256): Notify: Transaction "FP10_TopicAudioPages_07_api_wcc_second_Nav" ended with a "Pass" status (Duration: 0.2541 Wasted Time: 0.0086).
+TopicAudioWirelessPages.c(259): Notify: Transaction "FP10_TopicAudioPages_08_api_termbase_topicPage" started.
+TopicAudioWirelessPages.c(260): web_url("topicPage_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(260): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(260): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(260): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(260): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(260): web_url("topicPage_2") was successful, 4552 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(269): Notify: Transaction "FP10_TopicAudioPages_08_api_termbase_topicPage" ended with a "Pass" status (Duration: 0.2266 Wasted Time: 0.0092).
+TopicAudioWirelessPages.c(272): Notify: Transaction "FP10_TopicAudioPages_09_api_wcc_sitehome_alerts" started.
+TopicAudioWirelessPages.c(273): web_url("wcc_sitehome_alerts_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(273): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(273): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(273): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(273): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(273): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v1/us-en/wcc_sitehome_alerts"  	[MsgId: MMSG-26548]
+TopicAudioWirelessPages.c(273): web_url("wcc_sitehome_alerts_2") was successful, 286 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(282): Notify: Transaction "FP10_TopicAudioPages_09_api_wcc_sitehome_alerts" ended with a "Pass" status (Duration: 0.2106 Wasted Time: 0.0079).
+TopicAudioWirelessPages.c(285): web_add_auto_header("Origin") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(285): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(285): web_add_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(288): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(288): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(290): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(290): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(292): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(292): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(295): Notify: Transaction "FP10_TopicAudioPages_10_api_wcc_solutions_xhtml" started.
+TopicAudioWirelessPages.c(296): web_custom_request("wcc_solutions_xhtml") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(296): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(296): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(296): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(296): Warning: The string '"cc":"us","lc":"en","intentTmsId":"113563413184771141312128041451512103158105112","osTmsId":"184651403277425843090532942361795","osParentTmsId":"NA"' with parameter delimiters is not a parameter.
+TopicAudioWirelessPages.c(296): web_custom_request("wcc_solutions_xhtml") was successful, 169 body bytes, 277 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(307): Notify: Transaction "FP10_TopicAudioPages_10_api_wcc_solutions_xhtml" ended with a "Pass" status (Duration: 0.2200 Wasted Time: 0.0082).
+TopicAudioWirelessPages.c(310): Notify: Transaction "FP10_TopicAudioPages_11_api_wcc_pfinder_common" started.
+TopicAudioWirelessPages.c(311): web_url("wcc_pfinder_common_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(311): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(311): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(311): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(311): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(311): web_url("wcc_pfinder_common_2") was successful, 1205 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(320): Notify: Transaction "FP10_TopicAudioPages_11_api_wcc_pfinder_common" ended with a "Pass" status (Duration: 0.2280 Wasted Time: 0.0076).
+TopicAudioWirelessPages.c(323): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(323): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(326): Notify: Transaction "FP10_TopicAudioPages_12_api_videoDetails" started.
+TopicAudioWirelessPages.c(327): web_url("{p_locale}_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(327): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(327): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(327): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(327): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(327): web_url("{p_locale}_2") was successful, 1037 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(336): Notify: Transaction "FP10_TopicAudioPages_12_api_videoDetails" ended with a "Pass" status (Duration: 0.2493 Wasted Time: 0.0093).
+TopicAudioWirelessPages.c(354): Notify: Transaction "FP11_TopicWirelessPages_01_doc" started.
+TopicAudioWirelessPages.c(355): web_url("wireless-printing") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(355): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(355): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(355): Found resource "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Found resource "https://ssl.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Found resource "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Found resource "https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/styles.86f6121febe9ac96de73.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/runtime.677cf795c7672c9b2fa3.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/polyfills-es5.318752d820dd2895e9af.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/polyfills.1fcd7059dd04f25ca52f.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/scripts.b306dd7ae3694cfd8910.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Found resource "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/main.39ad6ce6a0a82906b75a.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/topic/wireless-printing"  	[MsgId: MMSG-26659]
+TopicAudioWirelessPages.c(355): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicAudioWirelessPages.c(355): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicAudioWirelessPages.c(355): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+TopicAudioWirelessPages.c(355): web_url("wireless-printing") highest severity level was "warning", 523644 body bytes, 8070 header bytes  	[MsgId: MMSG-26388]
+TopicAudioWirelessPages.c(365): Notify: Transaction "FP11_TopicWirelessPages_01_doc" ended with a "Pass" status (Duration: 0.6697 Wasted Time: 0.0912).
+TopicAudioWirelessPages.c(369): Notify: Transaction "FP11_TopicWirelessPages_02_api_ssc_global" started.
+TopicAudioWirelessPages.c(370): web_url("global_3") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(370): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(370): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(370): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(370): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(370): web_url("global_3") was successful, 154 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(379): Notify: Transaction "FP11_TopicWirelessPages_02_api_ssc_global" ended with a "Pass" status (Duration: 0.2099 Wasted Time: 0.0080).
+TopicAudioWirelessPages.c(382): Notify: Transaction "FP11_TopicWirelessPages_03_api_ssc_topicPage" started.
+TopicAudioWirelessPages.c(383): web_url("topicPage_3") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(383): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(383): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(383): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(383): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(383): web_url("topicPage_3") was successful, 2014 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(392): Notify: Transaction "FP11_TopicWirelessPages_03_api_ssc_topicPage" ended with a "Pass" status (Duration: 0.2475 Wasted Time: 0.0100).
+TopicAudioWirelessPages.c(395): Notify: Transaction "FP11_TopicWirelessPages_04_api_wcc_second_Nav" started.
+TopicAudioWirelessPages.c(396): web_url("wcc_second_Nav_3") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(396): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(396): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(396): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(396): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(396): web_url("wcc_second_Nav_3") was successful, 983 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(405): Notify: Transaction "FP11_TopicWirelessPages_04_api_wcc_second_Nav" ended with a "Pass" status (Duration: 0.2203 Wasted Time: 0.0057).
+TopicAudioWirelessPages.c(408): Notify: Transaction "FP11_TopicWirelessPages_05_api_termbase_topicPage" started.
+TopicAudioWirelessPages.c(409): web_url("topicPage_4") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(409): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(409): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(409): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(409): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(409): web_url("topicPage_4") was successful, 4552 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(418): Notify: Transaction "FP11_TopicWirelessPages_05_api_termbase_topicPage" ended with a "Pass" status (Duration: 0.2163 Wasted Time: 0.0081).
+TopicAudioWirelessPages.c(421): Notify: Transaction "FP11_TopicWirelessPages_06_api_wcc_sitehome_alerts" started.
+TopicAudioWirelessPages.c(422): web_url("wcc_sitehome_alerts_3") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(422): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(422): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(422): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(422): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(422): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v1/us-en/wcc_sitehome_alerts"  	[MsgId: MMSG-26548]
+TopicAudioWirelessPages.c(422): web_url("wcc_sitehome_alerts_3") was successful, 286 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(431): Notify: Transaction "FP11_TopicWirelessPages_06_api_wcc_sitehome_alerts" ended with a "Pass" status (Duration: 0.2188 Wasted Time: 0.0101).
+TopicAudioWirelessPages.c(457): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(457): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(459): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(459): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(461): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(461): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(464): Notify: Transaction "FP11_TopicWirelessPages_08_api_region" started.
+TopicAudioWirelessPages.c(465): web_url("region_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(465): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(465): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(465): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(465): web_url("region_2") was successful, 749 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(474): Notify: Transaction "FP11_TopicWirelessPages_08_api_region" ended with a "Pass" status (Duration: 0.2289 Wasted Time: 0.0097).
+TopicAudioWirelessPages.c(477): web_add_auto_header("Origin") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(477): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(477): web_add_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(480): Notify: Transaction "FP11_TopicWirelessPages_09_api_href" started.
+TopicAudioWirelessPages.c(481): web_custom_request("href_3") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(481): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(481): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(481): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(481): Warning: The string '"template":"Solutions_New","path":"/topic/wireless-printing","seriesoid":0,"modeloid":0' with parameter delimiters is not a parameter.
+TopicAudioWirelessPages.c(481): web_custom_request("href_3") was successful, 349 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(493): Notify: Transaction "FP11_TopicWirelessPages_09_api_href" ended with a "Pass" status (Duration: 0.2395 Wasted Time: 0.0082).
+TopicAudioWirelessPages.c(496): Notify: Transaction "FP11_TopicWirelessPages_10_api_solution-topics-wireless-printing" started.
+TopicAudioWirelessPages.c(497): web_custom_request("wireless-printing_2") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(497): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(497): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(497): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(497): Warning: The string '"isSelected":false,"osDetected":"Windows NT 10.0; Win64; x64","osbit":"64","selectedOs":"","osTmsId":null,"osParentTmsId":null' with parameter delimiters is not a parameter.
+TopicAudioWirelessPages.c(497): web_custom_request("wireless-printing_2") was successful, 1553 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(509): Notify: Transaction "FP11_TopicWirelessPages_10_api_solution-topics-wireless-printing" ended with a "Pass" status (Duration: 0.2701 Wasted Time: 0.0100).
+TopicAudioWirelessPages.c(512): web_remove_auto_header("Origin") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(512): Previous automatically added web header for "Origin" removed  	[MsgId: MMSG-26587]
+TopicAudioWirelessPages.c(512): web_remove/revert_auto_header("Origin") was successful  	[MsgId: MMSG-26392]
+TopicAudioWirelessPages.c(514): Notify: Transaction "FP11_TopicWirelessPages_11_api_wcc_pfinder_common" started.
+TopicAudioWirelessPages.c(515): web_url("wcc_pfinder_common_3") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(515): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(515): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(515): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(515): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(515): web_url("wcc_pfinder_common_3") was successful, 918 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(524): Notify: Transaction "FP11_TopicWirelessPages_11_api_wcc_pfinder_common" ended with a "Pass" status (Duration: 0.2419 Wasted Time: 0.0078).
+TopicAudioWirelessPages.c(527): Notify: Transaction "FP11_TopicWirelessPages_12_api_videoDetails" started.
+TopicAudioWirelessPages.c(528): web_url("{p_locale}_3") started  	[MsgId: MMSG-26355]
+TopicAudioWirelessPages.c(528): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(528): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(528): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+TopicAudioWirelessPages.c(528): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+TopicAudioWirelessPages.c(528): web_url("{p_locale}_3") was successful, 725 body bytes, 511 header bytes  	[MsgId: MMSG-26386]
+TopicAudioWirelessPages.c(537): Notify: Transaction "FP11_TopicWirelessPages_12_api_videoDetails" ended with a "Pass" status (Duration: 0.2209 Wasted Time: 0.0102).
+Ending action TopicAudioWirelessPages.
+Starting action HPACCOUNT.
+HPACCOUNT.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(4): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(4): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(6): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(6): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(8): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(8): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(10): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(10): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(12): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(12): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(15): Notify: Transaction "FP08_Microsites_09_HpAccount_doc" started.
+HPACCOUNT.c(16): web_url("hp-account") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(16): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+HPACCOUNT.c(16): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.584cb464c9ef2f729f74eaab86bd6774.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://cdn.optimizely.com/js/19424703111.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.0d071178dbfc11a8f000cb436f734bb4.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.0092239db491f865f85b66c09cf8be7f.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/clientlibs/granite/jquery.0811b5e7037ada110b591bbd86240386.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/clientlibs/clientlib-base.6efb0f1504110deaf09a62602d5629e3.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/hp-account/_jcr_content/root/responsivegrid/container_716586644/columncontrol/columnCtrl1/image.coreimg.gif/1614656337665/show-dashboard-add-devices-cut-v2.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/hp-account/_jcr_content/root/responsivegrid/container_716586644/columncontrol_1773364507/columnCtrl2/image.coreimg.png/1614656337714/support-imagewhite.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/hp-account/_jcr_content/root/responsivegrid/container_716586644/columncontrol_1324284845/columnCtrl1/image.coreimg.png/1614656337743/access-anywhere-imagewhite.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/youtube-component/clientlib.f6502c1aad9ae5cb94c12c0b397ab74e.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/content/youtube-component/clientlib.0f34117689b50c22bf4788c61b2dd1b6.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://img.youtube.com/vi/6WE23PI5q6o/sddefault.jpg" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/hp-wcc/en-us/help/hp-account/_jcr_content/root/responsivegrid/container_716586644/columncontrol_265085044/columnCtrl1/image.coreimg.png/1614656337923/one%2Baccount-imagewhite.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/hp-account/Artboard2copywhite.png" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/customlib/ms-hp-account-non-rtl-custom.css" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/hp-logo-modal.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/content/dam/hp-wcc/microsite-assets/images/windows-10/flag/flag_us.gif" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Found resource "https://ppssupport-itgllbh7.inc.hp.com/etc.clientlibs/hp-wcc/components/structure/sidealert/clientlibs.71130019a3be7fc03f854a1c388daea8.js" in HTML "https://ppssupport-itgllbh7.inc.hp.com/us-en/help/hp-account"  	[MsgId: MMSG-26659]
+HPACCOUNT.c(16): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+HPACCOUNT.c(16): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/jquery.js"  	[MsgId: MMSG-26693]
+HPACCOUNT.c(16): Redirecting "https://itg-live.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js" (redirection depth is 0)  	[MsgId: MMSG-26694]
+HPACCOUNT.c(16): To location "https://itg-live.www.hp.com/us-en/scripts/framework/jquery/v-1-8/can.jquery.js"  	[MsgId: MMSG-26693]
+HPACCOUNT.c(16): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+HPACCOUNT.c(16): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+HPACCOUNT.c(16): Warning -26604: Unsupported "Content-Encoding"  	[MsgId: MWAR-26604]
+HPACCOUNT.c(16): web_url("hp-account") highest severity level was "warning", 858306 body bytes, 17490 header bytes  	[MsgId: MMSG-26388]
+HPACCOUNT.c(26): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(26): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(28): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(28): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(30): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(30): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(32): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(32): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+HPACCOUNT.c(35): web_url("en_7") started  	[MsgId: MMSG-26355]
+HPACCOUNT.c(35): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+HPACCOUNT.c(35): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+HPACCOUNT.c(35): Notify: Parameter Substitution: parameter "p_locale" =  "us-en"
+HPACCOUNT.c(35): web_url("en_7") was successful, 28 body bytes, 413 header bytes  	[MsgId: MMSG-26386]
+HPACCOUNT.c(45): Notify: Transaction "FP08_Microsites_09_HpAccount_doc" ended with a "Pass" status (Duration: 1.1892 Wasted Time: 0.1053).
+Ending action HPACCOUNT.
+Starting action HubNavigations.
+HubNavigations.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+HubNavigations.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+HubNavigations.c(5): web_add_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+HubNavigations.c(5): web_add_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+HubNavigations.c(7): web_add_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+HubNavigations.c(7): web_add_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+HubNavigations.c(9): web_add_header("Sec-Fetch-User") started  	[MsgId: MMSG-26355]
+HubNavigations.c(9): web_add_header("Sec-Fetch-User") was successful  	[MsgId: MMSG-26392]
+HubNavigations.c(11): web_add_header("Upgrade-Insecure-Requests") started  	[MsgId: MMSG-26355]
+HubNavigations.c(11): web_add_header("Upgrade-Insecure-Requests") was successful  	[MsgId: MMSG-26392]
+HubNavigations.c(13): web_add_auto_header("sec-ch-ua") started  	[MsgId: MMSG-26355]
+HubNavigations.c(13): web_add_auto_header("sec-ch-ua") was successful  	[MsgId: MMSG-26392]
+HubNavigations.c(15): web_add_auto_header("sec-ch-ua-mobile") started  	[MsgId: MMSG-26355]
+HubNavigations.c(15): web_add_auto_header("sec-ch-ua-mobile") was successful  	[MsgId: MMSG-26392]
+HubNavigations.c(18): web_reg_find started  	[MsgId: MMSG-26355]
+HubNavigations.c(18): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+HubNavigations.c(20): Notify: Transaction "FP18_HUBNavigation_01_doc" started.
+HubNavigations.c(22): web_custom_request("navigation") started  	[MsgId: MMSG-26355]
+HubNavigations.c(22): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+HubNavigations.c(22): Notify: Parameter Substitution: parameter "p_product" =  "6879040"
+HubNavigations.c(22): Notify: Parameter Substitution: parameter "p_Pagetype" =  "s-001"
+HubNavigations.c(22): Notify: Parameter Substitution: parameter "p_Host" =  "ppssupport-itgllbh7.inc.hp.com"
+HubNavigations.c(22): Redirecting "https://ppssupport-itgllbh7.inc.hp.com/hp-pps-services/hub/navigation?h_product=6879040&h_client=S-A-10020-1&h_lang=en&h_cc=us&h_pagetype=s-001" (redirection depth is 0)  	[MsgId: MMSG-26694]
+HubNavigations.c(22): To location "https://ppssupport-itgllbh7.inc.hp.com/us-en/product/hp-officejet-7610-wide-format-e-all-in-one-series/5153788/model/6879040"  	[MsgId: MMSG-26693]
+HubNavigations.c(22): Registered web_reg_find successful for "Text=Troubleshooting" (count=4)  	[MsgId: MMSG-26364]
+HubNavigations.c(22): Notify: Saving Parameter "Text_count = 4".
+HubNavigations.c(22): web_custom_request("navigation") was successful, 50297 body bytes, 1452 header bytes  	[MsgId: MMSG-26386]
+HubNavigations.c(31): Notify: Transaction "FP18_HUBNavigation_01_doc" ended with a "Pass" status (Duration: 1.5400 Wasted Time: 0.0187).
+Ending action HubNavigations.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+Vuser 0 (thread 20528), ended OK."

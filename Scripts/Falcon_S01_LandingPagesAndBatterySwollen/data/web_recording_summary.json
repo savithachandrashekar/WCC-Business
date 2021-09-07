@@ -1,0 +1,2986 @@
+{
+  "FilterHeaders": [
+    {
+      "Header": "x-requested-with",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-update-updater",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-update-interactivity",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-update-appid",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-encode-response-if-executable",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-goog-api-key",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "user-agent",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "upgrade-insecure-requests",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-user",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-site",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-mode",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-dest",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-ch-ua-mobile",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-ch-ua",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "purpose",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "origin",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "if-none-match",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "access-control-request-method",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "access-control-request-headers",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "accept-language",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-encoding",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "a-im",
+      "IncludeInScript": true
+    }
+  ],
+  "FilterResources": [
+    {
+      "IsNonResource": false,
+      "type": "text/plain"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/javascript"
+    },
+    {
+      "IsNonResource": true,
+      "type": "text/html"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/css"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/svg+xml"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/png"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/jpeg"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/gif"
+    },
+    {
+      "IsNonResource": false,
+      "type": "font/woff2"
+    },
+    {
+      "IsNonResource": false,
+      "type": "font/woff"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/x-javascript"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/x-font-woff"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/x-font-ttf"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/octet-stream"
+    },
+    {
+      "IsNonResource": true,
+      "type": "application/json"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/javascript"
+    }
+  ],
+  "GeneralInfo": {
+    "BrowserVersion": "",
+    "IsWinInetMode": false,
+    "MaxUsedConnections": 85,
+    "RecordedBrowser": "Chrome",
+    "RecordingDate": "May-19-2021",
+    "RecordingDuration": 29782,
+    "RecordingMode": "N/A",
+    "RecordingTimeStamp": 1621426376,
+    "RecordingType": "Browser",
+    "TotalBytesReceived": 3239273,
+    "TotalBytesSent": 279177,
+    "TotalRequests": 209,
+    "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+  },
+  "HostInfo": [
+    {
+      "DomainName": "yimg.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "69.147.86.11",
+          "IncludeInScript": true,
+          "Name": "s.yimg.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 62,
+              "EventId": 6380,
+              "HttpStatus": 200,
+              "Size": 22,
+              "URL": "https://s.yimg.com/wi/config/10044594.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 0,
+              "EventId": 6202,
+              "HttpStatus": 200,
+              "Size": 5580,
+              "URL": "https://s.yimg.com/wi/ytc.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "yahoo.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "98.137.155.8",
+          "IncludeInScript": true,
+          "Name": "sp.analytics.yahoo.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 63,
+              "EventId": 6508,
+              "HttpStatus": 200,
+              "Size": 43,
+              "URL": "https://sp.analytics.yahoo.com/sp.pl?a=10000&d=Thu%2C%2020%20May%202021%2004%3A13%3A50%20GMT&n=0&b=Official%20HP%C2%AE%20Printer%20Support&.yp=10044594&f=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&enc=UTF-8&yv=1.9.2&tagmgr=gtm%2Censighten"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "trueleadid.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "34.236.114.79",
+          "IncludeInScript": true,
+          "Name": "deviceid.trueleadid.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 6571,
+              "HttpStatus": 302,
+              "Size": 138,
+              "URL": "https://deviceid.trueleadid.com/cog.gif?next=https%3A//tag.apxlv.com/tag/partner/222%3Fc%5Fi%3D1%26ld%3D1%26pixel%5Fmode%3Dpixel"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "tapad.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "107.178.246.49",
+          "IncludeInScript": true,
+          "Name": "tapestry.tapad.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 47,
+              "EventId": 6393,
+              "HttpStatus": 200,
+              "Size": 95,
+              "URL": "https://tapestry.tapad.com/tapestry/1?ta_partner_id=916&ta_partner_did=Q6747704291182929944J&ta_format=png"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "rubiconproject.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "69.173.151.90",
+          "IncludeInScript": true,
+          "Name": "pixel.rubiconproject.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 63,
+              "EventId": 6422,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://pixel.rubiconproject.com/tap.php?v=11581&nid=2395&put=Q6747704291182929944J"
+            }
+          ],
+          "SSLCipher": "AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "rlcdn.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "35.190.60.146",
+          "IncludeInScript": true,
+          "Name": "idsync.rlcdn.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 15,
+              "EventId": 6470,
+              "HttpStatus": 307,
+              "Size": 0,
+              "URL": "https://idsync.rlcdn.com/1000.gif?memo=CP_nGxIwCiwIARCZ2gEaJGM3ODI1YTc3LWI5MjEtMTFlYi05YTFjLTQyMDEwYTI0NmM1MBAAGg0I_sOXhQYSBQjoBxAAQgBKAA"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 6413,
+              "HttpStatus": 307,
+              "Size": 0,
+              "URL": "https://idsync.rlcdn.com/455679.gif?partner_uid=c7825a77-b921-11eb-9a1c-42010a246c50"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 16,
+              "EventId": 6391,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://idsync.rlcdn.com/379208.gif?partner_uid=Q6747704291182929944J"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "redditstatic.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "199.232.9.140",
+          "IncludeInScript": true,
+          "Name": "www.redditstatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 125,
+              "EventId": 6183,
+              "HttpStatus": 200,
+              "Size": 6670,
+              "URL": "https://www.redditstatic.com/ads/pixel.js"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "pubmatic.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.36.113.17",
+          "IncludeInScript": true,
+          "Name": "simage2.pubmatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 140,
+              "EventId": 6410,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://simage2.pubmatic.com/AdServer/Pug?vcode=bz0yJnR5cGU9MSZjb2RlPTI2NDYmdGw9MTI5NjAw&piggybackCookie=Q6747704291182929944J"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "pippio.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "107.178.254.65",
+          "IncludeInScript": true,
+          "Name": "pippio.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 16,
+              "EventId": 6518,
+              "HttpStatus": 307,
+              "Size": 0,
+              "URL": "https://pippio.com/api/sync/ddp?pid=2&m=CMwpGgwI_8OXhQYSBAgCEABCAEoA&google_error=3"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 15,
+              "EventId": 6506,
+              "HttpStatus": 307,
+              "Size": 0,
+              "URL": "https://pippio.com/api/sync?pid=5324&_=2"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "pinterest.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "23.206.164.196",
+          "IncludeInScript": true,
+          "Name": "ct.pinterest.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 125,
+              "EventId": 6212,
+              "HttpStatus": 200,
+              "Size": 35,
+              "URL": "https://ct.pinterest.com/v3/?event=init&tid=2613604734453&noscript=1&gtmcb=141174983"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "owneriq.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "23.79.15.96",
+          "IncludeInScript": true,
+          "Name": "px.owneriq.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 15,
+              "EventId": 6537,
+              "HttpStatus": 200,
+              "Size": 43,
+              "URL": "https://px.owneriq.net/fr/epx.gif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 6524,
+              "HttpStatus": 302,
+              "Size": 154,
+              "URL": "https://px.owneriq.net/ecc?redir=https%3a%2f%2fpx.owneriq.net%2ffr%2fepx.gif&uid=Q6747704311413597689&ref=%2Feucm%2Fp%2Fapndmp"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 32,
+              "EventId": 6511,
+              "HttpStatus": 302,
+              "Size": 154,
+              "URL": "https://px.owneriq.net/eucm/p/apndmp?oi=1&tid=0"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 62,
+              "EventId": 6485,
+              "HttpStatus": 200,
+              "Size": 146,
+              "URL": "https://px.owneriq.net/cm?id=&esi=1&google_error=3"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 6442,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://px.owneriq.net/ep?sid%5B%5D=14558720452&sid%5B%5D=14558720457&sid%5B%5D=14558720462&sid%5B%5D=8460259172&sid%5B%5D=8460259192&pt=7kxod6&uid=Q6747704291182929944J&jcs=1"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 6268,
+              "HttpStatus": 200,
+              "Size": 817,
+              "URL": "https://px.owneriq.net/eps?pt=7kxod6&pid=8088&uid=Q6747704291182929944J&l=true"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/javascript",
+              "DownloadTime": 125,
+              "EventId": 6261,
+              "HttpStatus": 200,
+              "Size": 766,
+              "URL": "https://px.owneriq.net/j/?ref=https://ppssupport-itgllbh7.inc.hp.com/us-en/printer&pt=7kxod6&t=f%7C%22Official%2520HP%25C2%25AE%2520Printer%2520Support%22&s=6ka7"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/javascript",
+              "DownloadTime": 16,
+              "EventId": 6152,
+              "HttpStatus": 200,
+              "Size": 12359,
+              "URL": "https://px.owneriq.net/stas/s/7kxod6.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "optimizely.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "34.232.196.113",
+          "IncludeInScript": true,
+          "Name": "logx.optimizely.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 125,
+              "EventId": 5693,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://logx.optimizely.com/v1/events"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "23.206.164.152",
+          "IncludeInScript": true,
+          "Name": "cdn.optimizely.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 141,
+              "EventId": 5312,
+              "HttpStatus": 200,
+              "Size": 128392,
+              "URL": "https://cdn.optimizely.com/js/18956663993.js"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "23.67.216.26",
+          "IncludeInScript": true,
+          "Name": "a2129670914.cdn.optimizely.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 15,
+              "EventId": 5579,
+              "HttpStatus": 200,
+              "Size": 898,
+              "URL": "https://a2129670914.cdn.optimizely.com/client_storage/a2129670914.html"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "openx.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "34.98.64.218",
+          "IncludeInScript": true,
+          "Name": "us-u.openx.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 16,
+              "EventId": 6415,
+              "HttpStatus": 200,
+              "Size": 43,
+              "URL": "https://us-u.openx.net/w/1.0/sd?cc=1&id=537073059&val=Q6747704291182929944J"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 32,
+              "EventId": 6389,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://us-u.openx.net/w/1.0/sd?id=537073059&val=Q6747704291182929944J"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "onetrust.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.20.184.68",
+          "IncludeInScript": true,
+          "Name": "privacyportaluat.onetrust.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 125,
+              "EventId": 6599,
+              "HttpStatus": 200,
+              "Size": 1373,
+              "URL": "https://privacyportaluat.onetrust.com/request/v1/consentreceipts"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 78,
+              "EventId": 6593,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://privacyportaluat.onetrust.com/request/v1/consentreceipts"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.20.185.68",
+          "IncludeInScript": true,
+          "Name": "geolocation.onetrust.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 78,
+              "EventId": 5872,
+              "HttpStatus": 200,
+              "Size": 177,
+              "URL": "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "ojrq.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "34.95.127.121",
+          "IncludeInScript": true,
+          "Name": "www.ojrq.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 15,
+              "EventId": 6476,
+              "HttpStatus": 200,
+              "Size": 50,
+              "URL": "https://www.ojrq.net/p/?return=&cid=5105&tpsync=no"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "linkedin.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "108.174.10.14",
+          "IncludeInScript": true,
+          "Name": "px.ads.linkedin.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/gif",
+              "DownloadTime": 641,
+              "EventId": 6352,
+              "HttpStatus": 200,
+              "Size": 65,
+              "URL": "https://px.ads.linkedin.com/collect?pid=40922&fmt=gif&cookiesTest=true"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 156,
+              "EventId": 6215,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://px.ads.linkedin.com/collect/?pid=40922&fmt=gif"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "kampyle.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "35.241.45.82",
+          "IncludeInScript": true,
+          "Name": "udc-neb.kampyle.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 47,
+              "EventId": 6240,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://udc-neb.kampyle.com/egw/5/qceuv8449dzg58ptt1bhda9g8ue19c7s/track/__cool.gif?data=eyJldmVudHMiOiBbCiAgICB7InNlc3Npb25fc2NyZWVuX3NpemUiOiAiMTQ2M3g4MjMiLCJzZXNzaW9uX2R1YSI6ICJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvOTAuMC40NDMwLjIxMiBTYWZhcmkvNTM3LjM2Iiwic2Vzc2lvbl9wbGF0Zm9ybSI6ICJXaW4zMiIsInRyYWNrZXJfdHlwZSI6ICJqYXZhc2NyaXB0IiwidHJhY2tlcl92ZXJzaW9uIjogIjIuMS4xNSIsImV2ZW50X25hbWUiOiAiY3JlYXRlU2Vzc2lvbiIsImV2ZW50X3RpbWVzdGFtcF9lcG9jaCI6ICIxNjIxNDg0MDI5MTkxIiwiZXZlbnRfdGltZXpvbmVfb2Zmc2V0IjogMCwidXNlcl9pZCI6ICIxNzk4N2ZhYzUwNWM0OS0wMWM4MjY3NTY1ZTkxNS0yMzYzMTYzLTEyNWY1MS0xNzk4N2ZhYzUwNmM5NiIsInVybCI6ICJodHRwczovL3Bwc3N1cHBvcnQtaXRnbGxiaDcuaW5jLmhwLmNvbS91cy1lbi9wcmludGVyIiwiZm9ybUlkIjogbnVsbCwiZm9ybVRyaWdnZXJUeXBlIjogbnVsbCwia2FtcHlsZV9kYXRhIjogeyJMQVNUX0lOVklUQVRJT05fVklFVyI6ICIiLCJERUNMSU5FRF9EQVRFIjogIiIsImthbXB5bGVJbnZpdGVQcmVzZW50ZWQiOiAiIiwia2FtcHlsZV91c2VyaWQiOiAiNmNkOS1iZDJlLTYyZmEtNmE4Ni0yYmFjLTllMTctMDJmZC1lYjU2Iiwia2FtcHlsZVVzZXJTZXNzaW9uIjogIiIsImthbXB5bGVVc2VyUGVyY2VudGlsZSI6ICIiLCJTVUJNSVRURURfREFURSI6ICIiLCJhZGRpdGlvbmFsRGF0YSI6IHsidXNlcl9zZXNzaW9uIjogIiIsImRpcmVjdF9uYXZpZ2F0aW9uIjogdHJ1ZSwiZGlmZnJlbnRfcmVmZXJyZXIiOiB0cnVlfX0sImNvb2tpZV9zaXplIjogMTU1NSwia2FtcHlsZV92ZXJzaW9uIjogIjIuMzguMCIsIm9uc2l0ZV92ZXJzaW9uIjogIjIuMzguMCIsImhpc3RvcnlfbGVuZ3RoIjogMSwiZXZlbnRfbG9jYWxfdGltZXN0YW1wIjogMTYyMTQ4NDAyODMzNywicG9zaXRpb24iOiBudWxsLCJpc1VzZXJJZGVudGlmaWVkIjogZmFsc2UsImZlZWRiYWNrX2NvcnJlbGF0aW9uX3V1aWQiOiBudWxsfQpdfQ=="
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 47,
+              "EventId": 6238,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://udc-neb.kampyle.com/egw/5/qceuv8449dzg58ptt1bhda9g8ue19c7s/track/__cool.gif?data=eyJldmVudHMiOiBbCiAgICB7InNlc3Npb25fc2NyZWVuX3NpemUiOiAiMTQ2M3g4MjMiLCJzZXNzaW9uX2R1YSI6ICJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvOTAuMC40NDMwLjIxMiBTYWZhcmkvNTM3LjM2Iiwic2Vzc2lvbl9wbGF0Zm9ybSI6ICJXaW4zMiIsInRyYWNrZXJfdHlwZSI6ICJqYXZhc2NyaXB0IiwidHJhY2tlcl92ZXJzaW9uIjogIjIuMS4xNSIsImV2ZW50X25hbWUiOiAibmVidWxhX3BhZ2VfdmlldyIsImV2ZW50X3RpbWVzdGFtcF9lcG9jaCI6ICIxNjIxNDg0MDI5MjAwIiwiZXZlbnRfdGltZXpvbmVfb2Zmc2V0IjogMCwidXNlcl9pZCI6ICIxNzk4N2ZhYzUwNWM0OS0wMWM4MjY3NTY1ZTkxNS0yMzYzMTYzLTEyNWY1MS0xNzk4N2ZhYzUwNmM5NiIsImVudmlyb21lbnQiOiAicHJvZFVzT3JlZ29uIiwiYWNjb3VudElkIjogNTQxMTE0LCJ1cmwiOiAiaHR0cHM6Ly9wcHNzdXBwb3J0LWl0Z2xsYmg3LmluYy5ocC5jb20vdXMtZW4vcHJpbnRlciIsIndlYnNpdGVJZCI6IDU0MTMxOCwiZm9ybUlkIjogbnVsbCwiZm9ybVRyaWdnZXJUeXBlIjogbnVsbCwia2FtcHlsZV9kYXRhIjogeyJMQVNUX0lOVklUQVRJT05fVklFVyI6ICIiLCJERUNMSU5FRF9EQVRFIjogIiIsImthbXB5bGVJbnZpdGVQcmVzZW50ZWQiOiAiIiwia2FtcHlsZV91c2VyaWQiOiAiNmNkOS1iZDJlLTYyZmEtNmE4Ni0yYmFjLTllMTctMDJmZC1lYjU2Iiwia2FtcHlsZVVzZXJTZXNzaW9uIjogIjE2MjE0ODQwMjgzMzciLCJrYW1weWxlVXNlclBlcmNlbnRpbGUiOiAiIiwiU1VCTUlUVEVEX0RBVEUiOiAiIn0sImNvb2tpZV9zaXplIjogMTY2NCwia2FtcHlsZV92ZXJzaW9uIjogIjIuMzguMCIsIm9uc2l0ZV92ZXJzaW9uIjogIjIuMzguMCIsImhpc3RvcnlfbGVuZ3RoIjogMSwiZXZlbnRfbG9jYWxfdGltZXN0YW1wIjogMTYyMTQ4NDAyODM0MSwicG9zaXRpb24iOiBudWxsLCJpc1VzZXJJZGVudGlmaWVkIjogZmFsc2UsImZlZWRiYWNrX2NvcnJlbGF0aW9uX3V1aWQiOiBudWxsfQpdfQ=="
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "199.232.9.175",
+          "IncludeInScript": true,
+          "Name": "nebula-cdn.kampyle.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6020,
+              "HttpStatus": 200,
+              "Size": 5197,
+              "URL": "https://nebula-cdn.kampyle.com/resources/onsite/js/cool-2.1.15.min.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 5922,
+              "HttpStatus": 200,
+              "Size": 103510,
+              "URL": "https://nebula-cdn.kampyle.com/us/wu/541318/onsite/generic1621444731359.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 5328,
+              "HttpStatus": 200,
+              "Size": 664,
+              "URL": "https://nebula-cdn.kampyle.com/wu/541318/onsite/embed.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "impactradius-event.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "35.186.249.72",
+          "IncludeInScript": true,
+          "Name": "d.impactradius-event.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 0,
+              "EventId": 6067,
+              "HttpStatus": 200,
+              "Size": 14877,
+              "URL": "https://d.impactradius-event.com/A353853-8e85-4786-9645-fac6b773cd071.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "hp.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "184.30.31.138",
+          "IncludeInScript": true,
+          "Name": "www.hp.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 16,
+              "EventId": 5636,
+              "HttpStatus": 200,
+              "Size": 12167,
+              "URL": "https://www.hp.com/cma/ng/lib/exceptions/privacy-banner-test.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "23.67.157.122",
+          "IncludeInScript": true,
+          "Name": "ssl.www8.hp.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 32,
+              "EventId": 5028,
+              "HttpStatus": 200,
+              "Size": 15908,
+              "URL": "https://ssl.www8.hp.com/us/en/scripts/framework/jquery/v-1-8/can.jquery.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "15.72.22.19",
+          "IncludeInScript": true,
+          "Name": "ppssupport-itgllbh7.inc.hp.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 9000,
+              "EventId": 6551,
+              "HttpStatus": 200,
+              "Size": 40695,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/us-en/contact-hp"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 531,
+              "EventId": 5665,
+              "HttpStatus": 200,
+              "Size": 28357,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/carousel-image/PSF-21_Carousel.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 250,
+              "EventId": 5620,
+              "HttpStatus": 200,
+              "Size": 51985,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/carousel-image/20_10_18_hero_HolidaysGiftguide970170--28002-29.jpg"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 156,
+              "EventId": 5604,
+              "HttpStatus": 200,
+              "Size": 303,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/arrow_icon_nocircle.svg"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 500,
+              "EventId": 5585,
+              "HttpStatus": 200,
+              "Size": 482,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/fe-assets/images/srch_icon.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 266,
+              "EventId": 5568,
+              "HttpStatus": 200,
+              "Size": 58629,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/carousel-image/New-Intsnt-Ink-Banner_Sitehome.jpg"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 406,
+              "EventId": 5565,
+              "HttpStatus": 200,
+              "Size": 715,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/image/support_agent-01.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 188,
+              "EventId": 5561,
+              "HttpStatus": 200,
+              "Size": 595,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/flags/flag_us.gif"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 219,
+              "EventId": 5510,
+              "HttpStatus": 200,
+              "Size": 1103,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/image/software_drivers.svg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 609,
+              "EventId": 5508,
+              "HttpStatus": 200,
+              "Size": 114330,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/topic/HPSmartApp-01-01.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 594,
+              "EventId": 5505,
+              "HttpStatus": 200,
+              "Size": 18264,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/image/Print_banner_new.jpg"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 203,
+              "EventId": 5503,
+              "HttpStatus": 200,
+              "Size": 1596,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/us-en/products"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 500,
+              "EventId": 5501,
+              "HttpStatus": 200,
+              "Size": 606,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/image/check_warranty-01.svg"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 188,
+              "EventId": 5482,
+              "HttpStatus": 200,
+              "Size": 1748,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/ssc/config/us-en/printerLanding"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 562,
+              "EventId": 5480,
+              "HttpStatus": 200,
+              "Size": 51124,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/topic/printeroffline.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 234,
+              "EventId": 5398,
+              "HttpStatus": 200,
+              "Size": 27063,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/topic/Printer_2.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 266,
+              "EventId": 5382,
+              "HttpStatus": 200,
+              "Size": 199356,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/headless-assets/images/topic/Printer_feature.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 235,
+              "EventId": 5377,
+              "HttpStatus": 200,
+              "Size": 42139,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/icons.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 188,
+              "EventId": 5367,
+              "HttpStatus": 200,
+              "Size": 554,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/printer-signIn.svg"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/svg+xml",
+              "DownloadTime": 203,
+              "EventId": 5336,
+              "HttpStatus": 200,
+              "Size": 1872,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/identify_product_all.svg"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 204,
+              "EventId": 5297,
+              "HttpStatus": 200,
+              "Size": 1730,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/data/country-selector.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 204,
+              "EventId": 5295,
+              "HttpStatus": 200,
+              "Size": 286,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v1/us-en/wcc_sitehome_alerts"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 204,
+              "EventId": 5293,
+              "HttpStatus": 200,
+              "Size": 873,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v2/us-en/wcc_second_Nav"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 188,
+              "EventId": 5291,
+              "HttpStatus": 200,
+              "Size": 918,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v2/contexual/us-en/wcc_pfinder_common?pageTemplate=Printer_Landing_New"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 172,
+              "EventId": 5289,
+              "HttpStatus": 200,
+              "Size": 784,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/sitemap/href"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 484,
+              "EventId": 5270,
+              "HttpStatus": 200,
+              "Size": 409,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/libs/scripts/medallia.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 203,
+              "EventId": 5266,
+              "HttpStatus": 200,
+              "Size": 701,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v2/us-en/wcc_land_print_carousel"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 188,
+              "EventId": 5263,
+              "HttpStatus": 200,
+              "Size": 442,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v2/us-en/wcc_land_print_primaryoptions"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 188,
+              "EventId": 5261,
+              "HttpStatus": 200,
+              "Size": 275,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v2/us-en/wcc_land_print_banner"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 172,
+              "EventId": 5259,
+              "HttpStatus": 200,
+              "Size": 1748,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/ssc/config/us-en/printerLanding"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 188,
+              "EventId": 5240,
+              "HttpStatus": 200,
+              "Size": 2781,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/termbase/us-en/printerLanding"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 203,
+              "EventId": 5238,
+              "HttpStatus": 200,
+              "Size": 1098,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/content/dam/hp-wcc/libs/scripts/third_party_lib.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 188,
+              "EventId": 5236,
+              "HttpStatus": 200,
+              "Size": 927,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/cms-v2/us-en/wcc_land_print_topicoptions"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 172,
+              "EventId": 5234,
+              "HttpStatus": 200,
+              "Size": 749,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-services/ssc/region"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 203,
+              "EventId": 5224,
+              "HttpStatus": 200,
+              "Size": 1023,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/pages-printer-landing-printer-landing-module-ngfactory.61308d737e72f38e5571.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 234,
+              "EventId": 5162,
+              "HttpStatus": 200,
+              "Size": 590166,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/main.d51ea4ffa4730172bdfd.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 234,
+              "EventId": 5160,
+              "HttpStatus": 200,
+              "Size": 29944,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/scripts.204dec66716e86a3ab29.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 218,
+              "EventId": 5157,
+              "HttpStatus": 200,
+              "Size": 108100,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/images/sprite-country-flags.png"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 218,
+              "EventId": 5154,
+              "HttpStatus": 200,
+              "Size": 34395,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/polyfills.d301623517a574834b52.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 172,
+              "EventId": 5150,
+              "HttpStatus": 200,
+              "Size": 1725,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/runtime.9eb1e837f7a9f421fb99.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 234,
+              "EventId": 5140,
+              "HttpStatus": 200,
+              "Size": 41688,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/fonts/latin-e-light-italic-ttf.woff2"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/css",
+              "DownloadTime": 235,
+              "EventId": 5064,
+              "HttpStatus": 200,
+              "Size": 21207,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/styles.b1ba3e4435944121b1d7.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 235,
+              "EventId": 5061,
+              "HttpStatus": 200,
+              "Size": 40144,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/fonts/latin-e-regular-italic-ttf.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 188,
+              "EventId": 5041,
+              "HttpStatus": 200,
+              "Size": 8440,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/fonts/hp_support_controls.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 234,
+              "EventId": 5024,
+              "HttpStatus": 200,
+              "Size": 39140,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/fonts/latin-e-bold-italic-ttf.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 250,
+              "EventId": 5021,
+              "HttpStatus": 200,
+              "Size": 33160,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/fonts/latin-e-bold-ttf.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 219,
+              "EventId": 5018,
+              "HttpStatus": 200,
+              "Size": 42320,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/fonts/latin-e-light-ttf.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 219,
+              "EventId": 5003,
+              "HttpStatus": 200,
+              "Size": 34348,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/wcc-assets/fonts/latin-e-regular-ttf.woff2"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 219,
+              "EventId": 4964,
+              "HttpStatus": 200,
+              "Size": 1596,
+              "URL": "https://ppssupport-itgllbh7.inc.hp.com/us-en/printer"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "54.174.149.161",
+          "IncludeInScript": true,
+          "Name": "met2.hp.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 47,
+              "EventId": 6418,
+              "HttpStatus": 200,
+              "Size": 43,
+              "URL": "https://met2.hp.com/b/ss/hphqglobal,hphq-ces-global-stage-temp,hphq-ces-na-stage-temp/1/JS-2.15.0/s75947085412827?AQB=1&ndh=1&pf=1&t=20%2F4%2F2021%204%3A13%3A50%204%200&mid=53083487617248159812469690922077787578&aamlh=9&ce=UTF-8&ns=hpcorp&pageName=D%3Dv55&g=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&ch=pps&server=ppssupport-itgllbh7.inc.hp.com&events=event46%2Cevent45%3D128%2Cevent11&aamb=6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y&c1=us-en&v2=us&c3=Printer_Landing_New&v3=en&c7=us&c8=en&c9=cs%3Aconsumer.home&c12=R11839&v12=Anonymous&c15=41&c26=D%3Dv12&c31=null&v32=null&v33=null&v34=null&v35=null&c43=null&v46=D%3Dc3&c49=D%3Dg&c50=D%3Dg&c51=hpexpnontridion%3Aihfcaas.5.r&c55=null&v55=pps-ces%7Cprinter_landing_new&c56=null&c57=null&c58=null&c59=null&c61=0001%3A0001%3A00&c63=Initial&c66=53083487617248159812469690922077787578&v90=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&v92=ens%7Csupport_stage%7C04-May-2021%2007%3A24%3A28&v93=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&v94=ppssupport-itgllbh7.inc.hp.com&v95=ppssupport-itgllbh7.inc.hp.com%3AUnknown%7CUnknown%7CAMS%7Cus%3Aen%7CUSD&v99=13&s=1463x823&c=24&j=1.6&v=N&k=Y&bw=1626&bh=792&mcorgid=5E34123F5245B2CD0A490D45%40AdobeOrg&AQE=1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/x-javascript",
+              "DownloadTime": 47,
+              "EventId": 5598,
+              "HttpStatus": 200,
+              "Size": 48,
+              "URL": "https://met2.hp.com/id?d_visid_ver=4.4.0&d_fieldgroup=A&mcorgid=5E34123F5245B2CD0A490D45%40AdobeOrg&mid=53083487617248159812469690922077787578&ts=1621484025229"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "44.224.125.151",
+          "IncludeInScript": true,
+          "Name": "mastiff-itg.ext.hp.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 640,
+              "EventId": 5732,
+              "HttpStatus": 200,
+              "Size": 3490,
+              "URL": "https://mastiff-itg.ext.hp.com/gw/hpit/cs/mastiff.itg/1.0/MastiffService-1/getOffer"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 859,
+              "EventId": 5489,
+              "HttpStatus": 200,
+              "Size": 100551,
+              "URL": "https://mastiff-itg.ext.hp.com/gw/hpit/cs/mastiff.itg/1.0/content/js/supportweb/HP_scraper.js"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "35.244.184.212",
+          "IncludeInScript": true,
+          "Name": "linkto.ext.hp.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 31,
+              "EventId": 6256,
+              "HttpStatus": 200,
+              "Size": 206,
+              "URL": "https://linkto.ext.hp.com/xc/365159/342132/5105"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "96.7.89.28",
+          "IncludeInScript": true,
+          "Name": "itg-live.www8.hp.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-font-woff",
+              "DownloadTime": 0,
+              "EventId": 5649,
+              "HttpStatus": 200,
+              "Size": 1859,
+              "URL": "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-css/resources/fonts/fonts_header_icons.woff"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-font-ttf",
+              "DownloadTime": 16,
+              "EventId": 5634,
+              "HttpStatus": 200,
+              "Size": 737,
+              "URL": "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-css/resources/fonts/newhplogo.ttf"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-font-woff",
+              "DownloadTime": 0,
+              "EventId": 5632,
+              "HttpStatus": 200,
+              "Size": 3860,
+              "URL": "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-css/resources/fonts/footericons.woff"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-font-woff",
+              "DownloadTime": 15,
+              "EventId": 5614,
+              "HttpStatus": 200,
+              "Size": 53686,
+              "URL": "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/clientlib-hf-fontface-core/resources/fonts/HpSimplifiedLight.woff"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-font-woff",
+              "DownloadTime": 16,
+              "EventId": 5608,
+              "HttpStatus": 200,
+              "Size": 43688,
+              "URL": "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/clientlib-hf-fontface-core/resources/fonts/HPSimplifiedRegular.woff"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 5372,
+              "HttpStatus": 200,
+              "Size": 46064,
+              "URL": "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hf-js.js"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 0,
+              "EventId": 5345,
+              "HttpStatus": 200,
+              "Size": 7596,
+              "URL": "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlib-hpi-hf-r-css.css"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 5340,
+              "HttpStatus": 200,
+              "Size": 259,
+              "URL": "https://itg-live.www8.hp.com/etc.clientlibs/HPIT-AEM-GLOBALNAV/clientlibs-globalnav/clientlibs-fonts/us/en/clientlib-hf-fontface.css"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 5302,
+              "HttpStatus": 200,
+              "Size": 16386,
+              "URL": "https://itg-live.www8.hp.com/caas/header-footer/us/en/default/latest.r?contentType=js&hide_search=true&show_shopping_cart=true&hide_country_selector=true"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "15.72.236.27",
+          "IncludeInScript": true,
+          "Name": "h17009.www1.hp.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 31,
+              "EventId": 5791,
+              "HttpStatus": 200,
+              "Size": 179058,
+              "URL": "https://h17009.www1.hp.com/pub/msc/CBD1E914-7BFF-157E-EE98-B5C5A70BE529.png"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "gstatic.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.138.94",
+          "IncludeInScript": true,
+          "Name": "ssl.gstatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 16,
+              "EventId": 5784,
+              "HttpStatus": 200,
+              "Size": 90905,
+              "URL": "https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_variation_8.pb"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "googletagmanager.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.217.1.136",
+          "IncludeInScript": true,
+          "Name": "www.googletagmanager.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "br",
+              "DataType": "application/javascript",
+              "DownloadTime": 32,
+              "EventId": 6069,
+              "HttpStatus": 200,
+              "Size": 51571,
+              "URL": "https://www.googletagmanager.com/gtm.js?id=GTM-MQML682"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 5406,
+              "HttpStatus": 200,
+              "Size": 91090,
+              "URL": "https://www.googletagmanager.com/gtm.js?id=GTM-PDHM2PK"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "googleapis.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.113.94",
+          "IncludeInScript": true,
+          "Name": "update.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 16,
+              "EventId": 6625,
+              "HttpStatus": 200,
+              "Size": 414,
+              "URL": "https://update.googleapis.com/service/update2/json?cup2key=10:628726926&cup2hreq=e41f0148c48d1e2bf40f0df6d336a227f5ece27849f87ee86f3c93606aa8c5ae"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.114.95",
+          "IncludeInScript": true,
+          "Name": "content-autofill.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/plain",
+              "DownloadTime": 31,
+              "EventId": 6156,
+              "HttpStatus": 200,
+              "Size": 60,
+              "URL": "https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvOTAuMC40NDMwLjIxMhIsCUv9LestSSkVEgUNnyyLRBIFDZ8si0QSBQ3YJStnEgUNYP_0ixIFDaWTNiQYrqnKAQ==?alt=proto"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/plain",
+              "DownloadTime": 15,
+              "EventId": 5581,
+              "HttpStatus": 200,
+              "Size": 53,
+              "URL": "https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvOTAuMC40NDMwLjIxMhIlCeq0gYqc5lntEgUNnyyLRBIFDZ8si0QSBQ3YJStnEgUNYP_0ixiuqcoB?alt=proto"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/plain",
+              "DownloadTime": 16,
+              "EventId": 5326,
+              "HttpStatus": 200,
+              "Size": 45,
+              "URL": "https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvOTAuMC40NDMwLjIxMhIXCZE9y8O0HBWCEgUN2CUrZxIFDWD_9IsYrqnKAQ==?alt=proto"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/plain",
+              "DownloadTime": 15,
+              "EventId": 5304,
+              "HttpStatus": 200,
+              "Size": 36,
+              "URL": "https://content-autofill.googleapis.com/v1/pages/ChRDaHJvbWUvOTAuMC40NDMwLjIxMhIQCe6-3hT1HmsrEgUN2CUrZxiuqcoB?alt=proto"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.113.94",
+          "IncludeInScript": true,
+          "Name": "clientservices.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 32,
+              "EventId": 4957,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://clientservices.googleapis.com/chrome-variations/seed?osname=win&channel=stable&milestone=90"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "googleadservices.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.217.1.226",
+          "IncludeInScript": true,
+          "Name": "www.googleadservices.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 16,
+              "EventId": 6154,
+              "HttpStatus": 200,
+              "Size": 14016,
+              "URL": "https://www.googleadservices.com/pagead/conversion_async.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "google.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.138.105",
+          "IncludeInScript": true,
+          "Name": "www.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 94,
+              "EventId": 6462,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://www.google.com/pagead/1p-user-list/854101013/?random=1621484029693&cv=9&fst=1621483200000&num=1&guid=ON&eid=2505059651&u_h=823&u_w=1463&u_ah=783&u_aw=1463&u_cd=24&u_his=1&u_tz=0&u_java=false&u_nplug=3&u_nmime=4&gtm=2wg5c1&sendb=1&frm=0&url=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&tiba=Official%20HP%C2%AE%20Printer%20Support&async=1&fmt=3&is_vtc=1&random=2432748915&resp=GooglemKTybQhCsO&rmt_tld=0&ipr=y"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 94,
+              "EventId": 6460,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://www.google.com/pagead/1p-user-list/687393200/?random=1621484029682&cv=9&fst=1621483200000&num=1&userId=null&guid=ON&eid=2505059650&u_h=823&u_w=1463&u_ah=783&u_aw=1463&u_cd=24&u_his=1&u_tz=0&u_java=false&u_nplug=3&u_nmime=4&gtm=2wg5c1&sendb=1&frm=0&url=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&tiba=Official%20HP%C2%AE%20Printer%20Support&async=1&fmt=3&is_vtc=1&random=1273275561&resp=GooglemKTybQhCsO&rmt_tld=0&ipr=y"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 31,
+              "EventId": 6444,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://www.google.com/pagead/1p-user-list/783157761/?guid=ON&script=0&userId=null&is_vtc=1&random=2219632380"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 32,
+              "EventId": 6440,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://www.google.com/pagead/1p-user-list/849111477/?guid=ON&script=0&userId=null&is_vtc=1&random=3413941993"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.114.156",
+          "IncludeInScript": true,
+          "Name": "adservice.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 93,
+              "EventId": 6652,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://adservice.google.com/ddm/fls/p/dc_pre=COa8ut-y1_ACFSHuKAUd4dEAyg;src=4898302;type=emeae00;cat=hp_em0;ord=1621484028794.1428045702;gtm=2wg5c1;auiddc=305356713.1621484029;u42=ppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter;~oref=https://ppssupport-itgllbh7.inc.hp.com/us-en/printer"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 62,
+              "EventId": 6489,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://adservice.google.com/ddm/fls/p/dc_pre=CLWP49yy1_ACFRXqKAUdX_4OqA;src=9848580;type=irid;cat=irid;ord=.1621484029368;~oref=https://ppssupport-itgllbh7.inc.hp.com/us-en/printer"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 31,
+              "EventId": 6478,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://adservice.google.com/ddm/fls/p/dc_pre=CNKp4dyy1_ACFYfRKAUd2RcBGg;src=4898302;type=emeae0;cat=hp_em0;ord=1621484028794.1428045702;gtm=2wg5c1;auiddc=305356713.1621484029;u42=ppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter;~oref=https://ppssupport-itgllbh7.inc.hp.com/us-en/printer"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.138.84",
+          "IncludeInScript": true,
+          "Name": "accounts.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 16,
+              "EventId": 4955,
+              "HttpStatus": 200,
+              "Size": 200,
+              "URL": "https://accounts.google.com/ListAccounts?gpsia=1&source=ChromiumBrowser&json=standard"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "facebook.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "69.171.250.35",
+          "IncludeInScript": true,
+          "Name": "www.facebook.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 31,
+              "EventId": 6649,
+              "HttpStatus": 200,
+              "Size": 44,
+              "URL": "https://www.facebook.com/tr?id=1524986591042566&ev=ConsumerEngagement&noscript=1&gtmcb=1609770966"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 31,
+              "EventId": 6642,
+              "HttpStatus": 200,
+              "Size": 44,
+              "URL": "https://www.facebook.com/tr?id=1282296701803562&ev=ConsumerEngagement&noscript=1&gtmcb=119306405"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 32,
+              "EventId": 6635,
+              "HttpStatus": 200,
+              "Size": 44,
+              "URL": "https://www.facebook.com/tr?id=1688171794549438&ev=ConsumerEngagement&noscript=1&gtmcb=868289929"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 16,
+              "EventId": 6209,
+              "HttpStatus": 200,
+              "Size": 44,
+              "URL": "https://www.facebook.com/tr?id=1688171794549438&ev=PageView&noscript=1&gtmcb=509687509"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "everesttech.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "44.226.225.184",
+          "IncludeInScript": true,
+          "Name": "cm.everesttech.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 63,
+              "EventId": 5596,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://cm.everesttech.net/cm/dd?d_uuid=47692277270334837533009146191134613054"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "ensighten.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "54.85.176.198",
+          "IncludeInScript": true,
+          "Name": "nexus.ensighten.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 5689,
+              "HttpStatus": 200,
+              "Size": 480,
+              "URL": "https://nexus.ensighten.com/hp/support_stage/code/3ce08cf7c65e410fd9cf20d6115a04e1.js?conditionId0=285030"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 5687,
+              "HttpStatus": 200,
+              "Size": 379,
+              "URL": "https://nexus.ensighten.com/hp/support_stage/code/b9b0fc01116e2374d7e92bc6cb675f3e.js?conditionId0=4880989"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 47,
+              "EventId": 5670,
+              "HttpStatus": 200,
+              "Size": 30324,
+              "URL": "https://nexus.ensighten.com/hp/support_stage/code/8eb6e0d6c0d367083fff5b64b61a4441.js?conditionId0=422765"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/javascript",
+              "DownloadTime": 47,
+              "EventId": 5518,
+              "HttpStatus": 200,
+              "Size": 570,
+              "URL": "https://nexus.ensighten.com/hp/support_stage/serverComponent.php?r=66406378.42858177&namespace=Bootstrapper&staticJsPath=nexus.ensighten.com/hp/support_stage/code/&publishedOn=Tue%20May%2004%2007:24:28%20GMT%202021&ClientID=217&PageID=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter%3Fgdl_template%3DPrinter_Landing_New"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 5415,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://nexus.ensighten.com/error/e.gif?msg=%22TypeError%3A%20Cannot%20read%20property%20%27triggerPromiseWithTimeout%27%20of%20undefined%22%20error%20caught%20in%20Data%20Definition%20trigger%3A%20support_language_code%2C%20ID%3A9913.%20Using%20bottom%20of%20body%20trigger.&lnn=-1&fn=&cid=217&client=hp&publishPath=support_stage&rid=-1&did=-1&errorName=DataDefinitionException"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 94,
+              "EventId": 5307,
+              "HttpStatus": 200,
+              "Size": 71462,
+              "URL": "https://nexus.ensighten.com/hp/support_stage/Bootstrap.js"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "doubleclick.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.115.156",
+          "IncludeInScript": true,
+          "Name": "googleads.g.doubleclick.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 32,
+              "EventId": 6265,
+              "HttpStatus": 200,
+              "Size": 1019,
+              "URL": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/854101013/?random=1621484029693&cv=9&fst=1621484029693&num=1&guid=ON&resp=GooglemKTybQhCsO&eid=2505059651&u_h=823&u_w=1463&u_ah=783&u_aw=1463&u_cd=24&u_his=1&u_tz=0&u_java=false&u_nplug=3&u_nmime=4&gtm=2wg5c1&sendb=1&ig=1&frm=0&url=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&tiba=Official%20HP%C2%AE%20Printer%20Support&hn=www.googleadservices.com&async=1&rfmt=3&fmt=4"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 31,
+              "EventId": 6263,
+              "HttpStatus": 200,
+              "Size": 1025,
+              "URL": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/687393200/?random=1621484029682&cv=9&fst=1621484029682&num=1&userId=null&guid=ON&resp=GooglemKTybQhCsO&eid=2505059650&u_h=823&u_w=1463&u_ah=783&u_aw=1463&u_cd=24&u_his=1&u_tz=0&u_java=false&u_nplug=3&u_nmime=4&gtm=2wg5c1&sendb=1&ig=1&frm=0&url=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&tiba=Official%20HP%C2%AE%20Printer%20Support&hn=www.googleadservices.com&async=1&rfmt=3&fmt=4"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 31,
+              "EventId": 6235,
+              "HttpStatus": 302,
+              "Size": 42,
+              "URL": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/783157761/?guid=ON&script=0&userId=null&gtmcb=1430405515"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 31,
+              "EventId": 6233,
+              "HttpStatus": 302,
+              "Size": 42,
+              "URL": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/849111477/?guid=ON&script=0&userId=null&gtmcb=244644747"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.68.130",
+          "IncludeInScript": true,
+          "Name": "cm.g.doubleclick.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 15,
+              "EventId": 6640,
+              "HttpStatus": 302,
+              "Size": 605,
+              "URL": "https://cm.g.doubleclick.net/pixel?cb=https%3A%2F%2Ftag.cogocast.net%2Ftag%2Fpartner%2F222%3Fpixel_mode%3Dpixel%26dc_id%3D856a1be1632e481583a209170b475cc0%26cb%3Dhttps%253A%2F%2Ftag.apxlv.com%2Ftag%2Fpartner%2F222%253Fc%255Fi%253D2%2526jid%253Dc954bb68b92111eb837ab4cf3afaa473%2526ld%253D2%2526pixel%255Fmode%253Dpixel%26c_i%3D0%26ld%3D0%26gpcl%3D1&google_cm=1&google_hm=hWob4WMuSBWDogkXC0dcwA%3D%3D&google_nid=cogo_labs&google_sc=1&ld=1&u=856a1be1632e481583a209170b475cc0&google_tc="
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 6629,
+              "HttpStatus": 302,
+              "Size": 708,
+              "URL": "https://cm.g.doubleclick.net/pixel?cb=https%3A%2F%2Ftag.cogocast.net%2Ftag%2Fpartner%2F222%3Fpixel_mode%3Dpixel%26dc_id%3D856a1be1632e481583a209170b475cc0%26cb%3Dhttps%253A%2F%2Ftag.apxlv.com%2Ftag%2Fpartner%2F222%253Fc%255Fi%253D2%2526jid%253Dc954bb68b92111eb837ab4cf3afaa473%2526ld%253D2%2526pixel%255Fmode%253Dpixel%26c_i%3D0%26ld%3D0%26gpcl%3D1&google_cm=1&google_hm=hWob4WMuSBWDogkXC0dcwA%3D%3D&google_nid=cogo_labs&google_sc=1&ld=1&u=856a1be1632e481583a209170b475cc0"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 6515,
+              "HttpStatus": 302,
+              "Size": 288,
+              "URL": "https://cm.g.doubleclick.net/pixel?google_nid=pippio_dmp&google_cm&google_no_sc&m=CMwpGgwI_8OXhQYSBAgCEABCAEoA"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 32,
+              "EventId": 6436,
+              "HttpStatus": 302,
+              "Size": 255,
+              "URL": "https://cm.g.doubleclick.net/pixel?google_nid=owneriq1&google_cm=&google_sc=&google_ula=1174&google_hm=UTY3NDc3MDQyOTExODI5Mjk5NDRK&esi=1&google_tc="
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 94,
+              "EventId": 6399,
+              "HttpStatus": 302,
+              "Size": 369,
+              "URL": "https://cm.g.doubleclick.net/pixel?google_nid=owneriq1&google_cm&google_sc&google_ula=1174&google_hm=UTY3NDc3MDQyOTExODI5Mjk5NDRK&esi=1"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "142.250.114.149",
+          "IncludeInScript": true,
+          "Name": "ad.doubleclick.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 6645,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://ad.doubleclick.net/activity;dc_pre=COa8ut-y1_ACFSHuKAUd4dEAyg;src=4898302;type=emeae00;cat=hp_em0;ord=1621484028794.1428045702;gtm=2wg5c1;auiddc=305356713.1621484029;u42=ppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 6633,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://ad.doubleclick.net/activity;src=4898302;type=emeae00;cat=hp_em0;ord=1621484028794.1428045702;gtm=2wg5c1;auiddc=305356713.1621484029;u42=ppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 6342,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://ad.doubleclick.net/activity;dc_pre=CLWP49yy1_ACFRXqKAUdX_4OqA;src=9848580;type=irid;cat=irid;ord=.1621484029368?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 32,
+              "EventId": 6340,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://ad.doubleclick.net/activity;dc_pre=CNKp4dyy1_ACFYfRKAUd2RcBGg;src=4898302;type=emeae0;cat=hp_em0;ord=1621484028794.1428045702;gtm=2wg5c1;auiddc=305356713.1621484029;u42=ppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 6242,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://ad.doubleclick.net/activity;src=9848580;type=irid;cat=irid;ord=.1621484029368?"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 6231,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://ad.doubleclick.net/activity;src=4898302;type=emeae0;cat=hp_em0;ord=1621484028794.1428045702;gtm=2wg5c1;auiddc=305356713.1621484029;u42=ppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter?"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "demdex.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "52.43.115.132",
+          "IncludeInScript": true,
+          "Name": "hp.demdex.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 62,
+              "EventId": 5622,
+              "HttpStatus": 200,
+              "Size": 2791,
+              "URL": "https://hp.demdex.net/dest5.html?d_nsid=0"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "52.43.115.132",
+          "IncludeInScript": true,
+          "Name": "dpm.demdex.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/gif",
+              "DownloadTime": 109,
+              "EventId": 6395,
+              "HttpStatus": 200,
+              "Size": 59,
+              "URL": "https://dpm.demdex.net/demconf.jpg?et:ibs%7cdata:dpid=53196&dpuuid=Q6747704291182929944J"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 63,
+              "EventId": 6344,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://dpm.demdex.net/ibs:dpid=53196&dpuuid=Q6747704291182929944J"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "image/gif",
+              "DownloadTime": 78,
+              "EventId": 5674,
+              "HttpStatus": 200,
+              "Size": 59,
+              "URL": "https://dpm.demdex.net/demconf.jpg?et:ibs%7cdata:dpid=411&dpuuid=YKXh_QAAAEFm2Qc_"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 62,
+              "EventId": 5658,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://dpm.demdex.net/ibs:dpid=411&dpuuid=YKXh_QAAAEFm2Qc_"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 78,
+              "EventId": 5497,
+              "HttpStatus": 200,
+              "Size": 2051,
+              "URL": "https://dpm.demdex.net/id?d_visid_ver=4.4.0&d_fieldgroup=MC&d_rtbd=json&d_ver=2&d_orgid=5E34123F5245B2CD0A490D45%40AdobeOrg&d_nsid=0&ts=1621484024295"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "cookielaw.org",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.16.149.64",
+          "IncludeInScript": true,
+          "Name": "cdn.cookielaw.org",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 31,
+              "EventId": 6023,
+              "HttpStatus": 200,
+              "Size": 11847,
+              "URL": "https://cdn.cookielaw.org/scripttemplates/6.17.0/assets/v2/otPcTab.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 15,
+              "EventId": 6017,
+              "HttpStatus": 200,
+              "Size": 2571,
+              "URL": "https://cdn.cookielaw.org/scripttemplates/6.17.0/assets/otCenterRounded.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-javascript",
+              "DownloadTime": 94,
+              "EventId": 5920,
+              "HttpStatus": 200,
+              "Size": 57366,
+              "URL": "https://cdn.cookielaw.org/consent/e0a0fc2a-044d-41af-bd55-2f56dd8162df/e688e508-0267-4c09-a64b-7c03f7e759ce/en-ie.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 5875,
+              "HttpStatus": 200,
+              "Size": 85833,
+              "URL": "https://cdn.cookielaw.org/scripttemplates/6.17.0/otBannerSdk.js"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-javascript",
+              "DownloadTime": 16,
+              "EventId": 5750,
+              "HttpStatus": 200,
+              "Size": 2194,
+              "URL": "https://cdn.cookielaw.org/consent/e0a0fc2a-044d-41af-bd55-2f56dd8162df/e0a0fc2a-044d-41af-bd55-2f56dd8162df.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 5734,
+              "HttpStatus": 200,
+              "Size": 5801,
+              "URL": "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "contentsquare.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "54.235.82.108",
+          "IncludeInScript": true,
+          "Name": "wr-us.contentsquare.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 47,
+              "EventId": 6682,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&15&10&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 47,
+              "EventId": 6680,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&14&0&5&8&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 46,
+              "EventId": 6676,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&13&9&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 109,
+              "EventId": 6674,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&12&0&4&8&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 47,
+              "EventId": 6668,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&11&0&3&8&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 46,
+              "EventId": 6666,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&10&8&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 46,
+              "EventId": 6664,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&9&7&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 47,
+              "EventId": 6647,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&8&6&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 47,
+              "EventId": 6561,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&7&0&2&8&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 47,
+              "EventId": 6522,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&6&5&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 63,
+              "EventId": 6480,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&5&4&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 47,
+              "EventId": 6369,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&4&3&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 47,
+              "EventId": 6172,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&3&2&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 140,
+              "EventId": 5941,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&2&1&0&105&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 31,
+              "EventId": 5870,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&1&0&1&8&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 47,
+              "EventId": 5796,
+              "HttpStatus": 200,
+              "Size": 1,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/wr/?3299960863671225&325&11&0&0&0&8&subsid=232897&msgsize=120"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 47,
+              "EventId": 5755,
+              "HttpStatus": 200,
+              "Size": 262,
+              "URL": "https://wr-us.contentsquare.net/ctn_v2/auth/?pid=325&as=1&1471727926&subsid=232897&msgsize=120"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "13.226.93.70",
+          "IncludeInScript": true,
+          "Name": "t.contentsquare.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 94,
+              "EventId": 5177,
+              "HttpStatus": 200,
+              "Size": 54396,
+              "URL": "https://t.contentsquare.net/uxa/9d25aca9-e352-4895-bbbd-ccebc9786c07.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.88.204.17",
+          "IncludeInScript": true,
+          "Name": "ct.contentsquare.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "br",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 5772,
+              "HttpStatus": 200,
+              "Size": 32191,
+              "URL": "https://ct.contentsquare.net/www/WR1113b.js"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 5338,
+              "HttpStatus": 200,
+              "Size": 16680,
+              "URL": "https://ct.contentsquare.net/www/latest-WR110.js"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 5332,
+              "HttpStatus": 200,
+              "Size": 5529,
+              "URL": "https://ct.contentsquare.net/pcc/9d25aca9-e352-4895-bbbd-ccebc9786c07.js?DeploymentConfigName=Release_20210426&Version=5"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 5299,
+              "HttpStatus": 200,
+              "Size": 7984,
+              "URL": "https://ct.contentsquare.net/ptc/9d25aca9-e352-4895-bbbd-ccebc9786c07.js"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "54.230.31.78",
+          "IncludeInScript": true,
+          "Name": "csxd.contentsquare.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/html",
+              "DownloadTime": 32,
+              "EventId": 5226,
+              "HttpStatus": 200,
+              "Size": 903,
+              "URL": "https://csxd.contentsquare.net/uxa/xdframe-single-domain-1.1.0.html?pid=1255&cookieNames=_cs_id,_cs_s,_cs_cvars,_cs_ex"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "54.158.125.67",
+          "IncludeInScript": true,
+          "Name": "c.contentsquare.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 6688,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://c.contentsquare.net/events?v=10.8.6&sr=31&mdh=792&pn=1&re=1&uu=0b82c2e8-c17f-a9f2-dfbc-d8aff63f7fbd&sn=1&lv=1621484026&lhd=1621484026&hd=1621484026&pid=1255&str=1181&di=1792&dc=7520&fl=7523&eu=%5B%5B2%2C7782%2C882%2C471%2C0%2C%22div%23directionTracker%3Eapp-layout%3Aeq(0)%3Eapp-printer-landing%3Aeq(0)%3Eapp-topic-options-main%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(1)%3Eh2%3Aeq(0)%22%2C8097%2C4114%5D%2C%5B5%2C8546%2C0%2C0%2C%22a%23closeAlert%22%2C%22%22%5D%2C%5B2%2C15242%2C883%2C464%2C0%2C%22div%23directionTracker%3Eapp-layout%3Aeq(0)%3Eapp-printer-landing%3Aeq(0)%3Eapp-topic-options-main%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%22%2C37802%2C1807%5D%2C%5B6%2C15254%2C893%2C411%2C%22a%23Check_warranty_status%3Espan%3Aeq(0)%22%2C%22%22%5D%2C%5B7%2C15282%2C913%2C342%2C%22a%23Check_warranty_status%3Espan%3Aeq(0)%22%5D%2C%5B6%2C15430%2C1050%2C156%2C%22a%23sec-nav-business-support%22%2C%22%22%5D%2C%5B7%2C15481%2C1104%2C170%2C%22a%23sec-nav-business-support%22%5D%2C%5B2%2C15642%2C1289%2C337%2C0%2C%22div%23directionTracker%22%2C52094%2C8659%5D%2C%5B2%2C16044%2C1291%2C341%2C0%2C%22%22%2C52175%2C8762%5D%2C%5B2%2C16444%2C1324%2C339%2C0%2C%22%22%2C53508%2C8710%5D%2C%5B2%2C16846%2C1534%2C380%2C0%2C%22div%23directionTracker%3Eapp-layout%3Aeq(0)%3Eapp-printer-landing%3Aeq(0)%3Eapp-primary-options%3Aeq(0)%3Ediv%3Aeq(0)%22%2C61995%2C18572%5D%2C%5B2%2C17247%2C1583%2C213%2C0%2C%22div%23directionTracker%3Eapp-layout%3Aeq(0)%3Eapp-printer-landing%3Aeq(0)%3Eapp-landing-hero-banner%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%22%2C63976%2C17955%5D%2C%5B2%2C17651%2C1258%2C252%2C0%2C%22div%23directionTracker%3Eapp-layout%3Aeq(0)%3Eapp-printer-landing%3Aeq(0)%3Eapp-landing-hero-banner%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%22%2C62982%2C34700%5D%2C%5B2%2C18052%2C1147%2C220%2C0%2C%22div%23directionTracker%3Eapp-layout%3Aeq(0)%3Eapp-printer-landing%3Aeq(0)%3Eapp-landing-hero-banner%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%3Ediv%3Aeq(0)%22%2C46355%2C20685%5D%2C%5B2%2C18454%2C1144%2C219%2C0%2C%22%22%2C46234%2C20295%5D%5D"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 6612,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://c.contentsquare.net/events?v=10.8.6&sr=31&mdh=792&pn=1&re=1&uu=0b82c2e8-c17f-a9f2-dfbc-d8aff63f7fbd&sn=1&lv=1621484026&lhd=1621484026&hd=1621484026&pid=1255&str=1181&di=1792&dc=7520&fl=7523&eu=%5B%5B0%2C5%2C1626%2C792%5D%2C%5B2%2C4309%2C1179%2C321%2C0%2C%22div%23directionTracker%3Eapp-loader%3Aeq(0)%3Ediv%3Aeq(0)%22%2C42618%2C26549%5D%2C%5B6%2C4575%2C1182%2C121%2C%22div%23onetrust-close-btn-container%3Ebutton%3Aeq(0)%22%2C%22%22%5D%2C%5B2%2C4702%2C1182%2C104%2C0%2C%22div%23onetrust-close-btn-container%3Ebutton%3Aeq(0)%22%2C21168%2C27945%5D%2C%5B2%2C5214%2C1187%2C99%2C0%2C%22%22%2C28615%2C20497%5D%2C%5B2%2C5612%2C1190%2C105%2C0%2C%22%22%2C33084%2C29434%5D%2C%5B3%2C5784%2C1190%2C106%2C%22div%23onetrust-close-btn-container%3Ebutton%3Aeq(0)%22%2C%22%22%5D%2C%5B4%2C5982%2C1190%2C106%2C%22div%23onetrust-close-btn-container%3Ebutton%3Aeq(0)%22%2C%22%22%5D%2C%5B5%2C6002%2C1190%2C106%2C%22div%23onetrust-close-btn-container%3Ebutton%3Aeq(0)%22%2C%22%22%5D%2C%5B7%2C6451%2C1129%2C152%2C%22div%23onetrust-close-btn-container%3Ebutton%3Aeq(0)%22%5D%2C%5B2%2C6453%2C1129%2C152%2C0%2C%22p%23onetrust-policy-text%3Ep%3Aeq(0)%22%2C60328%2C20068%5D%5D"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 62,
+              "EventId": 6482,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://c.contentsquare.net/dvar?v=10.8.6&pid=1255&uu=0b82c2e8-c17f-a9f2-dfbc-d8aff63f7fbd&sn=1&pn=1&dv=N4IgpgaghgTgjAJhALhAQQHYHsME8C2WArgM4gA0IADjFlQMwogAKMAlhgC5gwD6AMlAwATDgHNeAOTAB3CtVpU4TUgFowGEAF8gAA%3D%3D&r=406497"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 5782,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://c.contentsquare.net/pageEvent?value=MIewdgZglg5gXAAgEoFMA2KCGBnFB9AJgAYCBGIgFgIDYgAA&isETR=false&v=10.8.6&pid=1255&uu=0b82c2e8-c17f-a9f2-dfbc-d8aff63f7fbd&sn=1&pn=1&r=525207"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 5780,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://c.contentsquare.net/pageview?pid=1255&uu=0b82c2e8-c17f-a9f2-dfbc-d8aff63f7fbd&sn=1&lv=1621484026&lhd=1621484026&hd=1621484026&pn=1&re=1&dw=1621&dh=2550&ww=1626&wh=792&sw=1463&sh=823&dr=&url=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&uc=1&la=en-US&cvars=%7B%221%22%3A%5B%22Template%22%2C%22Printer_Landing_New%22%5D%2C%226%22%3A%5B%22Locale%22%2C%22us-en%22%5D%7D&cvarp=%7B%221%22%3A%5B%22Template%22%2C%22Printer_Landing_New%22%5D%2C%226%22%3A%5B%22Locale%22%2C%22us-en%22%5D%7D&v=10.8.6&r=889248"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "cogocast.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "52.5.112.137",
+          "IncludeInScript": true,
+          "Name": "tag.cogocast.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 6660,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://tag.cogocast.net/tag/partner/222?pixel_mode=pixel&dc_id=856a1be1632e481583a209170b475cc0&cb=https%3A//tag.apxlv.com/tag/partner/222%3Fc%5Fi%3D2%26jid%3Dc954bb68b92111eb837ab4cf3afaa473%26ld%3D2%26pixel%5Fmode%3Dpixel&c_i=0&ld=0&gpcl=1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 94,
+              "EventId": 6603,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://tag.cogocast.net/tag/partner/222?pixel_mode=pixel&dc_id=856a1be1632e481583a209170b475cc0&cb=https%3A//tag.apxlv.com/tag/partner/222%3Fc%5Fi%3D2%26jid%3Dc954bb68b92111eb837ab4cf3afaa473%26ld%3D2%26pixel%5Fmode%3Dpixel"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.18.25.172",
+          "IncludeInScript": true,
+          "Name": "gpush.cogocast.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 156,
+              "EventId": 6657,
+              "HttpStatus": 302,
+              "Size": 285,
+              "URL": "https://gpush.cogocast.net/?cb=https%3A%2F%2Ftag.cogocast.net%2Ftag%2Fpartner%2F222%3Fpixel_mode%3Dpixel%26dc_id%3D856a1be1632e481583a209170b475cc0%26cb%3Dhttps%253A%2F%2Ftag.apxlv.com%2Ftag%2Fpartner%2F222%253Fc%255Fi%253D2%2526jid%253Dc954bb68b92111eb837ab4cf3afaa473%2526ld%253D2%2526pixel%255Fmode%253Dpixel%26c_i%3D0%26ld%3D0%26gpcl%3D1&ld=1&u=856a1be1632e481583a209170b475cc0&google_error=3"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 172,
+              "EventId": 6623,
+              "HttpStatus": 302,
+              "Size": 519,
+              "URL": "https://gpush.cogocast.net/?ula=1&dc_id=856a1be1632e481583a209170b475cc0&cb=https%3A%2F%2Ftag%2Ecogocast%2Enet%2Ftag%2Fpartner%2F222%3Fpixel%5Fmode%3Dpixel%26dc%5Fid%3D856a1be1632e481583a209170b475cc0%26cb%3Dhttps%253A%2F%2Ftag%2Eapxlv%2Ecom%2Ftag%2Fpartner%2F222%253Fc%255Fi%253D2%2526jid%253Dc954bb68b92111eb837ab4cf3afaa473%2526ld%253D2%2526pixel%255Fmode%253Dpixel%26c%5Fi%3D0%26ld%3D0%26gpcl%3D1"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "cloudflare.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.16.19.94",
+          "IncludeInScript": true,
+          "Name": "cdnjs.cloudflare.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "br",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 5068,
+              "HttpStatus": 200,
+              "Size": 26909,
+              "URL": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "casalemedia.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "23.38.176.244",
+          "IncludeInScript": true,
+          "Name": "dsum.casalemedia.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 47,
+              "EventId": 6420,
+              "HttpStatus": 200,
+              "Size": 43,
+              "URL": "https://dsum.casalemedia.com/rum?cm_dsp_id=31&external_user_id=Q6747704291182929944J&C=1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 125,
+              "EventId": 6397,
+              "HttpStatus": 302,
+              "Size": 280,
+              "URL": "https://dsum.casalemedia.com/rum?cm_dsp_id=31&external_user_id=Q6747704291182929944J"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "bootstrapcdn.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.18.11.207",
+          "IncludeInScript": true,
+          "Name": "netdna.bootstrapcdn.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "font/woff",
+              "DownloadTime": 31,
+              "EventId": 5099,
+              "HttpStatus": 200,
+              "Size": 83760,
+              "URL": "https://netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0"
+            },
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 47,
+              "EventId": 5032,
+              "HttpStatus": 200,
+              "Size": 4403,
+              "URL": "https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.18.10.207",
+          "IncludeInScript": true,
+          "Name": "maxcdn.bootstrapcdn.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 47,
+              "EventId": 5034,
+              "HttpStatus": 200,
+              "Size": 18527,
+              "URL": "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "bing.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "204.79.197.200",
+          "IncludeInScript": true,
+          "Name": "bat.bing.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 6270,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://bat.bing.com/action/0?ti=13015798&tm=gtm001&Ver=2&mid=2a8d8845-1e7e-4d68-80cf-d5a35862c9e7&sid=c77455a0b92111eb9b40c3540e443f06&vid=c774a9b0b92111eb84de85f47dfb5834&vids=1&pi=1200101525&lg=en-US&sw=1463&sh=823&sc=24&tl=Official%20HP%C2%AE%20Printer%20Support&kw=HP%20Printer%20Support,%20HP%20Printer%20Customer%20Service,%20HP%20Printer%20Tech%20Support,%20HP%20Printer%20Customer%20Support,%20HP%20Printer%20Technical%20Support&p=https%3A%2F%2Fppssupport-itgllbh7.inc.hp.com%2Fus-en%2Fprinter&r=&lt=10761&evt=pageLoad&msclkid=N&sv=1&rn=206539"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 47,
+              "EventId": 6251,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://bat.bing.com/p/action/13015798"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6160,
+              "HttpStatus": 200,
+              "Size": 8910,
+              "URL": "https://bat.bing.com/bat.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "apxlv.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "172.64.143.20",
+          "IncludeInScript": true,
+          "Name": "tag.apxlv.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 140,
+              "EventId": 6662,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://tag.apxlv.com/tag/partner/222?c_i=2&jid=c954bb68b92111eb837ab4cf3afaa473&ld=2&pixel_mode=pixel"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 109,
+              "EventId": 6575,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://tag.apxlv.com/tag/partner/222?c%5Fi=1&ld=1&pixel%5Fmode=pixel&jid=c954bb68b92111eb837ab4cf3afaa473"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 141,
+              "EventId": 6542,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://tag.apxlv.com/tag/partner/222?pixel_mode=pixel"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "adnxs.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.254.148.166",
+          "IncludeInScript": true,
+          "Name": "secure.adnxs.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 63,
+              "EventId": 6492,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://secure.adnxs.com/bounce?%2Fgetuid%3Fhttps%253A%252F%252Fpx.owneriq.net%252Feucm%252Fp%252Fapndmp%253Foi%253D1%2526tid%253D%24UID"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 79,
+              "EventId": 6458,
+              "HttpStatus": 307,
+              "Size": 0,
+              "URL": "https://secure.adnxs.com/getuid?https%3A%2F%2Fpx.owneriq.net%2Feucm%2Fp%2Fapndmp%3Foi%3D1%26tid%3D$UID"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "104.254.148.166",
+          "IncludeInScript": true,
+          "Name": "ib.adnxs.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 47,
+              "EventId": 6500,
+              "HttpStatus": 200,
+              "Size": 43,
+              "URL": "https://ib.adnxs.com/bounce?%2Fsetuid%3Fentity%3D13%26code%3DQ6747704291182929944J"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 62,
+              "EventId": 6487,
+              "HttpStatus": 307,
+              "Size": 0,
+              "URL": "https://ib.adnxs.com/setuid?entity=13&code=Q6747704291182929944J"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        }
+      ],
+      "IncludeInScript": true
+    }
+  ],
+  "WebSocket": {
+    "IncludeInScript": false,
+    "IsScriptIncludeWebSocket": false
+  },
+  "NumberOfCorrelations": 0
+}

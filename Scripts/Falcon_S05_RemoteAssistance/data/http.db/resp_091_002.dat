@@ -1,0 +1,265 @@
+body { background-color: #fff; color: #444; -webkit-font-smoothing: antialiased; overflow: scroll; }
+body, textarea, input { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }
+textarea { resize: none; }
+h1, h2, h3, h4, p, ul, li, form, input { margin: 0; padding: 0; list-style: none; }
+a { text-decoration: none; color: #2377A4; }
+form {display: block; }
+h2 { font-size: 24px; color: #444; text-align: center; padding: 0 0 24px 0; }
+.hiddenSubmit { width: 0; height: 0; overflow: hidden; position: absolute; top: -10000px; } /* display none would not work with ie/chrome */
+.clb { clear: both; font-size: 0; height: 0; }
+
+
+/* header {{{ */
+.cuiHeader .header .header-main { background: #2377A4 !important; }
+.cuiHeader .header .header-main .header-logo-container { border-right: none; }
+.cuiHeader .header .header-main .header-logo-container:hover { background: inherit; }
+.cuiHeader .header .header-main .header-logo-container:focus { background: #13435D !important; }
+.cuiHeader .header .header-menu .header-menu-item { border-left: none !important; }
+.cuiHeader .header .header-menu .header-menu-item > a { background: #2377A4 !important; }
+.cuiHeader .header .header-menu .header-menu-item nav > a { background: #2377A4 !important; }
+.cuiHeader .header .header-menu .header-menu-item nav > a:focus { background: #13435D !important; }
+.cuiHeader .header .header-menu .header-menu-item .header-sub-menu a:hover,
+.cuiHeader .header .header-menu .header-menu-item .header-sub-menu a:focus { background: #2377A4 !important; }
+#Header { margin: 0 66px; height: 50px; background: url(../Images/logmein123/gradient.png) #6cb5dd 0 0 repeat-x; position: relative;
+    -moz-border-radius: 0 0 5px 5px; -webkit-border-radius: 0 0 5px 5px; border-radius: 0 0 5px 5px;
+    box-shadow: 0 1px 5px #e9e9e9; -moz-box-shadow: 0 1px 5px #e9e9e9; -webkit-box-shadow: 0 1px 5px #e9e9e9; }
+#Header h1 { padding: 13px 0 0 19px; width: 167px; }
+#Header h1 span { display: block; background: url(../Images/logmein123/sprite.png) no-repeat 0 0; width: 167px; height: 25px; }
+#Header h1 span a { display: block; width: 167px; height: 25px; }
+#Header h1 span b { display: none; }
+/* }}} header */
+
+
+/* footer {{{ */
+#Footer { position: absolute; display: none; width: 100%; height: 20px; line-height: 20px; font-size: 10px; color: #767676; text-align: center; }
+#Footer a { padding: 2px 14px 0 0; color: #767676; text-decoration: underline; }
+#Footer a:hover { text-decoration: none; }
+/* }}} footer */
+
+
+/* common page types {{{ */
+.slimPage { width: 680px; margin: 0 auto; padding: 86px 0 20px 0; }
+.widePage { width: 650px; margin: 0 auto; padding: 80px 0 50px 0; }
+/* }}} common page types */
+
+
+/* individual page types {{{ */
+.protectPage form .submit { min-width: 102px; }
+.protectPage .mailSent p { text-align: center; }
+
+.downloadPage form .submit { width: 320px; background: #2377A4; border: none !important; box-shadow: none !important; }
+.downloadPage form.broken .submit { background: #C1CBD5; }
+.downloadPage .opener { font-weight: normal; font-size: 13px; padding: 14px 0 0 0; }
+.downloadPage .formWrap { padding-bottom: 15px; }
+.downloadPage .more { width: 280px; }
+.downloadPage .reportAbuse { padding: 24px 0 10px 0; font-size: 18px; text-align: center; color: #536D87; }
+.downloadPage .reportAbuse a { font-weight: bold; text-decoration: none; }
+.downloadPage .reportAbuse a:hover { text-decoration: underline; }
+.downloadPage h1 { font-size: 24px; color: #536D87; text-align: center; padding: 0 0 24px 0; }
+
+.downloadPage .inputLabel p { color: #536D87; text-align: center; padding-bottom: 11px; }
+
+.appletDownloadProgressPage .fakeBg { background: url(../Images/logmein123/sprite.png) 0 -191px no-repeat; height: 28px; width: 290px; margin: 0 auto; }
+.appletDownloadProgressPage .status { padding: 15px 0 0 0; text-align: center; }
+.appletDownloadProgressPage { text-align: center; }
+/* }}} individual page types */
+
+
+/* applet download info box/page {{{ */
+.appletInfoPage .formWrap p { text-align: center; font-size: 11px; line-height: 16px; padding-bottom: 15px; }
+.appletInfoPage .formWrap p.top { font-size: 13px; line-height: 18px; padding: 4px 25px 227px 25px; background: url(../Images/logmein123/download_window.png) 4px 83px no-repeat; }
+.appletInfoPage .formWrap h3 { font-size: 13px; line-height: 16px; padding: 0 0 1px 0; text-align: center; }
+.appletInfoPage .formWrap .endButtons { text-align: center; padding: 12px 0; }
+.appletInfoPage .formWrap .endButtons a.button { float: none; min-width: 90px; }
+/* }}} applet download info box/page */
+
+
+/* connect technician more box {{{ */
+.connectTechnician { color: #536D87; }
+.hasMore.connectTechnician .more { margin: 12px 0 0 0; font-size: 13px; line-height: 18px; padding-bottom: 11px; }
+.connectTechnician .opener { padding: 20px 0 0 0; font-size: 18px; }
+.connectTechnician .steps { padding: 4px 0 26px 0; margin: 25px 16px; font-size: 18px; font-weight: bold; }
+.connectTechnician .steps hr { clear:left; float: right; width: 80%; margin-right: -15px; }
+.connectTechnician .step { clear: left; }
+.connectTechnician .pic { float:left; margin-right: 1em; }
+.connectTechnician .text { display: block; padding-top: 30px; }
+.connectTechnician .step1 { margin-bottom: 60px; }
+.connectTechnician .step2 { margin: 60px 0 30px 0; }
+.connectTechnician .step1 .pic { background: url(/Images/site/customer/computer.png) no-repeat; width: 110px; height: 93px; }
+.connectTechnician .step2 .pic { background: url(/Images/site/customer/technician.png) no-repeat; width: 110px; height: 129px; }
+.connectTechnician .step2 .text { padding-top: 50px; }
+.connectTechnician .warning { padding: 0 0 8px 0; }
+.connectTechnician .learnMore { font-weight: bold; }
+.connectTechnician .warningNote { padding: 50px 20px 0 20px; font-size: 18px; text-align: center; }
+.connectTechnician a:hover { text-decoration: none; }
+.connectTechnician hr { background: white; height: 3px; border: none; }
+html.lt-ie7 .hasMore.connectTechnician .more { padding-bottom: 0; margin-bottom: 5px; zoom: 1; }
+/* }}} connect technician more box */
+
+
+/* new anti-scammer warning page {{{ */
+div.warningPage { color: #536D87; padding-top: 67px; font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+.warningPage h1 { font-size: 22px; text-align: center; padding: 25px 5px; }
+.warningPage .button { width: 45%; height: 50px; line-height: 50px; font-size: 18px; background: #4BB7EF !important; color: white; vertical-align: middle; box-shadow: none; border: none; }
+.warningBox { background-color: #F3F6F8; font-size: 15px; text-align: center; padding: 35px 40px 36px 40px; width: 450px; margin: 0 auto; margin-bottom: 20px;  -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.warningBox h2 { color: #536D87; font-size: 18px; font-weight: bold; padding-bottom: 0; padding-top: 20px; }
+.warningBox table {  margin: 20px auto 0 auto; text-align: left; border: 0; border-collapse: collapse; }
+.warningBox td { color: #CE4563; vertical-align: middle; margin: 0; padding: 0; }
+.warningBox td.icon b { width: 24px; height: 24px; background: url('/Images/site/customer/ban.png') no-repeat 0 0; display: block; margin: 10px; }
+.warningPage .endButtons { text-align: center; margin: 0 60px; }
+.warningPage .endButtons a:first-child { float: left; }
+.warningPage .endButtons a:nth-child(2) { float: right; }
+.warningPage .reportAbuse { text-align: center; font-size: 15px; clear: both; margin-top: 120px; }
+.warningPage .reportAbuse a:hover { text-decoration: underline; }
+/* }}} */
+
+
+/* more-less opener {{{ */
+.hasMore .opener { text-align: center; }
+.hasMore .opener * { vertical-align: middle; }
+.hasMore .showMoreLess { display: inline-block; background: url('/Images/site/customer/dropdown.png') no-repeat; width: 19px; height: 19px; font-size: 0; cursor: pointer; line-height: 0; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; }
+.hasMore .showMoreLess:hover { box-shadow: 0 0 2px rgba(0,0,0,0.2); -moz-box-shadow: 0 0 2px rgba(0,0,0,0.2); -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.2); }
+.hasMore .more { font-size: 13px; line-height: 18px; position: absolute; width: 320px; top: -1500px; padding: 3px 0 26px 0; overflow: hidden; }
+.hasMore .moreWider { width: 340px !important;}
+.hasMore .more .inner { padding: 0 6px; }
+.hasMore .more h3 { font-size: 14px; padding: 0 0 6px 0; }
+.hasMore.alwaysVisible h2 { font-size: 24px; }
+.hasMore.alwaysVisible .more { display: block !important; } /* do not let anyone (js) override this! */
+.done .more { position: static; }
+.showMoreLessWhite { border: 1px solid #fff; }
+.showMoreLessGray { border: 1px solid #efefef; }
+.showMoreLessYellow { border: 1px solid #fffdc3; }
+.hasMoreActive .showMoreLessWhite,
+.hasMoreActive .showMoreLessGray,
+.hasMoreActive .showMoreLessYellow { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
+/* }}} more-less opener */
+
+
+/* language selector {{{ */
+.languageSelector { width: 53px; height: 55px; position: absolute; top: 0; right: 5px; }
+.languageSelector .closed { width: 53px; height: 50px; display: block; background: url(../Images/logmein123/sprite.png) -54px -26px no-repeat; }
+.languageSelector .opened { display: none; width: 53px; height: 55px; background: url(../Images/logmein123/sprite.png) 0 -26px no-repeat; z-index: 4; position: absolute; }
+.languageSelector .dropdown { display: none; min-width: 60px; position: absolute; z-index: 3; top: 54px; right: 0; border: 1px solid #ccc; padding: 13px 14px; background-color: #fff; -moz-border-radius: 4px 0 4px 4px; -webkit-border-radius: 4px 0 4px 4px; border-radius: 4px 0 4px 4px; }
+.languageSelector .dropdown li { white-space: nowrap; }
+.languageSelector .dropdown li a { line-height: 20px; height: 20px; display: block; }
+.languageSelector .dropdown li a:hover { text-decoration: underline; }
+.languageSelector .dropdown li.active a { color: #444; cursor: default; }
+.languageSelector .dropdown li.active a:hover { text-decoration: none; }
+
+html.lt-ie7 .languageSelector .dropdown { margin-right: -1px; }
+
+.selectLang .languageSelector .closed { display: none; }
+.selectLang .languageSelector .opened, .selectLang .languageSelector .dropdown { display: block; }
+/* }}} language selector */
+
+
+/* fade in css animation for the dropdown {{{
+considering that doing a fade out is extremely complicated this is pretty close to something
+of an overkill (also note that we must not break anything for non-cssanimation enabled browsers) */
+.languageSelector .transEdgeCut { display: none; }
+html.cssanimations .languageSelector .transEdgeCut { display: block; border-top: 3px solid #fff; height: 0; font-size: 0; width: 51px; position: absolute; top: -1px; right: 0; z-index: 3; }
+html.cssanimations .languageSelector .opened, html.cssanimations .languageSelector .dropdown { -webkit-transition: opacity .3s linear; -moz-transition: opacity .3s linear; transition: opacity .3s linear; }
+html.cssanimations .languageSelector .opened { display: block; height: 0; width: 0; opacity: 0; }
+html.cssanimations .selectLang .languageSelector .opened { display: block; width: 53px; height: 55px; opacity: 1; }
+html.cssanimations .languageSelector .dropdown { display: block; width: auto; height: 0; border: 1px solid #fff; opacity: 0; }
+html.cssanimations .languageSelector .dropdown ul { display: none; }
+html.cssanimations .selectLang .languageSelector .dropdown ul { display: block; }
+html.cssanimations .selectLang .languageSelector .dropdown { width: auto; height: auto; border: 1px solid #ccc; padding: 13px 14px; opacity: 1; }
+/* }}} fade in css animation for the dropdown */
+
+
+/* forms {{{ */
+.formWrapBorder, .formWrap { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.formWrapBorder { border: 1px solid #dcdcdc; background-color: #fff; padding: 1px; width: 316px; }
+.formWrapBorderWithReCaptcha { border: 1px solid #dcdcdc; background-color: #fff; padding: 1px; width: 340px; }
+.formWrap { background-color: #efefef; padding: 18px; color: #444; position: relative; }
+.login.formWrap { background-color: #F2F6F9; padding: 50px 67px; }
+
+html.lt-ie8 .formWrap .endButtons { height: auto; } /* only for IE7!! do NOT move this line */
+.formWrap .endButtons, html.lt-ie7 .formWrap .endButtons { height: 40px; } /* the joke is that it works in ie6, ie8, ie9 */
+.formWrap .footNote { color: #444; font-size: 13px; line-height: 18px; padding-left: 8px; float: left; }
+.formWrap .endButtons a.button { float: right; }
+body.lang_fr .formWrap .endButtons a.button { min-width: 70px; } /* in ie7 the text may push the button to the right, but it's okay to decrease the size a bit everywhere */
+
+.formWrap .more { width: 545px; }
+
+.errorBox { height: 50px; }
+.errorBox #Content_error_msg { color: #CE4563; padding: 3px; font-weight: bold; font-size: 11px;}
+.errorBox #Content_success_msg { color: #44CEAA; text-align: center; font-size: 16px; }
+
+form { width: 320px; margin: 0 auto; }
+form .field { position: relative; }
+form .field input::-ms-clear { display: none; }
+form .field.focus label { color: #aaa; }
+form .field label { color: #888; position: absolute; z-index: 2; display: inline-block; padding: 6px 0 9px 8px; left: 2px; top: 2px; cursor: text; }
+form .field .text { height: 56px; padding: 0 15px; width: 286px; border: 2px solid #E6EBF1; color: #536D87; font-weight: bold; font-size: 2.5em; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+form .field :root .text { padding: 50px; }
+form .field .text::-webkit-input-placeholder { position: relative; top: -0.35em; color: #94A1B2; font-size: 0.5em; font-weight: normal; vertical-align: middle }
+form .field .text::-moz-placeholder { position: relative; top: -0.35em; color: #94A1B2; font-size: 0.5em; font-weight: normal; vertical-align: middle; opacity: 1 }
+form .field .text:-moz-placeholder { position: relative; top: -0.35em; color: #94A1B2; font-size: 0.5em; font-weight: normal; vertical-align: middle; opacity: 1 }
+form .field .text:-ms-input-placeholder { position: relative; color: #94A1B2; font-size: 1em; font-weight: normal; vertical-align: middle }
+form .fieldWithReCaptcha .text { width: 290px !important; }
+form .fieldWithReCaptcha .text { width: 290px !important; }
+form .field .text:focus { outline: 0; left: -1px; top: -1px; margin-bottom: 0; }
+form .field .error { background: url('/Images/site/customer/error.png') no-repeat 270px center; outline: 0; border: 2px solid #CE4563; left: -1px; top: -1px; }
+form .field .success { background: url('/Images/site/customer/correct.png') no-repeat 270px center white; outline: 0; border: 2px solid #44CEAA; left: -1px; top: -1px; }
+form .field textarea.text { min-height: 66px; line-height: 16px; }
+form .recaptcha { padding-bottom: 15px; }
+
+/* }}} forms */
+
+/* buttons {{{ */
+a.button { display: inline-block; height: 38px; line-height: 38px; background: #6eb7df url(../Images/logmein123/gradient.png) 0 -192px repeat-x; font-weight: bold; font-size: 13px; color: #666; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #b0b0b0; border-left: 1px solid #d8d8d5; border-right: 1px solid #d8d8d5; text-align: center;
+    -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.2); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+a.button:hover { opacity: 0.9; }
+a.submit, a.primary { color: #fff; background-position: 0 -51px; border-top: 1px solid #6db3d6; border-bottom: 1px solid #317da5; border-left: 1px solid #67add1; border-right: 1px solid #67add1; }
+a.disabled { background-position: 0 -203px; border-top: 1px solid #d3d3d3; border-bottom: 1px solid #bababa; color: #fff; cursor: not-allowed; }
+a.disabled:hover { background-position: 0 -203px; }
+a.button.big { height: 60px; line-height: 60px; background-position: 0 -90px; font-size: 24px; }
+form.broken a.submit { background-position: 0 -231px; border-top: 1px solid #d3d3d3; border-bottom: 1px solid #bababa; color: #fff; border-right: 1px solid #ccc; border-left: 1px solid #ccc; cursor: not-allowed; }
+form.broken a.submit.big { background-position: 0 -141px; }
+.submitButtonWrapper { min-height: 50px; }
+/* }}} */
+
+.downloadNotification { position:absolute; width: 300px; height: 150px; background-color: white; box-shadow: 0 0 20px 5px #EBEBEB; border-radius: 5px; z-index: 10 }
+.downloadNotification .arrow { display: inline-block; width: 100px; height: 150px; background: url('/Images/site/customer/arrow.png') center center no-repeat #48AEE4; border-radius: 5px 0 0 5px; margin-right: 0 }
+.downloadNotification p { width: 180px; float: right; padding: 40px 0; font-size: 16px }
+.downloadNotification p:focus { outline: none; }
+.downloadNotification.bottomLeft { left: 15px; bottom: 15px; }
+.downloadNotification.topRight { top: 65px; right: 15px; }
+.downloadNotification.bottomCenter { margin-left: auto; margin-right: auto; left: 0; right: 0; bottom: 100px; }
+.downloadNotification.closed { display: none; }
+.downloadNotification.topRight .arrow { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); border-radius: 0 5px 5px 0; }
+.downloadNotification .icon-close { position: absolute; top: 10px; right: 10px; cursor: pointer; }
+
+/* mediaqueries {{{ */
+@media only screen and (max-width: 780px), only screen and (max-device-width: 780px) {
+    .widePage { width: auto; }
+    .warningBox { width: auto; margin: 0 30px; }
+    .warningBox .hasMore p.opener, .warningBox .hasMore .more { width: auto; }
+    .warningBox h2 { text-align: center; }
+    #Footer a { padding-right: 4px; }
+    .slimPage { width: 545px; }
+    .login.formWrap { padding: 50px 0; }
+}
+@media only screen and (max-width: 520px), only screen and (max-device-width: 520px) {
+    .slimPage, .widePage { padding-top: 80px; }
+    .slimPage { width: 350px; }
+    #Header { margin: 0; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
+    .connectTechnician .steps { width: 330px; }
+    .connectTechnician .step1 .text { padding-top: 20px; }
+    .connectTechnician .step2 .text { padding-top: 30px; }
+    .warningBox { font-size: 12px; line-height: 15px; padding: 10px 10px 30px 10px; background-position: 10px 20px; min-width: 170px; }
+    .warningBox .hasMore .more { font-size: 12px; line-height: 15px; }
+    .warningBox h2 { font-size: 14px; line-height: 16px; }
+    .warningBox .reportAbuse { margin-top: 10px; }
+    .warningBox .endButtons { white-space: nowrap; }
+    .warningPage .button { width: 100%; }
+    .warningPage .button:first-child { margin-bottom: 20px; } 
+    .warningPage .reportAbuse { margin-top: 180px; }
+    #Footer p { width: 80%; margin: 0 auto; }
+    #Footer { line-height: 15px; }
+    #Footer a { padding: 0; }
+    .connectTechnician .warningNote { width: 350px; padding: 0; }
+}
+/* }}} mediaqueries */
